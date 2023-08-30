@@ -1,0 +1,14 @@
+@import "variables";
+@import "fonts.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+//slick
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+
+// Aos
+@import "node_modules/aos/src/sass/aos.scss";
+
+//style
+@import "base";
+@import "style";
