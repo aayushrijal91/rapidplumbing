@@ -1,6 +1,6 @@
 <script>
     let globalAssetList = '<?= $jsonEncodedArray ?>';
-    var SITE_URL = "<?php echo V_CDN_URL; ?>";
+    var SITE_URL = "<?php echo V_CDN_URL; ?>/theme";
 </script>
 
 <script src="<?php echo V_CDN_URL . V_THEME_DIR; ?>_assets/scripts/vendor.min.js?v=1.1"></script>

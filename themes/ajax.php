@@ -5,18 +5,22 @@ $email_settings  = email_settings::get_data($email_settingsArr);
 if(count($email_settings)){
 	$email_settings = $email_settings[0];
 }
-if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form') {
+
+if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form_request') {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
         $recaptcha_response = $_POST['recaptcha_response'];
+
+        var_dump('landed');
+        die();
         $data = array(
             'secret' => "6Ldso5ghAAAAAOeC9nGV2Zq1nmFYwN2Z-Sp4Eyre",
             'response' => $recaptcha_response
         );
 
         $verify = curl_init();
-        curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+        // curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
         curl_setopt($verify, CURLOPT_POST, true);
-        curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
+        // curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
         curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
         $recaptcha = curl_exec($verify);
@@ -45,7 +49,7 @@ if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form') {
                 'service'                  =>    strip_tags($_POST['service']),
                 'special_selection'        =>    $special,
             );
-            contact_us_form_data::add_record($ArrData);
+            // contact_us_form_data::add_record($ArrData);
 
             $email =     strip_tags($_POST['email']);
 
