@@ -700,7 +700,7 @@ require 'inc/nav.php';
                             <a href="#" class="btn btn-white text-primary rounded-pill px-3 px-lg-5 fs-18 fw-700">Get Started</a>
                         </div>
                         <div class="col-auto">
-                            <a href="#" class="btn btn-outline-white rounded-pill px-3 px-lg-5 fs-18 fw-700">Conditions</a>
+                            <a href="#" class="btn btn-outline-white rounded-pill px-3 px-lg-5 fs-18 border-2 fw-700">Conditions</a>
                         </div>
                     </div>
                 </div>
@@ -708,16 +708,7 @@ require 'inc/nav.php';
         </div>
     </section>
 
-    <section class="gallery bg-dark py-5 py-lg-9">
-        <div class="gallery-slider">
-            <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img1.jpg" alt="Rapid Plumbing Van" /></div>
-            <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img2.jpg" alt="Rapid Plumbing Van" /></div>
-            <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img3.jpg" alt="Rapid Plumbing Van" /></div>
-            <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img4.jpg" alt="Rapid Plumbing Van" /></div>
-            <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img5.jpg" alt="Rapid Plumbing Van" /></div>
-            <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img6.jpg" alt="Rapid Plumbing Van" /></div>
-        </div>
-    </section>
+    <?php require 'inc/gallery.php'; ?>
 </main>
 
 <?php

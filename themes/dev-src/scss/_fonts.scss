@@ -4,6 +4,7 @@
 $font-articulat: "articulat-cf", sans-serif;
 $font-articulat-heavy: "articulat-heavy-cf", sans-serif;
 $font-poppins: "Poppins", sans-serif;
+$font-serpentine: "Serpentine", sans-serif;
 
 $font-body: $font-poppins;
 
@@ -11,6 +12,7 @@ $font-families: (
     "articulat": "articulat-cf",
     "articulat-heavy": "articulat-heavy-cf",
     "poppins": "Poppins",
+    "serpentine": "Serpentine",
 );
 
 @each $name, $font-family in $font-families {
@@ -18,3 +20,19 @@ $font-families: (
         font-family: $font-family, sans-serif;
     }
 }
+
+$asset-path: "../webfonts/";
+
+/* Fonts includer */
+@mixin font-face($font-family, $font-file, $weight: "normal", $style: "normal") {
+    @font-face {
+        font-family: $font-family;
+        src: local($font-file), url($asset-path + $font-file + ".woff") format("woff"),
+            url($asset-path + $font-file + ".woff2") format("woff2");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face("Serpentine", "Serpentine D Bold", 400);
+

@@ -14,6 +14,24 @@ header.header {
     }
 }
 
+section.banner {
+    background: url(../images/background/banner.png) no-repeat right center, linear-gradient(274deg, #24478D 0%, #67B2F2 100%);
+    background-size: contain;
+    min-height: 500px;
+
+    .banner__heading {
+        font-size: 96px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -4.8px;
+        background: linear-gradient(180deg, #FFF 11.72%, #C0CEEA 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 main.homepage {
     section.banner {
         position: relative;
