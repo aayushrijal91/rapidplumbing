@@ -5,11 +5,12 @@ $secondary: #F0C324;
 $tertiary: #716D6D;
 $quaternary: #13264A;
 $dark: #131314;
-$dark-grey: #E8E8E8;
+$dark-grey: #1D1C21;
+$dark-blue: #152F5F;
 $light-grey: #f4f4f4;
-$jet-black: #171717;
-$grey: #878787;
-$light: #F7F7F7;
+$brighte-green: #00D280;
+$grey: #61636C;
+$light: #898B9A;
 $white: #ffffff;
 $danger: #CA141C;
 
@@ -23,7 +24,8 @@ $theme-colors: map-merge(("primary": $primary,
       "dark": $dark,
       "light-grey": $light-grey,
       "dark-grey": $dark-grey,
-      "jet-black": $jet-black,
+      "dark-blue": $dark-blue,
+      "brighte-green": $brighte-green,
       "grey": $grey,
       "light": $light,
       "white": $white,
@@ -56,6 +58,7 @@ $spacers: (
   ) !default;
 $spacers: map-merge((0: 0,
       0_75: $spacer * .75,
+      0_5: ($spacer * .5),
       1: $spacer * 0.25,
       1_75: $spacer * 1.75,
       2: $spacer * 0.5,

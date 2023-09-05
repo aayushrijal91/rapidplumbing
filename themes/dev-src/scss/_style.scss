@@ -123,14 +123,76 @@ main.homepage {
         }
     }
 
+    section.cta {
+        .ctaWrapper {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            .seemorebtn {
+                height: 33px;
+                padding: 5px 32px;
+                position: absolute;
+                top: -19px;
+                z-index: 100;
+                transition: 0.5s all ease;
+
+                .text {
+                    transition: 0.5s all ease;
+                }
+
+                .arrow-icon {
+                    transition: 0.5s all ease;
+                }
+            }
+
+            .content {
+                position: absolute;
+                bottom: 14px;
+                padding: 54px 44px 36px;
+                background: $dark;
+                width: 100%;
+                transition: 0.5s all ease;
+                transform: translateY(100%);
+                display: flex;
+                justify-content: center;
+            }
+
+            &:hover {
+                .content {
+                    bottom: 0;
+                    transform: translateY(0);
+                    background: #1B1C1E;
+                }
+
+                .seemorebtn {
+                    gap: 0 !important;
+                    padding: 5px;
+
+                    .text {
+                        width: 0;
+                        font-size: 0;
+                    }
+
+                    .arrow-icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+
     section.trusted {
+        background: linear-gradient(102deg, #0B1934 0%, #13264A 100%);
+
         .trusted-bg {
             mix-blend-mode: soft-light;
         }
     }
 
     section.blue-gradient {
-        background: var(--Light-Blue, linear-gradient(126deg, #253B66 7.98%, #244990 96.65%));
+        background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
     }
 
     section.welcome {
@@ -255,7 +317,7 @@ main.homepage {
                 margin-right: 1.125rem;
                 z-index: 1;
                 transition: 0.35s all ease;
-    
+
                 .overlay {
                     position: absolute;
                     background: linear-gradient(rgba(18, 32, 57, 0.9) 0% 65%, #152F5F 100%);
@@ -274,12 +336,12 @@ main.homepage {
 
                 &:hover {
                     transform: scale(1.05);
-    
+
                     .overlay {
                         opacity: 0;
                     }
                 }
-    
+
                 img {
                     position: relative;
                     z-index: -2;
@@ -298,11 +360,69 @@ main.homepage {
     }
 
     section.customers {
+        padding: 110px 0 140px;
+
         .testimonials-slider {
             .testimonial {
                 width: 352px;
                 margin-right: 1rem;
+                margin-top: 2rem;
+                padding: 28px;
+                background: $dark-blue;
+                position: relative;
+
+                .quote {
+                    position: absolute;
+                    top: -33px;
+                    left: 21px;
+                }
+
+                hr {
+                    margin: 34px 0;
+                }
             }
         }
+    }
+
+    section.whyUs {
+        padding: 140px 0;
+
+        .whyusCard {
+            background: rgba(23, 157, 219, 0.2);
+            padding: 30px;
+            height: 100%;
+        }
+    }
+
+    .circle-gradient {
+        opacity: 0.5;
+        background: #00AEEF;
+        filter: blur(500px);
+        height: 1524px;
+        width: 1524px;
+        z-index: 0;
+    }
+
+    .circle-gradient-1 {
+        position: absolute;
+        left: -40%;
+        top: -20%;
+    }
+
+    .circle-gradient-2 {
+        position: absolute;
+        left: -40%;
+        bottom: -20%;
+    }
+
+    .circle-gradient-3 {
+        position: absolute;
+        left: -40%;
+        bottom: -60%;
+    }
+
+    section.pricematching {
+        background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
+        padding-top: 97px;
     }
 }
