@@ -199,8 +199,8 @@ require 'inc/nav.php';
                                 <p class="fs-20 fw-700 text-capitalize">24 Hour Emergency Service</p>
                                 <p class="text-light fs-18 py-3">When an emergency strikes, you want to know that you have a reliable plumber to call. You can count on us 24 hours a day, 7 days a week for any emergency repair.</p>
                                 <a href="#" class="btn btn-primary rounded-0 fs-18 fw-700 text-white mt-4">Learn More</a>
+                            </article>
                         </article>
-                    </article>
                     </article>
                 </div>
 
@@ -249,16 +249,38 @@ require 'inc/nav.php';
     <section class="trusted position-relative z-1">
         <div class="row align-items-center">
             <div class="col-6">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img1.jpg" alt="Rapid Plumbing Van" />
+                <div class="trusted-main-slider">
+                    <div>
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img1.jpg" alt="Rapid Plumbing Van" />
+                    </div>
+                    <div>
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img2.jpg" alt="Rapid Plumbing Van" />
+                    </div>
+                    <div>
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img1.jpg" alt="Rapid Plumbing Van" />
+                    </div>
+                    <div>
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img2.jpg" alt="Rapid Plumbing Van" />
+                    </div>
+                    <div>
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img1.jpg" alt="Rapid Plumbing Van" />
+                    </div>
+                    <div>
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img2.jpg" alt="Rapid Plumbing Van" />
+                    </div>
+                </div>
             </div>
             <div class="col-6">
                 <article class="p-7 pe-10 d-flex flex-column gap-1_5">
                     <p class="fs-70 fw-500 lh-1">Your <span class="text-primary">Trusted</span> <br>Penrith <span class="text-primary">Plumber.</span></p>
                     <p class="fs-20 py-4 col-xl-9">We pride ourselves on our reputation for fast, friendly service, and all of our staff is fully trained to uphold our high standards in everything they do.</p>
-                    <div class="thumbnail-slider d-flex gap-3">
+                    <div class="trusted-thumbnail-slider">
                         <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail1.jpg" alt="Rapid Plumbing Van" /></div>
                         <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail2.jpg" alt="Rapid Plumbing Van" /></div>
                         <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail3.jpg" alt="Rapid Plumbing Van" /></div>
+                        <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail4.jpg" alt="Rapid Plumbing Van" /></div>
+                        <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail5.jpg" alt="Rapid Plumbing Van" /></div>
+                        <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail6.jpg" alt="Rapid Plumbing Van" /></div>
                     </div>
                 </article>
             </div>

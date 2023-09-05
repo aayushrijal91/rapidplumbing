@@ -189,6 +189,30 @@ main.homepage {
         .trusted-bg {
             mix-blend-mode: soft-light;
         }
+
+        .trusted-thumbnail-slider {
+            .slick-arrow {
+                &:before {
+                    display: none;
+                }
+
+                &.slick-disabled {
+                    display: none;
+                }
+
+                .custom-prev-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .slick-slide {
+                margin: 0 5px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     section.blue-gradient {

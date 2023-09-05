@@ -60,6 +60,34 @@ $('.gallery-slider').slick({
     touchThreshold: 1000,
 });
 
+$('.trusted-main-slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1000,
+    autoplay: false,
+    swipe: false,
+    asNavFor: '.trusted-thumbnail-slider',
+    focusOnSelect: true,
+});
+
+$('.trusted-thumbnail-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 1000,
+    autoplay: false,
+    swipe: false,
+    asNavFor: '.trusted-main-slider',
+    prevArrow: "<button class='slick-prev'><img class='custom-prev-arrow' src='http://localhost:3000/rapid/themes/_assets/images/icons/arrow.png' alt='Previous' /></button>",
+    nextArrow: "<button class='slick-next'><img class='custom-next-arrow' src='http://localhost:3000/rapid/themes/_assets/images/icons/arrow.png' alt='Next' /></button>"
+});
+
+
 function validateForm(form) {
     const inputs = form.find('input.required');
     const errorMessages = form.find('.error');
