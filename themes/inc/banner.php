@@ -13,12 +13,17 @@
                 <?php } ?>
 
                 <div class="row pt-5">
-                    <div class="col-auto">
-                        <a href="#" class="btn btn-secondary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700">Get Started</a>
-                    </div>
-                    <div class="col-auto">
-                        <a href="#" class="btn btn-outline-white border-2 rounded-pill px-3 px-lg-5 fs-18 fw-700">Our Services</a>
-                    </div>
+                    <?php if (!empty($banner_details['banner_button_1_text']) && !empty($banner_details['banner_button_1_link'])) : ?>
+                        <div class="col-auto">
+                            <a href="<?= _issetUrl($banner_details, 'banner_button_1_link'); ?>" class="btn btn-secondary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($banner_details, 'banner_button_1_text'); ?></a>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (!empty($banner_details['banner_button_2_text']) && !empty($banner_details['banner_button_2_link'])) : ?>
+                        <div class="col-auto">
+                            <a href="<?= _issetUrl($banner_details, 'banner_button_2_link'); ?>" class="btn btn-outline-white border-2 rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($banner_details, 'banner_button_2_text'); ?></a>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

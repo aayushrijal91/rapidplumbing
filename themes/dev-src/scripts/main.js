@@ -1,3 +1,5 @@
+var baseUrl = window.location.protocol + "//" + window.location.host + '/rapid';
+
 function lazyloader() {
     const lazyContent = new LazyLoad({
         elements_selector: ".lazy"
@@ -73,6 +75,7 @@ $('.trusted-main-slider').slick({
     focusOnSelect: true,
 });
 
+
 $('.trusted-thumbnail-slider').slick({
     dots: false,
     arrows: true,
@@ -83,9 +86,18 @@ $('.trusted-thumbnail-slider').slick({
     autoplay: false,
     swipe: false,
     asNavFor: '.trusted-main-slider',
-    prevArrow: "<button class='slick-prev'><img class='custom-prev-arrow' src='http://localhost:3000/rapid/themes/_assets/images/icons/arrow.png' alt='Previous' /></button>",
-    nextArrow: "<button class='slick-next'><img class='custom-next-arrow' src='http://localhost:3000/rapid/themes/_assets/images/icons/arrow.png' alt='Next' /></button>"
+    prevArrow: `<button class='slick-prev'><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.6763" cy="18.0659" r="17.7505" transform="rotate(-180 18.6763 18.0659)" fill="#F0C324"/><path d="M22.0529 26.8188L13.2999 18.0659L22.0529 9.31299" stroke="white" stroke-width="4"/></svg></button>`,
+    nextArrow: `<button class='slick-next'><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.6763" cy="18.066" r="17.7505" fill="#F0C324"/><path d="M15.2998 9.31299L24.0527 18.0659L15.2998 26.8188" stroke="white" stroke-width="4"/></svg></button>`
 });
+
+$('#about-review').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: false,
+    prevArrow: `<button class='slick-prev'><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17.7505" cy="17.7505" r="17.2505" transform="matrix(-1 0 0 1 36.2505 0.0898438)" stroke="white"/><path d="M21.8765 9.0874L13.1235 17.8403L21.8765 26.5933" stroke="white" stroke-width="4"/></svg></button>`,
+    nextArrow: `<button class='slick-next'><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.4996" cy="17.8404" r="17.2505" stroke="white"/><path d="M15.123 9.0874L23.876 17.8403L15.123 26.5933" stroke="white" stroke-width="4"/></svg></button>`
+})
 
 
 function validateForm(form) {
