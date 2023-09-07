@@ -17,13 +17,13 @@ return array (
   '_perPageDefault' => '25',
   '_previewPage' => '',
   '_requiredPlugins' => '',
-  '_tableName' => 'about_content',
+  '_tableName' => 'services_content',
   'listPageFields' => NULL,
   'listPageOrder' => '',
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
-  'menuName' => 'About Content',
-  'menuOrder' => '0000000010',
+  'menuName' => 'Services Content',
+  'menuOrder' => '0000000012',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
@@ -246,7 +246,7 @@ return array (
     'infoField5' => '',
   ),
   'banner_button_1_text' => array(
-    'order' => 19,
+    'order' => 15,
     'label' => 'Banner Button 1 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -265,7 +265,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_1_link' => array(
-    'order' => 20,
+    'order' => 16,
     'label' => 'Banner Button 1 Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -284,7 +284,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_text' => array(
-    'order' => 21,
+    'order' => 17,
     'label' => 'Banner Button 2 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -303,7 +303,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_link' => array(
-    'order' => 22,
+    'order' => 18,
     'label' => 'Banner Button 2 Link',
     'type' => 'textfield',
     'indexed' => '',

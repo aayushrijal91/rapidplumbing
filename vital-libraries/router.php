@@ -7,7 +7,9 @@ class router {
 		'' => array('home'),	
 		'ajax' => array('ajax'),		
 		'sitemap' => array('sitemap'),
-		'about' => array('about')
+		'about-us' => array('about-us'),
+		'services' => array('services'),
+		'faqs' => array('faqs'),
 	);
 	
 	public static function init() {

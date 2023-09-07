@@ -32,6 +32,15 @@ function _isset($DataArray = array(), $field = array())
 	return $echoValue;
 }
 
+function _issetUrl($DataArray = array(), $field = array())
+{
+	$echoValue = '';
+	if (isset($DataArray[$field]) && !empty($DataArray[$field])) {
+		$echoValue = $DataArray[$field];
+	}
+	return '/rapid'.$echoValue;
+}
+
 /* get image src alt and title */
 function _imgSrc($tmpArr = array(), $key = '', $extraClass = '')
 {
