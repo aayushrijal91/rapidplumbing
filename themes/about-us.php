@@ -272,7 +272,7 @@ require 'inc/banner.php';
 
     <div class="container py-5 py-md-6 py-lg-10">
         <section class="review" id="about-review">
-            <div>
+            <article>
                 <div class="row align-items-center gx-lg-6">
                     <div class="col-lg-6">
                         <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-review-1.jpg" alt="Testimonial" />
@@ -286,25 +286,93 @@ require 'inc/banner.php';
                         <p class="fs-18 lh-1_5 pt-4">At Rapid Plumbing Group Pty Ltd we provide all of our customers with dedicated services and attention. Our technicians will always provide you with pricing at affordable rates and with no hidden fees. We are dedicated to providing our customers with the care and attention that they deserve. We will always ensure that you are 100% satisfied with the services we perform on your home or property.</p>
                     </div>
                 </div>
-            </div>
-            
-            <div>
+            </article>
+
+            <article>
                 <div class="row align-items-center gx-lg-6">
                     <div class="col-lg-6">
-                        <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-review-1.jpg" alt="Testimonial" />
+                        <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-review-2.jpg" alt="Testimonial" />
                     </div>
                     <div class="col-lg-6">
                         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="42" viewBox="0 0 71 42" fill="none">
                             <path d="M27.5461 41.578H0.806641L17.9199 0.628418H35.4915L27.5461 41.578ZM62.231 41.578H35.6443L52.7576 0.628418H70.1764L62.231 41.578Z" fill="#00AEEF" />
                         </svg>
 
-                        <h2 class="fs-48 fw-700 lh-1 text-primary py-4">“Finally, a local plumber <span class="text-white">you can rely on</span> to provide a professional reliable service without being ripped off”</h2>
-                        <p class="fs-18 lh-1_5 pt-4">At Rapid Plumbing Group Pty Ltd we provide all of our customers with dedicated services and attention. Our technicians will always provide you with pricing at affordable rates and with no hidden fees. We are dedicated to providing our customers with the care and attention that they deserve. We will always ensure that you are 100% satisfied with the services we perform on your home or property.</p>
+                        <h2 class="fs-48 fw-700 lh-1 text-primary py-4">“Great <span class="text-white">service and quality</span> workmanship.”</h2>
+                        <article class="description pt-4 fs-18 lh-1_5">
+                            <p>At Rapid Plumbing Group Pty Ltd we provide all of our customers with dedicated services and attention. Our technicians will always provide you with pricing at affordable rates and with no hidden fees. We are dedicated to providing our customers with the care and attention that they deserve. We will always ensure that you are 100% satisfied with the services we perform on your home or property.</p>
+                        </article>
                     </div>
                 </div>
-            </div>
+            </article>
+
+            <article>
+                <div class="row align-items-center gx-lg-6">
+                    <div class="col-lg-6">
+                        <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-review-3.jpg" alt="Testimonial" />
+                    </div>
+                    <div class="col-lg-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="42" viewBox="0 0 71 42" fill="none">
+                            <path d="M27.5461 41.578H0.806641L17.9199 0.628418H35.4915L27.5461 41.578ZM62.231 41.578H35.6443L52.7576 0.628418H70.1764L62.231 41.578Z" fill="#00AEEF" />
+                        </svg>
+
+                        <h2 class="fs-48 fw-700 lh-1 text-primary py-4">“The boys are always on time and <span class="text-white">always provide choices</span> that are cost effective for me and always clean up after themselves.”</h2>
+                        <article class="description pt-4 fs-18 lh-1_5">
+                            <p>Whenever we are called to a job, we always put our customers first. We do this by providing quality services, arriving on time, and always providing our customers with multiple price points and options. This allows us to get the job done and stay affordable in the face of plumbing emergencies.</p>
+                            <p>Additionally, our technicians will always clean up after themselves to ensure that your home is kept clean and organized even after we finish our services.</p>
+                        </article>
+                    </div>
+                </div>
+            </article>
         </section>
     </div>
+
+    <section class="bg-white py-5">
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+                <div class="col-lg-11">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="text-primary fs-32 fw-700 lh-1">Some of our<br /> happy customers</p>
+                        </div>
+                        <div class="col-9">
+                            <div class="customersSlider">
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/catholic-schools-nsw.png" alt="Catholic Schools NSW"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/nsw-ambulance.png" alt="NSW Ambulance"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/nsw-education.png" alt="NSW Education"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/fire-rescue.png" alt="Fire Rescue"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/roads-maritime.png" alt="Roads and Maritime"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/facilities-first.png" alt="Facilities First"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/mcdonalds.png" alt="McDonalds"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/dha.png" alt="DHA"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/westfield.png" alt="Westfield"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/penrith-city-council.png" alt="Penrith City Council"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/spotless.png" alt="Spotless"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/raine-home-commercial.png" alt="Raine Home Commercial"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/downer.png" alt="Downer"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/allianz.png" alt="Allianz"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/serco.png" alt="Serco"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/the-hills-sydney-garden-shire.png" alt="The hills Sydney Garden Shire"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/hungry-jacks.png" alt="Hungry Jacks"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/starr-partners.png" alt="Starr Partners"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/century-21.png" alt="Century 21"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/fairtrade.png" alt="Fair Trade"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/barbeque-galore.png" alt="Barbeque Galore"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/bcf.png" alt="BCF"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/ray-white.png" alt="Ray White"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/fitness-first.png" alt="Fitness First"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/zone-bowling.png" alt="Zone Bowling"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/woolworths.png" alt="Woolworths"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/netstrata.png" alt="Net Strata"></div>
+                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/belle-property.png" alt="Belle Property"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <?php require 'inc/gallery.php'; ?>
 </main>
