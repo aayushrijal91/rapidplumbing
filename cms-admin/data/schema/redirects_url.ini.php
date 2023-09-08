@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'SEO Redirects',
-  'menuOrder' => '0000000019',
+  'menuOrder' => '0000000023',
   'menuType' => 'multi',
   'num' => array(
     'order' => 1,

@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => '',
   'listPageSearchFields' => '_all_',
   'menuName' => 'SEO Common Variables',
-  'menuOrder' => '0000000006',
+  'menuOrder' => '0000000008',
   'menuType' => 'single',
   'num' => array(
     'order' => 1,

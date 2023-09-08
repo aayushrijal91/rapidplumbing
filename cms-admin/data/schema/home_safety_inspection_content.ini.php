@@ -17,13 +17,13 @@ return array (
   '_perPageDefault' => '25',
   '_previewPage' => '',
   '_requiredPlugins' => '',
-  '_tableName' => 'services_content',
+  '_tableName' => 'home_safety_inspection_content',
   'listPageFields' => NULL,
   'listPageOrder' => '',
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
-  'menuName' => 'Services Content',
-  'menuOrder' => '0000000014',
+  'menuName' => 'Home Safety Inspection Content',
+  'menuOrder' => 1694152693,
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
@@ -246,7 +246,7 @@ return array (
     'infoField5' => '',
   ),
   'banner_button_1_text' => array(
-    'order' => 15,
+    'order' => 19,
     'label' => 'Banner Button 1 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -265,7 +265,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_1_link' => array(
-    'order' => 16,
+    'order' => 20,
     'label' => 'Banner Button 1 Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -284,7 +284,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_text' => array(
-    'order' => 17,
+    'order' => 21,
     'label' => 'Banner Button 2 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -303,7 +303,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_link' => array(
-    'order' => 18,
+    'order' => 22,
     'label' => 'Banner Button 2 Link',
     'type' => 'textfield',
     'indexed' => '',

@@ -2,9 +2,9 @@
 return array (
   '_detailPage' => '',
   '_filenameFields' => '',
-  '_tableName' => 'services_menugroup',
-  'menuName' => 'Services',
-  'menuOrder' => '0000000013',
+  '_tableName' => 'careers_menugroup',
+  'menuName' => 'Careers',
+  'menuOrder' => '0000000018',
   'menuType' => 'menugroup',
 );
 ?>

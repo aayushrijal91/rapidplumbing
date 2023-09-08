@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Footer Settings',
-  'menuOrder' => '0000000005',
+  'menuOrder' => '0000000007',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

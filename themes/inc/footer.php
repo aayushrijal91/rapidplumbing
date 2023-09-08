@@ -1,18 +1,23 @@
+<?php
+// Footer menu
+$footer_menu_Arr = array();
+$footer_menu = footer_menu::get_data($footer_menu_Arr);
+?>
+
 <footer class="bg-dark-grey text-white py-3 py-lg-6">
     <div class="container">
         <div class="row">
             <div class="col-xl-3">
                 <a href="<?php echo V_SITE_URL; ?>"><?= _imgSrc($header_settings, 'site_logo', 'header__logo'); ?></a>
-                <div class="footer-menu mt-5">
-                    <ul class="list-unstyled fs-20 fst-italic fw-700 d-flex flex-column gap-3">
-                        <li><a href="#" class="text-white">Home</a></li>
-                        <li><a href="#" class="text-white">Why Us?</a></li>
-                        <li><a href="#" class="text-white">Community</a></li>
-                        <li><a href="#" class="text-white">Memberships</a></li>
-                        <li><a href="#" class="text-white">Blogs</a></li>
-                        <li><a href="#" class="text-white">Contact Us</a></li>
-                    </ul>
-                </div>
+                <?php if (!empty($footer_menu)) : ?>
+                    <div class="footer-menu mt-5">
+                        <ul class="list-unstyled fs-20 fst-italic fw-700 d-flex flex-column gap-3">
+                            <?php foreach ($footer_menu as $footer) : ?>
+                                <li><a href="<?= _issetUrl($footer, 'link') ?>" class="text-white"><?= _isset($footer, 'title') ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="col-xl-9">
                 <div class="d-flex flex-column h-100 justify-content-between">

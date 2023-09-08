@@ -634,3 +634,129 @@ main.servicesPage {
         }
     }
 }
+
+// Faq Page
+main.faqPage {
+    background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
+    padding: 101px 0;
+
+    .faq-slider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: inherit;
+        }
+
+        .box {
+            position: relative;
+            padding: 39px 22px;
+            margin: 16px 0;
+            margin-right: 1rem;
+            z-index: 1;
+            background: #152F5F;
+            transition: 0.35s all ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+// Careers Page 
+main.careersPage {
+    background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
+    padding: 78px 0 179px;
+
+    .careerForm {
+        background: $darker-blue;
+        padding: 92px 78px;
+
+        ul {
+            columns: 2;
+            column-gap: 20px;
+
+            li {
+                list-style: disc;
+                font-size: 18px;
+                font-weight: 300;
+                padding: 10px 0;
+            }
+        }
+
+        form {
+            .form-group {
+                .error {
+                    display: none;
+                }
+
+                label {
+                    font-weight: 600;
+                    letter-spacing: -0.16px;
+                }
+
+                .form-control {
+                    background: transparent;
+                    border-radius: 0;
+                    border: none;
+                    border-bottom: 1px solid $white;
+                    font-size: 18px;
+                    color: $white;
+                    padding: 0;
+                    padding-bottom: 10px;
+                    line-height: 1;
+                    outline: none;
+                    box-shadow: none;
+                    font-weight: 600;
+                    transition: 0.1s all;
+
+                    &::placeholder {
+                        color: $white;
+                        font-weight: 300;
+                        opacity: 0.5;
+                    }
+
+                    &:focus {
+                        border-color: $primary;
+                    }
+                }
+
+                .form-check {
+                    label.form-check-label {
+                        color: $white;
+                        font-weight: 400;
+                    }
+
+                    input.form-check-input {
+                        outline: none;
+                        box-shadow: none;
+                        background: transparent;
+                        transition: 0.1s all;
+
+                        &:checked {
+                            border-width: 4px;
+                        }
+
+                        &.is-valid,
+                        &:valid {
+                            border-color: $primary;
+                        }
+                    }
+                }
+
+                input[type="file"] {
+                    display: none;
+                }
+
+                &.upload {
+                    label {
+                        padding: 39px 16px;
+                        border: 1px dotted $primary;
+                    }
+                }
+            }
+        }
+    }
+}

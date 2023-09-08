@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <?php $htmltag = html_tag($banner_details, 'banner_title_heading_tag', ''); ?>
-                <<?= $htmltag ?> class="banner__heading font-serpentine">
+                <<?= $htmltag ?> class="banner__heading font-serpentine lh-1">
                     <?= _isset($banner_details, 'banner_title'); ?>
                 </<?= $htmltag ?>>
                 <?php if (!empty($banner_details['banner_subtitle'])) { ?>

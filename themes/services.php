@@ -29,7 +29,7 @@ $banner_details['banner_button_2_link'] = $ServicesPage['banner_button_2_link'];
 
 // Get Projects
 $services_list = array('orderBy' => 'dragSortOrder ASC');
-$services_list = services_help_list::get_data($services_list);
+$services_list = services_list::get_data($services_list);
 
 require 'inc/header.php';
 require 'inc/nav.php';

@@ -10,6 +10,8 @@ class router {
 		'about-us' => array('about-us'),
 		'services' => array('services'),
 		'faqs' => array('faqs'),
+		'careers' => array('careers'),
+		'home-safety-inspection' => array('home-safety-inspection'),
 	);
 	
 	public static function init() {

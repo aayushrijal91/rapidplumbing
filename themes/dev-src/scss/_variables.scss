@@ -7,6 +7,7 @@ $quaternary: #13264A;
 $dark: #131314;
 $dark-grey: #1D1C21;
 $dark-blue: #152F5F;
+$darker-blue: #1E3B73;
 $light-grey: #f4f4f4;
 $brighte-green: #00D280;
 $grey: #61636C;
@@ -25,6 +26,7 @@ $theme-colors: map-merge(("primary": $primary,
       "light-grey": $light-grey,
       "dark-grey": $dark-grey,
       "dark-blue": $dark-blue,
+      "darker-blue": $darker-blue,
       "brighte-green": $brighte-green,
       "grey": $grey,
       "light": $light,
@@ -92,8 +94,10 @@ $font-sizes: (
   109: 109px,
   70: 70px,
   64: 64px,
+  55: 55px,
   48: 48px,
   32: 32px,
+  30: 30px,
   27: 27px,
   24: 24px,
   20: 20px,
