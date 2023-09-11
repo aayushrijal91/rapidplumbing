@@ -1,4 +1,5 @@
-<section class="banner py-5 d-flex align-items-center position-relative">
+<section class="serviceBanner py-5 d-flex align-items-center position-relative">
+    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/there_in_a_flush.png" alt="there in a flush" class="there-in-a-flush" />
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -6,11 +7,6 @@
                 <<?= $htmltag ?> class="banner__heading font-serpentine lh-0_7">
                     <?= _isset($banner_details, 'banner_title'); ?>
                 </<?= $htmltag ?>>
-                <?php if (!empty($banner_details['banner_subtitle'])) { ?>
-                    <p class="banner__content fs-20 pt-4 col-lg-8 fw-500">
-                        <?= _isset($banner_details, 'banner_subtitle'); ?>
-                    </p>
-                <?php } ?>
 
                 <div class="row pt-5">
                     <?php if (!empty($banner_details['banner_button_1_text']) && !empty($banner_details['banner_button_1_link'])) : ?>
@@ -28,5 +24,4 @@
             </div>
         </div>
     </div>
-    <?= _imgSrc($banner_details, 'banner_image', 'position-absolute bottom-0 end-0'); ?>
 </section>

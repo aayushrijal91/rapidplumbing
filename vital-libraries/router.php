@@ -9,6 +9,7 @@ class router {
 		'sitemap' => array('sitemap'),
 		'about-us' => array('about-us'),
 		'services' => array('services'),
+		'inner-service' => array('inner-service'),
 		'faqs' => array('faqs'),
 		'careers' => array('careers'),
 		'home-safety-inspection' => array('home-safety-inspection'),

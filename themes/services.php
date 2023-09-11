@@ -55,11 +55,11 @@ require 'inc/banner.php';
             <div class="row pt-6 pt-lg-8 g-3">
                 <?php foreach ($services_list as $service) : ?>
                     <div class="col serviceHelpCardRow">
-                        <a href="">
+                        <a href="<?= _isset($service, 'slug') ?>">
                             <article class="serviceHelpCard">
                                 <?= _imgSrc($service, 'image'); ?>
                                 <div class="overlay">
-                                    <p class="title"><?= $service['title'] ?></p>
+                                    <p class="title"><?= _isset($service, 'title') ?></p>
                                 </div>
                             </article>
                         </a>
@@ -139,6 +139,4 @@ require 'inc/banner.php';
     <?php require 'inc/gallery.php'; ?>
 </main>
 
-<?php
-require 'inc/footer.php';
-?>
+<?php require 'inc/footer.php'; ?>
