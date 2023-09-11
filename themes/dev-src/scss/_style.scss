@@ -727,3 +727,107 @@ main.bookOnlinePage {
         }
     }
 }
+
+// Memberships Page
+main.membershipsPage {
+    section.introduction {
+        background: url(../images/background/home-form.png) no-repeat left center, $dark-grey;
+        padding: 93px 0;
+        color: $white;
+
+        .homeSafetyInspectionGuideImage {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    section.comparison {
+
+        .comparison1,
+        .comparison2 {
+            height: 100%;
+
+            .title {
+                height: 118px;
+                padding: 16px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 1;
+                }
+
+                img {
+                    max-height: 68px;
+                }
+            }
+
+            .table {
+                margin: 0;
+
+                tbody,
+                td,
+                tfoot,
+                th,
+                thead,
+                tr {
+                    border: 0;
+                }
+
+                td,
+                td {
+                    padding: 28px;
+                }
+            }
+        }
+
+        .comparison1 {
+            background: #2A2A2B;
+
+            .table {
+                font-size: 20px;
+                font-weight: 300;
+                --bs-table-bg: #4E4E4E;
+                --bs-table-color: $white;
+                --bs-table-striped-color: $white;
+                --bs-table-striped-bg: #2A2A2B;
+            }
+        }
+
+        .comparison2 {
+            background: $primary;
+
+            .table {
+                font-size: 20px;
+                font-weight: 300;
+                --bs-table-bg: #25C4FF;
+                --bs-table-color: $white;
+                --bs-table-striped-color: $white;
+                --bs-table-striped-bg: #00AEEF;
+            }
+        }
+    }
+
+    section.why-us {
+        background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
+        padding: 107px 0 165px;
+
+        .membershipSlider {
+            .slick-track {
+                display: flex;
+            }
+
+            .slick-slide {
+                height: inherit;
+                background-color: #253E6F;
+                padding: 37px 20px;
+                margin: 0 9px;
+            }
+        }
+    }
+}

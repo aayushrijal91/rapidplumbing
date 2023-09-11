@@ -5,7 +5,7 @@ $secondary: #F0C324;
 $tertiary: #716D6D;
 $quaternary: #13264A;
 $dark: #131314;
-$dark-grey: #1D1C21;
+$dark-grey: #1C1C1D;
 $dark-blue: #152F5F;
 $darker-blue: #1E3B73;
 $light-grey: #f4f4f4;
@@ -14,6 +14,10 @@ $grey: #61636C;
 $light: #E2E2E2;
 $white: #ffffff;
 $danger: #CA141C;
+$comparison-table-head-1: #28292D;
+$comparison-table-head-1-offer: #333437;
+$comparison-table-head-2: #02A3DF;
+$comparison-table-head-2-offer: #079BD3;
 
 $theme-colors: (
   ) !default;
@@ -32,6 +36,10 @@ $theme-colors: map-merge(("primary": $primary,
       "light": $light,
       "white": $white,
       "danger": $danger,
+      "comparison-table-head-1": $comparison-table-head-1,
+      "comparison-table-head-1-offer": $comparison-table-head-1-offer,
+      "comparison-table-head-2": $comparison-table-head-2,
+      "comparison-table-head-2-offer": $comparison-table-head-2-offer,
     ),
     $theme-colors
 );

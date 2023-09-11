@@ -125,6 +125,13 @@ $('.faq-slider').slick({
     touchThreshold: 1000,
 });
 
+$('.membershipSlider').slick({
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "100px"
+})
 
 function validateForm(form) {
     const inputs = form.find('input.required');
