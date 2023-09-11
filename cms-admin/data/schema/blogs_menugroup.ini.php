@@ -2,9 +2,9 @@
 return array (
   '_detailPage' => '',
   '_filenameFields' => '',
-  '_tableName' => 'home_safety_inspection_menugroup',
-  'menuName' => 'Home Safety Inspection',
-  'menuOrder' => '0000000020',
+  '_tableName' => 'blogs_menugroup',
+  'menuName' => 'Blogs',
+  'menuOrder' => '0000000022',
   'menuType' => 'menugroup',
 );
 ?>

@@ -12,6 +12,8 @@ class router {
 		'faqs' => array('faqs'),
 		'careers' => array('careers'),
 		'home-safety-inspection' => array('home-safety-inspection'),
+		'blogs' => array('blogs'),
+		'contact-us' => array('contact-us'),
 	);
 	
 	public static function init() {
