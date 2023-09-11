@@ -27,25 +27,9 @@ $banner_details['banner_button_2_text'] = $ContactUsPageArr['banner_button_2_tex
 $banner_details['banner_button_2_link'] = $ContactUsPageArr['banner_button_2_link'];
 /*  Banner Array End */
 
-$HomePageArr = array();
-$HomePage = homepage_content::get_data($HomePageArr);
-if (count($HomePage)) {
-    $HomePage = $HomePage[0];
-}
-
 require 'inc/header.php';
 require 'inc/nav.php';
 require 'inc/banner.php';
 ?>
-
-<main class="contactUsPage position-relative">
-    <?= require 'inc/contactForm.php'; ?>
-
-    <div class="py-5 py-lg-9">
-        <?= require 'inc/globalCta.php'; ?>
-    </div>
-
-    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/background/contact-us-dots.svg" class="position-absolute bottom-0 z-n1" alt="Rapid Plumbing Van" />
-</main>
 
 <?php require 'inc/footer.php'; ?>

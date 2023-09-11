@@ -14,6 +14,8 @@ class router {
 		'home-safety-inspection' => array('home-safety-inspection'),
 		'blogs' => array('blogs'),
 		'contact-us' => array('contact-us'),
+		'book-online' => array('book-online'),
+		'memberships' => array('memberships'),
 	);
 	
 	public static function init() {

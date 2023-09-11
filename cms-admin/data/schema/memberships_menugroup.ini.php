@@ -17,13 +17,13 @@ return array (
   '_perPageDefault' => '25',
   '_previewPage' => '',
   '_requiredPlugins' => '',
-  '_tableName' => 'settings_menugroup',
+  '_tableName' => 'memberships_menugroup',
   'listPageFields' => NULL,
   'listPageOrder' => '',
   'listPageSearchFields' => '',
   'menuHidden' => '0',
-  'menuName' => 'Settings',
-  'menuOrder' => '0000000031',
+  'menuName' => 'Memberships',
+  'menuOrder' => '0000000029',
   'menuType' => 'menugroup',
 );
 ?>
