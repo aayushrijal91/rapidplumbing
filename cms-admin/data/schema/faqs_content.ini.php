@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'FAQs Content',
-  'menuOrder' => '0000000017',
+  'menuOrder' => '0000000014',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

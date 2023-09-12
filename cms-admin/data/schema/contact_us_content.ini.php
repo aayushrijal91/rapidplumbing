@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Contact Us Content',
-  'menuOrder' => '0000000026',
+  'menuOrder' => '0000000019',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

@@ -855,3 +855,28 @@ main.membershipsPage {
         }
     }
 }
+
+// Inner Service
+main.innerServicePage {
+    background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
+
+    section.restore {
+        border-radius: 0 0 100% 100%;
+        overflow: hidden;
+        padding: 114px 0;
+        background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
+        position: relative;
+
+        .plumber-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .plumber-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

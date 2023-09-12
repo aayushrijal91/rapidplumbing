@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Home Safety Inspection Content',
-  'menuOrder' => '0000000021',
+  'menuOrder' => '0000000025',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

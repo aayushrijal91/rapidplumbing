@@ -4,9 +4,15 @@
         <div class="row">
             <div class="col-lg-6">
                 <?php $htmltag = html_tag($banner_details, 'banner_title_heading_tag', ''); ?>
-                <<?= $htmltag ?> class="banner__heading font-serpentine lh-0_7">
+                <<?= $htmltag ?> class="banner__heading font-serpentine lh-1">
                     <?= _isset($banner_details, 'banner_title'); ?>
                 </<?= $htmltag ?>>
+
+                <?php if (!empty($banner_details['banner_subtitle'])) { ?>
+                    <p class="banner__content fs-20 pt-4 col-lg-9 fw-500">
+                        <?= _isset($banner_details, 'banner_subtitle'); ?>
+                    </p>
+                <?php } ?>
 
                 <div class="row pt-5">
                     <?php if (!empty($banner_details['banner_button_1_text']) && !empty($banner_details['banner_button_1_link'])) : ?>

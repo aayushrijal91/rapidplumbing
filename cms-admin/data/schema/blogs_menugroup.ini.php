@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'blogs_menugroup',
   'menuName' => 'Blogs',
-  'menuOrder' => '0000000022',
+  'menuOrder' => '0000000015',
   'menuType' => 'menugroup',
 );
 ?>
