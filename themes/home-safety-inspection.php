@@ -33,8 +33,8 @@ require 'inc/banner.php';
 ?>
 
 <main class="homeSafetyInspectionPage">
-    <section class="introduction position-relative">
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="homeSafetyInspectionGuideImage" alt="Home Safety Inspection" />
+    <section class="introduction position-relative text-white">
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="homeSafetyInspectionGuideImage position-absolute start-0 bottom-0" alt="Home Safety Inspection" />
 
         <div class="container">
             <div class="row justify-content-end">
@@ -69,7 +69,7 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="propertyDamageProtection">
+    <section class="propertyDamageProtection bg-white position-relative">
         <div class="container">
             <h2 class="text-primary fs-64 fw-800 text-center text-capitalize">Protect your property from damage</h2>
             <p class="text-center text-dark fs-18 pt-3">by identifying and putting a stop to small plumbing problems before they become costly disasters.</p>

@@ -33,8 +33,8 @@ require 'inc/banner.php';
 ?>
 
 <main class="membershipsPage">
-    <section class="introduction position-relative">
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="homeSafetyInspectionGuideImage" alt="Home Safety Inspection" />
+    <section class="introduction position-relative text-white">
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="homeSafetyInspectionGuideImage position-absolute start-0 bottom-0" alt="Home Safety Inspection" />
 
         <div class="container">
             <div class="row justify-content-end">

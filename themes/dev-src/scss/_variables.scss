@@ -60,7 +60,7 @@ $container-max-widths: (
   md: 740px,
   lg: 1280px,
   xl: 1437px,
-  xxl: 1438px,
+  xxl: 1442px,
   ) !default;
 
 $spacer: 1rem !default;
@@ -99,12 +99,14 @@ $spacers: map-merge((0: 0,
 
 $font-sizes: (
   165: 165px,
+  128: 128px,
   109: 109px,
   100: 100px,
   70: 70px,
   64: 64px,
   55: 55px,
   48: 48px,
+  36: 36px,
   32: 32px,
   30: 30px,
   27: 27px,
