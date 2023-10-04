@@ -59,6 +59,12 @@ img {
         margin-bottom: 24px;
     }
 
+    ul {
+        li {
+            list-style: disc;
+        }
+    }
+
     @include media-breakpoint-down(sm) {
         font-size: 0.875rem !important;
     }
@@ -70,9 +76,9 @@ img {
     }
 }
 
-.highlight-primary-product {
-    strong {
-        color: $primary;
+.highlight-secondary {
+    span {
+        color: $secondary;
     }
 }
 

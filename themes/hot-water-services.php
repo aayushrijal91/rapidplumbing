@@ -30,8 +30,25 @@ require 'inc/nav.php';
 require 'inc/serviceBanner.php';
 ?>
 
-<main class="innerServicePage">
-    
+<main class="hotWaterServicesPage">
+    <section class="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <article>
+                        <h3 class="fs-60 highlight-primary text-capitalize fw-700 lh-1">Keep Your Home Safe <span class="fw-400">And Dry before the next storm</span></h3>
+                        <article class="description fs-18 lh-1_5 py-4">
+                            <p>If your hot water heater is reaching the 15-year mark, it may be time to replace it. However, if it is still relatively new it may just need to be repaired. Either way, you need expert technicians to perform a thorough inspection and determine the most cost-effective solution for you.</p>
+
+                            <p>Not having access to clean, hot water can really mess up your daily routine. Call Rapid Plumbing Group today, and we’ll dispatch a technician to your home as quickly as possible! We’re available 24/7 to address any urgent hot water heater repairs, or just for a routine inspection.</p>
+                        </article>
+                        <a href="#" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 d-inline-flex">Enquire</a>
+                    </article>
+                </div>
+                <div class="col-6"></div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php require 'inc/footer.php'; ?>

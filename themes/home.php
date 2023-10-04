@@ -57,10 +57,10 @@ require 'inc/nav.php';
         </div>
     </section>
 
-    <?= require 'inc/contactForm.php'; ?>
+    <?php require 'inc/contactForm.php'; ?>
 
     <div class="py-5 py-lg-9">
-        <?= require 'inc/globalCta.php'; ?>
+        <?php require 'inc/globalCta.php'; ?>
     </div>
 
     <section class="trusted position-relative z-1">
