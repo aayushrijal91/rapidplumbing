@@ -5,7 +5,6 @@
                 <div class="col-lg-6">
                     <article class="ctaWrapper">
                         <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/24-hr-service-cta.jpg" class="heroImage" alt="24 hour emergency service" />
-                        <!-- <?= _imgSrc($HomePage, 'service_1_image', 'heroImage'); ?> -->
 
                         <article class="content">
                             <div class="seemorebtn btn btn-white d-inline-flex rounded-pill text-grey fw-700 gap-2">

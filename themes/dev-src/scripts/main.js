@@ -125,6 +125,16 @@ $('.faq-slider').slick({
     touchThreshold: 1000,
 });
 
+$('.hot-water-faq-slider').slick({
+    arrows: false,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 500,
+    autoplay: false,
+    touchThreshold: 1000,
+});
+
 $('.membershipSlider').slick({
     arrows: false,
     slidesToShow: 3,
