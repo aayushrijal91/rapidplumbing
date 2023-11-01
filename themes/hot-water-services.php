@@ -188,21 +188,6 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <!-- <div class="container">
-            <h3 class="text-center fw-700 fs-60 py-6">Hot Water Services Sydney FAQs</h3>
-            <div class="row">
-                <div class="col-4">
-                    <article class="faqCard"></article>
-                </div>
-                <div class="col-4">
-                    <article class="faqCard"></article>
-                </div>
-                <div class="col-4">
-                    <article class="faqCard"></article>
-                </div>
-            </div>
-        </div> -->
-
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center">Hot Water Services Sydney FAQs</h3>

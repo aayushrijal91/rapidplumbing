@@ -249,7 +249,7 @@ main.homepage {
                     font-weight: 800;
                     line-height: 1;
                     display: flex;
-                    align-items: end;
+                    align-items: flex-end;
                     transition: 0.35s all ease;
                 }
 
@@ -469,7 +469,7 @@ main.servicesPage {
                 padding: 15px 24px;
                 transition: 0.35s all ease;
                 display: flex;
-                align-items: end;
+                align-items: flex-end;
 
                 .title {
                     font-size: 22px;
@@ -872,7 +872,7 @@ main.blockedDrainServicesPage {
                     font-weight: 800;
                     line-height: 1;
                     display: flex;
-                    align-items: end;
+                    align-items: flex-end;
                     transition: 0.35s all ease;
                 }
 
@@ -946,11 +946,11 @@ main.emergencyPlumbingServicesPage {
             .slick-track {
                 display: flex;
             }
-    
+
             .slick-slide {
                 height: inherit;
             }
-    
+
             .box {
                 position: relative;
                 padding: 39px 22px;
@@ -959,7 +959,7 @@ main.emergencyPlumbingServicesPage {
                 z-index: 1;
                 background: #222224;
                 transition: 0.35s all ease;
-    
+
                 &:hover {
                     transform: scale(1.05);
                 }
@@ -968,11 +968,14 @@ main.emergencyPlumbingServicesPage {
     }
 }
 
-main.hotWaterServicesPage {
+main.hotWaterServicesPage,
+main.tapsAndToiletsServicePage,
+main.rainwaterServicePage,
+main.gasPlumbingServicePage {
     section.introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
     }
-    
+
     section.help {
         background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
         padding: 125px 0;
@@ -1021,7 +1024,7 @@ main.hotWaterServicesPage {
         .aboutCard {
             background: #142647;
             height: 425px;
-    
+
             .mainImg {
                 height: 100%;
             }
@@ -1031,11 +1034,11 @@ main.hotWaterServicesPage {
             .slick-track {
                 display: flex;
             }
-    
+
             .slick-slide {
                 height: inherit;
             }
-    
+
             .box {
                 position: relative;
                 padding: 39px 22px;
@@ -1044,11 +1047,81 @@ main.hotWaterServicesPage {
                 z-index: 1;
                 background: #112649;
                 transition: 0.35s all ease;
-    
+
                 &:hover {
                     transform: scale(1.05);
                 }
             }
         }
+    }
+}
+
+main.tapsAndToiletsServicePage {
+    background: #13264A;
+
+    section.introduction {
+        border-radius: 0 0 100% 100%;
+        padding: 140px 0 200px;
+        background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(115deg, #142445 0%, #1A356D 100%);
+    }
+
+    section.help {
+        background: #13264A;
+    }
+
+    .services {
+        .tapstoiltesservices-slider {
+            .slick-slide {
+                position: relative;
+                margin: 0 21px 30px;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    border-radius: 0 0 35px 35px;
+                }
+
+                .overlay {
+                    background: #152F5F;
+                    border-radius: 100px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    text-align: center;
+                    min-height: 64px;
+                    padding: 12px 6px 32px;
+                    z-index: 9;
+                }
+
+                .button {
+                    position: absolute;
+                    bottom: -26px;
+                    background: $primary;
+                    border-radius: 100px;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+    .hot-water-faq-slider {
+        .box {
+            background: #0D2143 !important;
+        }
+    }
+}
+
+main.rainwaterServicePage {
+    .introduction {
+        background: imgUrl('hotwaterservices_introduction.png') right center;
+        backdrop-filter: blur(10px);
+    }
+}
+
+main.gasPlumbingServicePage {
+    .introduction {
+        background: #0D1E3F !important;
+        padding: 36px;
     }
 }

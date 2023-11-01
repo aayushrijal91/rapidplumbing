@@ -141,7 +141,19 @@ $('.membershipSlider').slick({
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "100px"
-})
+});
+
+$('.tapstoiltesservices-slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    autoplay: false,
+    variableWidth: true,
+    touchThreshold: 1000,
+});
 
 function validateForm(form) {
     const inputs = form.find('input.required');
