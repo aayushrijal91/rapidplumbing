@@ -979,7 +979,9 @@ main.rainwaterServicePage,
 main.gasPlumbingServicePage,
 main.generalPlumbingServicePage,
 main.propertyManagersServicePage,
-main.leakDetectionServicePage {
+main.leakDetectionServicePage,
+main.renovationPlumbersServicePage,
+main.roofingGutteringServicePage {
     section.introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
     }
@@ -1135,7 +1137,8 @@ main.leakDetectionServicePage {
     }
 }
 
-main.generalPlumbingServicePage {
+main.generalPlumbingServicePage,
+main.renovationPlumbersServicePage {
     .services {
         .tapstoiltesservices-slider {
             .slick-slide {
@@ -1257,5 +1260,12 @@ main.leakDetectionServicePage {
                 }
             }
         }
+    }
+}
+
+main.roofingGutteringServicePage {
+    .about {
+        background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
+        padding: 60px 96px;
     }
 }
