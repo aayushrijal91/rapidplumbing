@@ -894,6 +894,11 @@ main.blockedDrainServicesPage {
 
     section.about {
         .callRapidCard {
+            &.primaryborder {
+                border: 6px solid $primary;
+                box-sizing: border-box;
+            }
+
             img.heroImage {
                 object-position: center;
             }
@@ -971,7 +976,8 @@ main.emergencyPlumbingServicesPage {
 main.hotWaterServicesPage,
 main.tapsAndToiletsServicePage,
 main.rainwaterServicePage,
-main.gasPlumbingServicePage {
+main.gasPlumbingServicePage,
+main.generalPlumbingServicePage {
     section.introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
     }
@@ -1123,5 +1129,65 @@ main.gasPlumbingServicePage {
     .introduction {
         background: #0D1E3F !important;
         padding: 36px;
+    }
+}
+
+main.generalPlumbingServicePage {
+    .services {
+        .tapstoiltesservices-slider {
+            .slick-slide {
+                position: relative;
+                margin: 0 21px 30px;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    border-radius: 0 0 35px 35px;
+                }
+
+                .overlay {
+                    background: #152F5F;
+                    border-radius: 100px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    text-align: center;
+                    min-height: 64px;
+                    padding: 12px 6px 32px;
+                    z-index: 9;
+                }
+
+                .button {
+                    position: absolute;
+                    bottom: -26px;
+                    background: $primary;
+                    border-radius: 100px;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+    section.about {
+        .callRapidCard {
+            &.primaryborder {
+                border: 6px solid $primary;
+                box-sizing: border-box;
+            }
+
+            img.heroImage {
+                object-position: center;
+            }
+
+            .overlay {
+                background: linear-gradient(180deg, rgba(21, 47, 95, 0.00) 0%, #152F5F 100%);
+                padding: 28px;
+
+                p {
+                    font-size: 48px;
+                }
+            }
+        }
     }
 }

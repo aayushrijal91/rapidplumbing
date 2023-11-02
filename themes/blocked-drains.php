@@ -106,15 +106,15 @@ require 'inc/serviceBanner.php';
     <section class="about py-8">
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <article class="callRapidCard h-100 position-relative">
+                <div class="col-md-4">
+                    <article class="callRapidCard primaryborder h-100 position-relative">
                         <img class="heroImage h-100 w-100 object-fit-cover" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/callRapid.jpg" alt="Remove drain blockages fast" />
                         <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
                             <p class="fw-800 lh-1">Call Rapid to Remove Drain Blockages Fast</p>
                         </div>
                     </article>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <h3 class="fs-36 highlight-primary lh-1 py-4">Call Rapid <span>to Remove Drain Blockages Fast</span></h3>
                     <article class="description fs-18 pt-4">
                         <p>When it comes to taking care of blocked drains, you will find that early vigilance is key. When you are running water in the sink, or when you are taking a shower, keep track of the water level. If the water level is not running down as quickly as it should, you need to look for a fix.</p>
@@ -126,7 +126,7 @@ require 'inc/serviceBanner.php';
                         <p>New drain traps are much better at keeping things from going down the sink than older ones that might be frayed or that have less of a good seal.</p>
                     </article>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <article class="callRapidCard h-100 position-relative">
                         <img class="heroImage h-100 w-100 object-fit-cover" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/prevent-blocked-drains.jpg" alt="How to prevent blocked drains" />
                         <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
