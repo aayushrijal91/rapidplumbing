@@ -181,67 +181,6 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <div class="container pt-7">
-            <h3 class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</h3>
-
-            <div class="row gy-5 pt-5">
-                <div class="col-md-6 col-lg-4">
-                    <article class="helpCard">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" class="w-100" />
-                        <div class="overlay">
-                            <p class="fs-24 fw-700 lh-1 text-start">Gas Hot Water Systems</p>
-                            <a href="#" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <article class="helpCard">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" class="w-100" />
-                        <div class="overlay">
-                            <p class="fs-24 fw-700 lh-1 text-start">Gas Hot Water Systems Electric Hot Water Systems</p>
-                            <a href="#" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <article class="helpCard">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" class="w-100" />
-                        <div class="overlay">
-                            <p class="fs-24 fw-700 lh-1 text-start">Instant Hot Water Systems</p>
-                            <a href="#" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <article class="helpCard">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" class="w-100" />
-                        <div class="overlay">
-                            <p class="fs-24 fw-700 lh-1 text-start">Hot Water Installations</p>
-                            <a href="#" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <article class="helpCard">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" class="w-100" />
-                        <div class="overlay">
-                            <p class="fs-24 fw-700 lh-1 text-start">Hot Water Service/Repairs</p>
-                            <a href="#" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <article class="helpCard">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" class="w-100" />
-                        <div class="overlay">
-                            <p class="fs-24 fw-700 lh-1 text-start">Heat Pumps</p>
-                            <a href="#" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center">Gas Plumbing Sydney FAQs</h3>

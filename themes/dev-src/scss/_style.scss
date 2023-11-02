@@ -977,7 +977,8 @@ main.hotWaterServicesPage,
 main.tapsAndToiletsServicePage,
 main.rainwaterServicePage,
 main.gasPlumbingServicePage,
-main.generalPlumbingServicePage {
+main.generalPlumbingServicePage,
+main.propertyManagersServicePage {
     section.introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
     }
@@ -1188,6 +1189,26 @@ main.generalPlumbingServicePage {
                     font-size: 48px;
                 }
             }
+        }
+    }
+}
+
+main.propertyManagersServicePage {
+    background: #13264A;
+
+    section.introduction {
+        border-radius: 0 0 100% 100%;
+        padding: 140px 0 200px;
+        background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
+    }
+
+    section.help {
+        background: #13264A;
+    }
+
+    .hot-water-faq-slider {
+        .box {
+            background: #0D2143 !important;
         }
     }
 }

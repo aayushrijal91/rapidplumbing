@@ -32,7 +32,7 @@ require 'inc/serviceBanner.php';
 
 <main class="tapsAndToiletsServicePage">
     <section class="introduction position-relative overflow-hidden">
-    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/tapstoilets-introduction.png" class="plumber-right position-absolute top-0 end-0" alt="Plumber Left" />
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/tapstoilets-introduction.png" class="plumber-right position-absolute top-0 end-0" alt="Plumber Left" />
 
         <div class="container">
             <div class="row">
