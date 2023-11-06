@@ -1267,5 +1267,15 @@ main.roofingGutteringServicePage {
     .about {
         background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
         padding: 60px 96px;
+
+        .aboutCard {
+            background: #142647;
+            height: 100% !important;
+            padding: 28px;
+
+            .mainImg {
+                height: 100%;
+            }
+        }
     }
 }

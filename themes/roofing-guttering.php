@@ -36,6 +36,33 @@ require 'inc/serviceBanner.php';
             <div class="about">
                 <h3 class="fs-50 text-center text-primary fw-700">Keep your home dry during storms</h3>
                 <p class="text-center fs-20 pt-3">Get your roofs and gutters looked as if you don't want a wet day!</p>
+                <div class="py-5">
+                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/roof.jpg" alt="Roof and gutter cleaning" class="w-100" />
+                </div>
+                <article class="fs-18 lh-1_67 description">
+                    <p>Proper roofing and guttering are essential components of a well-maintained property. They protect structures from the effects of severe weather, such as heavy rain or hail, preventing leaks and potential damage to walls and ceilings. It is important to ensure functionality stays good between storms, lest disaster strikes.</fs-18 lh-1_67p>
+                    <p>Rapid Plumbing Group offers comprehensive roofing and guttering services, including installation, maintenance, and repairs. Our team is experienced in dealing with all types of roofs, from metal to tile to shingle. We also offer gutter cleaning to remove debris and ensure smooth flow during storms. Don't wait for a leak or other problem to arise - protect your property with our roofing and guttering services.</p>
+                </article>
+                <div class="row">
+                    <div class="col-4">
+                        <article class="aboutCard d-flex flex-column">
+                            <p class="fs-24 text-center pb-4 flex-grow-1">Roof Leak Repairs</p>
+                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/roof1.jpg" alt="Roof and gutter cleaning" class="w-100" />
+                        </article>
+                    </div>
+                    <div class="col-4">
+                        <article class="aboutCard d-flex flex-column">
+                            <p class="fs-24 text-center pb-4 flex-grow-1">Gutter Installation, Repairs & Cleaning</p>
+                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/roof2.jpg" alt="Roof and gutter cleaning" class="w-100" />
+                        </article>
+                    </div>
+                    <div class="col-4">
+                        <article class="aboutCard d-flex flex-column">
+                            <p class="fs-24 text-center pb-4 flex-grow-1">Downpipe Installation/Repairs</p>
+                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/roof3.jpg" alt="Roof and gutter cleaning" class="w-100" />
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
 
