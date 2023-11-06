@@ -981,7 +981,10 @@ main.generalPlumbingServicePage,
 main.propertyManagersServicePage,
 main.leakDetectionServicePage,
 main.renovationPlumbersServicePage,
-main.roofingGutteringServicePage {
+main.roofingGutteringServicePage,
+main.septicSystemsServicePage,
+main.backflowPreventionServicePage,
+main.waterFiltersServicePage {
     section.introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
     }
@@ -1122,10 +1125,9 @@ main.tapsAndToiletsServicePage {
     }
 }
 
-main.rainwaterServicePage {
+main.rainwaterServicePage, main.septicSystemsServicePage {
     .introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center;
-        backdrop-filter: blur(10px);
     }
 }
 
@@ -1277,5 +1279,11 @@ main.roofingGutteringServicePage {
                 height: 100%;
             }
         }
+    }
+}
+
+main.waterFiltersServicePage {
+    .introduction {
+        background: imgUrl('hotwaterservices_introduction.png') right 400%, linear-gradient(102deg, #0B1934 0%, #13264A 100%) !important;
     }
 }
