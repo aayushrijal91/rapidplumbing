@@ -984,7 +984,9 @@ main.renovationPlumbersServicePage,
 main.roofingGutteringServicePage,
 main.septicSystemsServicePage,
 main.backflowPreventionServicePage,
-main.waterFiltersServicePage {
+main.waterFiltersServicePage,
+main.commercialPlumbingServicePage,
+main.schoolsServicePage {
     section.introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
     }
@@ -1125,14 +1127,15 @@ main.tapsAndToiletsServicePage {
     }
 }
 
-main.rainwaterServicePage, main.septicSystemsServicePage {
+main.rainwaterServicePage, main.septicSystemsServicePage, main.schoolsServicePage {
     .introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center;
     }
 }
 
 main.gasPlumbingServicePage,
-main.leakDetectionServicePage {
+main.leakDetectionServicePage,
+main.commercialPlumbingServicePage {
     .introduction {
         background: #0D1E3F !important;
         padding: 36px;
@@ -1200,7 +1203,7 @@ main.renovationPlumbersServicePage {
     }
 }
 
-main.propertyManagersServicePage {
+main.propertyManagersServicePage, main.schoolsServicePage {
     background: #13264A;
 
     section.introduction {
@@ -1220,7 +1223,7 @@ main.propertyManagersServicePage {
     }
 }
 
-main.leakDetectionServicePage {
+main.leakDetectionServicePage, main.commercialPlumbingServicePage {
     section.help {
         section.services {
             background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
@@ -1285,5 +1288,21 @@ main.roofingGutteringServicePage {
 main.waterFiltersServicePage {
     .introduction {
         background: imgUrl('hotwaterservices_introduction.png') right 400%, linear-gradient(102deg, #0B1934 0%, #13264A 100%) !important;
+    }
+}
+
+main.commercialPlumbingServicePage {
+    section.services {
+        background: transparent !important;
+    }
+}
+
+main.schoolsServicePage {
+    .introduction {
+        background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(115deg, #142445 0%, #1A356D 100%) !important;
+
+        .rounded-xl {
+            border-radius: 15px !important;
+        }
     }
 }
