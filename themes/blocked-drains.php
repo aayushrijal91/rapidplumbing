@@ -1,6 +1,10 @@
 <?php
 $page_content_arr = array();
 $page_content = blocked_drains_content::get_data($page_content_arr);
+
+$blocked_drains_services_arr = array('orderBy' => 'dragSortOrder ASC');
+$blocked_drains_services = blocked_drains_services::get_data($blocked_drains_services_arr);
+
 if (count($page_content)) {
     $page_content = $page_content[0];
 }
@@ -47,16 +51,14 @@ require 'inc/serviceBanner.php';
                             <h3 class="text-primary fs-70 lh-1 text-end">home today!</h3>
                         </article>
                     </article>
-                    <article class="text-center fs-18 description pt-5 fw-300">
-                        <p class="fw-700">Is a blocked drain preventing water from flowing out of your home?</p>
+                    <article class="text-center fs-18 description pt-5 fw-300 lh-1_5">
+                        <p class="fw-700"><?= _isset($page_content, 'introduction_subtitle') ?></p>
 
-                        <p>Rapid Plumbing Group Pty Ltd offers a full range of cleaning, preventative maintenance and plumbing repair solutions. When homeowners ignore poor water pressure, reduced performance from fixtures and appliances, or other major plumbing issues it often results in the need for professional services and solutions.</p>
-
-                        <p>Read on to learn more about water jetting and how it may improve the function of your utilities and reduce the risk of developing future blocked drain problems.</p>
+                        <?= _isset($page_content, 'introduction_description') ?>
                     </article>
 
                     <button class="bg-transparent rounded-pill mt-5">
-                        <a href="#" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
+                        <a href="<?= _isset($page_content, 'introduction_button') ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
                     </button>
                 </div>
             </div>
@@ -68,38 +70,12 @@ require 'inc/serviceBanner.php';
             <h3 class="fs-70 fw-500 lh-1 highlight-primary"><span>Blocked Drains</span> services</h3>
         </div>
         <div class="expect-slider pt-7 position-relative z-1">
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img1.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">24 Hour Emergency Service</p>
-            </article>
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img2.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">Septic Tank Services</p>
-            </article>
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img3.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">Rain Water Tanks & Pumps</p>
-            </article>
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img4.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">Sewer & Stormwater</p>
-            </article>
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img5.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">Backflow Testing & Certification</p>
-            </article>
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img6.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">Broken Pipe Repair</p>
-            </article>
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img7.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">Bathroom Renovations</p>
-            </article>
-            <article class="box">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img8.jpg" alt="Rapid Plumbing Van" />
-                <p class="overlay">Water Jetting</p>
-            </article>
+            <?php foreach ($blocked_drains_services as $service) { ?>
+                <article class="box">
+                    <?= _imgSrc($service, 'image', ''); ?>
+                    <p class="overlay"><?= $service['title'] ?></p>
+                </article>
+            <?php } ?>
         </div>
     </section>
 
@@ -108,29 +84,24 @@ require 'inc/serviceBanner.php';
             <div class="row">
                 <div class="col-md-4">
                     <article class="callRapidCard primaryborder h-100 position-relative">
-                        <img class="heroImage h-100 w-100 object-fit-cover" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/callRapid.jpg" alt="Remove drain blockages fast" />
+                        <?= _imgSrc($page_content, 'about_image_1', 'heroImage h-100 w-100 object-fit-cover'); ?>
                         <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
-                            <p class="fw-800 lh-1">Call Rapid to Remove Drain Blockages Fast</p>
+                            <p class="fw-800 lh-1"><?= _isset($page_content, 'about_image_1_title') ?></p>
                         </div>
                     </article>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="fs-36 highlight-primary lh-1 py-4">Call Rapid <span>to Remove Drain Blockages Fast</span></h3>
+                    <h3 class="fs-36 highlight-primary lh-1 py-4"><?= _isset($page_content, 'about_title') ?></h3>
                     <article class="description fs-18 pt-4">
-                        <p>When it comes to taking care of blocked drains, you will find that early vigilance is key. When you are running water in the sink, or when you are taking a shower, keep track of the water level. If the water level is not running down as quickly as it should, you need to look for a fix.</p>
-
-                        <p>On a regular basis, run hot water down the drain to clear away grease or soap sediment. Make sure that you use traps to prevent debris from going down the drain, and teach your children not to stick things down the drain, even if it looks like fun.</p>
-
-                        <p>Preventing drain blockages is something that just takes a bit of time and effort. Remember that old drain traps should be replaced.</p>
-
-                        <p>New drain traps are much better at keeping things from going down the sink than older ones that might be frayed or that have less of a good seal.</p>
+                        <?= _isset($page_content, 'about_description') ?>
                     </article>
                 </div>
                 <div class="col-md-4">
                     <article class="callRapidCard h-100 position-relative">
                         <img class="heroImage h-100 w-100 object-fit-cover" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/prevent-blocked-drains.jpg" alt="How to prevent blocked drains" />
                         <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
-                            <p class="fw-800 lh-1">How Can You Prevent Blocked Drains?</p>
+                            <p class="fw-800 lh-1">
+                            <p class="fw-800 lh-1"><?= _isset($page_content, 'about_image_2_title') ?></p>
                         </div>
                     </article>
                 </div>
