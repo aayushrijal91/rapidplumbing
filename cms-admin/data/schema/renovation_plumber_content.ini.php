@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Renovation Plumber Content',
-  'menuOrder' => '0000000055',
+  'menuOrder' => '0000000057',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

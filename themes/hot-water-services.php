@@ -50,8 +50,11 @@ require 'inc/serviceBanner.php';
                         <article class="description fs-18 lh-1_5 py-4">
                             <?= _isset($page_content, 'introduction_description') ?>
                         </article>
+                        
                         <?php if (!empty($page_content['introduction_button_link'])) : ?>
-                            <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 d-inline-flex">Enquire</a>
+                            <button class="bg-transparent rounded-pill mt-4">
+                                <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
+                            </button>
                         <?php endif; ?>
                     </article>
                 </div>
