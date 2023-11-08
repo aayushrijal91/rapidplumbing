@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '',
   'menuHidden' => '0',
   'menuName' => 'Settings',
-  'menuOrder' => '0000000064',
+  'menuOrder' => '0000000066',
   'menuType' => 'menugroup',
 );
 ?>

@@ -938,11 +938,8 @@ main.emergencyPlumbingServicesPage {
     section.trustworthy-plumbers {
         .trustCard {
             background: #1D1D1E;
-            height: 425px;
-
-            .mainImg {
-                height: 100%;
-            }
+            min-height: 425px;
+            height: 100%;
         }
     }
 

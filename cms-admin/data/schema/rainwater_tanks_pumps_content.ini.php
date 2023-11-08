@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Rainwater Tanks & Pumps Content',
-  'menuOrder' => '0000000043',
+  'menuOrder' => '0000000045',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

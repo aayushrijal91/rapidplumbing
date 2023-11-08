@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'blocked_drains_menugroup',
   'menuName' => 'Blocked Drains',
-  'menuOrder' => '0000000031',
+  'menuOrder' => '0000000032',
   'menuType' => 'menugroup',
 );
 ?>
