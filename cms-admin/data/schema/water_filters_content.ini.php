@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Water Filters Content',
-  'menuOrder' => '0000000061',
+  'menuOrder' => '0000000063',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
