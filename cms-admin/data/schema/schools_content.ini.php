@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Schools Content',
-  'menuOrder' => '0000000078',
+  'menuOrder' => '0000000080',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
