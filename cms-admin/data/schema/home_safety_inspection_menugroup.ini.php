@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'home_safety_inspection_menugroup',
   'menuName' => 'Home Safety Inspection',
-  'menuOrder' => '0000000025',
+  'menuOrder' => '0000000028',
   'menuType' => 'menugroup',
 );
 ?>

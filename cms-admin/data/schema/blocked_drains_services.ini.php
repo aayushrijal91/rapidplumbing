@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Blocked Drains Services',
-  'menuOrder' => '0000000034',
+  'menuOrder' => '0000000037',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

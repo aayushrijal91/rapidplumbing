@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Hot Water Services List',
-  'menuOrder' => '0000000044',
+  'menuOrder' => '0000000047',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

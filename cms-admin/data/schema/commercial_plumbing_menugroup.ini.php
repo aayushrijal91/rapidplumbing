@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'commercial_plumbing_menugroup',
   'menuName' => 'Commercial Plumbing',
-  'menuOrder' => '0000000081',
+  'menuOrder' => '0000000084',
   'menuType' => 'menugroup',
 );
 ?>

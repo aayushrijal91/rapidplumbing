@@ -1,28 +1,38 @@
 <?php
-$AboutPageArr = array();
-$AboutPage = about_content::get_data($AboutPageArr);
-if (count($AboutPage)) {
-    $AboutPage = $AboutPage[0];
+$page_contentArr = array();
+$page_content = about_content::get_data($page_contentArr);
+
+if (count($page_content)) {
+    $page_content = $page_content[0];
 }
 
+$services = array('orderBy' => 'dragSortOrder ASC');
+$services = about_services::get_data($services);
+
+$stakeholders = array('orderBy' => 'dragSortOrder ASC');
+$stakeholders = about_preface::get_data($stakeholders);
+
+$staff_quotes = array('orderBy' => 'dragSortOrder ASC');
+$staff_quotes = about_staff_quotes::get_data($staff_quotes);
+
 /*  Meta data */
-$meta_title         = $AboutPage['meta_title'];
-$meta_description     = $AboutPage['meta_description'];
-$meta_keyword         = $AboutPage['meta_keyword'];
+$meta_title         = $page_content['meta_title'];
+$meta_description     = $page_content['meta_description'];
+$meta_keyword         = $page_content['meta_keyword'];
 $meta_image         = '';
 $meta_url             = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 /* Meta Data End */
 
 /* Banner Array Start */
-$banner_details['banner_image'] = $AboutPage['banner_video_image'];
-// $banner_details['mobile_background_image'] = $AboutPage['mobile_banner_image'];
-$banner_details['banner_title_heading_tag'] = $AboutPage['banner_title_heading_tag'];
-$banner_details['banner_title'] = $AboutPage['banner_title'];
-$banner_details['banner_subtitle'] = $AboutPage['banner_subtitle'];
-$banner_details['banner_button_1_text'] = $AboutPage['banner_button_1_text'];
-$banner_details['banner_button_1_link'] = $AboutPage['banner_button_1_link'];
-$banner_details['banner_button_2_text'] = $AboutPage['banner_button_2_text'];
-$banner_details['banner_button_2_link'] = $AboutPage['banner_button_2_link'];
+$banner_details['banner_image'] = $page_content['banner_video_image'];
+// $banner_details['mobile_background_image'] = $page_content['mobile_banner_image'];
+$banner_details['banner_title_heading_tag'] = $page_content['banner_title_heading_tag'];
+$banner_details['banner_title'] = $page_content['banner_title'];
+$banner_details['banner_subtitle'] = $page_content['banner_subtitle'];
+$banner_details['banner_button_1_text'] = $page_content['banner_button_1_text'];
+$banner_details['banner_button_1_link'] = $page_content['banner_button_1_link'];
+$banner_details['banner_button_2_text'] = $page_content['banner_button_2_text'];
+$banner_details['banner_button_2_link'] = $page_content['banner_button_2_link'];
 /*  Banner Array End */
 
 require 'inc/header.php';
@@ -35,18 +45,17 @@ require 'inc/banner.php';
         <section class="mission">
             <div class="row align-items-center">
                 <div class="col-lg-4">
-                    <h3 class="fs-64 fw-500 lh-1">Our <span class="text-primary">Mission</span></h3>
+                    <h3 class="fs-64 fw-500 lh-1 highlight-primary"><?= _isset($page_content, 'introduction_title') ?></h3>
                 </div>
                 <div class="col-lg-8">
-                    <p class="fw-700 fs-18">Provide a fast and efficient plumbing solution whilst not compromising on the quality of work or safety.</p>
+                    <p class="fw-700 fs-18"><?= _isset($page_content, 'introduction_subtitle') ?></p>
                 </div>
             </div>
 
             <img class="py-5 w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/about-us-mission.gif" alt="Rapid Plumbing Van" />
 
             <article class="description fs-18">
-                <p>We are committed to ensuring that our clients are totally satisfied with the overall experience of dealing with our company and it is our philosophy to provide the highest level of customer service and workmanship to ensure our service meets and exceeds expectations.</p>
-                <p>Our expert Penrith technicians are committed to providing effective and efficient results and are dedicated to letting our professionalism and workmanship leave a lasting impression. Don’t just take our word for it.</p>
+                <?= _isset($page_content, 'introduction_description') ?>
             </article>
 
             <div class="row gx-3 mt-6">
@@ -114,55 +123,41 @@ require 'inc/banner.php';
     <section class="services py-6">
         <div class="container">
             <div class="row align-items-center justify-content-between">
+
                 <div class="col-auto">
-                    <h3 class="fs-64 fw-500">Services</h3>
+                    <h3 class="fs-64 fw-500"><?= _isset($page_content, 'services_title') ?></h3>
                 </div>
+
                 <div class="col-auto">
-                    <a href="<?= _issetUrl($banner_details, 'banner_button_1_link'); ?>" class="btn btn-secondary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($banner_details, 'banner_button_1_text'); ?></a>
+                    <?php if (!empty($page_content['services_button_link']) && !empty($page_content['services_button_text'])) : ?>
+                        <button class="bg-transparent rounded-pill mt-4">
+                            <a href="<?= _issetUrl($page_content, 'services_button_link'); ?>" class="btn btn-secondary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'services_button_text') ?></a>
+                        </button>
+                    <?php endif; ?>
                 </div>
             </div>
 
             <hr class="border-primary my-4" />
 
-            <p class="fs-18">Rapid Plumbing Group is a fully licensed and insured business that offers an impressive total plumbing, drainage and gas fitting services to our domestic, industrial, and commercial clients. Our services range from small maintenance jobs to large multi level developments within the area. No issue is ever too big or too small for our experts to handle.</p>
+            <article class="fs-18"><?= _isset($page_content, 'services_description'); ?></article>
 
             <div class="row pt-5">
-                <div class="col-md-6 col-lg-3">
-                    <article class="serviceCard">
-                        <img class="heroImage w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/service-1.jpg" alt="Plumbing" />
-                        <div class="title rounded-pill">
-                            <p class="px-4 fs-20 fw-700 text-capitalize">Plumbing</p>
-                            <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-4 fs-18 fw-700">Enquire</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <article class="serviceCard">
-                        <img class="heroImage w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/service-2.jpg" alt="Blocked Drains" />
-                        <div class="title rounded-pill">
-                            <p class="px-4 fs-20 fw-700 text-capitalize">Blocked Drains</p>
-                            <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-4 fs-18 fw-700">Enquire</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <article class="serviceCard">
-                        <img class="heroImage w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/service-3.jpg" alt="Hot Water" />
-                        <div class="title rounded-pill">
-                            <p class="px-4 fs-20 fw-700 text-capitalize">Hot Water</p>
-                            <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-4 fs-18 fw-700">Enquire</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <article class="serviceCard">
-                        <img class="heroImage w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/service-4.jpg" alt="Gas Fitting" />
-                        <div class="title rounded-pill">
-                            <p class="px-4 fs-20 fw-700 text-capitalize">Gas Fitting</p>
-                            <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-4 fs-18 fw-700">Enquire</a>
-                        </div>
-                    </article>
-                </div>
+                <?php foreach ($services as $service) : ?>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="serviceCard">
+                            <?= _imgSrc($service, 'image', 'heroImage w-100') ?>
+                            <div class="title rounded-pill">
+                                <p class="px-4 fs-20 fw-700 text-capitalize"><?= _isset($service, 'title') ?></p>
+
+                                <?php if (!empty($service['button_link'])) : ?>
+                                    <button class="bg-transparent rounded-pill">
+                                        <a href="<?= _issetUrl($service, 'button_link'); ?>" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-4 fs-18 fw-700">Enquire</a>
+                                    </button>
+                                <?php endif; ?>
+                            </div>
+                        </article>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -170,51 +165,27 @@ require 'inc/banner.php';
     <section class="stakeholders">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-12">
-                    <article class="stakeholderCard">
-                        <div class="row align-items-center">
-                            <div class="col-3">
-                                <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/stakeholder-1.jpg" alt="Rapid Plumbing Van" />
+                <?php foreach ($stakeholders as $stakeholder) : ?>
+                    <div class="col-12">
+                        <article class="stakeholderCard">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <?= _imgSrc($stakeholder, 'image', 'w-100 h-100') ?>
+                                </div>
+                                <div class="col">
+                                    <article class="px-5 py-4">
+                                        <p class="fs-24 fw-500"><?= _isset($stakeholder, 'title') ?></p>
+
+                                        <article class="fs-18 text-primary-light pt-3">
+                                            <?= _isset($stakeholder, 'content') ?>
+                                        </article>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="col">
-                                <article class="px-5 py-4">
-                                    <p class="fs-24 fw-500">Staff</p>
-                                    <p class="fs-18 text-primary-light pt-3">Our fully trained and experienced team work tirelessly to build a reputation of being professional, reliable and competent in all aspects of the plumbing trade. We do this by providing cost effective solutions to our customers’ specific needs. Additionally, we participate in regular trainings to ensure that we are industry leaders in the plumbing world. We have sourced the industries most dedicated and professional tradesmen to enable us to maintain the highest level of customer service and satisfaction.</p>
-                                </article>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12">
-                    <article class="stakeholderCard">
-                        <div class="row align-items-center">
-                            <div class="col-3">
-                                <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/stakeholder-2.jpg" alt="Rapid Plumbing Van" />
-                            </div>
-                            <div class="col">
-                                <article class="px-5 py-4">
-                                    <p class="fs-24 fw-500">Clients</p>
-                                    <p class="fs-18 text-primary-light pt-3">Our client base is wide and varied which has seen us complete works for a variety of corporate sectors, agents, and builders alike. These include large organizations such as Transfield, Westfield shopping centres, Woolworths, and various government agencies such as N.S.W Fire Services, Defense Housing (DHA), NSW Primary and Secondary Schools, and various local councils. We have been able to continually exceed KPI’s with our maintenance contracts and are also highly regarded and respected for completing large projects well in advance of deadlines.</p>
-                                </article>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12">
-                    <article class="stakeholderCard">
-                        <div class="row align-items-center">
-                            <div class="col-3">
-                                <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/stakeholder-3.jpg" alt="Rapid Plumbing Van" />
-                            </div>
-                            <div class="col">
-                                <article class="px-5 py-4">
-                                    <p class="fs-24 fw-500">Policies</p>
-                                    <p class="fs-18 text-primary-light pt-3">Our tradesmen follow a strict OHS policy and also adhere to a detailed Code of Conduct and cleanliness policies to ensure that our image in the community is held in high regard. All of our technicians are background checked and certified to complete services in your home. We always keep your home clean and safe providing all of our customers the peace of mind that their property is in the best shape possible.</p>
-                                </article>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                        </article>
+                    </div>
+                <?php endforeach; ?>
+
             </div>
         </div>
     </section>
@@ -224,17 +195,14 @@ require 'inc/banner.php';
             <div class="row align-items-end">
                 <div class="col-lg-6">
                     <article class="py-5 pt-lg-8 pb-lg-6">
-                        <h3 class="fs-64 fw-400 text-capitalize lh-1">Message From Our Owners <span class="fw-700 text-primary">We'll Be there in a flush</span></h3>
+                        <h3 class="fs-64 fw-400 text-capitalize lh-1 highlight-primary"><?= _isset($page_content, 'message_title') ?></h3>
                         <article class="description fs-18 lh-1_5 pt-4">
-                            <p class="fw-600">A message from owner operators, Scott & Melanie Mahboub</p>
-                            <p class="">Since starting our own business way back in 2005, we've always had one main focus in mind - to provide our clients a fast, personalised, friendly and expert service at an honest, affordable price. This continued philosophy has enabled us to grow & expand our customer base across multiple industry sectors. Our continued growth has positioned us ahead of the field & helped us to become the go to plumbing company in the Greater Sydney & lower Blue Mountains regions.</p>
-                            <p class="">With the combined experience of over 210 years, we are well known for thinking outside of the box and having an innovative and environmentally friendly approach to all plumbing issues. It is our pleasure to serve you whether you are a home or business owner, Strata, real estate or facility Manager, Government agency or builder, we are here to help give you piece of mind & ensure that the job will get done right at the best possible price first time, every single time.</p>
-                            <p class="fw-600">That is our promise to you!!!!</p>
+                            <?= _isset($page_content, 'message_description') ?>
                         </article>
                     </article>
                 </div>
                 <div class="col-lg-6">
-                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/ceo.png" alt="CEO" />
+                    <?= _imgSrc($page_content, 'message_image', 'h-100 w-100') ?>
                 </div>
             </div>
         </div>
@@ -244,27 +212,21 @@ require 'inc/banner.php';
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <h3 class="fs-64 lh-1">Why <span class="text-primary">Choose Rapid?</span></h3>
-                    <article class="description py-5">
-                        <p class="fs-18 fw-500">No issue is too big or too small for our plumbers!</p>
-                        <p class="fs-18 lh-1_5">
-                            Nothing is worse than having a plumbing issues in your home or property. When this occurs you could find yourself looking for a reliable and professional Penrith plumber. At Rapid Plumbing Group Pty Ltd we offer customers in an around Penrith expert plumbing solutions.
-                        </p>
+                    <h3 class="fs-64 lh-1 highlight-primary"><?= _isset($page_content, 'why_us_title') ?></h3>
+
+                    <article class="description py-5 fs-18 lh-1_67">
+                        <?= _isset($page_content, 'why_us_description') ?>
                     </article>
-                    <a href="<?= _issetUrl($banner_details, 'banner_button_1_link'); ?>" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-7 fs-18 fw-700">Enquire</a>
+
+                    <?php if (!empty($page_content['why_us_button_link']) && !empty($page_content['why_us_button_text'])) : ?>
+                        <button class="bg-transparent rounded-pill">
+                            <a href="<?= _issetUrl($page_content, 'why_us_button_link'); ?>" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-7 fs-18 fw-700"><?= _isset($page_content, 'why_us_button_text') ?></a>
+                        </button>
+                    <?php endif; ?>
                 </div>
+
                 <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-4">
-                            <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-about-1.jpg" alt="Why us" />
-                        </div>
-                        <div class="col-4">
-                            <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-about-2.jpg" alt="Why us" />
-                        </div>
-                        <div class="col-4">
-                            <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-about-3.jpg" alt="Why us" />
-                        </div>
-                    </div>
+                    <?= _imgSrc($page_content, 'why_us_image', 'w-100 h-100') ?>
                 </div>
             </div>
         </div>
@@ -272,58 +234,26 @@ require 'inc/banner.php';
 
     <div class="container py-5 py-md-6 py-lg-10">
         <section class="review" id="about-review">
-            <article>
-                <div class="row align-items-center gx-lg-6">
-                    <div class="col-lg-6">
-                        <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-review-1.jpg" alt="Testimonial" />
-                    </div>
-                    <div class="col-lg-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="42" viewBox="0 0 71 42" fill="none">
-                            <path d="M27.5461 41.578H0.806641L17.9199 0.628418H35.4915L27.5461 41.578ZM62.231 41.578H35.6443L52.7576 0.628418H70.1764L62.231 41.578Z" fill="#00AEEF" />
-                        </svg>
+            <?php foreach ($staff_quotes as $quote) : ?>
+                <article>
+                    <div class="row align-items-center gx-lg-6">
+                        <div class="col-lg-6">
+                            <?= _imgSrc($quote, 'image' , 'w-100 h-100') ?>
+                        </div>
+                        <div class="col-lg-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="71" height="42" viewBox="0 0 71 42" fill="none">
+                                <path d="M27.5461 41.578H0.806641L17.9199 0.628418H35.4915L27.5461 41.578ZM62.231 41.578H35.6443L52.7576 0.628418H70.1764L62.231 41.578Z" fill="#00AEEF" />
+                            </svg>
 
-                        <h2 class="fs-48 fw-700 lh-1 text-primary py-4">“Finally, a local plumber <span class="text-white">you can rely on</span> to provide a professional reliable service without being ripped off”</h2>
-                        <p class="fs-18 lh-1_5 pt-4">At Rapid Plumbing Group Pty Ltd we provide all of our customers with dedicated services and attention. Our technicians will always provide you with pricing at affordable rates and with no hidden fees. We are dedicated to providing our customers with the care and attention that they deserve. We will always ensure that you are 100% satisfied with the services we perform on your home or property.</p>
-                    </div>
-                </div>
-            </article>
+                            <h2 class="fs-48 fw-700 lh-1 text-primary py-4 highlight-white"><?= _isset($quote, 'title') ?></h2>
 
-            <article>
-                <div class="row align-items-center gx-lg-6">
-                    <div class="col-lg-6">
-                        <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-review-2.jpg" alt="Testimonial" />
+                            <article class="fs-18 lh-1_5 pt-4">
+                                <?= _isset($quote, 'content') ?>
+                            </article>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="42" viewBox="0 0 71 42" fill="none">
-                            <path d="M27.5461 41.578H0.806641L17.9199 0.628418H35.4915L27.5461 41.578ZM62.231 41.578H35.6443L52.7576 0.628418H70.1764L62.231 41.578Z" fill="#00AEEF" />
-                        </svg>
-
-                        <h2 class="fs-48 fw-700 lh-1 text-primary py-4">“Great <span class="text-white">service and quality</span> workmanship.”</h2>
-                        <article class="description pt-4 fs-18 lh-1_5">
-                            <p>At Rapid Plumbing Group Pty Ltd we provide all of our customers with dedicated services and attention. Our technicians will always provide you with pricing at affordable rates and with no hidden fees. We are dedicated to providing our customers with the care and attention that they deserve. We will always ensure that you are 100% satisfied with the services we perform on your home or property.</p>
-                        </article>
-                    </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="row align-items-center gx-lg-6">
-                    <div class="col-lg-6">
-                        <img class="w-100" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/why-us-review-3.jpg" alt="Testimonial" />
-                    </div>
-                    <div class="col-lg-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="42" viewBox="0 0 71 42" fill="none">
-                            <path d="M27.5461 41.578H0.806641L17.9199 0.628418H35.4915L27.5461 41.578ZM62.231 41.578H35.6443L52.7576 0.628418H70.1764L62.231 41.578Z" fill="#00AEEF" />
-                        </svg>
-
-                        <h2 class="fs-48 fw-700 lh-1 text-primary py-4">“The boys are always on time and <span class="text-white">always provide choices</span> that are cost effective for me and always clean up after themselves.”</h2>
-                        <article class="description pt-4 fs-18 lh-1_5">
-                            <p>Whenever we are called to a job, we always put our customers first. We do this by providing quality services, arriving on time, and always providing our customers with multiple price points and options. This allows us to get the job done and stay affordable in the face of plumbing emergencies.</p>
-                            <p>Additionally, our technicians will always clean up after themselves to ensure that your home is kept clean and organized even after we finish our services.</p>
-                        </article>
-                    </div>
-                </div>
-            </article>
+                </article>
+            <?php endforeach; ?>
         </section>
     </div>
 

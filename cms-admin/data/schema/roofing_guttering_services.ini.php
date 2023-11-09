@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Roofing Guttering Services',
-  'menuOrder' => '0000000069',
+  'menuOrder' => '0000000072',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

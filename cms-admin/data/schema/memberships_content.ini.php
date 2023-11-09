@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Memberships Content',
-  'menuOrder' => '0000000024',
+  'menuOrder' => '0000000027',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
