@@ -63,7 +63,7 @@ require 'inc/serviceBanner.php';
                         </article>
                     </div>
                     <div class="col-6">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/recycle-and-reuse.png" alt="" />
+                        <?= _imgSrc($page_content, 'introduction_image', 'h-100 w-100'); ?>
                     </div>
                 </div>
             </section>

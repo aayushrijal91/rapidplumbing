@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Authentication',
-  'menuOrder' => '0000000080',
+  'menuOrder' => '0000000081',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
