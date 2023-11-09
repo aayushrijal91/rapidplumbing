@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'leak_detection_menugroup',
   'menuName' => 'Leak Detection',
-  'menuOrder' => '0000000059',
+  'menuOrder' => '0000000060',
   'menuType' => 'menugroup',
 );
 ?>
