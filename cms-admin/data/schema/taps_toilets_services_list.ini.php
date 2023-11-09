@@ -21,9 +21,9 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '0',
+  'menuHidden' => '1',
   'menuName' => 'Taps & Toilets Services List',
-  'menuOrder' => '0000000046',
+  'menuOrder' => '0000000048',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

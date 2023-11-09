@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Emergency Plumbing Content',
-  'menuOrder' => '0000000038',
+  'menuOrder' => '0000000040',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

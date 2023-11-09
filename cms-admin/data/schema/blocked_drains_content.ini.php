@@ -612,5 +612,29 @@ return array (
     'customUploadDir' => '',
     'customUploadUrl' => '',
   ),
+  'services' => array(
+    'order' => 30,
+    'label' => 'Services',
+    'type' => 'relatedRecords',
+    'indexed' => '',
+    'defaultValue' => '',
+    'fieldPrefix' => '',
+    'description' => '',
+    'isRequired' => '0',
+    'isUnique' => '0',
+    'listType' => 'pulldown',
+    'optionsType' => 'text',
+    'optionsText' => 'option one
+option two
+option three',
+    'relatedTable' => 'blocked_drains_services',
+    'relatedLimit' => '25',
+    'relatedView' => '1',
+    'relatedModify' => '1',
+    'relatedErase' => '1',
+    'relatedCreate' => '1',
+    'relatedWhere' => '',
+    'relatedMoreLink' => '',
+  ),
 );
 ?>
