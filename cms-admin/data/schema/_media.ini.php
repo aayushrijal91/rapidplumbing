@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Media Library',
-  'menuOrder' => '0000000092',
+  'menuOrder' => '0000000094',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(
