@@ -57,9 +57,11 @@ require 'inc/serviceBanner.php';
                         <?= _isset($page_content, 'introduction_description') ?>
                     </article>
 
-                    <button class="bg-transparent rounded-pill mt-5">
-                        <a href="<?= _isset($page_content, 'introduction_button') ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
-                    </button>
+                    <?php if (!empty($page_content['introduction_button'])) : ?>
+                        <button class="bg-transparent rounded-pill mt-5">
+                            <a href="<?= _issetUrl($page_content, 'introduction_button'); ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
+                        </button>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -98,9 +100,8 @@ require 'inc/serviceBanner.php';
                 </div>
                 <div class="col-md-4">
                     <article class="callRapidCard h-100 position-relative">
-                        <img class="heroImage h-100 w-100 object-fit-cover" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/prevent-blocked-drains.jpg" alt="How to prevent blocked drains" />
+                        <?= _imgSrc($page_content, 'about_image_2', 'heroImage h-100 w-100 object-fit-cover'); ?>
                         <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
-                            <p class="fw-800 lh-1">
                             <p class="fw-800 lh-1"><?= _isset($page_content, 'about_image_2_title') ?></p>
                         </div>
                     </article>

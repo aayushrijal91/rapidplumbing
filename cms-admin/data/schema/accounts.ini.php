@@ -9,7 +9,7 @@ return array (
   'listPageSearchFields' => 'fullname, username, email',
   'menuHidden' => '0',
   'menuName' => 'User Accounts',
-  'menuOrder' => '0000000078',
+  'menuOrder' => '0000000080',
   'menuPrefixIcon' => 'fa-user',
   'menuType' => 'multi',
   'tableHidden' => '0',

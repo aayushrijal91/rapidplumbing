@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'property_strata_managers_menugroup',
   'menuName' => 'Property & Strata Managers',
-  'menuOrder' => '0000000055',
+  'menuOrder' => '0000000057',
   'menuType' => 'menugroup',
 );
 ?>
