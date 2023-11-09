@@ -113,7 +113,7 @@ require 'inc/serviceBanner.php';
 
         <section class="serviceFaq pt-8">
             <div class="container">
-                <h3 class="fs-60 fw-700 highlight-secondary text-center">Hot Water Services Sydney FAQs</h3>
+                <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
                 <div class="hot-water-faq-slider pt-6 pt-lg-7 z-1">
                     <?php foreach ($faqs as $faq) : ?>
                         <article class="box">
