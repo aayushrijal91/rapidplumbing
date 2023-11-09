@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => '',
   'listPageSearchFields' => '_all_',
   'menuName' => 'Email Settings',
-  'menuOrder' => '0000000077',
+  'menuOrder' => '0000000079',
   'menuType' => 'single',
   'num' => array(
     'order' => 1,

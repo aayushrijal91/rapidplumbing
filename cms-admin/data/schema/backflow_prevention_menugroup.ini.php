@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'backflow_prevention_menugroup',
   'menuName' => 'Backflow Prevention',
-  'menuOrder' => '0000000068',
+  'menuOrder' => '0000000070',
   'menuType' => 'menugroup',
 );
 ?>

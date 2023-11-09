@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Commercial Plumbing Content',
-  'menuOrder' => '0000000073',
+  'menuOrder' => '0000000075',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
