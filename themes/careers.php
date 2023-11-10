@@ -1,30 +1,31 @@
 <?php
 $CareersPageArr = array();
-$CareersPage = careers_content::get_data($CareersPageArr);
-if (count($CareersPage)) {
-    $CareersPage = $CareersPage[0];
+$page_content = careers_content::get_data($CareersPageArr);
+
+if (count($page_content)) {
+    $page_content = $page_content[0];
 }
 
 /* Assets Rates multi record end */
 
 /*  Meta data */
-$meta_title         = $CareersPage['meta_title'];
-$meta_description     = $CareersPage['meta_description'];
-$meta_keyword         = $CareersPage['meta_keyword'];
+$meta_title         = $page_content['meta_title'];
+$meta_description     = $page_content['meta_description'];
+$meta_keyword         = $page_content['meta_keyword'];
 $meta_image         = '';
 $meta_url             = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 /* Meta Data End */
 
 /* Banner Array Start */
-$banner_details['banner_image'] = $CareersPage['banner_video_image'];
-// $banner_details['mobile_background_image'] = $CareersPage['mobile_banner_image'];
-$banner_details['banner_title_heading_tag'] = $CareersPage['banner_title_heading_tag'];
-$banner_details['banner_title'] = $CareersPage['banner_title'];
-$banner_details['banner_subtitle'] = $CareersPage['banner_subtitle'];
-$banner_details['banner_button_1_text'] = $CareersPage['banner_button_1_text'];
-$banner_details['banner_button_1_link'] = $CareersPage['banner_button_1_link'];
-$banner_details['banner_button_2_text'] = $CareersPage['banner_button_2_text'];
-$banner_details['banner_button_2_link'] = $CareersPage['banner_button_2_link'];
+$banner_details['banner_image'] = $page_content['banner_video_image'];
+// $banner_details['mobile_background_image'] = $page_content['mobile_banner_image'];
+$banner_details['banner_title_heading_tag'] = $page_content['banner_title_heading_tag'];
+$banner_details['banner_title'] = $page_content['banner_title'];
+$banner_details['banner_subtitle'] = $page_content['banner_subtitle'];
+$banner_details['banner_button_1_text'] = $page_content['banner_button_1_text'];
+$banner_details['banner_button_1_link'] = $page_content['banner_button_1_link'];
+$banner_details['banner_button_2_text'] = $page_content['banner_button_2_text'];
+$banner_details['banner_button_2_link'] = $page_content['banner_button_2_link'];
 /*  Banner Array End */
 
 require 'inc/header.php';
@@ -34,8 +35,8 @@ require 'inc/banner.php';
 
 <main class="careersPage">
     <div class="container">
-        <h2 class="fs-64 fw-800 text-center">The pipeline to success</h2>
-        <p class="fs-18 fw-300 text-center py-3 col-lg-9 mx-auto">The plumbing scene is eternally competitive-a lone tradie is prone to drowning (ironically). Sometimes, it's good to have people watching your back, and we can give you just that at Rapid Plumbing Group.</p>
+        <h2 class="fs-64 fw-800 text-center"><?= _isset($page_content, 'introduction_title') ?></h2>
+        <p class="fs-18 fw-300 text-center py-3 col-lg-9 mx-auto"><?= _isset($page_content, 'introduction_description') ?></p>
         <div class="text-center pt-4">
             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/career-pipeline.png" alt="Rapid Plumbing Van" />
         </div>
@@ -43,20 +44,17 @@ require 'inc/banner.php';
         <div class="careerForm mt-6 mt-lg-9">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h3 class="fs-55 fw-700 lh-1">Ready to advance your career in this industry?</h3>
-                    <p class="py-4 fw-300">Apply with the form and one of our team members will be in contact with you.</p>
+                    <h3 class="fs-55 fw-700 lh-1"><?= _isset($page_content, 'form_title') ?></h3>
+
+                    <p class="py-4 fw-300"><?= _isset($page_content, 'form_description') ?></p>
+
                     <h4 class="fs-30 fw-800">Job benefits</h4>
-                    <ul class="pt-4">
-                        <li>Superannuation</li>
-                        <li>Holiday pay</li>
-                        <li>Good overtime/after-hours pay</li>
-                        <li>Work phone</li>
-                        <li>Work uniform</li>
-                        <li>Work vehicle</li>
-                        <li>Sales training</li>
-                        <li>Bonuses</li>
-                    </ul>
+
+                    <article class="pt-4">
+                        <?= _isset($page_content, 'job_benefits') ?>
+                    </article>
                 </div>
+                
                 <div class="col-lg-6">
                     <form id="enquiry_form" class="needs-validation" method="POST" novalidate>
                         <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
