@@ -402,6 +402,10 @@ main.homepage {
     section.pricematching {
         background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
         padding-top: 97px;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 80px;
+        }
     }
 }
 

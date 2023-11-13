@@ -492,25 +492,29 @@ require 'inc/nav.php';
     </section>
 
     <section class="pricematching position-relative z-1 overflow-hidden">
-        <div class="row align-items-center">
-            <div class="col-xl-6">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-price-matching.png" alt="Rapid Plumbing Van" />
-            </div>
-            <div class="col-xl-6">
-                <div class="pe-xl-15">
-                    <h3 class="fs-64 lh-1 fw-500">Rapid <span class="text-primary">Price Matching</span></h3>
-                    <article class="fs-18 description py-5">
-                        <p><strong>Is your Plumber giving you the best deal? Let us be your FREE second opinion</strong></p>
-                        <p>Experiencing a drainage, sewer or plumbing problem? Have you received an outrageous quote from another company? We offer FREE second opinions and will do our best to BEAT ANY competitors price!*</p>
+        <div class="container-fluid px-0">
+            <div class="row align-items-center gy-5">
+                <div class="col-xl-6 order-2 order-md-1">
+                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-price-matching.png" alt="Rapid Plumbing Van" />
+                </div>
+                <div class="col-xl-6 order-1 order-md-2">
+                    <article class="px-3 px-md-0 pe-xl-15">
+                        <h3 class="fs-64 lh-1 fw-500">Rapid <span class="text-primary">Price Matching</span></h3>
+
+                        <article class="fs-18 description py-4 py-md-5">
+                            <p><strong>Is your Plumber giving you the best deal? Let us be your FREE second opinion</strong></p>
+                            <p>Experiencing a drainage, sewer or plumbing problem? Have you received an outrageous quote from another company? We offer FREE second opinions and will do our best to BEAT ANY competitors price!*</p>
+                        </article>
+
+                        <div class="row">
+                            <div class="col-6 col-md-auto">
+                                <a href="#" class="btn btn-white text-primary rounded-pill px-3 px-lg-5 fs-18 fw-700">Get Started</a>
+                            </div>
+                            <div class="col-6 col-md-auto">
+                                <a href="#" class="btn btn-outline-white rounded-pill px-3 px-lg-5 fs-18 border-2 fw-700">Conditions</a>
+                            </div>
+                        </div>
                     </article>
-                    <div class="row">
-                        <div class="col-auto">
-                            <a href="#" class="btn btn-white text-primary rounded-pill px-3 px-lg-5 fs-18 fw-700">Get Started</a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="#" class="btn btn-outline-white rounded-pill px-3 px-lg-5 fs-18 border-2 fw-700">Conditions</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

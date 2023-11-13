@@ -315,6 +315,24 @@ section.globalCta {
     }
 }
 
+footer {
+    .mobileServiceBtn {
+        background: rgba(97,99,108,0.2);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: $white;
+        min-height: 51px;
+        padding: 6px 23px;
+        font-size: 18px;
+        letter-spacing: -0.18px;
+        font-weight: 700;
+        font-style: italic;
+        text-transform: capitalize;
+    }
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 10px;

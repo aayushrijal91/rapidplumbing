@@ -60,6 +60,18 @@ $('.gallery-slider').slick({
     speed: 500,
     autoplay: false,
     touchThreshold: 1000,
+    responsive: [
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: false,
+                centerPadding: 0,
+                autoplay: true,
+            }
+        }
+    ]
 });
 
 $('.trusted-main-slider').slick({
