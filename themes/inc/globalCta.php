@@ -1,6 +1,6 @@
 <section class="globalCta">
     <div class="container">
-        <div class="row">
+        <div class="row gy-4">
             <?php if (!empty($HomePage['service_1_title'])) : ?>
                 <div class="col-lg-6">
                     <article class="ctaWrapper">
@@ -15,7 +15,9 @@
                             </div>
                             <article>
                                 <p class="fs-20 fw-700 text-capitalize"><?= _isset($HomePage, 'service_1_title') ?></p>
-                                <article class="text-light fs-18 py-3"><?= _isset($HomePage, 'service_1_content') ?></article>
+
+                                <article class="text-light fs-18 py-3 description"><?= _isset($HomePage, 'service_1_content') ?></article>
+
                                 <a href="<?= _issetUrl($HomePage, 'service_1_button_link') ?>" class="btn btn-primary rounded-0 fs-18 fw-700 text-white mt-4">Learn More</a>
                             </article>
                         </article>
@@ -37,7 +39,9 @@
                                 </div>
                                 <article>
                                     <p class="fs-20 fw-700 text-capitalize"><?= _isset($HomePage, 'service_2_title') ?></p>
-                                    <article class="text-light fs-18 py-3"><?= _isset($HomePage, 'service_2_content') ?></article>
+
+                                    <article class="text-light fs-18 py-3 description"><?= _isset($HomePage, 'service_2_content') ?></article>
+
                                     <a href="<?= _issetUrl($HomePage, 'service_2_button_link') ?>" class="btn btn-primary rounded-0 fs-18 fw-700 text-white mt-4">Learn More</a>
                                 </article>
                             </article>
@@ -55,7 +59,9 @@
                                 </a>
                                 <article>
                                     <p class="fs-20 fw-700 text-capitalize"><?= _isset($HomePage, 'service_3_title') ?></p>
-                                    <article class="text-light fs-18 py-3"><?= _isset($HomePage, 'service_3_content') ?></article>
+
+                                    <article class="text-light fs-18 py-3 description"><?= _isset($HomePage, 'service_3_content') ?></article>
+                                    
                                     <a href="<?= _issetUrl($HomePage, 'service_3_button_link') ?>" class="btn btn-primary rounded-0 fs-18 fw-700 text-white mt-4">Learn More</a>
                                 </article>
                             </article>

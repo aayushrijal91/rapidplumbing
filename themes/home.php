@@ -65,7 +65,7 @@ require 'inc/nav.php';
 
     <section class="trusted position-relative z-1">
         <div class="row align-items-center">
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="trusted-main-slider">
                     <div>
                         <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-img1.jpg" alt="Rapid Plumbing Van" />
@@ -87,11 +87,12 @@ require 'inc/nav.php';
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <article class="p-7 pe-10 d-flex flex-column gap-1_5">
+            <div class="col-md-6">
+                <article class="px-3 py-6 p-md-7 pe-md-10 d-flex flex-column gap-1_5">
                     <p class="fs-70 fw-500 lh-1">Your <span class="text-primary">Trusted</span> <br>Penrith <span class="text-primary">Plumber.</span></p>
-                    <p class="fs-20 py-4 col-xl-9">We pride ourselves on our reputation for fast, friendly service, and all of our staff is fully trained to uphold our high standards in everything they do.</p>
-                    <div class="trusted-thumbnail-slider">
+
+                    <p class="fs-20 py-4 col-xl-9 description">We pride ourselves on our reputation for fast, friendly service, and all of our staff is fully trained to uphold our high standards in everything they do.</p>
+                    <div class="trusted-thumbnail-slider pt-md-4">
                         <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail1.jpg" alt="Rapid Plumbing Van" /></div>
                         <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail2.jpg" alt="Rapid Plumbing Van" /></div>
                         <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/trusted-thumbnail3.jpg" alt="Rapid Plumbing Van" /></div>
@@ -110,14 +111,19 @@ require 'inc/nav.php';
     <section class="blue-gradient overflow-hidden">
         <section class="welcome position-relative">
             <div class="container position-relative">
-                <h3 class="fs-64 fw-500 text-center lh-1"><span class="text-primary">Welcome</span> to Rapid Plumbing Group</h3>
-                <p class="fs-20 text-center pt-5">Your commercial preventative & reactive maintenance specialists</p>
-                <div class="text-center py-6"><a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700">More About Us</a></div>
-                <div class="row justify-content-center">
+                <h3 class="fs-64 fw-500 text-md-center lh-1 highlight-primary"><span>Welcome</span> to Rapid Plumbing Group</h3>
+
+                <p class="fs-20 text-md-center pt-4 pt-md-5">Your commercial preventative & reactive maintenance specialists</p>
+
+                <div class="text-center py-6 d-none d-md-block">
+                    <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700">More About Us</a>
+                </div>
+
+                <div class="row justify-content-center pt-5 pt-md-0">
                     <div class="col-xl-9">
-                        <div class="row gx-3">
-                            <div class="col">
-                                <article class="awardCard mt-7">
+                        <div class="row gx-3" id="awards-slider">
+                            <div class="col-6 col-md">
+                                <article class="awardCard mt-md-7">
                                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2018</p>
@@ -125,8 +131,8 @@ require 'inc/nav.php';
                                     <p class="fs-14 fw-600">Finalists</p>
                                 </article>
                             </div>
-                            <div class="col">
-                                <article class="awardCard mt-5">
+                            <div class="col-6 col-md">
+                                <article class="awardCard mt-md-5">
                                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2019</p>
@@ -134,8 +140,8 @@ require 'inc/nav.php';
                                     <p class="fs-14 fw-600">Finalists</p>
                                 </article>
                             </div>
-                            <div class="col">
-                                <article class="awardCard mt-9">
+                            <div class="col-6 col-md">
+                                <article class="awardCard mt-md-9">
                                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2020</p>
@@ -143,7 +149,7 @@ require 'inc/nav.php';
                                     <p class="fs-14 fw-600">Finalists</p>
                                 </article>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md">
                                 <article class="awardCard">
                                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
@@ -152,8 +158,8 @@ require 'inc/nav.php';
                                     <p class="fs-14 fw-600">Finalists</p>
                                 </article>
                             </div>
-                            <div class="col">
-                                <article class="awardCard mt-7">
+                            <div class="col-6 col-md">
+                                <article class="awardCard mt-md-7">
                                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2022</p>
@@ -164,7 +170,12 @@ require 'inc/nav.php';
                         </div>
                     </div>
                 </div>
+
+                <div class="text-center pt-5 d-md-none">
+                    <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700">More About Us</a>
+                </div>
             </div>
+
             <div class="welcome-bg welcome-bg1 position-absolute start-0 top-50 translate-middle-y mt-5 z-n1"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/welcome-bg1.png" alt="Rapid Plumbing Van" /></div>
             <div class="welcome-bg welcome-bg2 position-absolute end-0 top-50 translate-middle-y mt-5 z-n1"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/welcome-bg2.png" alt="Rapid Plumbing Van" /></div>
             <div class="circle-gradient circle-gradient-1"></div>
@@ -172,8 +183,8 @@ require 'inc/nav.php';
 
         <section class="help">
             <div class="container position-relative z-1">
-                <h3 class="fs-64 fw-500 text-center lh-1">How can we <span class="text-primary">help</span> you?</h3>
-                <div class="row pt-8">
+                <h3 class="fs-64 fw-500 text-md-center lh-1">How can we <span class="text-primary">help</span> you?</h3>
+                <div class="row pt-5 pt-md-8 gy-3">
                     <div class="col-xl-3">
                         <article class="helpCard">
                             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" />
@@ -185,7 +196,7 @@ require 'inc/nav.php';
                     </div>
                     <div class="col-xl-3">
                         <article class="helpCard">
-                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img2.jpg" alt="Rapid Plumbing Van" />
+                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" />
                             <div class="overlay">
                                 <p class="title">Hot water system repair & replacement</p>
                                 <a href="#" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700">ENQUIRE</a>
@@ -194,7 +205,7 @@ require 'inc/nav.php';
                     </div>
                     <div class="col-xl-3">
                         <article class="helpCard">
-                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img3.jpg" alt="Rapid Plumbing Van" />
+                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" />
                             <div class="overlay">
                                 <p class="title">Gas Fitting Services</p>
                                 <a href="#" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
@@ -203,7 +214,7 @@ require 'inc/nav.php';
                     </div>
                     <div class="col-xl-3">
                         <article class="helpCard">
-                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img4.jpg" alt="Rapid Plumbing Van" />
+                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/help-img1.jpg" alt="Rapid Plumbing Van" />
                             <div class="overlay">
                                 <p class="title">Blocked Drain Repair & Water Jetting</p>
                                 <a href="#" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
@@ -216,10 +227,10 @@ require 'inc/nav.php';
 
         <section class="process">
             <div class="container position-relative z-1">
-                <h3 class="fs-70 fw-500 text-center lh-1">The <span class="text-primary">rapid</span> 3-step process</h3>
-                <div class="row justify-content-center pt-8">
+                <h3 class="fs-70 fw-500 text-md-center lh-1 highlight-primary">The <span>rapid</span> 3-step process</h3>
+                <div class="row justify-content-center pt-5 pt-md-8">
                     <div class="col-xl-9">
-                        <div class="row">
+                        <div class="row gy-4">
                             <div class="col-xl-4">
                                 <article class="processCard">
                                     <p class="number">01</p>
@@ -262,7 +273,7 @@ require 'inc/nav.php';
 
         <section class="expect position-relative">
             <div class="container position-relative z-1">
-                <div class="row align-items-center">
+                <div class="row align-items-center gy-4">
                     <div class="col-xl-5">
                         <h3 class="fs-70 fw-500 lh-1 mb-0">What to <span class="text-primary">expect</span> from us?</h3>
                     </div>
@@ -274,7 +285,7 @@ require 'inc/nav.php';
                     </div>
                 </div>
             </div>
-            <div class="expect-slider pt-7 position-relative z-1">
+            <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
                 <article class="box">
                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/expect-img1.jpg" alt="Rapid Plumbing Van" />
                     <p class="overlay">24 Hour Emergency Service</p>
@@ -316,13 +327,17 @@ require 'inc/nav.php';
                 <div class="main">
                     <div class="row align-items-center gx-xl-8">
                         <div class="col-xl-6">
-                            <article class="ps-1_75">
-                                <h4 class="fs-48 lh-1 fw-500">Have a project in mind?</h4>
-                                <p class="fs-18 pt-4 pb-6">We offer professional, onsite quotes for only $49 - which is credited to your job, if you go ahead with us! All plumbing quotes are no-obligation and hassle-free!</p>
-                                <a href="#" class="btn btn-white text-primary rounded-pill px-lg-5 px-3 fs-18 fw-700 d-inline-flex">Enquire</a>
+                            <article class="ps-md-1_75">
+                                <h4 class="fs-48 lh-1 fw-500 text-center text-md-start">Have a project in mind?</h4>
+
+                                <p class="fs-18 pt-4 pb-4 pb-md-6 text-center text-md-start description">We offer professional, onsite quotes for only $49 - which is credited to your job, if you go ahead with us! All plumbing quotes are no-obligation and hassle-free!</p>
+
+                                <div class="d-flex justify-content-center justify-content-md-start">
+                                    <a href="#" class="btn btn-white text-primary rounded-pill px-lg-5 px-5 px-md-3 fs-18 fw-700 d-inline-flex">Enquire</a>
+                                </div>
                             </article>
                         </div>
-                        <div class="col-xl-6">
+                        <div class="col-auto col-xl-6 d-none d-md-block">
                             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/project-in-mind.jpg" class="rounded-10 overflow-hidden" alt="Rapid Plumbing Van" />
                         </div>
                     </div>
@@ -332,10 +347,10 @@ require 'inc/nav.php';
 
         <section class="customers">
             <div class="container">
-                <div class="row align-items-center justify-content-between">
+                <div class="row align-items-center justify-content-between gy-5">
                     <div class="col-xl-4">
                         <p class="fs-64 lh-1 fw-500"><span class="text-primary">See what our</span> customers <span class="text-primary">have to say</span></p>
-                        <div class="row pt-6">
+                        <div class="row pt-6 d-none d-md-flex">
                             <div class="col-6">
                                 <a href="#" class="btn btn-primary text-white rounded-pill fs-18 fw-700">Leave A Review</a>
                             </div>
@@ -353,7 +368,7 @@ require 'inc/nav.php';
                                         <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/testimonial1.png" alt="Rapid Plumbing Van" />
 
                                         <div class="position-absolute end-0 bottom-0 mb-n0_5 me-n0_5">
-                                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/google.png" alt="Rapid Plumbing Van" />
+                                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/google.png" alt="Rapid Plumbing Van" />
                                         </div>
                                     </div>
                                     <p class="fs-24 fw-700 lh-1 mt-2_5 mb-3">Lorraine C.</p>
@@ -387,7 +402,7 @@ require 'inc/nav.php';
                                         <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/testimonial3.png" alt="Rapid Plumbing Van" />
 
                                         <div class="position-absolute end-0 bottom-0 mb-n0_5 me-n0_5">
-                                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/facebook.png" alt="Rapid Plumbing Van" />
+                                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/somebox.png" alt="Rapid Plumbing Van" />
                                         </div>
                                     </div>
                                     <p class="fs-24 fw-700 lh-1 mt-2_5 mb-3">Lorraine C.</p>
@@ -416,20 +431,29 @@ require 'inc/nav.php';
                         </div>
                     </div>
                 </div>
+
+                <div class="row pt-6 d-md-none">
+                    <div class="col-6">
+                        <a href="#" class="btn btn-primary text-white rounded-pill fs-18 fw-700">Leave A Review</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="btn border-white border-2 text-white rounded-pill fs-18 fw-700">Read More</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="whyUs position-relative">
             <div class="container position-relative z-1">
-                <div class="row gx-lg-5 align-items-center">
-                    <div class="col-auto">
+                <div class="row gx-lg-5 align-items-center gy-4">
+                    <div class="col-md-auto">
                         <h3 class="fs-64 lh-1 fw-500 mb-0"><span class="text-primary">Why</span> hire us?</h3>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <p class="fs-18">When deciding on a plumber for all of your residential and commercial plumbing needs, you want to be sure the company you choose not only has the right qualifications, but also has your best interests at heart. Our team of professionals provides honest, high quality workmanship at a price you can agree on.</p>
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-5 gy-3">
                     <div class="col-xl-3">
                         <article class="whyusCard">
                             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/family-owned.png" alt="Rapid Plumbing Van" />

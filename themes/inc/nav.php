@@ -14,9 +14,10 @@ $header_menu_section = header_menu::get_data($header_menu_section_Arr);
 $services_menu_list_Arr = array();
 $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
 ?>
+
 <header class="header pb-2" id="header">
     <div class="container-fluid">
-        <div class="row align-items-center px-xl-5 py-3">
+        <div class="row justify-content-between align-items-center px-xl-5 py-2 py-md-3">
             <div class="col-auto">
                 <a href="./" class="">
                     <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +28,7 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
             <div class="col-auto">
                 <a href="<?php echo V_SITE_URL; ?>"><?= _imgSrc($header_settings, 'site_logo', 'header__logo'); ?></a>
             </div>
-            <div class="col">
+            <div class="col d-none d-md-block">
                 <?php if (!empty($header_menu_section)) { ?>
                     <nav class="navbar navbar-expand-lg collapsed ">
                         <div class="collapse navbar-collapse  justify-content-center" id="navbarContent">
@@ -42,11 +43,12 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
                     </nav>
                 <?php } ?>
             </div>
-            <div class="col-auto">
+
+            <div class="col-auto d-none d-md-block">
                 <div class="row align-items-center gx-xl-5">
                     <div class="col-auto">
                         <a href="tel:<?php echo preg_replace('/[^\d]/i', '', _isset($contact_info, 'phone_number')); ?>" class="btn btn-primary text-white fs-27 text-italic fw-700 gap-2">
-                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/buzzing-phone.gif" width=38 height=38 alt="" />
+                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/buzzing-phone.gif" width=38 height=38 alt="Phone" />
                             <?= _isset($contact_info, 'phone_number'); ?>
                         </a>
                     </div>
@@ -72,9 +74,15 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
                     <?php endif; ?>
                 </div>
             </div>
+
+            <div class="col-auto">
+                <a href="tel:<?php echo preg_replace('/[^\d]/i', '', _isset($contact_info, 'phone_number')); ?>">
+                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/buzzing-phone-dark.gif" width=38 height=38 alt="Phone" />
+                </a>
+            </div>
         </div>
         <?php if (!empty($services_menu_list)) : ?>
-            <div class="row g-2">
+            <div class="row g-2 d-none d-md-flex">
                 <?php foreach ($services_menu_list as $service) : ?>
                     <div class="col">
                         <a class="serviceBtn" href="<?= _issetUrl($service, 'link') ?>">

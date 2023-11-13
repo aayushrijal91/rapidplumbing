@@ -1,6 +1,6 @@
 <section class="contactForm">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center gy-5">
             <div class="col-lg-6">
                 <div class="title">
                     <article>
@@ -15,28 +15,28 @@
                     <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
                     <input type="hidden" name="request" value="enquiry_form_request">
                     <div class="row gy-5">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="firstName">First Name</label>
                                 <input type="text" name="firstName" id="firstName" class="form-control required" placeholder="E.g. John" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="lastName">Last Name</label>
                                 <input type="text" name="lastName" id="lastName" class="form-control required" placeholder="E.g. Smith" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="emailAddress">Email</label>
                                 <input type="email" name="emailAddress" id="emailAddress" class="form-control required" placeholder="E.g. johnsmith@gmail.com" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="phoneNumber">Number</label>
                                 <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control required" placeholder="E.g. 0400 000 000" />

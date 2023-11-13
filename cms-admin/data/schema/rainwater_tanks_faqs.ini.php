@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Rainwater Tanks FAQs',
-  'menuOrder' => '0000000055',
+  'menuOrder' => '0000000058',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

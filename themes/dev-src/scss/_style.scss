@@ -81,10 +81,19 @@ main.homepage {
             .slick-arrow {
                 &.slick-prev {
                     left: -55px;
+                    z-index: 1000;
+
+                    @include media-breakpoint-down(sm) {
+                        left: -15px;
+                    }
                 }
 
                 &.slick-next {
                     right: -43px;
+
+                    @include media-breakpoint-down(sm) {
+                        right: 2px;
+                    }
                 }
 
                 &:before {
@@ -119,10 +128,21 @@ main.homepage {
         z-index: 1;
         padding: 140px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 60px 0;
+        }
+
         .awardCard {
             padding: 21px 24px;
             background: rgba(23, 157, 219, 0.2);
             text-align: center;
+            
+            @include media-breakpoint-down(sm) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 6px;
+            }
         }
 
         .welcome-circle-bg {
@@ -139,10 +159,25 @@ main.homepage {
     section.help {
         padding: 140px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
+
         .helpCard {
             position: relative;
             z-index: 1;
             transition: 0.35s all ease;
+            height: 500px;
+
+            @include media-breakpoint-down(sm) {
+                height: 218px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
 
             .overlay {
                 position: absolute;
@@ -183,6 +218,10 @@ main.homepage {
 
     section.process {
         padding: 140px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
 
         .processCard {
             background: rgba(23, 157, 219, 0.2);
@@ -228,6 +267,10 @@ main.homepage {
     section.expect {
         padding: 140px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
+
         .expect-slider {
             .box {
                 position: relative;
@@ -272,14 +315,26 @@ main.homepage {
     section.project {
         padding: 140px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
+
         .main {
             background: rgba(123, 157, 219, 0.2);
             padding: 30px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 48px 16px;
+            }
         }
     }
 
     section.customers {
         padding: 110px 0 140px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
 
         .testimonials-slider {
             .testimonial {
@@ -305,6 +360,10 @@ main.homepage {
 
     section.whyUs {
         padding: 140px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
 
         .whyusCard {
             background: rgba(23, 157, 219, 0.2);

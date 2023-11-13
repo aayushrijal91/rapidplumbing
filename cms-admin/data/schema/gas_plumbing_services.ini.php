@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Gas Plumbing Services',
-  'menuOrder' => '0000000040',
+  'menuOrder' => '0000000043',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

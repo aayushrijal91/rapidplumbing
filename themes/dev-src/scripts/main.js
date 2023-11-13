@@ -91,6 +91,18 @@ $('.trusted-thumbnail-slider').slick({
     nextArrow: `<button class='slick-next'><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.6763" cy="18.066" r="17.7505" fill="#F0C324"/><path d="M15.2998 9.31299L24.0527 18.0659L15.2998 26.8188" stroke="white" stroke-width="4"/></svg></button>`
 });
 
+if ($(window).width() < 540) {
+    $('#awards-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "60px"
+    });
+}
+
+
 $('#about-review').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

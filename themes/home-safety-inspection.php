@@ -42,9 +42,11 @@ require 'inc/banner.php';
                 <div class="col-lg-6">
                     <article class="">
                         <h2 class="fs-64 fw-800 lh-1"><?= _isset($page_content, 'introduction_title') ?></h2>
+                        
                         <article class="description fs-18 pt-4">
                             <?= _isset($page_content, 'introduction_description') ?>
                         </article>
+
                         <div class="row pt-4">
                             <?php if (!empty($page_content['introduction_button_1_link']) && !empty($page_content['introduction_button_1_text'])) : ?>
                                 <div class="col-auto">
