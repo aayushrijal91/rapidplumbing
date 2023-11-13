@@ -39,21 +39,27 @@ require 'inc/nav.php';
 ?>
 
 <main class="homepage">
-    <section class="banner">
+    <section class="position-relative d-flex justify-content-center">
         <div class="w-100">
-            <div class="homebanner">
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/slide-1.jpg" alt="home banner slide" />
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/slide-2.jpg" alt="home banner slide" />
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/slide-3.jpg" alt="home banner slide" />
-                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/slide-4.jpg" alt="home banner slide" />
+            <div class="homebanner d-none d-md-block">
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-1.jpg" alt="home banner slide" />
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-2.jpg" alt="home banner slide" />
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-3.jpg" alt="home banner slide" />
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-4.jpg" alt="home banner slide" />
+            </div>
+            <div class="homebanner d-md-none">
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-sm-1.jpg" alt="home banner slide" />
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-sm-2.jpg" alt="home banner slide" />
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-sm-3.jpg" alt="home banner slide" />
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-sm-4.jpg" alt="home banner slide" />
             </div>
         </div>
-        <div class="rapid-van">
+        <div class="rapid-van position-absolute bottom-0 mx-auto">
             <div class="d-flex justify-content-center mb-4">
                 <a href="" class="text-uppercase btn btn-secondary rounded-pill d-inline-flex fs-18 fw-700 text-white px-5 px-lg-6">Enquire</a>
             </div>
 
-            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-van.png" alt="Rapid Plumbing Van" />
+            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-van.png" alt="Rapid Plumbing Van" class="van"/>
         </div>
     </section>
 
@@ -488,7 +494,7 @@ require 'inc/nav.php';
             <div class="circle-gradient circle-gradient-3"></div>
         </section>
 
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/background/homepage-dots.svg" class="position-relative" alt="Rapid Plumbing Van" />
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/background/homepage-dots.svg" class="position-relative w-100" alt="Rapid Plumbing Van" />
     </section>
 
     <section class="pricematching position-relative z-1 overflow-hidden">

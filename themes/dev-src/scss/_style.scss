@@ -58,15 +58,11 @@ section.serviceBanner {
 
 // Home Page
 main.homepage {
-    section.banner {
-        position: relative;
-        display: flex;
-        justify-content: center;
-
-        .rapid-van {
-            position: absolute;
-            bottom: 0;
-            margin: 0 auto;
+    .rapid-van {
+        img.van {
+            @include media-breakpoint-down(sm) {
+                height: 90px;
+            }
         }
     }
 

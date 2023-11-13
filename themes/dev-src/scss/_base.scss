@@ -52,6 +52,10 @@ img {
     &.bordered {
         border-width: 2px;
     }
+
+    @include media-breakpoint-down(sm) {
+        height: 48px;
+    }
 }
 
 .description {
