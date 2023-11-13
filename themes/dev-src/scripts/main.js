@@ -62,6 +62,15 @@ $('.gallery-slider').slick({
     touchThreshold: 1000,
     responsive: [
         {
+            breakpoint: 1100,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                centerPadding: "60px",
+                autoplay: true,
+            }
+        },
+        {
             breakpoint: 900,
             settings: {
                 slidesToShow: 1,

@@ -236,13 +236,13 @@ $footer_menu = footer_menu::get_data($footer_menu_Arr);
                     </div>
 
                     <div class="copyright mt-7">
-                        <div class="row gx-0_5 gy-5 gy-md-2 align-items-center justify-content-center justify-content-md-between">
+                        <div class="row gx-0_5 gy-5 gy-lg-2 align-items-center justify-content-center justify-content-lg-between">
                             <div class="col-auto order-2 order-md-1">
-                                <p class="text-grey fs-14 fw-500 lh-1 mb-4 text-center">Rapid Plumbing Group</p>
+                                <p class="text-grey fs-14 fw-500 lh-1 mb-4 text-center d-md-none">Rapid Plumbing Group</p>
                                 <p class="text-grey fs-14 fw-500 lh-1 mb-0">Copyright <?php echo date("Y"); ?> <span class="px-4">/</span> <span class="d-none d-md-inline">Rapid Plumbing Group</span> <span class="px-4 d-none d-md-inline">/</span> All Rights Reserved</p>
                             </div>
 
-                            <div class="col-12 col-md-auto order-1 order-md-2">
+                            <div class="col-12 col-lg-auto order-1 order-md-2">
                                 <div class="social d-flex flex-row gap-4 justify-content-center align-items-center">
                                     <a href="#" target="_blank">
                                         <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">

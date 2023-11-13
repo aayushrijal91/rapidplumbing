@@ -501,11 +501,11 @@ require 'inc/nav.php';
     <section class="pricematching position-relative z-1 overflow-hidden">
         <div class="container-fluid px-0">
             <div class="row align-items-center gy-5">
-                <div class="col-xl-6 order-2 order-lg-1">
+                <div class="col-xl-6 order-2 order-xl-1">
                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-price-matching.png" alt="Rapid Plumbing Van" />
                 </div>
-                <div class="col-xl-6 order-1 order-lg-2">
-                    <article class="px-3 px-lg-0 pe-xl-15">
+                <div class="col-xl-6 order-1 order-xl-2">
+                    <article class="px-3 px-xl-0 pe-xl-15">
                         <h3 class="fs-64 lh-1 fw-500">Rapid <span class="text-primary">Price Matching</span></h3>
 
                         <article class="fs-18 description py-4 py-md-5">

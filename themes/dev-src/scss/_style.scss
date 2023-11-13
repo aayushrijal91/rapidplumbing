@@ -60,6 +60,10 @@ section.serviceBanner {
 main.homepage {
     .rapid-van {
         img.van {
+            @include media-breakpoint-down(xl) {
+                height: 120px;
+            }
+
             @include media-breakpoint-down(lg) {
                 height: 90px;
             }

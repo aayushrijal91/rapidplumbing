@@ -1,7 +1,7 @@
 <section class="contactForm">
     <div class="container">
         <div class="row align-items-center gy-5">
-            <div class="col-lg-6">
+            <div class="col-xl-6">
                 <div class="title">
                     <article>
                         <p class="text-1">Enquire</p>
@@ -10,7 +10,7 @@
                     </article>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-xl-6">
                 <form id="enquiry_form" class="needs-validation" method="POST" novalidate>
                     <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
                     <input type="hidden" name="request" value="enquiry_form_request">
