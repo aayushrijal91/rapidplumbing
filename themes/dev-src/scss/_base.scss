@@ -71,6 +71,11 @@ img {
         }
     }
 
+    @include media-breakpoint-down(lg) {
+        font-size: 1rem !important;
+    }
+
+
     @include media-breakpoint-down(sm) {
         font-size: 0.875rem !important;
     }
@@ -133,6 +138,10 @@ section.contactForm {
     padding: 113px 0 33px;
     background: url(../images/background/home-form.png) no-repeat left center;
 
+    @include media-breakpoint-down(lg) {
+        background: none;
+    }
+
     @include media-breakpoint-down(sm) {
         padding: 64px 0 33px;
     }
@@ -153,6 +162,10 @@ section.contactForm {
             font-size: 128px;
             padding-right: 56px;
             line-height: 1;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 85px;
+            }
 
             @include media-breakpoint-down(sm) {
                 font-size: 75px;

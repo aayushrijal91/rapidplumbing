@@ -28,7 +28,7 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
             <div class="col-auto">
                 <a href="<?php echo V_SITE_URL; ?>"><?= _imgSrc($header_settings, 'site_logo', 'header__logo'); ?></a>
             </div>
-            <div class="col d-none d-md-block">
+            <div class="col d-none d-lg-block">
                 <?php if (!empty($header_menu_section)) { ?>
                     <nav class="navbar navbar-expand-lg collapsed ">
                         <div class="collapse navbar-collapse  justify-content-center" id="navbarContent">
@@ -75,14 +75,14 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
                 </div>
             </div>
 
-            <div class="col-auto">
+            <div class="col-auto d-md-none">
                 <a href="tel:<?php echo preg_replace('/[^\d]/i', '', _isset($contact_info, 'phone_number')); ?>">
                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/buzzing-phone-dark.gif" width=38 height=38 alt="Phone" />
                 </a>
             </div>
         </div>
         <?php if (!empty($services_menu_list)) : ?>
-            <div class="row g-2 d-none d-md-flex">
+            <div class="row g-2 d-none d-lg-flex">
                 <?php foreach ($services_menu_list as $service) : ?>
                     <div class="col">
                         <a class="serviceBtn" href="<?= _issetUrl($service, 'link') ?>">
