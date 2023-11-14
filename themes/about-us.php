@@ -43,7 +43,7 @@ require 'inc/banner.php';
 <main class="aboutUsPage">
     <div class="container py-6">
         <section class="mission">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-4">
                 <div class="col-lg-4">
                     <h3 class="fs-64 fw-500 lh-1 highlight-primary"><?= _isset($page_content, 'introduction_title') ?></h3>
                 </div>
@@ -58,10 +58,10 @@ require 'inc/banner.php';
                 <?= _isset($page_content, 'introduction_description') ?>
             </article>
 
-            <div class="row gx-3 mt-6">
-                <div class="col-4">
+            <div class="row justify-content-center g-3 mt-5 mt-md-6">
+                <div class="col-md-6 col-lg-4">
                     <article class="rapidContactCard">
-                        <div class="d-flex gap-3 align-items-center justify-content-center">
+                        <div class="d-flex gap-3 align-items-center justify-content-center flex-grow-1">
                             <svg width="45" height="37" viewBox="0 0 45 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M26.1319 1.44116C18.3121 -0.110514 11.6598 1.73504 8.51983 4.25578C3.69308 8.13129 5.95737 10.2597 5.95737 10.2597C5.95737 10.2597 7.36352 11.8929 10.8406 11.9275C12.135 7.00133 16.1156 4.79651 18.7 3.86345C19.2355 3.63055 19.8394 3.44026 20.523 3.30802C23.3372 2.76361 25.3296 3.14198 25.3296 3.14198C25.3296 3.14198 26.7013 3.43953 27.0403 2.66443C27.2939 2.08475 27.1118 1.63585 26.1319 1.44116Z" fill="white" />
                                 <path d="M16.2395 5.70249C14.2521 7.11237 12.2891 9.15556 11.775 11.9004C12.6394 11.8416 13.6087 11.6903 14.6965 11.4045C14.6965 11.4045 14.2647 8.13874 16.2395 5.70249Z" fill="white" />
@@ -78,9 +78,10 @@ require 'inc/banner.php';
                         <img class="heroImage pt-4" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/meet-the-rapid-team.jpg" alt="Meet the rapid team" />
                     </article>
                 </div>
-                <div class="col-4">
+
+                <div class="col-md-6 col-lg-4">
                     <article class="rapidContactCard">
-                        <div class="d-flex gap-3 align-items-center justify-content-center">
+                        <div class="d-flex gap-3 align-items-center justify-content-center flex-grow-1">
                             <svg width="45" height="37" viewBox="0 0 45 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M26.1319 1.44116C18.3121 -0.110514 11.6598 1.73504 8.51983 4.25578C3.69308 8.13129 5.95737 10.2597 5.95737 10.2597C5.95737 10.2597 7.36352 11.8929 10.8406 11.9275C12.135 7.00133 16.1156 4.79651 18.7 3.86345C19.2355 3.63055 19.8394 3.44026 20.523 3.30802C23.3372 2.76361 25.3296 3.14198 25.3296 3.14198C25.3296 3.14198 26.7013 3.43953 27.0403 2.66443C27.2939 2.08475 27.1118 1.63585 26.1319 1.44116Z" fill="white" />
                                 <path d="M16.2395 5.70249C14.2521 7.11237 12.2891 9.15556 11.775 11.9004C12.6394 11.8416 13.6087 11.6903 14.6965 11.4045C14.6965 11.4045 14.2647 8.13874 16.2395 5.70249Z" fill="white" />
@@ -97,9 +98,10 @@ require 'inc/banner.php';
                         <img class="heroImage pt-4" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-partnership.jpg" alt="Rapid Partnership" />
                     </article>
                 </div>
-                <div class="col-4">
+
+                <div class="col-md-6 col-lg-4">
                     <article class="rapidContactCard">
-                        <div class="d-flex gap-3 align-items-center justify-content-center">
+                        <div class="d-flex gap-3 align-items-center justify-content-center flex-grow-1">
                             <svg width="45" height="37" viewBox="0 0 45 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M26.1319 1.44116C18.3121 -0.110514 11.6598 1.73504 8.51983 4.25578C3.69308 8.13129 5.95737 10.2597 5.95737 10.2597C5.95737 10.2597 7.36352 11.8929 10.8406 11.9275C12.135 7.00133 16.1156 4.79651 18.7 3.86345C19.2355 3.63055 19.8394 3.44026 20.523 3.30802C23.3372 2.76361 25.3296 3.14198 25.3296 3.14198C25.3296 3.14198 26.7013 3.43953 27.0403 2.66443C27.2939 2.08475 27.1118 1.63585 26.1319 1.44116Z" fill="white" />
                                 <path d="M16.2395 5.70249C14.2521 7.11237 12.2891 9.15556 11.775 11.9004C12.6394 11.8416 13.6087 11.6903 14.6965 11.4045C14.6965 11.4045 14.2647 8.13874 16.2395 5.70249Z" fill="white" />
@@ -111,7 +113,7 @@ require 'inc/banner.php';
                                 <path d="M39.7114 14.9067L40.0316 15.7641C40.1421 16.0962 40.0002 16.4723 39.7171 16.6009L35.1942 18.6632C34.9104 18.7925 34.589 18.6272 34.4785 18.2951L34.1584 17.4385L39.7114 14.9067Z" fill="#00AEEF" />
                                 <path d="M42.8922 29.5675C43.179 29.4073 43.4521 29.2009 43.7026 28.9518C44.4703 28.1892 44.9204 27.1731 44.9361 26.1629C44.9499 25.3342 44.8219 24.6414 44.2927 24.0742C43.8595 23.6091 43.3448 23.3718 42.4822 23.1073L42.4433 23.1007L42.405 23.0868C40.1376 22.2779 39.1991 21.0715 38.83 20.0598C37.6781 22.0288 37.1859 23.8678 37.3636 25.5421C37.5934 27.7021 38.9085 28.8534 38.9217 28.8644L38.9411 28.8806L38.9612 28.9011C40.0598 30.023 41.6021 30.2846 42.8922 29.5675Z" fill="#00AEEF" />
                             </svg>
-                            <p class="fs-20 fw-700">Message <span class="text-primary">from The Owner</span></p>
+                            <p class="fs-24 fw-700">Message <span class="text-primary">from The Owner</span></p>
                         </div>
                         <img class="heroImage pt-4" src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/message-from-the-owner.jpg" alt="Message from the owner" />
                     </article>
@@ -130,7 +132,7 @@ require 'inc/banner.php';
 
                 <div class="col-auto">
                     <?php if (!empty($page_content['services_button_link']) && !empty($page_content['services_button_text'])) : ?>
-                        <button class="bg-transparent rounded-pill mt-4">
+                        <button class="bg-transparent rounded-pill">
                             <a href="<?= _issetUrl($page_content, 'services_button_link'); ?>" class="btn btn-secondary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'services_button_text') ?></a>
                         </button>
                     <?php endif; ?>
@@ -139,11 +141,11 @@ require 'inc/banner.php';
 
             <hr class="border-primary my-4" />
 
-            <article class="fs-18"><?= _isset($page_content, 'services_description'); ?></article>
+            <article class="fs-18 description"><?= _isset($page_content, 'services_description'); ?></article>
 
-            <div class="row pt-5">
+            <div class="row gy-4 pt-5 justify-content-center">
                 <?php foreach ($services as $service) : ?>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-4 col-xl-3">
                         <article class="serviceCard">
                             <?= _imgSrc($service, 'image', 'heroImage w-100') ?>
                             <div class="title rounded-pill">
@@ -169,14 +171,14 @@ require 'inc/banner.php';
                     <div class="col-12">
                         <article class="stakeholderCard">
                             <div class="row align-items-center">
-                                <div class="col-3">
+                                <div class="col-12 col-md-5 col-lg-6 col-xl-3">
                                     <?= _imgSrc($stakeholder, 'image', 'w-100 h-100') ?>
                                 </div>
-                                <div class="col">
-                                    <article class="px-5 py-4">
+                                <div class="col-12 col-md">
+                                    <article class="px-3 px-xl-5 py-4">
                                         <p class="fs-24 fw-500"><?= _isset($stakeholder, 'title') ?></p>
 
-                                        <article class="fs-18 text-primary-light pt-3">
+                                        <article class="description fs-18 text-primary-light pt-3">
                                             <?= _isset($stakeholder, 'content') ?>
                                         </article>
                                     </article>
@@ -210,11 +212,11 @@ require 'inc/banner.php';
 
     <section class="why-us py-5 py-lg-8">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-5 ">
                 <div class="col-lg-5">
                     <h3 class="fs-64 lh-1 highlight-primary"><?= _isset($page_content, 'why_us_title') ?></h3>
 
-                    <article class="description py-5 fs-18 lh-1_67">
+                    <article class="description pt-4 py-md-5 fs-18 lh-1_67">
                         <?= _isset($page_content, 'why_us_description') ?>
                     </article>
 
@@ -236,9 +238,9 @@ require 'inc/banner.php';
         <section class="review" id="about-review">
             <?php foreach ($staff_quotes as $quote) : ?>
                 <article>
-                    <div class="row align-items-center gx-lg-6">
+                    <div class="row align-items-center gx-lg-6 gy-4">
                         <div class="col-lg-6">
-                            <?= _imgSrc($quote, 'image' , 'w-100 h-100') ?>
+                            <?= _imgSrc($quote, 'image', 'w-100 h-100') ?>
                         </div>
                         <div class="col-lg-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="71" height="42" viewBox="0 0 71 42" fill="none">
@@ -247,7 +249,7 @@ require 'inc/banner.php';
 
                             <h2 class="fs-48 fw-700 lh-1 text-primary py-4 highlight-white"><?= _isset($quote, 'title') ?></h2>
 
-                            <article class="fs-18 lh-1_5 pt-4">
+                            <article class="fs-18 lh-1_5 pt-4 description">
                                 <?= _isset($quote, 'content') ?>
                             </article>
                         </div>
@@ -261,41 +263,19 @@ require 'inc/banner.php';
         <div class="container-fluid">
             <div class="row justify-content-end">
                 <div class="col-lg-11">
-                    <div class="row">
-                        <div class="col-3">
+                    <div class="row gy-4">
+                        <div class="col-12 col-lg-3">
                             <p class="text-primary fs-32 fw-700 lh-1">Some of our<br /> happy customers</p>
                         </div>
-                        <div class="col-9">
+
+                        <div class="col-12 col-lg-9">
                             <div class="customersSlider">
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/catholic-schools-nsw.png" alt="Catholic Schools NSW"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/nsw-ambulance.png" alt="NSW Ambulance"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/nsw-education.png" alt="NSW Education"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/fire-rescue.png" alt="Fire Rescue"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/roads-maritime.png" alt="Roads and Maritime"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/facilities-first.png" alt="Facilities First"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/mcdonalds.png" alt="McDonalds"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/dha.png" alt="DHA"></div>
+                                <?php foreach ($page_content['partner_images'] as $partner) : ?>
+                                    <div><img src="<?= V_CDN_URL . $partner['urlPath'] ?>" alt="<?= $partner['info1'] ?>" title="<?= $partner['info2'] ?>" width="<?= $partner['width'] ?>" height="<?= $partner['height'] ?>"></div>
+                                <?php endforeach; ?>
                                 <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/westfield.png" alt="Westfield"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/penrith-city-council.png" alt="Penrith City Council"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/spotless.png" alt="Spotless"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/raine-home-commercial.png" alt="Raine Home Commercial"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/downer.png" alt="Downer"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/allianz.png" alt="Allianz"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/serco.png" alt="Serco"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/the-hills-sydney-garden-shire.png" alt="The hills Sydney Garden Shire"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/hungry-jacks.png" alt="Hungry Jacks"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/starr-partners.png" alt="Starr Partners"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/century-21.png" alt="Century 21"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/fairtrade.png" alt="Fair Trade"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/barbeque-galore.png" alt="Barbeque Galore"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/bcf.png" alt="BCF"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/ray-white.png" alt="Ray White"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/fitness-first.png" alt="Fitness First"></div>
                                 <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/zone-bowling.png" alt="Zone Bowling"></div>
                                 <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/woolworths.png" alt="Woolworths"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/netstrata.png" alt="Net Strata"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/belle-property.png" alt="Belle Property"></div>
-
                             </div>
                         </div>
                     </div>

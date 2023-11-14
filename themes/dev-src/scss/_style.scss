@@ -19,6 +19,15 @@ section.banner {
     background-size: contain;
     min-height: 500px;
 
+    @include media-breakpoint-down(xl) {
+        background-size: cover;
+        background-position: right center;
+    }
+
+    @include media-breakpoint-down(sm) {
+        background: linear-gradient(274deg, #24478D 0%, #67B2F2 100%);
+    }
+
     .banner__heading {
         font-size: 96px;
         font-style: italic;
@@ -29,6 +38,18 @@ section.banner {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 64px;
+        }
+    }
+
+    .banner__content {
+        font-size: 20px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -136,7 +157,7 @@ main.homepage {
             padding: 21px 24px;
             background: rgba(23, 157, 219, 0.2);
             text-align: center;
-            
+
             @include media-breakpoint-down(sm) {
                 display: flex;
                 flex-direction: column;
@@ -417,9 +438,20 @@ main.aboutUsPage {
         background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
         padding: 58px 96px 0;
 
+        @include media-breakpoint-down(xl) {
+            padding: 58px 24px 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 38px 16px 0;
+        }
+
         .rapidContactCard {
             background: #0F203E;
             padding: 28px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
 
             img.heroImage {
                 width: 100%;
@@ -1187,7 +1219,9 @@ main.tapsAndToiletsServicePage {
     }
 }
 
-main.rainwaterServicePage, main.septicSystemsServicePage, main.schoolsServicePage {
+main.rainwaterServicePage,
+main.septicSystemsServicePage,
+main.schoolsServicePage {
     .introduction {
         background: imgUrl('hotwaterservices_introduction.png') right center;
     }
@@ -1263,7 +1297,8 @@ main.renovationPlumbersServicePage {
     }
 }
 
-main.propertyManagersServicePage, main.schoolsServicePage {
+main.propertyManagersServicePage,
+main.schoolsServicePage {
     background: #13264A;
 
     section.introduction {
@@ -1283,7 +1318,8 @@ main.propertyManagersServicePage, main.schoolsServicePage {
     }
 }
 
-main.leakDetectionServicePage, main.commercialPlumbingServicePage {
+main.leakDetectionServicePage,
+main.commercialPlumbingServicePage {
     section.help {
         section.services {
             background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);

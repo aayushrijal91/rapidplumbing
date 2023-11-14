@@ -618,7 +618,7 @@ return array (
     'charset' => '',
   ),
   'message_description' => array(
-    'order' => 33,
+    'order' => 32,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -660,7 +660,7 @@ return array (
     'customUploadUrl' => '',
   ),
   'message_image' => array(
-    'order' => 34,
+    'order' => 33,
     'label' => 'Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -700,7 +700,7 @@ return array (
     'infoField5' => '',
   ),
   '__separator006__' => array(
-    'order' => 35,
+    'order' => 34,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -716,7 +716,7 @@ return array (
     'isCollapsed' => '',
   ),
   'why_us_title' => array(
-    'order' => 36,
+    'order' => 35,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -735,7 +735,7 @@ return array (
     'charset' => '',
   ),
   'why_us_description' => array(
-    'order' => 37,
+    'order' => 36,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -777,7 +777,7 @@ return array (
     'customUploadUrl' => '',
   ),
   'why_us_button_text' => array(
-    'order' => 38,
+    'order' => 37,
     'label' => 'Button Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -796,7 +796,7 @@ return array (
     'charset' => '',
   ),
   'why_us_button_link' => array(
-    'order' => 39,
+    'order' => 38,
     'label' => 'Button Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -815,7 +815,7 @@ return array (
     'charset' => '',
   ),
   'why_us_image' => array(
-    'order' => 40,
+    'order' => 39,
     'label' => 'Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -855,7 +855,7 @@ return array (
     'infoField5' => '',
   ),
   '__separator007__' => array(
-    'order' => 41,
+    'order' => 40,
     'label' => 'Staff Quotes',
     'type' => 'relatedRecords',
     'separatorType' => 'header bar',
@@ -877,6 +877,62 @@ return array (
     'relatedCreate' => '1',
     'relatedWhere' => '',
     'relatedMoreLink' => '',
+  ),
+  '__separator008__' => array(
+    'order' => 41,
+    'label' => '',
+    'type' => 'separator',
+    'separatorType' => 'header bar',
+    'separatorHeader' => 'Partner Brands',
+    'separatorHTML' => '<div class=\'col-sm-2\'>
+  Column 1
+</div>
+<div class=\'col-sm-10\'>
+  Column 2
+</div>
+',
+    'isCollapsible' => '',
+    'isCollapsed' => '',
+  ),
+  'partner_images' => array(
+    'order' => 42,
+    'label' => 'Partner Images',
+    'type' => 'upload',
+    'fieldPrefix' => '',
+    'description' => '',
+    'isRequired' => '0',
+    'allowedExtensions' => 'gif,jpg,jpeg,png,svg,webp',
+    'checkMaxUploadSize' => '1',
+    'maxUploadSizeKB' => '5120',
+    'checkMaxUploads' => '1',
+    'maxUploads' => '25',
+    'resizeOversizedImages' => '1',
+    'maxImageHeight' => '800',
+    'maxImageWidth' => '600',
+    'createThumbnails' => '1',
+    'maxThumbnailHeight' => '150',
+    'maxThumbnailWidth' => '150',
+    'cropThumbnails' => '0',
+    'createThumbnails2' => '0',
+    'maxThumbnailHeight2' => '150',
+    'maxThumbnailWidth2' => '150',
+    'cropThumbnails2' => '0',
+    'createThumbnails3' => '0',
+    'maxThumbnailHeight3' => '150',
+    'maxThumbnailWidth3' => '150',
+    'cropThumbnails3' => '0',
+    'createThumbnails4' => '0',
+    'maxThumbnailHeight4' => '150',
+    'maxThumbnailWidth4' => '150',
+    'cropThumbnails4' => '0',
+    'useCustomUploadDir' => '0',
+    'customUploadDir' => '',
+    'customUploadUrl' => '',
+    'infoField1' => 'Title',
+    'infoField2' => 'Caption',
+    'infoField3' => '',
+    'infoField4' => '',
+    'infoField5' => '',
   ),
 );
 ?>
