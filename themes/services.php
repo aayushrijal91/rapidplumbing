@@ -39,20 +39,21 @@ require 'inc/banner.php';
 <main class="servicesPage">
     <section class="how-can-we-help">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-5">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-5">
                     <h2 class="fs-64 text-primary lh-1 highlight-white"><?= _isset($page_content, 'introduction_title') ?></h2>
                 </div>
-                <div class="col-7">
+                
+                <div class="col-md-7">
                     <article class="description fs-18">
                         <?= _isset($page_content, 'introduction_description') ?>
                     </article>
                 </div>
             </div>
 
-            <div class="row pt-6 pt-lg-8 g-3">
+            <div class="row pt-6 pt-lg-8 g-3" id="servicesSlider">
                 <?php foreach ($services_list as $service) : ?>
-                    <div class="col serviceHelpCardRow">
+                    <div class="col-md-4 col-xl serviceHelpCardRow">
                         <a href="<?= _isset($service, 'slug') ?>">
                             <article class="serviceHelpCard">
                                 <?= _imgSrc($service, 'image'); ?>
@@ -69,15 +70,15 @@ require 'inc/banner.php';
 
     <section class="why-hire-us">
         <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-lg-9">
-                    <article class="col-lg-6">
-                        <p class="fs-165 text-white fw-700 text-end lh-0_7">Why</p>
+            <div class="row justify-content-xl-end">
+                <div class="col-xl-9">
+                    <article class="col-xl-6">
+                        <p class="fs-165 text-white fw-700 text-xl-end lh-xl-0_7">Why</p>
                         <p class="fs-109 text-primary fw-700 lh-1">hire us?</p>
                     </article>
 
-                    <div class="row g-3 pt-6">
-                        <div class="col-4">
+                    <div class="row justify-content-center g-3 pt-6">
+                        <div class="col-md-6 col-lg-4">
                             <article class="whyHireUsCard">
                                 <div class="row align-items-center">
                                     <div class="col-4">
@@ -90,7 +91,8 @@ require 'inc/banner.php';
                                 <p class="pt-4 text-primary-light lh-1_5"><?= _isset($page_content, 'reason_1_description') ?></p>
                             </article>
                         </div>
-                        <div class="col-4">
+
+                        <div class="col-md-6 col-lg-4">
                             <article class="whyHireUsCard">
                                 <div class="row align-items-center">
                                     <div class="col-4">
@@ -103,7 +105,8 @@ require 'inc/banner.php';
                                 <p class="pt-4 text-primary-light lh-1_5"><?= _isset($page_content, 'reason_2_description') ?></p>
                             </article>
                         </div>
-                        <div class="col-4">
+
+                        <div class="col-md-6 col-lg-4">
                             <article class="whyHireUsCard">
                                 <div class="row align-items-center">
                                     <div class="col-4">

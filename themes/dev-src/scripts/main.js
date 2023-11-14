@@ -92,6 +92,17 @@ $('.gallery-slider').slick({
     ]
 });
 
+if($(window).width() < 540) {
+    $('#servicesSlider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "50px",
+        autoplay: true,
+    })
+}
+
 $('.trusted-main-slider').slick({
     dots: false,
     arrows: false,

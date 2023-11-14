@@ -532,13 +532,21 @@ main.aboutUsPage {
 
 // Services Page
 main.servicesPage {
+    #servicesSlider {
+        .slick-slide {
+            margin: 0 6px;
+        }
+    }
+
     section.how-can-we-help {
         background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
         padding: 125px 0;
 
-        .serviceHelpCardRow {
-            flex: 0 0 20%;
-            max-width: 20%;
+        @include media-breakpoint-up(xl) {
+            .serviceHelpCardRow {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
         }
 
         .serviceHelpCard {
@@ -589,6 +597,10 @@ main.servicesPage {
     section.why-hire-us {
         background: imgUrl('why-hire-us.png') left bottom, linear-gradient(102deg, #13264A 0%, #0B1934 100%);
         padding: 64px 0;
+
+        @include media-breakpoint-down(xl) {
+            background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
+        }
 
         .whyHireUsCard {
             background: linear-gradient(126deg, #253B66 7.98%, #244990 96.65%);
