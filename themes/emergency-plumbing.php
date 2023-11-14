@@ -39,9 +39,8 @@ require 'inc/serviceBanner.php';
 <main class="emergencyPlumbingServicesPage">
     <section class="introduction">
         <div class="container">
-            <div class="row">
-                <div class="col-6"></div>
-                <div class="col-6">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-xl-6">
                     <p class="font-serpentine fs-20 text-italic"><?= _isset($page_content, 'introduction_subtitle') ?></p>
                     <h2 class="font-serpentine py-3 text-capitalize fs-85 text-italic lh-1 highlight-secondary">
                         <?= _isset($page_content, 'introduction_title') ?>
@@ -75,16 +74,16 @@ require 'inc/serviceBanner.php';
                 <?= _isset($page_content, 'about_description') ?>
             </article>
 
-            <div class="row gy-4 pt-6">
+            <div class="row gy-4 pt-4 pt-lg-6">
                 <?php foreach ($cta_list as $cta) { ?>
                     <div class="col-12">
                         <article class="trustCard">
                             <div class="row h-100">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
                                 </div>
-                                <div class="col-6 d-flex align-items-center">
-                                    <article class="p-5">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
                                         <article class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
@@ -99,7 +98,7 @@ require 'inc/serviceBanner.php';
         </div>
     </section>
 
-    <section class="serviceFaq pt-8">
+    <section class="serviceFaq pt-6 pt-md-8">
         <div class="container">
             <h3 class="fs-60 fw-700 highlight-secondary text-center"><span><?= _isset($page_content, 'banner_title') ?></span> Sydney FAQs</h3>
         </div>

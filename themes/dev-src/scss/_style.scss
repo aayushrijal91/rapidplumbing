@@ -58,6 +58,11 @@ section.serviceBanner {
     background-size: contain;
     min-height: 500px;
 
+    @include media-breakpoint-down(xl) {
+        background-size: cover;
+        background-position: right center;
+    }
+
     .banner__heading {
         font-size: 96px;
         font-style: italic;
@@ -68,6 +73,10 @@ section.serviceBanner {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 60px;
+        }
     }
 
     .there-in-a-flush {
@@ -1040,6 +1049,10 @@ main.emergencyPlumbingServicesPage {
     section.introduction {
         padding: 143px 0;
         position: relative;
+
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
     }
 
     section.trustworthy-plumbers {

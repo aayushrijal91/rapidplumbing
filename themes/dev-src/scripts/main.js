@@ -176,6 +176,41 @@ $('.faq-slider').slick({
     autoplay: false,
     initialSlide: 2,
     touchThreshold: 1000,
+
+    responsive: [
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 3,
+                centerPadding: "100px",
+                initialSlide: 1,
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                centerPadding: "50px",
+                initialSlide: 1,
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+                centerPadding: "50px",
+                initialSlide: 1,
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                centerPadding: "50px",
+                initialSlide: 0,
+                slidesToShow: 1,
+            }
+        }
+    ]
 });
 
 $('.hot-water-faq-slider').slick({
