@@ -964,6 +964,15 @@ main.blockedDrainServicesPage {
         border-radius: 0 0 100% 100%;
         padding: 114px 0;
         background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 0 0 20% 20%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+            border-radius: 0 0 10% 10%;
+        }
     }
 
     section.innerServices {
@@ -1025,6 +1034,10 @@ main.blockedDrainServicesPage {
 
                 p {
                     font-size: 48px;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 32px;
+                    }
                 }
             }
         }

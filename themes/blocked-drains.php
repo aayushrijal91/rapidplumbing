@@ -37,12 +37,12 @@ require 'inc/serviceBanner.php';
 
 <main class="blockedDrainServicesPage">
     <section class="restore position-relative overflow-hidden">
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/plumber-left.png" class="plumber-left position-absolute bottom-0 start-0" alt="Plumber Left" />
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/plumber-right.png" class="plumber-right position-absolute bottom-0 end-0" alt="Plumber Right" />
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/plumber-left.png" class="d-none d-xl-block plumber-left position-absolute bottom-0 start-0" alt="Plumber Left" />
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/plumber-right.png" class="d-none d-xl-block plumber-right position-absolute bottom-0 end-0" alt="Plumber Right" />
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9 d-flex flex-column align-items-center">
+                <div class="col-lg-11 col-xl-7 col-xxl-9 d-flex flex-column align-items-center">
                     <article class="d-flex justify-content-center col-lg-7">
                         <article>
                             <h2 class="fs-100 fw-500 lh-1">Restore</h2>
@@ -71,7 +71,7 @@ require 'inc/serviceBanner.php';
         <div class="container position-relative z-1">
             <h3 class="fs-70 fw-500 lh-1 highlight-primary"><span>Blocked Drains</span> services</h3>
         </div>
-        <div class="expect-slider pt-7 position-relative z-1">
+        <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
             <?php foreach ($blocked_drains_services as $service) { ?>
                 <article class="box">
                     <?= _imgSrc($service, 'image', ''); ?>
@@ -83,8 +83,8 @@ require 'inc/serviceBanner.php';
 
     <section class="about py-8">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row gy-4">
+                <div class="col-md-6 col-xl-4 order-1">
                     <article class="callRapidCard primaryborder h-100 position-relative">
                         <?= _imgSrc($page_content, 'about_image_1', 'heroImage h-100 w-100 object-fit-cover'); ?>
                         <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
@@ -92,13 +92,13 @@ require 'inc/serviceBanner.php';
                         </div>
                     </article>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xl-4 order-2 order-md-3 order-xl-2">
                     <h3 class="fs-36 highlight-primary lh-1 py-4"><?= _isset($page_content, 'about_title') ?></h3>
                     <article class="description fs-18 pt-4">
                         <?= _isset($page_content, 'about_description') ?>
                     </article>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-xl-4 order-3 order-md-2 order-xl-3">
                     <article class="callRapidCard h-100 position-relative">
                         <?= _imgSrc($page_content, 'about_image_2', 'heroImage h-100 w-100 object-fit-cover'); ?>
                         <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
@@ -110,22 +110,23 @@ require 'inc/serviceBanner.php';
         </div>
     </section>
 
-    <section class="water-jetting py-8">
+    <section class="water-jetting py-5 py-md-8">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-6">
-                    <article class="col-10">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <article class="col-md-8 col-lg-10">
                         <h2 class="fs-128 fw-400 lh-1 text-primary text-start">Water</h2>
                         <h2 class="fs-128 fw-400 lh-1 text-white text-end">Jetting</h2>
-                        <div class="text-center pt-5">
+                        <div class="text-center pt-4 pt-md-5">
                             <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
                         </div>
                     </article>
                 </div>
-                <div class="col-6">
+
+                <div class="col-lg-6">
                     <div class="row gy-3">
                         <div class="col-12">
-                            <article class="waterJettingCard bg-dark-blue position-relative py-5 ps-8 pe-4 d-flex align-items-center">
+                            <article class="waterJettingCard bg-dark-blue position-relative py-4 py-md-5 ps-6 ps-md-8 pe-4 d-flex align-items-center">
                                 <svg class="svg position-absolute" width="55" height="72" viewBox="0 0 55 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M39.6641 68.6583C41.7065 67.518 43.6505 66.0483 45.4337 64.2751C50.8995 58.8458 54.1038 51.612 54.2156 44.4201C54.3139 38.5201 53.4022 33.5877 49.6347 29.5497C46.551 26.2388 42.8863 24.5494 36.7457 22.6664L36.4687 22.6193L36.196 22.5199C20.0536 16.7611 13.3722 8.17263 10.7444 0.970215C2.54352 14.988 -0.960272 28.08 0.304491 40.0003C1.94019 55.378 11.303 63.5742 11.3969 63.6527L11.5354 63.7678L11.6784 63.9142C19.4994 71.9012 30.4845 73.7685 39.6686 68.6635L39.6641 68.6583Z" fill="#00AEEF" />
                                 </svg>
@@ -135,7 +136,7 @@ require 'inc/serviceBanner.php';
                             </article>
                         </div>
                         <div class="col-12">
-                            <article class="waterJettingCard bg-dark-blue position-relative py-5 ps-8 pe-4 d-flex align-items-center">
+                            <article class="waterJettingCard bg-dark-blue position-relative py-4 py-md-5 ps-6 ps-md-8 pe-4 d-flex align-items-center">
                                 <svg class="svg position-absolute" width="55" height="72" viewBox="0 0 55 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M39.6641 68.6583C41.7065 67.518 43.6505 66.0483 45.4337 64.2751C50.8995 58.8458 54.1038 51.612 54.2156 44.4201C54.3139 38.5201 53.4022 33.5877 49.6347 29.5497C46.551 26.2388 42.8863 24.5494 36.7457 22.6664L36.4687 22.6193L36.196 22.5199C20.0536 16.7611 13.3722 8.17263 10.7444 0.970215C2.54352 14.988 -0.960272 28.08 0.304491 40.0003C1.94019 55.378 11.303 63.5742 11.3969 63.6527L11.5354 63.7678L11.6784 63.9142C19.4994 71.9012 30.4845 73.7685 39.6686 68.6635L39.6641 68.6583Z" fill="#00AEEF" />
                                 </svg>
@@ -145,7 +146,7 @@ require 'inc/serviceBanner.php';
                             </article>
                         </div>
                         <div class="col-12">
-                            <article class="waterJettingCard bg-dark-blue position-relative py-5 ps-8 pe-4 d-flex align-items-center">
+                            <article class="waterJettingCard bg-dark-blue position-relative py-4 py-md-5 ps-6 ps-md-8 pe-4 d-flex align-items-center">
                                 <svg class="svg position-absolute" width="55" height="72" viewBox="0 0 55 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M39.6641 68.6583C41.7065 67.518 43.6505 66.0483 45.4337 64.2751C50.8995 58.8458 54.1038 51.612 54.2156 44.4201C54.3139 38.5201 53.4022 33.5877 49.6347 29.5497C46.551 26.2388 42.8863 24.5494 36.7457 22.6664L36.4687 22.6193L36.196 22.5199C20.0536 16.7611 13.3722 8.17263 10.7444 0.970215C2.54352 14.988 -0.960272 28.08 0.304491 40.0003C1.94019 55.378 11.303 63.5742 11.3969 63.6527L11.5354 63.7678L11.6784 63.9142C19.4994 71.9012 30.4845 73.7685 39.6686 68.6635L39.6641 68.6583Z" fill="#00AEEF" />
                                 </svg>
@@ -155,7 +156,7 @@ require 'inc/serviceBanner.php';
                             </article>
                         </div>
                         <div class="col-12">
-                            <article class="waterJettingCard bg-dark-blue position-relative py-5 ps-8 pe-4 d-flex align-items-center">
+                            <article class="waterJettingCard bg-dark-blue position-relative py-4 py-md-5 ps-6 ps-md-8 pe-4 d-flex align-items-center">
                                 <svg class="svg position-absolute" width="55" height="72" viewBox="0 0 55 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M39.6641 68.6583C41.7065 67.518 43.6505 66.0483 45.4337 64.2751C50.8995 58.8458 54.1038 51.612 54.2156 44.4201C54.3139 38.5201 53.4022 33.5877 49.6347 29.5497C46.551 26.2388 42.8863 24.5494 36.7457 22.6664L36.4687 22.6193L36.196 22.5199C20.0536 16.7611 13.3722 8.17263 10.7444 0.970215C2.54352 14.988 -0.960272 28.08 0.304491 40.0003C1.94019 55.378 11.303 63.5742 11.3969 63.6527L11.5354 63.7678L11.6784 63.9142C19.4994 71.9012 30.4845 73.7685 39.6686 68.6635L39.6641 68.6583Z" fill="#00AEEF" />
                                 </svg>
