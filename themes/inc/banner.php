@@ -1,7 +1,7 @@
 <section class="banner py-5 d-flex align-items-center position-relative">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8 col-xl-6">
                 <?php $htmltag = html_tag($banner_details, 'banner_title_heading_tag', ''); ?>
                 <<?= $htmltag ?> class="banner__heading font-serpentine lh-1">
                     <?= _isset($banner_details, 'banner_title'); ?>

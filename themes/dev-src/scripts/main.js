@@ -92,7 +92,7 @@ $('.gallery-slider').slick({
     ]
 });
 
-if($(window).width() < 540) {
+if ($(window).width() < 540) {
     $('#servicesSlider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -213,7 +213,7 @@ $('.faq-slider').slick({
     ]
 });
 
-$('.hot-water-faq-slider').slick({
+$('.innerServiceFaqSlider').slick({
     arrows: false,
     infinite: false,
     slidesToShow: 3,
@@ -221,6 +221,47 @@ $('.hot-water-faq-slider').slick({
     speed: 500,
     autoplay: false,
     touchThreshold: 1000,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: "50px",
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 1000
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: "100px",
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 1000
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: "20px",
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 1000
+            }
+        }
+    ]
 });
 
 $('.membershipSlider').slick({
@@ -242,6 +283,17 @@ $('.tapstoiltesservices-slider').slick({
     variableWidth: true,
     touchThreshold: 1000,
 });
+
+if ($(window).width() < 540) {
+    $('.innerServiceListingSlider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "50px",
+        autoplay: true,
+    })
+}
 
 function validateForm(form) {
     const inputs = form.find('input.required');

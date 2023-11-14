@@ -39,6 +39,10 @@ section.banner {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
+        @include media-breakpoint-down(lg) {
+            font-size: 75px;
+        }
+        
         @include media-breakpoint-down(sm) {
             font-size: 64px;
         }
@@ -73,6 +77,10 @@ section.serviceBanner {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 75px;
+        }
 
         @include media-breakpoint-down(sm) {
             font-size: 60px;
@@ -1125,6 +1133,10 @@ main.schoolsServicePage {
         background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
         padding: 125px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
+
         .helpCard {
             position: relative;
             z-index: 1;
@@ -1168,14 +1180,15 @@ main.schoolsServicePage {
 
         .aboutCard {
             background: #142647;
-            height: 425px;
+            height: 100%;
+            min-height: 425px;
 
             .mainImg {
                 height: 100%;
             }
         }
 
-        .hot-water-faq-slider {
+        .innerServiceFaqSlider {
             .slick-track {
                 display: flex;
             }
@@ -1196,6 +1209,12 @@ main.schoolsServicePage {
                 &:hover {
                     transform: scale(1.05);
                 }
+            }
+        }
+
+        .innerServiceListingSlider {
+            .slick-slide {
+                margin: 10px 6px;
             }
         }
     }
