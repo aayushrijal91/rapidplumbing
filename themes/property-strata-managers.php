@@ -67,15 +67,15 @@ require 'inc/serviceBanner.php';
             <div class="row gy-4 pt-6">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
-                        <article class="aboutCard">
+                        <article class="aboutCard dark">
                             <div class="row h-100">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
                                 </div>
-                                <div class="col-6 d-flex align-items-center">
-                                    <article class="p-5">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
-                                        <p class="fs-18 pt-3 lh-1_5">
+                                        <p class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
                                         </p>
                                     </article>
@@ -90,9 +90,9 @@ require 'inc/serviceBanner.php';
         <section class="serviceFaq">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center">Strata Plumbing Sydney FAQs</h3>
-                <div class="hot-water-faq-slider pt-6 pt-lg-7 z-1">
-                <?php foreach ($faqs as $faq) : ?>
-                        <article class="box">
+                <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
+                    <?php foreach ($faqs as $faq) : ?>
+                        <article class="box dark">
                             <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
                             <article class="description fs-18 pt-3 lh-1_5">
                                 <?= _isset($faq, 'content') ?>

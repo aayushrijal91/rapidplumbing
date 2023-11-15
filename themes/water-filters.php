@@ -41,11 +41,11 @@ require 'inc/serviceBanner.php';
     <section class="introduction">
         <div class="container-fluid px-0">
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 order-2 order-lg-1">
                     <?= _imgSrc($page_content, 'introduction_image', 'w-100 h-100') ?>
                 </div>
-                <div class="col-6">
-                    <article class="px-5 py-7 col-11 col-md-10 col-lg-9">
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <article class="px-3 px-xl-5 py-5 pb-lg-4 py-xxl-7 col-xxl-9">
                         <h3 class="fs-64 text-capitalize highlight-primary lh-1 fw-400"><?= _isset($page_content, 'introduction_title') ?></h3>
                         <article class="description lh-1_5 pt-4">
                             <?= _isset($page_content, 'introduction_description') ?>
@@ -63,13 +63,13 @@ require 'inc/serviceBanner.php';
                     <div class="col-12">
                         <article class="aboutCard">
                             <div class="row h-100">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
                                 </div>
-                                <div class="col-6 d-flex align-items-center">
-                                    <article class="p-5">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
-                                        <p class="fs-18 pt-3 lh-1_5">
+                                        <p class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
                                         </p>
                                     </article>
@@ -84,7 +84,7 @@ require 'inc/serviceBanner.php';
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
-                <div class="hot-water-faq-slider pt-6 pt-lg-7 z-1">
+                <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
                     <?php foreach ($faqs as $faq) : ?>
                         <article class="box">
                             <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
