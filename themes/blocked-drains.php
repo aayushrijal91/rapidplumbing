@@ -92,12 +92,14 @@ require 'inc/serviceBanner.php';
                         </div>
                     </article>
                 </div>
+
                 <div class="col-xl-4 order-2 order-md-3 order-xl-2">
                     <h3 class="fs-36 highlight-primary lh-1 py-4"><?= _isset($page_content, 'about_title') ?></h3>
                     <article class="description fs-18 pt-4">
                         <?= _isset($page_content, 'about_description') ?>
                     </article>
                 </div>
+
                 <div class="col-md-6 col-xl-4 order-3 order-md-2 order-xl-3">
                     <article class="callRapidCard h-100 position-relative">
                         <?= _imgSrc($page_content, 'about_image_2', 'heroImage h-100 w-100 object-fit-cover'); ?>

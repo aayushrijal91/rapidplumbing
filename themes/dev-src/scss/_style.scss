@@ -1320,6 +1320,7 @@ main.tapsAndToiletsServicePage {
 }
 
 @include media-breakpoint-up(md) {
+
     main.rainwaterServicePage,
     main.septicSystemsServicePage,
     main.schoolsServicePage {
@@ -1398,6 +1399,10 @@ main.renovationPlumbersServicePage {
 
                 p {
                     font-size: 48px;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 32px;
+                    }
                 }
             }
         }
