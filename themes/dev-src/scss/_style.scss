@@ -666,6 +666,14 @@ main.careersPage {
         background: $darker-blue;
         padding: 92px 78px;
 
+        @include media-breakpoint-down(xl) {
+            padding: 64px 24px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 48px 16px;
+        }
+
         ul {
             columns: 2;
             column-gap: 20px;

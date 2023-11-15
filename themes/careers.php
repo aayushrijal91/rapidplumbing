@@ -42,7 +42,7 @@ require 'inc/banner.php';
         </div>
 
         <div class="careerForm mt-6 mt-lg-9">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-5">
                 <div class="col-lg-6">
                     <h3 class="fs-55 fw-700 lh-1"><?= _isset($page_content, 'form_title') ?></h3>
 
@@ -50,7 +50,7 @@ require 'inc/banner.php';
 
                     <h4 class="fs-30 fw-800">Job benefits</h4>
 
-                    <article class="pt-4">
+                    <article class="pt-4 description">
                         <?= _isset($page_content, 'job_benefits') ?>
                     </article>
                 </div>
@@ -60,7 +60,7 @@ require 'inc/banner.php';
                         <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
                         <input type="hidden" name="request" value="enquiry_form_request">
 
-                        <div class="row gy-5">
+                        <div class="row gy-4 gy-md-5">
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label" for="firstName">Full Name</label>

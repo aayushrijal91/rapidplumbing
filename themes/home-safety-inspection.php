@@ -77,7 +77,7 @@ require 'inc/banner.php';
 
             <div class="d-flex justify-content-center pt-5">
                 <a href="tel:<?php echo preg_replace('/[^\d]/i', '', _isset($contact_info, 'phone_number')); ?>" class="btn btn-primary text-white fs-27 text-italic fw-700 gap-2">
-                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/buzzing-phone.gif" width=38 height=38 alt="" />
+                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/buzzing-phone.gif" width=38 height=38 alt="" />
                     <?= _isset($contact_info, 'phone_number'); ?>
                 </a>
             </div>
