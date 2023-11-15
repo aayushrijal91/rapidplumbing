@@ -1319,11 +1319,14 @@ main.tapsAndToiletsServicePage {
     }
 }
 
-main.rainwaterServicePage,
-main.septicSystemsServicePage,
-main.schoolsServicePage {
-    .introduction {
-        background: imgUrl('hotwaterservices_introduction.png') right center;
+@include media-breakpoint-up(md) {
+    main.rainwaterServicePage,
+    main.septicSystemsServicePage,
+    main.schoolsServicePage {
+        .introduction {
+
+            background: imgUrl('hotwaterservices_introduction.png') right center;
+        }
     }
 }
 
