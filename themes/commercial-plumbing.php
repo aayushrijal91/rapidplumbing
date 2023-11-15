@@ -44,8 +44,8 @@ require 'inc/serviceBanner.php';
     <section class="help">
         <div class="container">
             <section class="introduction">
-                <div class="row align-items-center">
-                    <div class="col-6">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6">
                         <article>
                             <h3 class="fs-55 fw-500 lh-1 text-capitalize fw-700"><?= _isset($page_content, 'introduction_title') ?></h3>
 
@@ -60,7 +60,7 @@ require 'inc/serviceBanner.php';
                             <?php endif; ?>
                         </article>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <?= _imgSrc($page_content, 'introduction_image', 'h-100 w-100'); ?>
                     </div>
                 </div>
@@ -73,13 +73,13 @@ require 'inc/serviceBanner.php';
                     <div class="col-12">
                         <article class="aboutCard">
                             <div class="row h-100">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
                                 </div>
-                                <div class="col-6 d-flex align-items-center">
-                                    <article class="p-5">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
-                                        <p class="fs-18 pt-3 lh-1_5">
+                                        <p class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
                                         </p>
                                     </article>
@@ -94,7 +94,7 @@ require 'inc/serviceBanner.php';
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
-                <div class="hot-water-faq-slider pt-6 pt-lg-7 z-1">
+                <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
                     <?php foreach ($faqs as $faq) : ?>
                         <article class="box">
                             <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
@@ -110,9 +110,9 @@ require 'inc/serviceBanner.php';
 
         <section class="services pt-6">
             <div class="container">
-                <div class="row pt-5 gy-4">
+                <div class="row pt-5 gy-4 innerServiceListingSlider">
                     <?php foreach ($services as $service) : ?>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-4 col-lg-3">
                             <article class="box">
                                 <?= _imgSrc($service, 'image', 'w-100 h-100') ?>
                                 <p class="overlay"><?= _isset($service, 'title') ?></p>
