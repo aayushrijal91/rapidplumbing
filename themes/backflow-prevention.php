@@ -43,7 +43,7 @@ require 'inc/serviceBanner.php';
 <main class="backflowPreventionServicePage">
     <section class="introduction">
         <div class="container">
-            <div class="row align-items-end align-items-xl-center">
+            <div class="row align-items-end align-items-xl-center gy-5">
                 <div class="col-lg-6">
                     <article class="py-5">
                         <h3 class="fs-60 text-capitalize fw-400 lh-1"><?= _isset($page_content, 'introduction_title') ?></h3>
