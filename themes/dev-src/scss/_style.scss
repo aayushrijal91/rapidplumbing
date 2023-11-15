@@ -1336,6 +1336,10 @@ main.commercialPlumbingServicePage {
     .introduction {
         background: #0D1E3F !important;
         padding: 36px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 36px 16px;
+        }
     }
 }
 

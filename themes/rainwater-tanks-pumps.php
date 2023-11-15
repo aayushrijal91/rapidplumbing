@@ -79,7 +79,7 @@ require 'inc/serviceBanner.php';
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
                                 </div>
                                 <div class="col-lg-6 d-flex align-items-center">
-                                <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
+                                    <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
                                         <p class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
@@ -101,7 +101,7 @@ require 'inc/serviceBanner.php';
                         <article class="box">
                             <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
                             <article class="description fs-18 pt-3 lh-1_5">
-                            <?= _isset($faq, 'content') ?>
+                                <?= _isset($faq, 'content') ?>
                             </article>
                         </article>
                     <?php endforeach; ?>
