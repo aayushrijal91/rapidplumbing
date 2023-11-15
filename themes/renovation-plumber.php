@@ -41,8 +41,8 @@ require 'inc/serviceBanner.php';
     <section class="help">
         <section class="about pb-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="row gy-5">
+                    <div class="col-md-6 col-xl-4 order-1">
                         <article class="callRapidCard primaryborder h-100 position-relative">
                             <?= _imgSrc($page_content, 'about_image_1', 'heroImage h-100 w-100 object-fit-cover'); ?>
                             <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
@@ -50,8 +50,9 @@ require 'inc/serviceBanner.php';
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-4">
-                        <h3 class="fs-36 highlight-primary lh-1 pt-4 text-capitalize"><?= _isset($page_content, 'about_title') ?></h3>
+
+                    <div class="col-xl-4 order-2 order-md-3 order-xl-2">
+                        <h3 class="fs-36 highlight-primary lh-1 pt-md-4 text-capitalize"><?= _isset($page_content, 'about_title') ?></h3>
 
                         <article class="description fs-18 pt-4">
                             <?= _isset($page_content, 'about_description') ?>
@@ -63,7 +64,8 @@ require 'inc/serviceBanner.php';
                             </button>
                         <?php endif; ?>
                     </div>
-                    <div class="col-md-4">
+
+                    <div class="col-md-6 col-xl-4 order-3 order-md-2 order-xl-3">
                         <article class="callRapidCard h-100 position-relative">
                             <?= _imgSrc($page_content, 'about_image_2', 'heroImage h-100 w-100 object-fit-cover'); ?>
                             <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
@@ -77,15 +79,15 @@ require 'inc/serviceBanner.php';
 
         <div class="container pb-9">
             <div class="row gy-4 pt-6">
-            <?php foreach ($cta_list as $cta) : ?>
+                <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
                         <article class="aboutCard">
                             <div class="row h-100">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
                                 </div>
-                                <div class="col-6 d-flex align-items-center">
-                                    <article class="p-5">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
                                         <p class="fs-18 pt-3 lh-1_5">
                                             <?= _isset($cta, 'content') ?>
@@ -102,8 +104,8 @@ require 'inc/serviceBanner.php';
         <section class="serviceFaq">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
-                <div class="hot-water-faq-slider pt-6 pt-lg-7 z-1">
-                <?php foreach ($faqs as $faq) : ?>
+                <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
+                    <?php foreach ($faqs as $faq) : ?>
                         <article class="box">
                             <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
                             <article class="description fs-18 pt-3 lh-1_5">
