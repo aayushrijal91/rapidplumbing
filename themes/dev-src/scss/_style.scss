@@ -1320,12 +1320,10 @@ main.tapsAndToiletsServicePage {
 }
 
 @include media-breakpoint-up(md) {
-
     main.rainwaterServicePage,
     main.septicSystemsServicePage,
     main.schoolsServicePage {
         .introduction {
-
             background: imgUrl('hotwaterservices_introduction.png') right center;
         }
     }
@@ -1416,7 +1414,40 @@ main.schoolsServicePage {
     section.introduction {
         border-radius: 0 0 100% 100%;
         padding: 140px 0 200px;
-        background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
+        background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(115deg, #142445 0%, #1A356D 100%);
+
+        @include media-breakpoint-down(xxl) {
+            border-radius: 0 0 30% 30%;
+        }
+
+        @include media-breakpoint-down(xxl) {
+            background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
+        }
+        
+        @include media-breakpoint-down(xl) {
+            padding-bottom: 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 0 0 10% 10%;
+            padding: 80px 0 0;
+        }
+
+        .strataImage {
+            @include media-breakpoint-only(xl) {
+                width: 60%;
+            }
+
+            @include media-breakpoint-up(xl) {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        .rounded-xl {
+            border-radius: 15px !important;
+        }
     }
 
     section.help {
@@ -1510,15 +1541,5 @@ main.waterFiltersServicePage {
 main.commercialPlumbingServicePage {
     section.services {
         background: transparent !important;
-    }
-}
-
-main.schoolsServicePage {
-    .introduction {
-        background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(115deg, #142445 0%, #1A356D 100%) !important;
-
-        .rounded-xl {
-            border-radius: 15px !important;
-        }
     }
 }

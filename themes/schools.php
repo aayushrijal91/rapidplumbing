@@ -38,10 +38,10 @@ require 'inc/serviceBanner.php';
 ?>
 
 <main class="schoolsServicePage">
-    <section class="introduction">
+    <section class="introduction overflow-hidden">
         <div class="container">
-            <div class="row gy-5">
-                <div class="col-lg-6">
+            <div class="row gy-5 justify-content-center">
+                <div class="col-xl-6">
                     <article>
                         <h3 class="fs-64 fw-700 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
 
@@ -58,7 +58,7 @@ require 'inc/serviceBanner.php';
                         <?php endif; ?>
                     </article>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-auto col-xl-6">
                     <?= _imgSrc($page_content, 'introduction_image', 'rounded-xl') ?>
                 </div>
             </div>

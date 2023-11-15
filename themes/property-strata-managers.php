@@ -39,11 +39,9 @@ require 'inc/serviceBanner.php';
 
 <main class="propertyManagersServicePage">
     <section class="introduction position-relative overflow-hidden">
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/strata-managers.png" class="plumber-right position-absolute top-0 end-0" alt="Plumber Left" />
-
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                     <article>
                         <h3 class="fs-64 fw-700 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
                         <p class="fw-700 text-primary text-capitalize fs-20 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
@@ -60,6 +58,8 @@ require 'inc/serviceBanner.php';
                 </div>
             </div>
         </div>
+
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/strata-managers.png" class="strataImage" alt="Strata Managed Building" />
     </section>
 
     <section class="help">
