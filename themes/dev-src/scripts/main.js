@@ -282,6 +282,28 @@ $('.tapstoiltesservices-slider').slick({
     autoplay: false,
     variableWidth: true,
     touchThreshold: 1000,
+    responsive: [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 1,
+                centerMode: true,
+                autoplay: true,
+                infinite: false,
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 1,
+                centerMode: true,
+                autoplay: true,
+                infinite: false,
+            }
+        }
+    ]
 });
 
 if ($(window).width() < 540) {

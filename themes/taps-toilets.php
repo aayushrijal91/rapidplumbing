@@ -42,11 +42,9 @@ require 'inc/serviceBanner.php';
 
 <main class="tapsAndToiletsServicePage">
     <section class="introduction position-relative overflow-hidden">
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/tapstoilets-introduction.png" class="plumber-right position-absolute top-0 end-0" alt="Plumber Left" />
-
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                     <article>
                         <h3 class="fs-64 fw-500 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
                         <p class="fw-700 text-primary text-capitalize fs-20 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
@@ -63,20 +61,22 @@ require 'inc/serviceBanner.php';
                 </div>
             </div>
         </div>
+
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/tapstoilets-introduction.png" class="plumberImage" alt="Plumber Left" />
     </section>
 
     <section class="help">
         <div class="services pb-6">
             <div class="container">
                 <h3 class="fs-64 fw-400"><?= _isset($page_content, 'services_title') ?></h3>
-                <article class="fs-18 py-5">
+                <article class="fs-18 description py-4 py-md-5">
                     <?= _isset($page_content, 'services_description') ?>
                 </article>
             </div>
 
             <div class="container-fluid">
                 <div class="row justify-content-end">
-                    <div class="col-xl-11 ps-7">
+                    <div class="col-xl-11 ps-xxl-7">
                         <div class="tapstoiltesservices-slider position-relative z-1">
                             <?php foreach ($services as $service) : ?>
                                 <article class="box">
@@ -88,7 +88,7 @@ require 'inc/serviceBanner.php';
                                         <a href="<?= _issetUrl($service, 'link'); ?>" class="button text-white px-5 py-3 fw-600">Enquire</a>
                                     <?php endif; ?>
                                 </article>
-                            <?php endforeach; ?>                                                                    
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -99,17 +99,17 @@ require 'inc/serviceBanner.php';
             <div class="row gy-4 pt-6">
                 <?php foreach ($cta_list as $cta) { ?>
                     <div class="col-12">
-                        <article class="aboutCard">
+                        <article class="aboutCard dark">
                             <div class="row h-100">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
                                 </div>
-                                <div class="col-6 d-flex align-items-center">
-                                    <article class="p-5">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
-                                        <p class="fs-18 pt-3 lh-1_5">
+                                        <article class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
-                                        </p>
+                                        </article>
                                     </article>
                                 </div>
                             </div>
@@ -122,9 +122,9 @@ require 'inc/serviceBanner.php';
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
-                <div class="hot-water-faq-slider pt-6 pt-lg-7 z-1">
+                <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
                     <?php foreach ($faqs as $faq) { ?>
-                        <article class="box">
+                        <article class="box dark">
                             <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
                             <article class="description fs-18 pt-3 lh-1_5">
                                 <?= _isset($faq, 'content') ?>

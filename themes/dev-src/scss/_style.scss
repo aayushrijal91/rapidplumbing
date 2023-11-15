@@ -42,7 +42,7 @@ section.banner {
         @include media-breakpoint-down(lg) {
             font-size: 75px;
         }
-        
+
         @include media-breakpoint-down(sm) {
             font-size: 64px;
         }
@@ -1183,6 +1183,14 @@ main.schoolsServicePage {
             height: 100%;
             min-height: 425px;
 
+            &.dark {
+                background: #0D2143;
+            }
+
+            &.light {
+                background: $darker-blue;
+            }
+
             .mainImg {
                 height: 100%;
             }
@@ -1206,6 +1214,14 @@ main.schoolsServicePage {
                 background: #112649;
                 transition: 0.35s all ease;
 
+                &.dark {
+                    background: #0D2143;
+                }
+
+                &.light {
+                    background: $darker-blue;
+                }
+
                 &:hover {
                     transform: scale(1.05);
                 }
@@ -1227,6 +1243,33 @@ main.tapsAndToiletsServicePage {
         border-radius: 0 0 100% 100%;
         padding: 140px 0 200px;
         background: imgUrl('hotwaterservices_introduction.png') right center, linear-gradient(115deg, #142445 0%, #1A356D 100%);
+
+        @include media-breakpoint-down(xxl) {
+            border-radius: 0 0 30% 30%;
+
+        }
+
+        @include media-breakpoint-down(xl) {
+            background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
+            padding-bottom: 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 0 0 10% 10%;
+            padding: 80px 0 0;
+        }
+
+        .plumberImage {
+            @include media-breakpoint-only(xl) {
+                width: 70%;
+            }
+
+            @include media-breakpoint-up(xl) {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
     }
 
     section.help {
