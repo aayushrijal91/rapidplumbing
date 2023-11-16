@@ -69,6 +69,20 @@ if (isset($Explode[0]) && !empty($Explode[0])) {
 }
 
 if (isset($Explode[0]) && !empty($Explode[0])) {
+    $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
+    $service = general_plumbing_services::get_data($serviceArray);
+    
+    if (count($service) > 0) {
+        $service = $service[0];
+        $_GET['slug'] = $Explode[0];
+        $filepagename =  'general-plumbing-inner';
+        include('general-plumbing-inner.php');
+        $no_page_exist = false;
+        //	exit();
+    }
+}
+
+if (isset($Explode[0]) && !empty($Explode[0])) {
     $blogArray = array('where' => "`slug` = '" . $Explode[0] . "'");
     $blogs = blogs::get_data($blogArray);
     if (count($blogs) > 0) {

@@ -1,16 +1,22 @@
 <?php
-$page_content_arr = array();
-$page_content = general_plumbing_content::get_data($page_content_arr);
 
-if (count($page_content)) {
-    $page_content = $page_content[0];
+if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
+    $serviceSlug = $_GET['slug'];
+}
+
+if ($serviceSlug != '') {
+    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
+    $service = general_plumbing_services::get_data($serviceArray);
+    if (count($service) > 0) {
+        $page_content = $service[0];
+    } else {
+        include('404.php');
+        die();
+    }
 }
 
 $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
-
-$services = array('orderBy' => 'dragSortOrder ASC');
-$services = general_plumbing_services::get_data($services);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
 $faqs = general_plumbing_faqs::get_data($faqs);
@@ -80,7 +86,7 @@ require 'inc/serviceBanner.php';
             </div>
         </section>
 
-        <div class="container pb-9">
+        <div class="container pb-6">
             <div class="row gy-4 pt-6">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
@@ -101,35 +107,6 @@ require 'inc/serviceBanner.php';
                         </article>
                     </div>
                 <?php endforeach; ?>
-            </div>
-        </div>
-
-        <div class="services">
-            <div class="container">
-                <h3 class="fs-64 fw-400">Services</h3>
-                <article class="fs-18 py-5">
-                    <?= _isset($page_content, 'services_description') ?>
-                </article>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row justify-content-end">
-                    <div class="col-xl-11 ps-xxl-7">
-                        <div class="tapstoiltesservices-slider position-relative z-1">
-                            <?php foreach ($services as $service) : ?>
-                                <article class="box">
-                                    <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
-                                    <div class="overlay">
-                                        <p><?= _isset($service, 'title') ?></p>
-                                    </div>
-                                    <?php if (!empty($service['slug'])) : ?>
-                                        <a href="<?= _isset($service, 'slug'); ?>" class="button text-white px-5 py-3 fw-600">Enquire</a>
-                                    <?php endif; ?>
-                                </article>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
