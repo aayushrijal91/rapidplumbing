@@ -1,9 +1,18 @@
 <?php
-$page_content_arr = array();
-$page_content = hot_water_services_content::get_data($page_content_arr);
 
-if (count($page_content)) {
-    $page_content = $page_content[0];
+if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
+    $serviceSlug = $_GET['slug'];
+}
+
+if ($serviceSlug != '') {
+    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
+    $service = hot_water_services_list::get_data($serviceArray);
+    if (count($service) > 0) {
+        $page_content = $service[0];
+    } else {
+        include('404.php');
+        die();
+    }
 }
 
 $cta_list = array('orderBy' => 'dragSortOrder ASC');
@@ -11,9 +20,6 @@ $cta_list = cta_list::get_data($cta_list);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
 $faqs = hot_water_services_faqs::get_data($faqs);
-
-$services = array('orderBy' => 'dragSortOrder ASC');
-$services = hot_water_services_list::get_data($services);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -72,17 +78,15 @@ require 'inc/serviceBanner.php';
             <div class="row gy-4 gy-lg-5 mt-5 mt-xl-7 innerServiceListingSlider">
                 <?php foreach ($services as $service) : ?>
                     <div class="col-md-6 col-lg-4 col-xl-3">
-                        <a href="<?= $service['slug'] ?>">
-                            <article class="helpCard">
-                                <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
-                                <div class="overlay">
-                                    <p class="fs-24 fw-700 lh-1 text-start text-white"><?= _isset($service, 'title') ?></p>
-                                    <?php if (!empty($service['button_link'])) : ?>
-                                        <a href="<?= _issetUrl($service, 'button_link'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                                    <?php endif; ?>
-                                </div>
-                            </article>
-                        </a>
+                        <article class="helpCard">
+                            <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
+                            <div class="overlay">
+                                <p class="fs-24 fw-700 lh-1 text-start"><?= _isset($service, 'title') ?></p>
+                                <?php if (!empty($service['button_link'])) : ?>
+                                    <a href="<?= _issetUrl($service, 'button_link'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
+                                <?php endif; ?>
+                            </div>
+                        </article>
                     </div>
                 <?php endforeach; ?>
             </div>

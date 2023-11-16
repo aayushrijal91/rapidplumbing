@@ -13,7 +13,7 @@ addFilter('admin_footer', 'plugin_custom_js');
 function plugin_custom_js()
 {
     global $CURRENT_USER;
-    if (isset($_GET['menu']) && in_array($_GET['menu'], array('blocked_drains_services', 'gas_plumbing_services', 'blogs')) && isset($_GET['action']) && in_array($_GET['action'], array('add', 'edit'))) { ?>
+    if (isset($_GET['menu']) && in_array($_GET['menu'], array('blocked_drains_services', 'gas_plumbing_services', 'hot_water_services_list', 'blogs')) && isset($_GET['action']) && in_array($_GET['action'], array('add', 'edit'))) { ?>
         <script>
             $(document).ready(function() {
                 var _tmpObj = {
@@ -22,6 +22,10 @@ function plugin_custom_js()
                         'slug': 'input[name="slug"]'
                     },
                     'gas_plumbing_services ': {
+                        'title': 'input[name="title"]',
+                        'slug': 'input[name="slug"]'
+                    },
+                    'hot_water_services_list ': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },

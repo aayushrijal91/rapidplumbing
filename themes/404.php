@@ -31,11 +31,24 @@ if (isset($Explode[0]) && !empty($Explode[0])) {
     $service = gas_plumbing_services::get_data($serviceArray);
     
     if (count($service) > 0) {
-        var_dump('tst');
         $service = $service[0];
         $_GET['slug'] = $Explode[0];
         $filepagename =  'gas-plumbing-inner';
         include('gas-plumbing-inner.php');
+        $no_page_exist = false;
+        //	exit();
+    }
+}
+
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
+    $service = hot_water_services_list::get_data($serviceArray);
+    
+    if (count($service) > 0) {
+        $service = $service[0];
+        $_GET['slug'] = $Explode[0];
+        $filepagename =  'hot-water-services-inner';
+        include('hot-water-services-inner.php');
         $no_page_exist = false;
         //	exit();
     }
