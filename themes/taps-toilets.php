@@ -84,8 +84,8 @@ require 'inc/serviceBanner.php';
                                     <div class="overlay">
                                         <p><?= _isset($service, 'title') ?></p>
                                     </div>
-                                    <?php if (!empty($service['link'])) : ?>
-                                        <a href="<?= _issetUrl($service, 'link'); ?>" class="button text-white px-5 py-3 fw-600">Enquire</a>
+                                    <?php if (!empty($service['slug'])) : ?>
+                                        <a href="<?= _isset($service, 'slug'); ?>" class="button text-white px-5 py-3 fw-600">Enquire</a>
                                     <?php endif; ?>
                                 </article>
                             <?php endforeach; ?>

@@ -97,26 +97,6 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <div class="container pt-7">
-            <h3 class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</h3>
-
-            <div class="row gy-4 gy-lg-5 mt-5 mt-xl-7 innerServiceListingSlider">
-                <?php foreach ($services as $service) : ?>
-                    <div class="col-md-6 col-lg-4">
-                        <article class="helpCard">
-                            <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
-                            <div class="overlay align-items-start">
-                                <p class="fs-24 fw-700 lh-1 text-start"><?= _isset($service, 'title') ?></p>
-                                <?php if (!empty($service['slug'])) : ?>
-                                    <a href="<?= _issetUrl($service, 'slug'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 text-uppercase">Enquire</a>
-                                <?php endif; ?>
-                            </div>
-                        </article>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>

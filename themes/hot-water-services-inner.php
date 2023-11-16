@@ -73,26 +73,6 @@ require 'inc/serviceBanner.php';
 
     <section class="help">
         <div class="container">
-            <h3 class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</h3>
-
-            <div class="row gy-4 gy-lg-5 mt-5 mt-xl-7 innerServiceListingSlider">
-                <?php foreach ($services as $service) : ?>
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <article class="helpCard">
-                            <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
-                            <div class="overlay">
-                                <p class="fs-24 fw-700 lh-1 text-start"><?= _isset($service, 'title') ?></p>
-                                <?php if (!empty($service['button_link'])) : ?>
-                                    <a href="<?= _issetUrl($service, 'button_link'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
-                                <?php endif; ?>
-                            </div>
-                        </article>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-
-        <div class="container">
             <div class="row gy-4 pt-6">
                 <?php foreach ($cta_list as $cta) { ?>
                     <div class="col-12">
