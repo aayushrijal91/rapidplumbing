@@ -268,8 +268,25 @@ $('.membershipSlider').slick({
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
     centerMode: true,
-    centerPadding: "100px"
+    centerPadding: "100px",
+    responsive: [
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 2,
+                centerPadding: "60px",
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 1,
+                centerPadding: "20px",
+            }
+        }
+    ]
 });
 
 $('.tapstoiltesservices-slider').slick({

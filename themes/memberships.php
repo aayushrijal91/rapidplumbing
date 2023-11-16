@@ -44,38 +44,36 @@ require 'inc/banner.php';
 
 <main class="membershipsPage">
     <section class="introduction position-relative text-white">
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="homeSafetyInspectionGuideImage position-absolute start-0 bottom-0" alt="Home Safety Inspection" />
-
-        <div class="container">
+        <div class="container pb-5 pb-xl-0">
             <div class="row justify-content-end">
-                <div class="col-lg-6">
-                    <article class="">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/vip-member-program.png" alt="VIP member program" />
-                        <article class="description fs-18 pt-4">
-                            <?= _isset($page_content, 'introduction_description') ?>
-                        </article>
-
-                        <div class="row pt-4">
-                            <?php if (!empty($page_content['introduction_button_1_link']) && !empty($page_content['introduction_button_1_text'])) : ?>
-                                <div class="col-auto">
-                                    <button class="bg-transparent rounded-pill">
-                                        <a href="<?= _issetUrl($page_content, 'introduction_button_1_link'); ?>" class="btn btn-white text-primary rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'introduction_button_1_text') ?></a>
-                                    </button>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if (!empty($page_content['introduction_button_2_link']) && !empty($page_content['introduction_button_2_text'])) : ?>
-                                <div class="col-auto">
-                                    <button class="bg-transparent rounded-pill">
-                                        <a href="<?= _issetUrl($page_content, 'introduction_button_2_link'); ?>" class="btn btn-outline-white border-2 rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'introduction_button_2_text') ?></a>
-                                    </button>
-                                </div>
-                            <?php endif; ?>
-                        </div>
+                <article class="col-xl-6">
+                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/vip-member-program.png" alt="VIP member program" />
+                    <article class="description fs-18 pt-4">
+                        <?= _isset($page_content, 'introduction_description') ?>
                     </article>
-                </div>
+
+                    <div class="row pt-4">
+                        <?php if (!empty($page_content['introduction_button_1_link']) && !empty($page_content['introduction_button_1_text'])) : ?>
+                            <div class="col-auto">
+                                <button class="bg-transparent rounded-pill">
+                                    <a href="<?= _issetUrl($page_content, 'introduction_button_1_link'); ?>" class="btn btn-white text-primary rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'introduction_button_1_text') ?></a>
+                                </button>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($page_content['introduction_button_2_link']) && !empty($page_content['introduction_button_2_text'])) : ?>
+                            <div class="col-auto">
+                                <button class="bg-transparent rounded-pill">
+                                    <a href="<?= _issetUrl($page_content, 'introduction_button_2_link'); ?>" class="btn btn-outline-white border-2 rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'introduction_button_2_text') ?></a>
+                                </button>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </article>
             </div>
         </div>
+
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="membershipIntroductionImg" alt="Home Safety Inspection" />
     </section>
 
     <?php require 'inc/gallery.php'; ?>
@@ -86,7 +84,7 @@ require 'inc/banner.php';
             <p class="text-center text-grey fs-20 pt-3">There's a reason why nearly half of our clients return to us to solve their plumbing problems</p>
 
             <div class="row g-4 pt-5">
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                     <article class="comparison1">
                         <article class="title">
                             <p>Other Plumbers</p>
@@ -118,7 +116,7 @@ require 'inc/banner.php';
                         </table>
                     </article>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                     <article class="comparison2">
                         <article class="title">
                             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/vip-member-program.png" alt="VIP member program" />
@@ -158,11 +156,11 @@ require 'inc/banner.php';
     <section class="why-us position-relative">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-lg-11">
+                <div class="col-xl-11">
                     <div class="row">
-                        <div class="col-lg-9">
+                        <div class="col-xl-9">
                             <article>
-                                <h2 class="text-white fs-165 text-white fw-800 lh-0_7 ps-10">Why</h2>
+                                <h2 class="text-white fs-165 fw-800 lh-0_7 ps-md-10">Why</h2>
                                 <p class="fs-109 text-secondary lh-1 fw-800">our membership</p>
                             </article>
 
@@ -180,7 +178,7 @@ require 'inc/banner.php';
             </div>
         </div>
 
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/vip-member-hand.png" class="position-absolute bottom-0 end-0" alt="VIP membership program" />
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/vip-member-hand.png" class="d-none d-xl-block position-absolute bottom-0 end-0" alt="VIP membership program" />
     </section>
 </main>
 <?php require 'inc/footer.php'; ?>

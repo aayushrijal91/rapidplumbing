@@ -880,6 +880,26 @@ main.membershipsPage {
     section.introduction {
         background: url(../images/background/home-form.png) no-repeat left center, $dark-grey;
         padding: 93px 0;
+
+        @include media-breakpoint-down(xl) {
+            padding: 93px 0 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 80px 0 0;
+        }
+
+        .membershipIntroductionImg {
+            @include media-breakpoint-only(xl) {
+                width: 50%;
+            }
+
+            @include media-breakpoint-up(xl) {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
     }
 
     section.comparison {
@@ -919,9 +939,12 @@ main.membershipsPage {
                     border: 0;
                 }
 
-                td,
                 td {
                     padding: 28px;
+
+                    @include media-breakpoint-down(sm) {
+                        padding: 16px;
+                    }
                 }
             }
         }
@@ -936,6 +959,10 @@ main.membershipsPage {
                 --bs-table-color: $white;
                 --bs-table-striped-color: $white;
                 --bs-table-striped-bg: #2A2A2B;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -949,6 +976,10 @@ main.membershipsPage {
                 --bs-table-color: $white;
                 --bs-table-striped-color: $white;
                 --bs-table-striped-bg: #00AEEF;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -956,6 +987,10 @@ main.membershipsPage {
     section.why-us {
         background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
         padding: 107px 0 165px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
 
         .membershipSlider {
             .slick-track {
@@ -1328,6 +1363,7 @@ main.tapsAndToiletsServicePage {
 }
 
 @include media-breakpoint-up(md) {
+
     main.rainwaterServicePage,
     main.septicSystemsServicePage,
     main.schoolsServicePage {
@@ -1431,7 +1467,7 @@ main.schoolsServicePage {
         @include media-breakpoint-down(xxl) {
             background: linear-gradient(115deg, #142445 0%, #1A356D 100%);
         }
-        
+
         @include media-breakpoint-down(xl) {
             padding-bottom: 0;
         }
