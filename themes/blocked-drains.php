@@ -73,10 +73,12 @@ require 'inc/serviceBanner.php';
         </div>
         <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
             <?php foreach ($blocked_drains_services as $service) { ?>
-                <article class="box">
-                    <?= _imgSrc($service, 'image', ''); ?>
-                    <p class="overlay"><?= $service['title'] ?></p>
-                </article>
+                <a href="<?= $service['slug'] ?>">
+                    <article class="box">
+                        <?= _imgSrc($service, 'image', ''); ?>
+                        <p class="overlay text-white"><?= $service['title'] ?></p>
+                    </article>
+                </a>
             <?php } ?>
         </div>
     </section>

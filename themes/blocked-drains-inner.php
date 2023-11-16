@@ -1,9 +1,18 @@
 <?php
-$page_content_arr = array();
-$page_content = blocked_drains_services::get_data($page_content_arr);
 
-if (count($page_content)) {
-    $page_content = $page_content[0];
+if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
+    $serviceSlug = $_GET['slug'];
+}
+
+if ($serviceSlug != '') {
+    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
+    $service = blocked_drains_services::get_data($serviceArray);
+    if (count($service) > 0) {
+        $page_content = $service[0];
+    } else {
+        include('404.php');
+        die();
+    }
 }
 
 /*  Meta data */
@@ -61,20 +70,6 @@ require 'inc/serviceBanner.php';
                     <?php endif; ?>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="innerServices py-6 py-lg-10">
-        <div class="container position-relative z-1">
-            <h3 class="fs-70 fw-500 lh-1 highlight-primary"><span>Blocked Drains</span> services</h3>
-        </div>
-        <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
-            <?php foreach ($blocked_drains_services as $service) { ?>
-                <article class="box">
-                    <?= _imgSrc($service, 'image', ''); ?>
-                    <p class="overlay"><?= $service['title'] ?></p>
-                </article>
-            <?php } ?>
         </div>
     </section>
 

@@ -14,13 +14,28 @@ if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1') 
 
 if (isset($Explode[0]) && !empty($Explode[0])) {
     $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
-    $service = services_list::get_data($serviceArray);
+    $service = blocked_drains_services::get_data($serviceArray);
 
     if (count($service) > 0) {
         $service = $service[0];
         $_GET['slug'] = $Explode[0];
-        $filepagename =  'service-page';
-        include($_GET['slug'] . '.php');
+        $filepagename =  'blocked-drains-inner';
+        include('blocked-drains-inner.php');
+        $no_page_exist = false;
+        //	exit();
+    }
+}
+
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
+    $service = gas_plumbing_services::get_data($serviceArray);
+    
+    if (count($service) > 0) {
+        var_dump('tst');
+        $service = $service[0];
+        $_GET['slug'] = $Explode[0];
+        $filepagename =  'gas-plumbing-inner';
+        include('gas-plumbing-inner.php');
         $no_page_exist = false;
         //	exit();
     }
@@ -35,29 +50,7 @@ if (isset($Explode[0]) && !empty($Explode[0])) {
         include('blogs-inner.php');
         $no_page_exist = 'false';
         //exit();
-    } 
-    // else if (isset($Explode[1]) && !empty($Explode[1])) {
-    //     $blogcatname = $Explode[1];
-    //     $blogs_cat_Arr = array('orderBy' => 'dragSortOrder ASC');
-    //     // $blogs_cat = blog_category_content::get_data($blogs_cat_Arr);
-    //     if (isset($blogcatname) && $blogcatname != '' && !empty($blogs_cat)) {
-    //         $cat_array = [];
-    //         $setpage = "no";
-    //         foreach ($blogs_cat as $val) {
-    //             if (slugify($val['title']) == $blogcatname) {
-    //                 $blogs_list_Arr = array('orderBy' => 'dragSortOrder ASC', 'where' => "`blog_category` = '" . $val['num'] . "'");
-    //                 $activeclass = '';
-    //                 $setpage = "yes";
-    //             }
-    //         }
-    //         if ($setpage == "no") {
-    //         } else {
-    //             $filepagename =  'blog';
-    //             include('blog.php');
-    //             $no_page_exist = 'false';
-    //         }
-    //     }
-    // }
+    }
 }
 
 if ($no_page_exist) :

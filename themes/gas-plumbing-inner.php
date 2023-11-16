@@ -1,16 +1,22 @@
 <?php
-$page_content_arr = array();
-$page_content = gas_plumbing_content::get_data($page_content_arr);
 
-if (count($page_content)) {
-    $page_content = $page_content[0];
+if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
+    $serviceSlug = $_GET['slug'];
+}
+
+if ($serviceSlug != '') {
+    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
+    $service = gas_plumbing_services::get_data($serviceArray);
+    if (count($service) > 0) {
+        $page_content = $service[0];
+    } else {
+        include('404.php');
+        die();
+    }
 }
 
 $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
-
-$services = array('orderBy' => 'dragSortOrder ASC');
-$services = gas_plumbing_services::get_data($services);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
 $faqs = gas_plumbing_faqs::get_data($faqs);
@@ -102,7 +108,7 @@ require 'inc/serviceBanner.php';
                             <div class="overlay align-items-start">
                                 <p class="fs-24 fw-700 lh-1 text-start"><?= _isset($service, 'title') ?></p>
                                 <?php if (!empty($service['slug'])) : ?>
-                                    <a href="<?= _isset($service, 'slug'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 text-uppercase">Enquire</a>
+                                    <a href="<?= _issetUrl($service, 'slug'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 text-uppercase">Enquire</a>
                                 <?php endif; ?>
                             </div>
                         </article>

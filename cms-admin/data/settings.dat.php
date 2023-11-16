@@ -7,7 +7,7 @@ return array (
   'programBuild' => '2353',
   'adminUrl' => 'http://localhost/rapid/cms-admin/admin.php',
   'installPath' => '',
-  'webRootDir' => 'C:/laragon/www/rapid',
+  'webRootDir' => 'C:/laragon/www/rapid/cms-admin/',
   'webPrefixUrl' => '',
   'uploadDir' => 'uploads/',
   'uploadUrl' => '/cms-admin/uploads/',
@@ -26,7 +26,7 @@ return array (
     'includeDomainInLinks' => '0',
     'wysiwygLang' => 'en',
   ),
-  'activePlugins' => '',
+  'activePlugins' => 'customAction.php',
   'advanced' => array(
     'imageResizeQuality' => '80',
     'showExpandedMenu' => '0',
@@ -88,7 +88,7 @@ return array (
   'vendorName' => 'interactivetools.com, inc.',
   'vendorUrl' => 'http://www.interactivetools.com/',
   'websiteUrl' => '/rapid',
-  'serverChangeLog_lastCheck' => 1700094440,
+  'serverChangeLog_lastCheck' => 1700118789,
   'serverChangeLog' => '[
     [1693958593,"Server IP","::1"],
     [1693891818,"Server IP","127.0.0.1"],

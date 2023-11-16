@@ -1,14 +1,14 @@
 <?php
 
 if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
-    $serviceSlug = $_GET['slug'];
+    $blogSlug = $_GET['slug'];
 }
 
-if ($serviceSlug != '') {
-    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
-    $service = blogs::get_data($serviceArray);
-    if (count($service) > 0) {
-        $page_content = $service[0];
+if ($blogSlug != '') {
+    $serviceArray = array('where' => "`slug` = '" . $blogSlug . "'");
+    $blog = blogs::get_data($blogArray);
+    if (count($blog) > 0) {
+        $page_content = $blog[0];
     } else {
         include('404.php');
         die();
