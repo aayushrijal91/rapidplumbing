@@ -6,7 +6,7 @@ if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug']))
 
 if ($serviceSlug != '') {
     $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
-    $service = services_list::get_data($serviceArray);
+    $service = blogs::get_data($serviceArray);
     if (count($service) > 0) {
         $page_content = $service[0];
     } else {

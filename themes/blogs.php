@@ -45,7 +45,7 @@ require 'inc/banner.php';
                             <div class="image">
                                 <?= _imgSrc($blog, 'thumbnail'); ?>
                             </div>
-                            <div class="content">
+                            <div class="content flex-grow-1">
                                 <h4 class="fs-24 fw-600"><?= _isset($blog, 'title') ?></h4>
                                 <div class="divider"></div>
                                 <p class="fs-14 fw-500 lh-1_5 pb-4"><?= _isset($blog, 'short_description') ?></p>

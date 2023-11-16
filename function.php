@@ -200,6 +200,7 @@ function html_tag($DataArray = array(), $field = array())
 	}
 	return $tagValue;
 }
+
 function slugify($text)
 {
 	$text = preg_replace('~[^\pL\d]+~u', '-', $text);

@@ -29,7 +29,6 @@ class router {
 		'roofing-guttering' => array('roofing-guttering'),
 		'septic-systems' => array('septic-systems'),
 		'backflow-prevention' => array('backflow-prevention'),
-		'backflow-prevention' => array('backflow-prevention'),
 		'water-filters' => array('water-filters'),
 		'commercial-plumbing' => array('commercial-plumbing'),
 		'schools' => array('schools'),
