@@ -35,14 +35,12 @@ require 'inc/banner.php';
 
 <main class="homeSafetyInspectionPage">
     <section class="introduction position-relative text-white">
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="homeSafetyInspectionGuideImage position-absolute start-0 bottom-0" alt="Home Safety Inspection" />
-
-        <div class="container">
+        <div class="container pb-5 pb-xl-0">
             <div class="row justify-content-end">
                 <div class="col-lg-6">
                     <article class="">
                         <h2 class="fs-64 fw-800 lh-1"><?= _isset($page_content, 'introduction_title') ?></h2>
-                        
+
                         <article class="description fs-18 pt-4">
                             <?= _isset($page_content, 'introduction_description') ?>
                         </article>
@@ -68,6 +66,8 @@ require 'inc/banner.php';
                 </div>
             </div>
         </div>
+
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-guide.png" class="homeSafetyInspectionGuideImage" alt="Home Safety Inspection" />
     </section>
 
     <section class="propertyDamageProtection bg-white position-relative">
