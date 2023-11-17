@@ -21,6 +21,7 @@ function plugin_custom_js()
         'general_plumbing_services',
         'leak_detection_services',
         'roofing_guttering_services',
+        'rainwater_tanks_services',
         'blogs'
     )) && isset($_GET['action']) && in_array($_GET['action'], array('add', 'edit'))) { ?>
         <script>
@@ -54,6 +55,10 @@ function plugin_custom_js()
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
+                    'rainwater_tanks_services': {
+                        'title': 'input[name="title"]',
+                        'slug': 'input[name="slug"]'
+                    },
                     'blogs': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
@@ -61,9 +66,11 @@ function plugin_custom_js()
                 };
                 var url = new URL(window.location.href);
                 var _menu = url.searchParams.get("menu");
+
                 if (_tmpObj[_menu]) {
                     $(_tmpObj[_menu]['title']).keyup(function() {
                         var _slug = ($(this).val()).toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-');
+                        console.log(_slug);
                         $(_tmpObj[_menu]['slug']).val(_slug);
                     });
                 }

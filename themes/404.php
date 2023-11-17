@@ -98,6 +98,20 @@ if (isset($Explode[0]) && !empty($Explode[0])) {
 
 if (isset($Explode[0]) && !empty($Explode[0])) {
     $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
+    $service = rainwater_tanks_services::get_data($serviceArray);
+    
+    if (count($service) > 0) {
+        $service = $service[0];
+        $_GET['slug'] = $Explode[0];
+        $filepagename =  'rainwater-tanks-inner';
+        include('rainwater-tanks-inner.php');
+        $no_page_exist = false;
+        //	exit();
+    }
+}
+
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
     $service = roofing_guttering_services::get_data($serviceArray);
     
     if (count($service) > 0) {

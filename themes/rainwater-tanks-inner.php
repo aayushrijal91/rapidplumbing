@@ -92,7 +92,7 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <div class="container pt-6 pt-lg-9">
+        <div class="container">
             <div class="row gy-4">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">

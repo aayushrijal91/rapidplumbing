@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'Commercial Plumbing Services',
-  'menuOrder' => '0000000089',
+  'menuOrder' => '0000000090',
   'menuType' => 'multi',
   'num' => array(
     'order' => 1,
