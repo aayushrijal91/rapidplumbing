@@ -19,6 +19,8 @@ function plugin_custom_js()
         'hot_water_services_list',
         'taps_toilets_services_list',
         'general_plumbing_services',
+        'leak_detection_services',
+        'roofing_guttering_services',
         'blogs'
     )) && isset($_GET['action']) && in_array($_GET['action'], array('add', 'edit'))) { ?>
         <script>
@@ -41,6 +43,14 @@ function plugin_custom_js()
                         'slug': 'input[name="slug"]'
                     },
                     'general_plumbing_services ': {
+                        'title': 'input[name="title"]',
+                        'slug': 'input[name="slug"]'
+                    },
+                    'leak_detection_services ': {
+                        'title': 'input[name="title"]',
+                        'slug': 'input[name="slug"]'
+                    },
+                    'roofing_guttering_services ': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },

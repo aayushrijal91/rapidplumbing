@@ -83,6 +83,34 @@ if (isset($Explode[0]) && !empty($Explode[0])) {
 }
 
 if (isset($Explode[0]) && !empty($Explode[0])) {
+    $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
+    $service = leak_detection_services::get_data($serviceArray);
+    
+    if (count($service) > 0) {
+        $service = $service[0];
+        $_GET['slug'] = $Explode[0];
+        $filepagename =  'leak-detection-inner';
+        include('leak-detection-inner.php');
+        $no_page_exist = false;
+        //	exit();
+    }
+}
+
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $serviceArray = array('where' => "`slug` = '" . $Explode[0] . "'");
+    $service = roofing_guttering_services::get_data($serviceArray);
+    
+    if (count($service) > 0) {
+        $service = $service[0];
+        $_GET['slug'] = $Explode[0];
+        $filepagename =  'roofing-guttering-inner';
+        include('roofing-guttering-inner.php');
+        $no_page_exist = false;
+        //	exit();
+    }
+}
+
+if (isset($Explode[0]) && !empty($Explode[0])) {
     $blogArray = array('where' => "`slug` = '" . $Explode[0] . "'");
     $blogs = blogs::get_data($blogArray);
     if (count($blogs) > 0) {

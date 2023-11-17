@@ -1,19 +1,25 @@
 <?php
-$page_content_arr = array();
-$page_content = roofing_guttering_content::get_data($page_content_arr);
 
-if (count($page_content)) {
-    $page_content = $page_content[0];
+if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
+    $serviceSlug = $_GET['slug'];
+}
+
+if ($serviceSlug != '') {
+    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
+    $service = leak_detection_services::get_data($serviceArray);
+    if (count($service) > 0) {
+        $page_content = $service[0];
+    } else {
+        include('404.php');
+        die();
+    }
 }
 
 $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
-$services = array('orderBy' => 'dragSortOrder ASC');
-$services = roofing_guttering_services::get_data($services);
-
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = roofing_guttering_faqs::get_data($faqs);
+$faqs = leak_detection_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -40,34 +46,36 @@ require 'inc/nav.php';
 require 'inc/serviceBanner.php';
 ?>
 
-<main class="roofingGutteringServicePage">
+<main class="leakDetectionServicePage">
     <section class="help">
-        <div class="container">
-            <div class="about">
-                <h3 class="fs-50 text-center text-primary fw-700"><?= _isset($page_content, 'introduction_title') ?></h3>
-                <p class="text-center fs-20 pt-3"><?= _isset($page_content, 'introduction_subtitle') ?></p>
-                <div class="py-5">
-                    <?= _imgSrc($page_content, 'introduction_image', 'h-100 w-100'); ?>
+        <div class="container pb-7">
+            <section class="introduction">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6">
+                        <article>
+                            <h3 class="fs-55 fw-500 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
+
+                            <p class="text-primary text-capitalize fs-20 fw-700 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
+
+                            <article class="fs-18 description lh-1_67 py-4">
+                                <?= _isset($page_content, 'introduction_description') ?>
+                            </article>
+
+                            <?php if (!empty($page_content['introduction_button_link']) && !empty($page_content['introduction_button_text'])) : ?>
+                                <button class="bg-transparent rounded-pill">
+                                    <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 d-inline-flex"><?= _isset($page_content, 'introduction_button_text') ?></a>
+                                </button>
+                            <?php endif; ?>
+                        </article>
+                    </div>
+                    <div class="col-lg-6">
+                        <?= _imgSrc($page_content, 'introduction_image', 'h-100 w-100'); ?>
+                    </div>
                 </div>
-                <article class="fs-18 lh-1_67 description">
-                    <?= _isset($page_content, 'introduction_description') ?>
-                </article>
-                <div class="row gy-3 justify-content-center">
-                    <?php foreach ($services as $service) : ?>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <a href="<?= _isset($service, 'slug') ?>">
-                                <article class="aboutCard d-flex flex-column">
-                                    <p class="fs-24 text-center pb-4 flex-grow-1 text-white"><?= _isset($service, 'title') ?></p>
-                                    <?= _imgSrc($service, 'image', 'w-100'); ?>
-                                </article>
-                            </a>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
+            </section>
         </div>
 
-        <div class="container pt-7 pb-9">
+        <div class="container pt-7">
             <div class="row gy-4">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
@@ -91,9 +99,9 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <section class="serviceFaq">
+        <section class="serviceFaq pt-8">
             <div class="container">
-                <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> FAQs</h3>
+                <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
                 <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
                     <?php foreach ($faqs as $faq) : ?>
                         <article class="box">

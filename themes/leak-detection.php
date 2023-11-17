@@ -76,10 +76,12 @@ require 'inc/serviceBanner.php';
                 <div class="row mt-5 gy-3 innerServiceListingSlider">
                     <?php foreach ($services as $service) : ?>
                         <div class="col-md-6 col-lg-3">
-                            <article class="box">
-                                <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
-                                <p class="overlay"><?= _isset($service, 'title') ?></p>
-                            </article>
+                            <a href="<?= _isset($service, 'slug') ?>">
+                                <article class="box">
+                                    <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
+                                    <p class="overlay text-white"><?= _isset($service, 'title') ?></p>
+                                </article>
+                            </a>
                         </div>
                     <?php endforeach; ?>
                 </div>
