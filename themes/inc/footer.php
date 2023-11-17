@@ -2,6 +2,21 @@
 // Footer menu
 $footer_menu_Arr = array();
 $footer_menu = footer_menu::get_data($footer_menu_Arr);
+
+$gas_plumbing = array('orderBy' => 'dragSortOrder ASC');
+$gas_plumbing = gas_plumbing_services::get_data($gas_plumbing);
+
+$general_plumbing = array('orderBy' => 'dragSortOrder ASC');
+$general_plumbing = general_plumbing_services::get_data($general_plumbing);
+
+$blocked_drains = array('orderBy' => 'dragSortOrder ASC');
+$blocked_drains = blocked_drains_services::get_data($blocked_drains);
+
+$hot_water = array('orderBy' => 'dragSortOrder ASC');
+$hot_water = hot_water_services_list::get_data($hot_water);
+
+$taps_toilets = array('orderBy' => 'dragSortOrder ASC');
+$taps_toilets = taps_toilets_services_list::get_data($taps_toilets);
 ?>
 
 <footer class="bg-dark-grey text-white py-3 py-lg-6">
@@ -26,12 +41,12 @@ $footer_menu = footer_menu::get_data($footer_menu_Arr);
                             <p class="fst-italic lh-1 fw-700">Plumbing</p>
                             <div class="services-menu pt-5">
                                 <ul class="list-unstyled d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-grey">Plumbing</a></li>
-                                    <li><a href="#" class="text-grey">Plumbing</a></li>
-                                    <li><a href="#" class="text-grey">PlumbingPlumbing</a></li>
-                                    <li><a href="#" class="text-grey">Plumbing</a></li>
-                                    <li><a href="#" class="text-grey">PlumbingPlumbing</a></li>
-                                    <li><a href="#" class="text-grey">Plumbing</a></li>
+                                    <?php foreach ($gas_plumbing as $service) : ?>
+                                        <li><a href="<?= _isset($service, 'slug') ?>" class="text-grey"><?= _isset($service, 'title') ?></a></li>
+                                    <?php endforeach; ?>
+                                    <?php foreach ($general_plumbing as $service) : ?>
+                                        <li><a href="<?= _isset($service, 'slug') ?>" class="text-grey"><?= _isset($service, 'title') ?></a></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>
@@ -39,12 +54,9 @@ $footer_menu = footer_menu::get_data($footer_menu_Arr);
                             <p class="fst-italic lh-1 fw-700">Blocked Drains</p>
                             <div class="services-menu pt-5">
                                 <ul class="list-unstyled d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-grey">Blocked Drains</a></li>
-                                    <li><a href="#" class="text-grey">Blocked Drains</a></li>
-                                    <li><a href="#" class="text-grey">Blocked DrainsDrains</a></li>
-                                    <li><a href="#" class="text-grey">Blocked Drains</a></li>
-                                    <li><a href="#" class="text-grey">Blocked DrainsDrains</a></li>
-                                    <li><a href="#" class="text-grey">Blocked Drains</a></li>
+                                    <?php foreach ($blocked_drains as $service) : ?>
+                                        <li><a href="<?= _isset($service, 'slug') ?>" class="text-grey"><?= _isset($service, 'title') ?></a></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>
@@ -52,25 +64,19 @@ $footer_menu = footer_menu::get_data($footer_menu_Arr);
                             <p class="fst-italic lh-1 fw-700">Hot Water</p>
                             <div class="services-menu pt-5">
                                 <ul class="list-unstyled d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-grey">Hot Water</a></li>
-                                    <li><a href="#" class="text-grey">Hot Water</a></li>
-                                    <li><a href="#" class="text-grey">Hot WaterWater</a></li>
-                                    <li><a href="#" class="text-grey">Hot Water</a></li>
-                                    <li><a href="#" class="text-grey">Hot WaterWater</a></li>
-                                    <li><a href="#" class="text-grey">Hot Water</a></li>
+                                    <?php foreach ($hot_water as $service) : ?>
+                                        <li><a href="<?= _isset($service, 'slug') ?>" class="text-grey"><?= _isset($service, 'title') ?></a></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-auto">
-                            <p class="fst-italic lh-1 fw-700">Gas Fitting</p>
+                            <p class="fst-italic lh-1 fw-700">Taps & Toilets</p>
                             <div class="services-menu pt-5">
                                 <ul class="list-unstyled d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-grey">Gas Fitting</a></li>
-                                    <li><a href="#" class="text-grey">Gas Fitting</a></li>
-                                    <li><a href="#" class="text-grey">Gas Fitting</a></li>
-                                    <li><a href="#" class="text-grey">Gas Fitting</a></li>
-                                    <li><a href="#" class="text-grey">Gas Fitting</a></li>
-                                    <li><a href="#" class="text-grey">Gas Fitting</a></li>
+                                    <?php foreach ($taps_toilets as $service) : ?>
+                                        <li><a href="<?= _isset($service, 'slug') ?>" class="text-grey"><?= _isset($service, 'title') ?></a></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>

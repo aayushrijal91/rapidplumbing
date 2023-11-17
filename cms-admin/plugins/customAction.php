@@ -27,31 +27,31 @@ function plugin_custom_js()
         <script>
             $(document).ready(function() {
                 var _tmpObj = {
-                    'blocked_drains_services ': {
+                    'blocked_drains_services': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
-                    'gas_plumbing_services ': {
+                    'gas_plumbing_services': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
-                    'hot_water_services_list ': {
+                    'hot_water_services_list': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
-                    'taps_toilets_services_list ': {
+                    'taps_toilets_services_list': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
-                    'general_plumbing_services ': {
+                    'general_plumbing_services': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
-                    'leak_detection_services ': {
+                    'leak_detection_services': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
-                    'roofing_guttering_services ': {
+                    'roofing_guttering_services': {
                         'title': 'input[name="title"]',
                         'slug': 'input[name="slug"]'
                     },
