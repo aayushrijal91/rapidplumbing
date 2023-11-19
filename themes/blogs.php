@@ -5,7 +5,7 @@ if (count($BlogsPageArr)) {
     $BlogsPageArr = $BlogsPageArr[0];
 }
 
-$BlogsArr = array();
+$BlogsArr = array('orderBy' => 'dragSortOrder ASC');
 $BlogsArr = blogs::get_data($BlogsArr);
 
 /* Assets Rates multi record end */
@@ -36,7 +36,7 @@ require 'inc/banner.php';
 ?>
 
 <main class="blogsPage">
-    <section class="blogs">
+    <section class="bg-white py-8">
         <div class="container">
             <div class="row g-4">
                 <?php foreach ($BlogsArr as $blog) { ?>
@@ -45,12 +45,16 @@ require 'inc/banner.php';
                             <div class="image">
                                 <?= _imgSrc($blog, 'thumbnail'); ?>
                             </div>
-                            <div class="content flex-grow-1">
-                                <h4 class="fs-24 fw-600"><?= _isset($blog, 'title') ?></h4>
-                                <div class="divider"></div>
-                                <p class="fs-14 fw-500 lh-1_5 pb-4"><?= _isset($blog, 'short_description') ?></p>
-                                <a href="<?= _isset($blog, 'slug') ?>" class="btn btn-outline-primary d-inline-flex border-1 text-white rounded-pill px-3 px-lg-4 fs-16 fw-700">Read More</a>
-                            </div>
+                            <article class="content flex-grow-1 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h4 class="fs-24 fw-600"><?= _isset($blog, 'title') ?></h4>
+                                    <div class="divider"></div>
+                                    <p class="fs-14 fw-500 lh-1_5 pb-4"><?= _isset($blog, 'short_description') ?></p>
+                                </div>
+                                <div>
+                                    <a href="<?= _isset($blog, 'slug') ?>" class="btn btn-outline-primary d-inline-flex border-1 text-white rounded-pill px-3 px-lg-4 fs-16 fw-700">Read More</a>
+                                </div>
+                            </article>
                         </article>
                     </div>
                 <?php } ?>

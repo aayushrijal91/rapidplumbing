@@ -12,6 +12,8 @@ $light-grey: #f4f4f4;
 $brighte-green: #00D280;
 $grey: #61636C;
 $light: #E2E2E2;
+$lighter: #F1F4FA;
+$grey-2: #c4c4c4;
 $white: #ffffff;
 $danger: #CA141C;
 $comparison-table-head-1: #28292D;
@@ -26,6 +28,7 @@ $theme-colors: map-merge(("primary": $primary,
       "primary-dark": $primary-dark,
       "secondary": $secondary,
       "tertiary": $tertiary,
+      "quaternary": $quaternary,
       "dark": $dark,
       "light-grey": $light-grey,
       "dark-grey": $dark-grey,
@@ -34,6 +37,8 @@ $theme-colors: map-merge(("primary": $primary,
       "brighte-green": $brighte-green,
       "grey": $grey,
       "light": $light,
+      "lighter": $lighter,
+      "grey-2": $grey-2,
       "white": $white,
       "danger": $danger,
       "comparison-table-head-1": $comparison-table-head-1,
