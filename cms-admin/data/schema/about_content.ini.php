@@ -905,7 +905,7 @@ return array (
     'checkMaxUploadSize' => '1',
     'maxUploadSizeKB' => '5120',
     'checkMaxUploads' => '1',
-    'maxUploads' => '25',
+    'maxUploads' => '50',
     'resizeOversizedImages' => '1',
     'maxImageHeight' => '800',
     'maxImageWidth' => '600',

@@ -5,12 +5,6 @@ $header_settings = header_settings::get_data($header_settings_Arr);
 $header_settings = $header_settings[0];
 /* menu single record end */
 
-/* menu single record start*/
-$footer_settings_Arr = array();
-$footer_settings = footer_settings::get_data($footer_settings_Arr);
-$footer_settings = $footer_settings[0];
-/* menu single record end */
-
 /* SEO Info start */
 $seo_common_variablesarr = array();
 $seo_common_variables = seo_common_variables::get_data($seo_common_variablesarr);

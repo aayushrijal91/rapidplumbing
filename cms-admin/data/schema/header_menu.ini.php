@@ -21,7 +21,7 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '0',
+  'menuHidden' => '1',
   'menuName' => 'Header Menu',
   'menuOrder' => '0000000004',
   'menuPrefixIcon' => '',

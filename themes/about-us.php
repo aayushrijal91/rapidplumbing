@@ -273,9 +273,6 @@ require 'inc/banner.php';
                                 <?php foreach ($page_content['partner_images'] as $partner) : ?>
                                     <div><img src="<?= V_CDN_URL . $partner['urlPath'] ?>" alt="<?= $partner['info1'] ?>" title="<?= $partner['info2'] ?>" width="<?= $partner['width'] ?>" height="<?= $partner['height'] ?>"></div>
                                 <?php endforeach; ?>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/westfield.png" alt="Westfield"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/zone-bowling.png" alt="Zone Bowling"></div>
-                                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/woolworths.png" alt="Woolworths"></div>
                             </div>
                         </div>
                     </div>

@@ -21,9 +21,9 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '0',
+  'menuHidden' => '1',
   'menuName' => 'Services Menu List',
-  'menuOrder' => '0000000006',
+  'menuOrder' => '0000000005',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(
