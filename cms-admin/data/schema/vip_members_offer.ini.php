@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'VIP Members Offer',
-  'menuOrder' => '0000000030',
+  'menuOrder' => '0000000034',
   'menuType' => 'multi',
   'num' => array(
     'order' => 1,

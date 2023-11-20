@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'General Plumbing FAQs',
-  'menuOrder' => '0000000063',
+  'menuOrder' => '0000000067',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Property & Strata Managers Content',
-  'menuOrder' => '0000000065',
+  'menuOrder' => '0000000069',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

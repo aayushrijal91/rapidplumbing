@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'rainwater_tanks_pumps_menugroup',
   'menuName' => 'Rainwater Tanks & Pumps',
-  'menuOrder' => '0000000056',
+  'menuOrder' => '0000000060',
   'menuType' => 'menugroup',
 );
 ?>

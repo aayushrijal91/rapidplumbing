@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Services List',
-  'menuOrder' => '0000000037',
+  'menuOrder' => '0000000041',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

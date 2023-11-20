@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Septic Systems FAQs',
-  'menuOrder' => '0000000080',
+  'menuOrder' => '0000000084',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(
