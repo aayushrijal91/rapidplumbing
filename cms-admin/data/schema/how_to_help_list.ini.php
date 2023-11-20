@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'How To Help List',
-  'menuOrder' => '0000000013',
+  'menuOrder' => '0000000014',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

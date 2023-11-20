@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Hiring Reasons',
-  'menuOrder' => '0000000015',
+  'menuOrder' => '0000000016',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

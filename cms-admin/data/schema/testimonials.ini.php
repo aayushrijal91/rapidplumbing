@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'Testimonials',
-  'menuOrder' => '0000000014',
+  'menuOrder' => '0000000015',
   'menuType' => 'multi',
   'num' => array(
     'order' => 1,

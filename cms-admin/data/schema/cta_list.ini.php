@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'CTA List',
-  'menuOrder' => '0000000008',
+  'menuOrder' => '0000000009',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

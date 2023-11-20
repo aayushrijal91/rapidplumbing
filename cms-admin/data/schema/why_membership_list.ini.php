@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'Why Membership List',
-  'menuOrder' => '0000000032',
+  'menuOrder' => '0000000033',
   'menuType' => 'multi',
   'num' => array(
     'order' => '1',

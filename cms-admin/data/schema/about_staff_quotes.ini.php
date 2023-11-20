@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'About Staff Quotes',
-  'menuOrder' => '0000000020',
+  'menuOrder' => '0000000021',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

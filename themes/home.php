@@ -64,19 +64,17 @@ require 'inc/nav.php';
             </div>
         </div>
         <div class="rapid-van position-absolute bottom-0 mx-auto">
-            <div class="d-flex justify-content-center mb-4">
-                <a href="" class="text-uppercase btn btn-secondary rounded-pill d-inline-flex fs-18 fw-700 text-white px-5 px-lg-6">Enquire</a>
-            </div>
+            <?php if (!empty($page_content['banner_button_text']) && !empty($page_content['banner_button_link'])) : ?>
+                <div class="d-flex justify-content-center mb-4">
+                    <a href="<?= _isset($page_content, 'banner_button_link') ?>" class="text-uppercase btn btn-secondary rounded-pill d-inline-flex fs-18 fw-700 text-white px-5 px-lg-6"><?= _isset($page_content, 'banner_button_text') ?></a>
+                </div>
+            <?php endif; ?>
 
             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-van.png" alt="Rapid Plumbing Van" class="van" />
         </div>
     </section>
 
     <?php require 'inc/contactForm.php'; ?>
-
-    <div class="py-5 py-lg-9">
-        <?php require 'inc/globalCta.php'; ?>
-    </div>
 
     <section class="trusted position-relative z-1">
         <div class="row align-items-center">
@@ -115,13 +113,15 @@ require 'inc/nav.php';
     <section class="blue-gradient overflow-hidden">
         <section class="welcome position-relative">
             <div class="container position-relative z-1">
-                <h3 class="fs-64 fw-500 text-md-center lh-1 highlight-primary"><span>Welcome</span> to Rapid Plumbing Group</h3>
+                <h3 class="fs-64 fw-500 text-md-center lh-1 highlight-primary"><?= _isset($page_content, 'welcome_title') ?></h3>
 
-                <p class="fs-20 text-md-center pt-4 pt-md-5">Your commercial preventative & reactive maintenance specialists</p>
+                <p class="fs-20 text-md-center pt-4 pt-md-5"><?= _isset($page_content, 'welcome_subtitle') ?></p>
 
-                <div class="text-center py-6 d-none d-md-block">
-                    <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700">More About Us</a>
-                </div>
+                <?php if (!empty($page_content['welcome_button_text']) && !empty($page_content['welcome_button_link'])) : ?>
+                    <div class="text-center py-6 d-none d-md-block">
+                        <a href="<?= _isset($page_content, 'welcome_button_link') ?>" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700"><?= _isset($page_content, 'welcome_button_text') ?></a>
+                    </div>
+                <?php endif; ?>
 
                 <div class="row justify-content-center pt-5 pt-md-0">
                     <div class="col-xl-9">
@@ -415,15 +415,15 @@ require 'inc/nav.php';
                         </article>
 
                         <div class="row">
-                            <?php if(!empty($page_content['price_matching_button_1_text']) && !empty($page_content['price_matching_button_1_link'])) : ?>
-                            <div class="col-6 col-md-auto">
-                                <a href="<?= _isset($page_content, 'price_matching_button_1_link') ?>" class="btn btn-white text-primary rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'price_matching_button_1_text') ?></a>
-                            </div>
+                            <?php if (!empty($page_content['price_matching_button_1_text']) && !empty($page_content['price_matching_button_1_link'])) : ?>
+                                <div class="col-6 col-md-auto">
+                                    <a href="<?= _isset($page_content, 'price_matching_button_1_link') ?>" class="btn btn-white text-primary rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'price_matching_button_1_text') ?></a>
+                                </div>
                             <?php endif; ?>
-                            <?php if(!empty($page_content['price_matching_button_1_text']) && !empty($page_content['price_matching_button_2_link'])) : ?>
-                            <div class="col-6 col-md-auto">
-                                <a href="<?= _isset($page_content, 'price_matching_button_2_link') ?>" class="btn btn-outline-white rounded-pill px-3 px-lg-5 fs-18 border-2 fw-700"><?= _isset($page_content, 'price_matching_button_2_text') ?></a>
-                            </div>
+                            <?php if (!empty($page_content['price_matching_button_1_text']) && !empty($page_content['price_matching_button_2_link'])) : ?>
+                                <div class="col-6 col-md-auto">
+                                    <a href="<?= _isset($page_content, 'price_matching_button_2_link') ?>" class="btn btn-outline-white rounded-pill px-3 px-lg-5 fs-18 border-2 fw-700"><?= _isset($page_content, 'price_matching_button_2_text') ?></a>
+                                </div>
                             <?php endif; ?>
                         </div>
                     </article>

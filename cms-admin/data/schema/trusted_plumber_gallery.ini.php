@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Trusted Plumber Gallery',
-  'menuOrder' => '0000000012',
+  'menuOrder' => '0000000013',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(
