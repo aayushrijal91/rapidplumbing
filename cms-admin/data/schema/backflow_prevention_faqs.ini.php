@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Backflow Prevention FAQs',
-  'menuOrder' => '0000000089',
+  'menuOrder' => '0000000091',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

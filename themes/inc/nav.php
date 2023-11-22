@@ -19,15 +19,17 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
     <div class="container-fluid">
         <div class="row justify-content-between align-items-center px-xl-5 py-2 py-md-3">
             <div class="col-auto">
-                <a href="./" class="">
+                <a href="./">
                     <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.214355 2.80707C0.214355 1.7025 1.10979 0.807068 2.21436 0.807068H23.3086C24.4132 0.807068 25.3086 1.7025 25.3086 2.80707C25.3086 3.91164 24.4132 4.80707 23.3086 4.80707H2.21436C1.10979 4.80707 0.214355 3.91164 0.214355 2.80707ZM0.214355 11C0.214355 9.89546 1.10979 9.00003 2.21436 9.00003H23.3086C24.4132 9.00003 25.3086 9.89546 25.3086 11C25.3086 12.1046 24.4132 13 23.3086 13H2.21436C1.10979 13 0.214355 12.1046 0.214355 11ZM0.214355 19.193C0.214355 18.0884 1.10979 17.193 2.21436 17.193H23.3086C24.4132 17.193 25.3086 18.0884 25.3086 19.193C25.3086 20.2976 24.4132 21.193 23.3086 21.193H2.21436C1.10979 21.193 0.214355 20.2976 0.214355 19.193Z" fill="white" />
                     </svg>
                 </a>
             </div>
+
             <div class="col-auto">
                 <a href="<?php echo V_SITE_URL; ?>"><?= _imgSrc($header_settings, 'site_logo', 'header__logo'); ?></a>
             </div>
+            
             <div class="col d-none d-lg-block">
                 <?php if (!empty($header_menu_section)) { ?>
                     <nav class="navbar navbar-expand-lg collapsed ">

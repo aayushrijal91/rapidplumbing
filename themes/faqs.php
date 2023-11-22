@@ -5,7 +5,27 @@ if (count($FaqPage)) {
     $FaqPage = $FaqPage[0];
 }
 
-/* Assets Rates multi record end */
+$general_plumbing_faqs = array('orderBy' => 'dragSortOrder ASC');
+$general_plumbing_faqs = general_plumbing_faqs::get_data($general_plumbing_faqs);
+
+$gas_plumbing_faqs = array('orderBy' => 'dragSortOrder ASC');
+$gas_plumbing_faqs = gas_plumbing_faqs::get_data($gas_plumbing_faqs);
+
+$commercial_plumbing_faqs = array('orderBy' => 'dragSortOrder ASC');
+$commercial_plumbing_faqs = commercial_plumbing_faqs::get_data($commercial_plumbing_faqs);
+
+$emergency_plumbing_faqs = array('orderBy' => 'dragSortOrder ASC');
+$emergency_plumbing_faqs = emergency_plumbing_faqs::get_data($emergency_plumbing_faqs);
+
+$blocked_drains_faqs = array('orderBy' => 'dragSortOrder ASC');
+$blocked_drains_faqs = blocked_drains_faqs::get_data($blocked_drains_faqs);
+
+$hot_water_faqs = array('orderBy' => 'dragSortOrder ASC');
+$hot_water_faqs = hot_water_services_faqs::get_data($hot_water_faqs);
+
+$taps_toilets_faqs = array('orderBy' => 'dragSortOrder ASC');
+$taps_toilets_faqs = taps_toilets_faqs::get_data($taps_toilets_faqs);
+
 
 /*  Meta data */
 $meta_title         = $FaqPage['meta_title'];
@@ -38,202 +58,86 @@ require 'inc/banner.php';
             <p class="fs-24 fw-700">Plumbing</p>
         </div>
         <div class="faq-slider pt-4 z-1">
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
+            <?php foreach ($general_plumbing_faqs as $faq) { ?>
+                <article class="box">
+                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                    <article class="description fs-18 pt-3 lh-1_5">
+                        <?= _isset($faq, 'content') ?>
+                    </article>
+                </article>
+            <?php } ?>
+            <?php foreach ($gas_plumbing_faqs as $faq) { ?>
+                <article class="box">
+                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                    <article class="description fs-18 pt-3 lh-1_5">
+                        <?= _isset($faq, 'content') ?>
+                    </article>
+                </article>
+            <?php } ?>
+            <?php foreach ($commercial_plumbing_faqs as $faq) { ?>
+                <article class="box">
+                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                    <article class="description fs-18 pt-3 lh-1_5">
+                        <?= _isset($faq, 'content') ?>
+                    </article>
+                </article>
+            <?php } ?>
+            <?php foreach ($emergency_plumbing_faqs as $faq) { ?>
+                <article class="box">
+                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                    <article class="description fs-18 pt-3 lh-1_5">
+                        <?= _isset($faq, 'content') ?>
+                    </article>
+                </article>
+            <?php } ?>
         </div>
     </section>
 
     <section class="slider pt-8">
         <div class="container">
-            <p class="fs-24 fw-700">Plumbing</p>
+            <p class="fs-24 fw-700">Blocked Drains</p>
         </div>
         <div class="faq-slider pt-4 z-1">
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
+            <?php foreach ($blocked_drains_faqs as $faq) { ?>
+                <article class="box">
+                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                    <article class="description fs-18 pt-3 lh-1_5">
+                        <?= _isset($faq, 'content') ?>
+                    </article>
+                </article>
+            <?php } ?>
         </div>
     </section>
 
     <section class="slider pt-8">
         <div class="container">
-            <p class="fs-24 fw-700">Plumbing</p>
+            <p class="fs-24 fw-700">Hot Water</p>
         </div>
         <div class="faq-slider pt-4 z-1">
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
+            <?php foreach ($hot_water_faqs as $faq) { ?>
+                <article class="box">
+                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                    <article class="description fs-18 pt-3 lh-1_5">
+                        <?= _isset($faq, 'content') ?>
+                    </article>
+                </article>
+            <?php } ?>
         </div>
     </section>
 
     <section class="slider pt-8">
         <div class="container">
-            <p class="fs-24 fw-700">Plumbing</p>
+            <p class="fs-24 fw-700">Taps & Toilets</p>
         </div>
         <div class="faq-slider pt-4 z-1">
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
-            <article class="box">
-                <p class="fs-20 fw-700">24 Hour Emergency Service</p>
-                <p class="fs-18 pt-3 lh-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at neque sit amet felis ultricies tristique vel quis turpis. Aenean urna ligula, fermentum quis pulvinar at, sodales commodo ligula. Maecenas in dignissim ante, vitae bibendum sem. Nam luctus lectus turpis, congue faucibus ligula auctor eget. Nullam et nibh risus. Nam posuere iaculis blandit. Aenean augue massa,</p>
-            </article>
+            <?php foreach ($taps_toilets_faqs as $faq) { ?>
+                <article class="box">
+                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                    <article class="description fs-18 pt-3 lh-1_5">
+                        <?= _isset($faq, 'content') ?>
+                    </article>
+                </article>
+            <?php } ?>
         </div>
     </section>
 </main>

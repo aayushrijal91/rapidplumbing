@@ -4,7 +4,7 @@ return array (
   '_filenameFields' => '',
   '_tableName' => 'water_filters_menugroup',
   'menuName' => 'Water Filters',
-  'menuOrder' => '0000000090',
+  'menuOrder' => '0000000092',
   'menuType' => 'menugroup',
 );
 ?>

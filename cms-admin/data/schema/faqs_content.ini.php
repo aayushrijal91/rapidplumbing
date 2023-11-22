@@ -246,7 +246,7 @@ return array (
     'infoField5' => '',
   ),
   'banner_button_1_text' => array(
-    'order' => 19,
+    'order' => 15,
     'label' => 'Banner Button 1 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -265,7 +265,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_1_link' => array(
-    'order' => 20,
+    'order' => 16,
     'label' => 'Banner Button 1 Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -284,7 +284,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_text' => array(
-    'order' => 21,
+    'order' => 17,
     'label' => 'Banner Button 2 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -303,7 +303,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_link' => array(
-    'order' => 22,
+    'order' => 18,
     'label' => 'Banner Button 2 Link',
     'type' => 'textfield',
     'indexed' => '',

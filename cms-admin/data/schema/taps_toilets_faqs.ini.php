@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '1',
   'menuName' => 'Taps & Toilets FAQs',
-  'menuOrder' => '0000000060',
+  'menuOrder' => '0000000062',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(
