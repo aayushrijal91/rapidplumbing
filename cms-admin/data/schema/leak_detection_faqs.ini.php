@@ -21,7 +21,7 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '1',
+  'menuHidden' => '0',
   'menuName' => 'Leak Detection FAQs',
   'menuOrder' => '0000000077',
   'menuPrefixIcon' => '',

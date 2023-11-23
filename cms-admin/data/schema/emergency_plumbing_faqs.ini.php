@@ -21,7 +21,7 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '1',
+  'menuHidden' => '0',
   'menuName' => 'Emergency Plumbing Faqs',
   'menuOrder' => '0000000054',
   'menuPrefixIcon' => '',

@@ -21,7 +21,7 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '1',
+  'menuHidden' => '0',
   'menuName' => 'Rainwater Tanks FAQs',
   'menuOrder' => '0000000066',
   'menuPrefixIcon' => '',

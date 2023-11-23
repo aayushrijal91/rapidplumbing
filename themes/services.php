@@ -39,7 +39,7 @@ require 'inc/banner.php';
 <main class="servicesPage">
     <section class="how-can-we-help">
         <div class="container">
-            <div class="row align-items-center gy-4">
+            <div class="row gy-4">
                 <div class="col-md-5">
                     <h2 class="fs-64 text-primary lh-1 highlight-white"><?= _isset($page_content, 'introduction_title') ?></h2>
                 </div>

@@ -21,7 +21,7 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '1',
+  'menuHidden' => '0',
   'menuName' => 'General Plumbing FAQs',
   'menuOrder' => '0000000070',
   'menuPrefixIcon' => '',

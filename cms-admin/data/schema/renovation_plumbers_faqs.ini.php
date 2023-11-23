@@ -21,7 +21,7 @@ return array (
   'listPageFields' => 'dragSortOrder, title',
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
-  'menuHidden' => '1',
+  'menuHidden' => '0',
   'menuName' => 'Renovation Plumbers FAQs',
   'menuOrder' => '0000000080',
   'menuPrefixIcon' => '',

@@ -12,7 +12,7 @@ if (count($global_cta)) {
 <section class="contactForm">
     <div class="container">
         <div class="row align-items-center gy-5">
-            <div class="col-xl-6">
+            <div class="col-xl-6 d-flex flex-column align-items-center">
                 <div class="title">
                     <article>
                         <p class="text-1">Enquire</p>
@@ -20,6 +20,10 @@ if (count($global_cta)) {
                         <p class="text-3">Today</p>
                     </article>
                 </div>
+                <a href="tel:<?php echo preg_replace('/[^\d]/i', '', _isset($contact_info, 'phone_number')); ?>" class="btn btn-primary text-white fs-27 text-italic fw-700 gap-2 mt-5">
+                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/buzzing-phone.gif" width=38 height=38 alt="" />
+                    <?= _isset($contact_info, 'phone_number'); ?>
+                </a>
             </div>
             <div class="col-xl-6">
                 <form id="enquiry_form" class="needs-validation" method="POST" novalidate>

@@ -74,7 +74,7 @@ require 'inc/serviceBanner.php';
                 <?php foreach ($services as $service) : ?>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <article class="helpCard">
-                            <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
+                            <?= _imgSrc($service, 'image', 'image'); ?>
                             <div class="overlay">
                                 <p class="fs-24 fw-700 lh-1 text-start text-white"><?= _isset($service, 'title') ?></p>
                                 <?php if (!empty($service['slug'])) : ?>

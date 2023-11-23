@@ -58,7 +58,7 @@ $('.gallery-slider').slick({
     centerMode: true,
     centerPadding: '220px',
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     touchThreshold: 1000,
     responsive: [
         {
@@ -160,7 +160,7 @@ $('.customersSlider').slick({
     variableWidth: true,
     arrows: false,
     autoplay: true,
-    speed: 8000,
+    speed: 2000,
     autoplaySpeed: 0,
     cssEase: 'linear'
 });

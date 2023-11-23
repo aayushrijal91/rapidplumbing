@@ -68,7 +68,7 @@ section.serviceBanner {
     }
 
     .banner__heading {
-        font-size: 96px;
+        font-size: 82px;
         font-style: italic;
         font-weight: 700;
         line-height: 1;
@@ -313,10 +313,17 @@ main.homepage {
             .box {
                 position: relative;
                 width: 274px;
+                height: 492px;
                 margin: 16px 0;
                 margin-right: 1.125rem;
                 z-index: 1;
                 transition: 0.35s all ease;
+
+                img.image {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
 
                 .overlay {
                     position: absolute;
@@ -1241,6 +1248,13 @@ main.schoolsServicePage {
             position: relative;
             z-index: 1;
             transition: 0.35s all ease;
+            height: 492px;
+
+            img.image {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
 
             .overlay {
                 position: absolute;
@@ -1378,14 +1392,10 @@ main.tapsAndToiletsServicePage {
 
     .services {
         .tapstoiltesservices-slider {
-            .slick-slide {
-                position: relative;
-                margin: 0 21px 30px;
-                display: flex;
-                justify-content: center;
+            .box {
+                height: 456px;
 
                 img {
-                    width: 100%;
                     border-radius: 0 0 35px 35px;
                 }
 
@@ -1408,6 +1418,13 @@ main.tapsAndToiletsServicePage {
                     border-radius: 100px;
                     z-index: 10;
                 }
+            }
+
+            .slick-slide {
+                position: relative;
+                margin: 0 21px 30px;
+                display: flex;
+                justify-content: center;
             }
         }
     }
@@ -1497,7 +1514,7 @@ main.renovationPlumbersServicePage {
                 padding: 28px;
 
                 p {
-                    font-size: 48px;
+                    font-size: 44px;
 
                     @include media-breakpoint-down(lg) {
                         font-size: 32px;

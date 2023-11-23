@@ -43,7 +43,7 @@ require 'inc/serviceBanner.php';
             <div class="container">
                 <div class="row gy-5">
                     <article class="col-lg-6">
-                        <h2 class="fw-800 fs-64 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h2>
+                        <h2 class="fw-800 fs-55 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h2>
                         <p class="fw-700 text-primary text-capitalize fs-20 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
 
                         <article class="fs-18 description pt-4 fw-300">

@@ -92,10 +92,10 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <div class="container pt-7">
+        <div class="container pt-7 pt-md-9">
             <h3 class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</h3>
 
-            <div class="row gy-4 gy-lg-5 mt-5 mt-xl-7 innerServiceListingSlider">
+            <div class="row gy-4 gy-lg-5 mt-5 innerServiceListingSlider">
                 <?php foreach ($services as $service) : ?>
                     <div class="col-md-6 col-lg-4">
                         <article class="helpCard">

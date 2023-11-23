@@ -81,7 +81,14 @@ require 'inc/banner.php';
                     <?= _isset($contact_info, 'phone_number'); ?>
                 </a>
             </div>
-            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-schedule.png" class="w-100 pt-5" alt="Schedule a home safety inspection" />
+            <div class="position-relative d-flex justify-content-center align-items-center pt-5">
+                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/home-safety-inspection-schedule.png" class="w-100" alt="Schedule a home safety inspection" />
+                <?php if (!empty($page_content['protection_button_link'])) : ?>
+                    <div class="position-absolute">
+                        <a href="<?= _isset($page_content, 'protection_button_link') ?>" class="text-uppercase btn btn-secondary rounded-pill d-inline-flex fs-18 fw-700 text-white px-5 px-lg-6 text-uppercase">Enquire</a>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
         <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/grass-fence.png" class="w-100 position-absolute bottom-0" alt="grass fence" />
     </section>

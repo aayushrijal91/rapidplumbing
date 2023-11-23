@@ -266,7 +266,7 @@ require 'inc/nav.php';
             <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
                 <?php foreach ($services_list as $service) : ?>
                     <article class="box">
-                        <?= _imgSrc($service, 'image'); ?>
+                        <?= _imgSrc($service, 'image', 'image'); ?>
                         <p class="overlay"><?= _isset($service, 'title') ?></p>
                     </article>
                 <?php endforeach; ?>

@@ -2,7 +2,7 @@
     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/there_in_a_flush.png" alt="there in a flush" class="there-in-a-flush" />
     <div class="container">
         <div class="row pt-8 pt-xxl-0">
-            <div class="col-lg-8 col-xl-6">
+            <div class="col-lg-8">
                 <?php $htmltag = html_tag($banner_details, 'banner_title_heading_tag', ''); ?>
                 
                 <<?= $htmltag ?> class="banner__heading font-serpentine lh-1">
