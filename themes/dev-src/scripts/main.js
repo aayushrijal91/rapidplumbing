@@ -12,6 +12,27 @@ function lazyloader() {
 
 AOS.init();
 
+// function progressBarSlider(slider) {
+//     let $progressBar = $('.slider-progressbar .progress');
+
+//     slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+//         let calc = ((nextSlide) / (slick.slideCount - 0)) * 100;
+//         console.log($progressBar);
+//         $progressBar
+//             .css('background-size', calc + '% 100%')
+//             .attr('aria-valuenow', calc);
+//     });
+// }
+
+function progressBarSlider(slider, $progressBar) {
+    slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        let calc = ((nextSlide) / (slick.slideCount - 0)) * 100;
+        $progressBar
+            .css('background-size', calc + '% 100%')
+            .attr('aria-valuenow', calc);
+    });
+}
+
 $('.homebanner').slick({
     arrows: false,
     dots: false,
@@ -37,6 +58,8 @@ $('.expect-slider').slick({
 
 $('.expect-slider').slick('slickGoTo', 2);
 
+progressBarSlider($('.expect-slider'));
+
 $('.testimonials-slider').slick({
     dots: false,
     arrows: false,
@@ -48,6 +71,8 @@ $('.testimonials-slider').slick({
     variableWidth: true,
     touchThreshold: 1000,
 });
+
+progressBarSlider($('.testimonials-slider'));
 
 $('.gallery-slider').slick({
     dots: false,
@@ -116,7 +141,6 @@ $('.trusted-main-slider').slick({
     focusOnSelect: true,
 });
 
-
 $('.trusted-thumbnail-slider').slick({
     dots: false,
     arrows: true,
@@ -165,53 +189,113 @@ $('.customersSlider').slick({
     cssEase: 'linear'
 });
 
-$('.faq-slider').slick({
-    arrows: false,
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "200px",
-    speed: 500,
-    autoplay: false,
-    initialSlide: 2,
-    touchThreshold: 1000,
+$('.slider').each(function (index, element) {
+    let $faqSlider = $(element).find('.faq-slider');
+    let $progressBar = $(element).find('.slider-progressbar .progress');
 
-    responsive: [
-        {
-            breakpoint: 1600,
-            settings: {
-                slidesToShow: 3,
-                centerPadding: "100px",
-                initialSlide: 1,
+    $faqSlider.slick({
+        arrows: false,
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "200px",
+        speed: 500,
+        autoplay: false,
+        initialSlide: 2,
+        touchThreshold: 1000,
+
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: "100px",
+                    initialSlide: 1,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: "50px",
+                    initialSlide: 1,
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 2,
+                    centerPadding: "50px",
+                    initialSlide: 1,
+                }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                    centerPadding: "50px",
+                    initialSlide: 0,
+                    slidesToShow: 1,
+                }
             }
-        },
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 3,
-                centerPadding: "50px",
-                initialSlide: 1,
-            }
-        },
-        {
-            breakpoint: 900,
-            settings: {
-                slidesToShow: 2,
-                centerPadding: "50px",
-                initialSlide: 1,
-            }
-        },
-        {
-            breakpoint: 540,
-            settings: {
-                centerPadding: "50px",
-                initialSlide: 0,
-                slidesToShow: 1,
-            }
-        }
-    ]
+        ]
+    });
+
+    progressBarSlider($faqSlider, $progressBar);
 });
+
+// $('.faq-slider').each(function (index, element) {
+//     $(element).slick({
+//         arrows: false,
+//         infinite: false,
+//         slidesToShow: 4,
+//         slidesToScroll: 1,
+//         centerMode: true,
+//         centerPadding: "200px",
+//         speed: 500,
+//         autoplay: false,
+//         initialSlide: 2,
+//         touchThreshold: 1000,
+
+//         responsive: [
+//             {
+//                 breakpoint: 1600,
+//                 settings: {
+//                     slidesToShow: 3,
+//                     centerPadding: "100px",
+//                     initialSlide: 1,
+//                 }
+//             },
+//             {
+//                 breakpoint: 1200,
+//                 settings: {
+//                     slidesToShow: 3,
+//                     centerPadding: "50px",
+//                     initialSlide: 1,
+//                 }
+//             },
+//             {
+//                 breakpoint: 900,
+//                 settings: {
+//                     slidesToShow: 2,
+//                     centerPadding: "50px",
+//                     initialSlide: 1,
+//                 }
+//             },
+//             {
+//                 breakpoint: 540,
+//                 settings: {
+//                     centerPadding: "50px",
+//                     initialSlide: 0,
+//                     slidesToShow: 1,
+//                 }
+//             }
+//         ]
+//     });
+
+//     progressBarSlider($(this));
+// });
+
 
 $('.innerServiceFaqSlider').slick({
     arrows: false,
@@ -263,6 +347,8 @@ $('.innerServiceFaqSlider').slick({
         }
     ]
 });
+
+progressBarSlider($('.innerServiceFaqSlider'));
 
 $('.membershipSlider').slick({
     arrows: false,

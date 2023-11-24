@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'Blocked Drains FAQs',
-  'menuOrder' => '0000000047',
+  'menuOrder' => '0000000046',
   'menuType' => 'multi',
   'num' => array(
     'order' => '1',

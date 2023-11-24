@@ -113,6 +113,14 @@ require 'inc/serviceBanner.php';
                         </article>
                     <?php endforeach; ?>
                 </div>
+
+                <div class="slider-progressbar mt-4">
+                    <div class="content">
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </section>

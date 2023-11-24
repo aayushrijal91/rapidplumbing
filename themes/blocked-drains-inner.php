@@ -104,7 +104,7 @@ require 'inc/serviceBanner.php';
         </div>
     </section>
 
-    <section class="water-jetting py-5 py-md-8">
+    <section class="key-points py-5 py-md-8">
         <div class="container">
             <div class="row align-items-center gy-5">
                 <div class="col-lg-6 d-flex justify-content-center">

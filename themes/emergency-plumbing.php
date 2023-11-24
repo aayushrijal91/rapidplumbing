@@ -99,7 +99,7 @@ require 'inc/serviceBanner.php';
         </div>
     </section>
 
-    <section class="serviceFaq pt-6 pt-md-8">
+    <section class="slider serviceFaq pt-6 pt-md-8">
         <div class="container">
             <h3 class="fs-60 fw-700 highlight-secondary text-center"><span><?= _isset($page_content, 'banner_title') ?></span> Sydney FAQs</h3>
         </div>
@@ -112,6 +112,16 @@ require 'inc/serviceBanner.php';
                     </article>
                 </article>
             <?php } ?>
+        </div>
+
+        <div class="container mt-4">
+            <div class="slider-progressbar">
+                <div class="content">
+                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
