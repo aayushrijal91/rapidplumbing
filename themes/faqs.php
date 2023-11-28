@@ -74,18 +74,20 @@ require 'inc/banner.php';
 
 <main class="faqPage">
     <section class="slider">
-        <div class="container">
-            <p class="fs-24 fw-700">Emergency Plumbing</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($emergency_plumbing_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Emergency Plumbing</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($emergency_plumbing_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -98,19 +100,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Blocked Drains</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($blocked_drains_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Blocked Drains</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($blocked_drains_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -123,19 +127,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Hot Water Services</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($hot_water_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Hot Water Services</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($hot_water_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -148,19 +154,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Taps & Toilets</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($taps_toilets_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Taps & Toilets</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($taps_toilets_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -173,19 +181,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Rainwater Tanks & Pumps</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($rainwater_tanks_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Rainwater Tanks & Pumps</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($rainwater_tanks_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -198,19 +208,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Gas Plumbing</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($gas_plumbing_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Gas Plumbing</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($gas_plumbing_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -223,19 +235,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">General Plumbing</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($general_plumbing_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">General Plumbing</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($general_plumbing_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -248,19 +262,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Commercial Plumbing</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($commercial_plumbing_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">General Plumbing</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($general_plumbing_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -273,19 +289,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Water Filters</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($water_filters_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Commercial Plumbing</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($commercial_plumbing_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -298,19 +316,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Backflow Prevention & RPZ Valves</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($backflow_prevention_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Water Filters</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($water_filters_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -323,19 +343,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Septic Systems</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($septic_systems_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Backflow Prevention & RPZ Valves</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($backflow_prevention_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -348,19 +370,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Roofing & Guttering</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($roofing_guttering_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Septic Systems</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($septic_systems_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -373,19 +397,21 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Renovation Plumber</p>
-        </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($renovation_plumbers_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Roofing & Guttering</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($roofing_guttering_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">
@@ -398,19 +424,48 @@ require 'inc/banner.php';
         </div>
     </section>
 
-    <section class="slider pt-8">
-        <div class="container">
-            <p class="fs-24 fw-700">Leak Detection</p>
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Renovation Plumber</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($renovation_plumbers_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
-        <div class="faq-slider pt-4 z-1">
-            <?php foreach ($leak_detection_faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
-                    </article>
-                </article>
-            <?php } ?>
+        <div class="container mt-4">
+            <div class="slider-progressbar">
+                <div class="content">
+                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider mt-8">
+        <div class="d-flex justify-content-end">
+            <div class="col-lg-11">
+                <p class="fs-24 fw-700">Leak Detection</p>
+                <div class="faq-slider pt-4 z-1">
+                    <?php foreach ($leak_detection_faqs as $faq) { ?>
+                        <article class="box">
+                            <p class="fs-20 fw-700"><?= _isset($faq, 'title') ?></p>
+                            <article class="description fs-18 pt-3 lh-1_5">
+                                <?= _isset($faq, 'content') ?>
+                            </article>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="container mt-4">
             <div class="slider-progressbar">

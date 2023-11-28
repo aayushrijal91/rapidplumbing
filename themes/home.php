@@ -263,20 +263,26 @@ require 'inc/nav.php';
                     </div>
                 </div>
             </div>
-            <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
-                <?php foreach ($services_list as $service) : ?>
-                    <article class="box">
-                        <?= _imgSrc($service, 'image', 'image'); ?>
-                        <p class="overlay"><?= _isset($service, 'title') ?></p>
-                    </article>
-                <?php endforeach; ?>
-            </div>
+            <div class="slider">
+                <div class="d-flex justify-content-end">
+                    <div class="col-lg-11">
+                        <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
+                            <?php foreach ($services_list as $service) : ?>
+                                <article class="box">
+                                    <?= _imgSrc($service, 'image', 'image'); ?>
+                                    <p class="overlay"><?= _isset($service, 'title') ?></p>
+                                </article>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="container">
-                <div class="slider-progressbar">
-                    <div class="content">
-                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                            <span class="sr-only"></span>
+                <div class="container">
+                    <div class="slider-progressbar">
+                        <div class="content">
+                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only"></span>
+                            </div>
                         </div>
                     </div>
                 </div>

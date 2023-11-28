@@ -99,26 +99,28 @@ require 'inc/serviceBanner.php';
         </div>
     </section>
 
-    <section class="slider serviceFaq pt-6 pt-md-8">
+    <section class="serviceFaq pt-6 pt-md-8">
         <div class="container">
             <h3 class="fs-60 fw-700 highlight-secondary text-center"><span><?= _isset($page_content, 'banner_title') ?></span> Sydney FAQs</h3>
         </div>
-        <div class="faq-slider pt-6 pt-lg-7 z-1">
-            <?php foreach ($faqs as $faq) { ?>
-                <article class="box">
-                    <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
-                    <article class="description fs-18 pt-3 lh-1_5">
-                        <?= _isset($faq, 'content') ?>
+        <div class="slider">
+            <div class="faq-slider pt-6 pt-lg-7 z-1">
+                <?php foreach ($faqs as $faq) { ?>
+                    <article class="box">
+                        <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
+                        <article class="description fs-18 pt-3 lh-1_5">
+                            <?= _isset($faq, 'content') ?>
+                        </article>
                     </article>
-                </article>
-            <?php } ?>
-        </div>
+                <?php } ?>
+            </div>
 
-        <div class="container mt-4">
-            <div class="slider-progressbar">
-                <div class="content">
-                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                        <span class="sr-only"></span>
+            <div class="container mt-4">
+                <div class="slider-progressbar">
+                    <div class="content">
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only"></span>
+                        </div>
                     </div>
                 </div>
             </div>

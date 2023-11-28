@@ -91,21 +91,24 @@ require 'inc/serviceBanner.php';
         <section class="serviceFaq">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center">Strata Plumbing Sydney FAQs</h3>
-                <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
-                    <?php foreach ($faqs as $faq) : ?>
-                        <article class="box dark">
-                            <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
-                            <article class="description fs-18 pt-3 lh-1_5">
-                                <?= _isset($faq, 'content') ?>
-                            </article>
-                        </article>
-                    <?php endforeach; ?>
-                </div>
 
-                <div class="slider-progressbar mt-4">
-                    <div class="content">
-                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                            <span class="sr-only"></span>
+                <div class="slider">
+                    <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
+                        <?php foreach ($faqs as $faq) : ?>
+                            <article class="box dark">
+                                <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
+                                <article class="description fs-18 pt-3 lh-1_5">
+                                    <?= _isset($faq, 'content') ?>
+                                </article>
+                            </article>
+                        <?php endforeach; ?>
+                    </div>
+    
+                    <div class="slider-progressbar mt-4">
+                        <div class="content">
+                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only"></span>
+                            </div>
                         </div>
                     </div>
                 </div>

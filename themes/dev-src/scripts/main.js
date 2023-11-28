@@ -12,17 +12,17 @@ function lazyloader() {
 
 AOS.init();
 
-// function progressBarSlider(slider) {
-//     let $progressBar = $('.slider-progressbar .progress');
+function progressBarSlider1(slider) {
+    let $progressBar = $('.slider-progressbar .progress');
 
-//     slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-//         let calc = ((nextSlide) / (slick.slideCount - 0)) * 100;
-//         console.log($progressBar);
-//         $progressBar
-//             .css('background-size', calc + '% 100%')
-//             .attr('aria-valuenow', calc);
-//     });
-// }
+    slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        let calc = ((nextSlide) / (slick.slideCount - 0)) * 100;
+        console.log($progressBar);
+        $progressBar
+            .css('background-size', calc + '% 100%')
+            .attr('aria-valuenow', calc);
+    });
+}
 
 function progressBarSlider(slider, $progressBar) {
     slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
@@ -46,19 +46,15 @@ $('.homebanner').slick({
 $('.expect-slider').slick({
     dots: false,
     arrows: false,
-    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     variableWidth: true,
     touchThreshold: 1000,
 });
 
-$('.expect-slider').slick('slickGoTo', 2);
-
-progressBarSlider($('.expect-slider'));
+progressBarSlider1($('.expect-slider'));
 
 $('.testimonials-slider').slick({
     dots: false,
@@ -72,7 +68,7 @@ $('.testimonials-slider').slick({
     touchThreshold: 1000,
 });
 
-progressBarSlider($('.testimonials-slider'));
+progressBarSlider1($('.testimonials-slider'));
 
 $('.gallery-slider').slick({
     dots: false,
@@ -195,14 +191,10 @@ $('.slider').each(function (index, element) {
 
     $faqSlider.slick({
         arrows: false,
-        infinite: false,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "200px",
         speed: 500,
         autoplay: false,
-        initialSlide: 2,
         touchThreshold: 1000,
 
         responsive: [
@@ -244,62 +236,10 @@ $('.slider').each(function (index, element) {
     progressBarSlider($faqSlider, $progressBar);
 });
 
-// $('.faq-slider').each(function (index, element) {
-//     $(element).slick({
-//         arrows: false,
-//         infinite: false,
-//         slidesToShow: 4,
-//         slidesToScroll: 1,
-//         centerMode: true,
-//         centerPadding: "200px",
-//         speed: 500,
-//         autoplay: false,
-//         initialSlide: 2,
-//         touchThreshold: 1000,
-
-//         responsive: [
-//             {
-//                 breakpoint: 1600,
-//                 settings: {
-//                     slidesToShow: 3,
-//                     centerPadding: "100px",
-//                     initialSlide: 1,
-//                 }
-//             },
-//             {
-//                 breakpoint: 1200,
-//                 settings: {
-//                     slidesToShow: 3,
-//                     centerPadding: "50px",
-//                     initialSlide: 1,
-//                 }
-//             },
-//             {
-//                 breakpoint: 900,
-//                 settings: {
-//                     slidesToShow: 2,
-//                     centerPadding: "50px",
-//                     initialSlide: 1,
-//                 }
-//             },
-//             {
-//                 breakpoint: 540,
-//                 settings: {
-//                     centerPadding: "50px",
-//                     initialSlide: 0,
-//                     slidesToShow: 1,
-//                 }
-//             }
-//         ]
-//     });
-
-//     progressBarSlider($(this));
-// });
-
+progressBarSlider1($('.faq-slider-2'));
 
 $('.innerServiceFaqSlider').slick({
     arrows: false,
-    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     speed: 500,
@@ -348,7 +288,7 @@ $('.innerServiceFaqSlider').slick({
     ]
 });
 
-progressBarSlider($('.innerServiceFaqSlider'));
+progressBarSlider1($('.innerServiceFaqSlider'));
 
 $('.membershipSlider').slick({
     arrows: false,
