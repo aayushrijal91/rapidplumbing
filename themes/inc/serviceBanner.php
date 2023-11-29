@@ -31,4 +31,5 @@
             </div>
         </div>
     </div>
+    <?= _imgSrc($banner_details, 'banner_image', 'position-absolute bottom-0 end-0 d-none d-xl-block'); ?>
 </section>

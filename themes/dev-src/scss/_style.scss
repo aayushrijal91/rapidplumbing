@@ -281,6 +281,8 @@ main.homepage {
     }
 
     section.process {
+        background: imgUrl('three-step-process-bubble.png') center;
+        background-size: contain;
         padding: 140px 0;
 
         @include media-breakpoint-down(sm) {
@@ -401,6 +403,8 @@ main.homepage {
     }
 
     section.customers {
+        background: imgUrl('what-customers-say-bubble.png') left center;
+
         padding: 110px 0 140px;
 
         @include media-breakpoint-down(sm) {

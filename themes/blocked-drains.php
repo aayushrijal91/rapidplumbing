@@ -24,6 +24,7 @@ $meta_url             = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST
 $banner_details = array(
     'banner_title_heading_tag' => _isset($page_content, 'banner_title_heading_tag'),
     'banner_title' => _isset($page_content, 'banner_title'),
+    'banner_image' => _isset($page_content, 'banner_video_image'),
     'banner_subtitle' => _isset($page_content, 'banner_subtitle'),
     'banner_button_1_text' => _isset($page_content, 'banner_button_1_text'),
     'banner_button_1_link' => _isset($page_content, 'banner_button_1_link'),
@@ -74,21 +75,28 @@ require 'inc/serviceBanner.php';
         <div class="container position-relative z-1">
             <h3 class="fs-70 fw-500 lh-1 highlight-primary"><span><?= _isset($banner_details, 'banner_title') ?></span> services</h3>
         </div>
-        <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
-            <?php foreach ($blocked_drains_services as $service) { ?>
-                <a href="<?= $service['slug'] ?>">
-                    <article class="box">
-                        <?= _imgSrc($service, 'image', ''); ?>
-                        <p class="overlay text-white"><?= $service['title'] ?></p>
-                    </article>
-                </a>
-            <?php } ?>
-        </div>
-        <div class="container">
-            <div class="slider-progressbar">
-                <div class="content">
-                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                        <span class="sr-only"></span>
+
+        <div class="slider pt-5 pt-md-7">
+            <div class="d-flex justify-content-end">
+                <div class="col-lg-11">
+                    <div class="expect-slider">
+                        <?php foreach ($blocked_drains_services as $service) { ?>
+                            <a href="<?= $service['slug'] ?>">
+                                <article class="box">
+                                    <?= _imgSrc($service, 'image', ''); ?>
+                                    <p class="overlay text-white"><?= $service['title'] ?></p>
+                                </article>
+                            </a>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="slider-progressbar">
+                    <div class="content">
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only"></span>
+                        </div>
                     </div>
                 </div>
             </div>
