@@ -101,7 +101,7 @@ require 'inc/serviceBanner.php';
                         <article class="helpCard">
                             <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
                             <div class="overlay align-items-start">
-                                <p class="fs-24 fw-700 lh-1 text-start"><?= _isset($service, 'title') ?></p>
+                                <p class="fs-24 fw-700 lh-1 text-start filter-shadow"><?= _isset($service, 'title') ?></p>
                                 <?php if (!empty($service['slug'])) : ?>
                                     <a href="<?= _isset($service, 'slug'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 text-uppercase">Enquire</a>
                                 <?php endif; ?>

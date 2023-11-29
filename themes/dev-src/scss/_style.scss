@@ -837,6 +837,12 @@ main.homeSafetyInspectionPage {
 // Blogs Page
 main.blogsPage,
 main.blogInnerPage {
+    .divider {
+        width: 2px;
+        height: 100%;
+        background: $grey-3;
+    }
+    
     .blogCard {
         height: 100%;
         display: flex;

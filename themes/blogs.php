@@ -38,6 +38,27 @@ require 'inc/banner.php';
 <main class="blogsPage">
     <section class="bg-white py-8">
         <div class="container">
+            <div class="bg-light row mb-5">
+                <div class="col-2">
+                    <select class="mx-4 py-4 bg-transparent border-0 text outline-none shadow-none">
+                        <option selected disabled>Select Blog Category</option>
+                        <option>test1</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="divider"></div>
+                </div>
+                <div class="col">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-auto">
+                            <p class="text-grey-3">Selected Filters</p>
+                        </div>
+                        <div class="col-auto">
+                            <p class="text-white rounded-pill bg-grey-3 px-3 py-2">All</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row g-4">
                 <?php foreach ($BlogsArr as $blog) { ?>
                     <div class="col-md-6 col-lg-4">

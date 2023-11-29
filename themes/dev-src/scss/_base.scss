@@ -353,6 +353,10 @@ section.globalCta {
     filter: drop-shadow(2px 4px 6px black);
 }
 
+.outline-none {
+    outline: none;
+}
+
 footer {
     .mobileServiceBtn {
         background: rgba(97,99,108,0.2);

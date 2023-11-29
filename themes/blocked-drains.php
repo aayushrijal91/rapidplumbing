@@ -9,9 +9,6 @@ if (count($page_content)) {
 $blocked_drains_services_arr = array('orderBy' => 'dragSortOrder ASC');
 $blocked_drains_services = blocked_drains_services::get_data($blocked_drains_services_arr);
 
-$blocked_drains_key_points = array('orderBy' => 'dragSortOrder ASC');
-$blocked_drains_key_points = blocked_drains_key_points::get_data($blocked_drains_key_points);
-
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
 $meta_description     = $page_content['meta_description'];
@@ -151,18 +148,30 @@ require 'inc/serviceBanner.php';
 
                 <div class="col-lg-6">
                     <div class="row gy-3">
-                        <?php foreach ($blocked_drains_key_points as $index => $point) : ?>
-                            <div class="col-12">
-                                <article class="waterJettingCard bg-dark-blue position-relative py-4 py-md-5 ps-6 ps-md-8 pe-4 d-flex align-items-center">
-                                    <svg class="svg position-absolute" width="55" height="72" viewBox="0 0 55 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M39.6641 68.6583C41.7065 67.518 43.6505 66.0483 45.4337 64.2751C50.8995 58.8458 54.1038 51.612 54.2156 44.4201C54.3139 38.5201 53.4022 33.5877 49.6347 29.5497C46.551 26.2388 42.8863 24.5494 36.7457 22.6664L36.4687 22.6193L36.196 22.5199C20.0536 16.7611 13.3722 8.17263 10.7444 0.970215C2.54352 14.988 -0.960272 28.08 0.304491 40.0003C1.94019 55.378 11.303 63.5742 11.3969 63.6527L11.5354 63.7678L11.6784 63.9142C19.4994 71.9012 30.4845 73.7685 39.6686 68.6635L39.6641 68.6583Z" fill="#00AEEF" />
-                                    </svg>
-                                    <p class="number position-absolute fs-32 fw-700"><?= $index + 1 ?></p>
+                        <?php
+                        if (isset($page_content['key_points']) && !empty($page_content['key_points'])) {
+                            $points = explode("\n", strip_tags($page_content['key_points']));
+                            $points = array_map('trim', $points);
+                            $points = array_filter($points);
+                            $index = 1;
 
-                                    <p class="text-white highlight-primary fs-24 fw-700"><?= _isset($point, 'title') ?></p>
-                                </article>
-                            </div>
-                        <?php endforeach; ?>
+                            foreach ($points as $point) {
+                        ?>
+                                <div class="col-12">
+                                    <article class="waterJettingCard bg-dark-blue position-relative py-4 py-md-5 ps-6 ps-md-8 pe-4 d-flex align-items-center">
+                                        <svg class="svg position-absolute" width="55" height="72" viewBox="0 0 55 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M39.6641 68.6583C41.7065 67.518 43.6505 66.0483 45.4337 64.2751C50.8995 58.8458 54.1038 51.612 54.2156 44.4201C54.3139 38.5201 53.4022 33.5877 49.6347 29.5497C46.551 26.2388 42.8863 24.5494 36.7457 22.6664L36.4687 22.6193L36.196 22.5199C20.0536 16.7611 13.3722 8.17263 10.7444 0.970215C2.54352 14.988 -0.960272 28.08 0.304491 40.0003C1.94019 55.378 11.303 63.5742 11.3969 63.6527L11.5354 63.7678L11.6784 63.9142C19.4994 71.9012 30.4845 73.7685 39.6686 68.6635L39.6641 68.6583Z" fill="#00AEEF" />
+                                        </svg>
+                                        <p class="number position-absolute fs-32 fw-700"><?= $index ?></p>
+
+                                        <p class="text-white highlight-primary fs-24 fw-700"><?= html_entity_decode($point) ?></p>
+                                    </article>
+                                </div>
+                        <?php
+                                $index++;
+                            }
+                        }
+                        ?>
                         <div class="col-12">
                             <article class="text-primary-light text-center fs-18 px-lg-4 pt-4 highlight-white">
                                 <?= _isset($page_content, 'key_point_description') ?>

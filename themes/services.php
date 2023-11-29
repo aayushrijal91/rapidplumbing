@@ -58,7 +58,7 @@ require 'inc/banner.php';
                             <article class="serviceHelpCard">
                                 <?= _imgSrc($service, 'image'); ?>
                                 <div class="overlay">
-                                    <p class="title"><?= _isset($service, 'title') ?></p>
+                                    <p class="title filter-shadow"><?= _isset($service, 'title') ?></p>
                                 </div>
                             </article>
                         </a>
