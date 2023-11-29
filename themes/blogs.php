@@ -64,7 +64,7 @@ require 'inc/banner.php';
                         <p class="text-grey-3">Selected Filters</p>
                     </div>
                     <div class="col-auto">
-                        <p class="text-white rounded-pill bg-grey-3 px-3 py-2">All</p>
+                        <p id="selected-filter" class="text-white rounded-pill bg-grey-3 px-3 py-2">All</p>
                     </div>
                 </div>
             </div>
@@ -80,8 +80,25 @@ require 'inc/banner.php';
     var blogsContainer = document.getElementById('blogListContainer');
     blogsContainer.innerHTML = '';
 
-    blogs.forEach(function(blog) {
-        let main = `<div class="col-md-6 col-lg-4">
+    displayBlogs(blogs);
+    
+     document.getElementById('blogCategory').addEventListener('change', function() {
+         var selectedCategory = this.options[this.selectedIndex].getAttribute('data-category');
+
+         document.getElementById('selected-filter').innerHTML = selectedCategory;
+
+         var filteredBlogs = blogs.filter(function(blog) {
+             return blog['category:label'] === selectedCategory;
+         });
+
+         displayBlogs(filteredBlogs);
+     });
+
+    function displayBlogs(blogs) {
+        blogsContainer.innerHTML = '';
+
+        blogs.forEach(function(blog) {
+            let main = `<div class="col-md-6 col-lg-4">
                          <article class="blogCard">
                              <div class="image">
                                <img src="${cdnUrl+blog.thumbnail[0].urlPath}" alt="${blog.thumbnail[0].info1}" title="${blog.thumbnail[0].info2}" width="${blog.thumbnail[0].width}" height="${blog.thumbnail[0].height}">
@@ -100,8 +117,10 @@ require 'inc/banner.php';
                          </article>
                      </div>`;
 
-        blogsContainer.insertAdjacentHTML('beforeend', main);
-    });
+            blogsContainer.insertAdjacentHTML('beforeend', main);
+        });
+    }
+    
 </script>
 
 <?php require 'inc/footer.php'; ?>
