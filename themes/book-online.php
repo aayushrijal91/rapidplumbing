@@ -1,30 +1,30 @@
 <?php
 $BookOnlinePageArr = array();
-$BookOnlinePageArr = book_online_content::get_data($BookOnlinePageArr);
-if (count($BookOnlinePageArr)) {
-    $BookOnlinePageArr = $BookOnlinePageArr[0];
+$page_content = book_online_content::get_data($BookOnlinePageArr);
+if (count($page_content)) {
+    $page_content = $page_content[0];
 }
 
-/* Assets Rates multi record end */
+$gallery = array('orderBy' => 'dragSortOrder ASC');
+$gallery = global_gallery::get_data($gallery);
 
 /*  Meta data */
-$meta_title         = $BookOnlinePageArr['meta_title'];
-$meta_description     = $BookOnlinePageArr['meta_description'];
-$meta_keyword         = $BookOnlinePageArr['meta_keyword'];
+$meta_title         = $page_content['meta_title'];
+$meta_description     = $page_content['meta_description'];
+$meta_keyword         = $page_content['meta_keyword'];
 $meta_image         = '';
 $meta_url             = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 /* Meta Data End */
 
 /* Banner Array Start */
-$banner_details['banner_image'] = $BookOnlinePageArr['banner_video_image'];
-// $banner_details['mobile_background_image'] = $BookOnlinePageArr['mobile_banner_image'];
-$banner_details['banner_title_heading_tag'] = $BookOnlinePageArr['banner_title_heading_tag'];
-$banner_details['banner_title'] = $BookOnlinePageArr['banner_title'];
-$banner_details['banner_subtitle'] = $BookOnlinePageArr['banner_subtitle'];
-$banner_details['banner_button_1_text'] = $BookOnlinePageArr['banner_button_1_text'];
-$banner_details['banner_button_1_link'] = $BookOnlinePageArr['banner_button_1_link'];
-$banner_details['banner_button_2_text'] = $BookOnlinePageArr['banner_button_2_text'];
-$banner_details['banner_button_2_link'] = $BookOnlinePageArr['banner_button_2_link'];
+$banner_details['banner_image'] = $page_content['banner_video_image'];
+$banner_details['banner_title_heading_tag'] = $page_content['banner_title_heading_tag'];
+$banner_details['banner_title'] = $page_content['banner_title'];
+$banner_details['banner_subtitle'] = $page_content['banner_subtitle'];
+$banner_details['banner_button_1_text'] = $page_content['banner_button_1_text'];
+$banner_details['banner_button_1_link'] = $page_content['banner_button_1_link'];
+$banner_details['banner_button_2_text'] = $page_content['banner_button_2_text'];
+$banner_details['banner_button_2_link'] = $page_content['banner_button_2_link'];
 /*  Banner Array End */
 
 require 'inc/header.php';
@@ -145,12 +145,17 @@ require 'inc/banner.php';
 
         <section class="gallery pt-5 pt-lg-8">
             <div class="gallery-slider">
-                <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img1.jpg" alt="Rapid Plumbing Van" /></div>
-                <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img2.jpg" alt="Rapid Plumbing Van" /></div>
-                <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img3.jpg" alt="Rapid Plumbing Van" /></div>
-                <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img4.jpg" alt="Rapid Plumbing Van" /></div>
-                <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img5.jpg" alt="Rapid Plumbing Van" /></div>
-                <div class="item"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/gallery-img6.jpg" alt="Rapid Plumbing Van" /></div>
+                <?php foreach ($gallery as $val) : ?>
+                    <div class="item">
+                        <?= _imgSrc($val, 'image') ?>
+                        <?php if (isset($val['slug'])) : ?>
+                            <a href="<?= _isset($val, 'slug') ?>" class="btn btn-white linkBtn rounded-pill fw-800 px-4"><span class="pe-2"> See More</span> <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4062 8.99622L8.10324 2.69321L1.80023 8.99621" stroke="#00AEEF" stroke-width="3.0125" />
+                                </svg>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </section>
     </div>
