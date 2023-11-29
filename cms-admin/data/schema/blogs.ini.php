@@ -150,8 +150,32 @@ return array (
     'fieldHeight' => '',
     'autoFormat' => '1',
   ),
-  '__separator001__' => array(
+  'category' => array(
     'order' => 11,
+    'label' => 'Category',
+    'type' => 'list',
+    'indexed' => '0',
+    'defaultValue' => 'option one',
+    'fieldPrefix' => '',
+    'description' => '',
+    'isRequired' => '0',
+    'isUnique' => '0',
+    'listType' => 'pulldown',
+    'optionsType' => 'table',
+    'relatedTable' => 'blog_category',
+    'relatedLimit' => '25',
+    'relatedView' => '1',
+    'relatedModify' => '1',
+    'relatedErase' => '1',
+    'relatedCreate' => '1',
+    'relatedWhere' => '',
+    'relatedMoreLink' => '',
+    'optionsTablename' => 'blog_category',
+    'optionsValueField' => 'num',
+    'optionsLabelField' => 'title',
+  ),
+  '__separator001__' => array(
+    'order' => 12,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -167,7 +191,7 @@ return array (
     'isCollapsed' => '',
   ),
   'meta_title' => array(
-    'order' => 12,
+    'order' => 13,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -186,7 +210,7 @@ return array (
     'charset' => '',
   ),
   'meta_keyword' => array(
-    'order' => 13,
+    'order' => 14,
     'label' => 'Keyword',
     'type' => 'textfield',
     'indexed' => '',
@@ -205,7 +229,7 @@ return array (
     'charset' => '',
   ),
   'meta_description' => array(
-    'order' => 14,
+    'order' => 15,
     'label' => 'Description',
     'type' => 'textbox',
     'indexed' => '',
@@ -220,7 +244,7 @@ return array (
     'autoFormat' => '1',
   ),
   '__separator002__' => array(
-    'order' => 15,
+    'order' => 16,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -236,7 +260,7 @@ return array (
     'isCollapsed' => '',
   ),
   'banner_title' => array(
-    'order' => 16,
+    'order' => 17,
     'label' => 'Banner Title',
     'type' => 'textfield',
     'indexed' => '0',
@@ -255,7 +279,7 @@ return array (
     'charset' => '',
   ),
   'banner_title_heading_tag' => array(
-    'order' => 17,
+    'order' => 18,
     'label' => 'Banner Title Heading Tag',
     'type' => 'list',
     'indexed' => '0',
@@ -271,7 +295,7 @@ return array (
     'optionsLabelField' => 'title',
   ),
   'banner_subtitle' => array(
-    'order' => 18,
+    'order' => 19,
     'label' => 'Banner Subtitle',
     'type' => 'textfield',
     'indexed' => '',
@@ -290,7 +314,7 @@ return array (
     'charset' => '',
   ),
   'banner_video_image' => array(
-    'order' => 19,
+    'order' => 20,
     'label' => 'Banner Video/Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -330,7 +354,7 @@ return array (
     'infoField5' => '',
   ),
   'banner_button_1_text' => array(
-    'order' => 20,
+    'order' => 21,
     'label' => 'Banner Button 1 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -349,7 +373,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_1_link' => array(
-    'order' => 21,
+    'order' => 22,
     'label' => 'Banner Button 1 Link',
     'type' => 'textfield',
     'indexed' => '0',
@@ -368,7 +392,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_text' => array(
-    'order' => 22,
+    'order' => 23,
     'label' => 'Banner Button 2 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -387,7 +411,7 @@ return array (
     'charset' => '',
   ),
   'banner_button_2_link' => array(
-    'order' => 23,
+    'order' => 24,
     'label' => 'Banner Button 2 Link',
     'type' => 'textfield',
     'indexed' => '0',
@@ -406,7 +430,7 @@ return array (
     'charset' => '',
   ),
   '__separator003__' => array(
-    'order' => 24,
+    'order' => 25,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -422,7 +446,7 @@ return array (
     'isCollapsed' => '',
   ),
   'section_1_image' => array(
-    'order' => 25,
+    'order' => 26,
     'label' => 'Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -462,7 +486,7 @@ return array (
     'infoField5' => '',
   ),
   'section_1_title' => array(
-    'order' => 26,
+    'order' => 27,
     'label' => 'Title',
     'type' => 'textbox',
     'indexed' => '',
@@ -477,7 +501,7 @@ return array (
     'autoFormat' => '1',
   ),
   'section_1_description' => array(
-    'order' => 27,
+    'order' => 28,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -519,7 +543,7 @@ return array (
     'customUploadUrl' => '',
   ),
   '__separator004__' => array(
-    'order' => 28,
+    'order' => 29,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -535,7 +559,7 @@ return array (
     'isCollapsed' => '',
   ),
   'section_2_image' => array(
-    'order' => 29,
+    'order' => 30,
     'label' => 'Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -575,7 +599,7 @@ return array (
     'infoField5' => '',
   ),
   'section_2_title' => array(
-    'order' => 30,
+    'order' => 31,
     'label' => 'Title',
     'type' => 'textbox',
     'indexed' => '',
@@ -590,7 +614,7 @@ return array (
     'autoFormat' => '1',
   ),
   'section_2_description' => array(
-    'order' => 31,
+    'order' => 32,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -632,7 +656,7 @@ return array (
     'customUploadUrl' => '',
   ),
   '__separator005__' => array(
-    'order' => 32,
+    'order' => 33,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -648,7 +672,7 @@ return array (
     'isCollapsed' => '',
   ),
   'section_3_title' => array(
-    'order' => 33,
+    'order' => 34,
     'label' => 'Title',
     'type' => 'textbox',
     'indexed' => '',
@@ -663,7 +687,7 @@ return array (
     'autoFormat' => '1',
   ),
   'section_3_description' => array(
-    'order' => 34,
+    'order' => 35,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -705,7 +729,7 @@ return array (
     'customUploadUrl' => '',
   ),
   '__separator006__' => array(
-    'order' => 35,
+    'order' => 36,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -721,7 +745,7 @@ return array (
     'isCollapsed' => '',
   ),
   'section_4_image' => array(
-    'order' => 36,
+    'order' => 37,
     'label' => 'Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -761,7 +785,7 @@ return array (
     'infoField5' => '',
   ),
   'section_4_title' => array(
-    'order' => 37,
+    'order' => 38,
     'label' => 'Title',
     'type' => 'textbox',
     'indexed' => '',
@@ -776,7 +800,7 @@ return array (
     'autoFormat' => '1',
   ),
   'section_4_description' => array(
-    'order' => 38,
+    'order' => 39,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -818,7 +842,7 @@ return array (
     'customUploadUrl' => '',
   ),
   '__separator007__' => array(
-    'order' => 39,
+    'order' => 40,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -834,7 +858,7 @@ return array (
     'isCollapsed' => '',
   ),
   'blog_subtitle' => array(
-    'order' => 40,
+    'order' => 41,
     'label' => 'Blog Subtitle',
     'type' => 'textbox',
     'indexed' => '',

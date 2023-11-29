@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Careers Content',
-  'menuOrder' => '0000000030',
+  'menuOrder' => '0000000031',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(
