@@ -56,7 +56,7 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
                     </div>
                     <?php if (!empty(_isset($contact_info, 'facebook_link'))) : ?>
                         <div class="col-auto">
-                            <a href="<?= _isset($contact_info, 'instagram_link') ?>">
+                            <a href="<?= _isset($contact_info, 'facebook_link') ?>">
                                 <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3957 14.3505L13.1042 9.94372H8.99481V7.10067C8.99481 6.1056 9.56162 4.96837 11.4037 4.96837H13.2459V1.2724C13.2459 1.2724 11.5454 0.988098 9.84502 0.988098C6.44417 0.988098 4.17693 3.12039 4.17693 6.81636V10.0859H0.492676V14.4926H4.31864V24.8698C5.02715 25.0119 5.87736 25.0119 6.72757 25.0119C7.57779 25.0119 8.2863 25.0119 9.13651 24.8698V14.3505H12.3957Z" fill="white" />
                                 </svg>
