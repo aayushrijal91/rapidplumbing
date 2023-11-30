@@ -267,7 +267,7 @@ require 'inc/nav.php';
             </div>
             <div class="slider">
                 <div class="d-flex justify-content-end">
-                    <div class="col-lg-11">
+                    <div class="col-12 col-lg-11">
                         <div class="expect-slider pt-5 pt-md-7 position-relative z-1">
                             <?php foreach ($services_list as $service) : ?>
                                 <article class="box">

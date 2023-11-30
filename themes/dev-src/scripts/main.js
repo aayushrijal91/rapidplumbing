@@ -17,7 +17,7 @@ function progressBarSlider1(slider) {
 
     slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         let calc = ((nextSlide) / (slick.slideCount - 0)) * 100;
-        console.log($progressBar);
+
         $progressBar
             .css('background-size', calc + '% 100%')
             .attr('aria-valuenow', calc);
@@ -52,6 +52,18 @@ $('.expect-slider').slick({
     autoplay: true,
     variableWidth: true,
     touchThreshold: 1000,
+    responsive: [
+        {
+            breakpoint: 540,
+            settings: {
+                centerMode: true,
+                centerPadding: "20px",
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false
+            }
+        }
+    ]
 });
 
 progressBarSlider1($('.expect-slider'));
