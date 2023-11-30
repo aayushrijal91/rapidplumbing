@@ -80,9 +80,9 @@ require 'inc/serviceBanner.php';
                 <?php foreach ($services as $service) : ?>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <article class="helpCard">
-                            <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
+                            <?= _imgSrc($service, 'image', 'h-100 w-100 object-fit-cover'); ?>
                             <div class="overlay">
-                                <p class="fs-24 fw-700 lh-1 text-start text-white"><?= _isset($service, 'title') ?></p>
+                                <p class="fs-24 fw-700 lh-1 text-start text-white filter-shadow"><?= _isset($service, 'title') ?></p>
                                 <?php if (!empty($service['slug'])) : ?>
                                     <a href="<?= _isset($service, 'slug'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
                                 <?php endif; ?>

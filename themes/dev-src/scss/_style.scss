@@ -1505,10 +1505,12 @@ main.renovationPlumbersServicePage {
                 margin: 0 21px 30px;
                 display: flex;
                 justify-content: center;
-
+                height: 456px;
+                
                 img {
-                    width: 100%;
+                    width: 330px;
                     border-radius: 0 0 35px 35px;
+                    object-fit: cover;
                 }
 
                 .overlay {

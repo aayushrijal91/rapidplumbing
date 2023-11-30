@@ -175,9 +175,11 @@ require 'inc/nav.php';
                     </div>
                 </div>
 
+                <?php if (!empty($page_content['welcome_button_text']) && !empty($page_content['welcome_button_link'])) : ?>
                 <div class="text-center pt-5 d-md-none">
-                    <a href="#" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700">More About Us</a>
+                    <a href="<?= _isset($page_content, 'welcome_button_link') ?>" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700"><?= _isset($page_content, 'welcome_button_text') ?></a>
                 </div>
+                <?php endif; ?>
             </div>
 
             <div class="welcome-bg welcome-bg1 position-absolute start-0 top-50 translate-middle-y mt-5 z-n1 d-none d-lg-block"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/welcome-bg1.png" alt="Rapid Plumbing Van" /></div>
@@ -194,7 +196,7 @@ require 'inc/nav.php';
                             <article class="helpCard">
                                 <?= _imgSrc($data, 'image') ?>
                                 <div class="overlay">
-                                    <p class="fs-24 fw-700 lh-1 text-start"><?= _isset($data, 'title') ?></p>
+                                    <p class="fs-24 fw-700 lh-1 text-start filter-shadow"><?= _isset($data, 'title') ?></p>
                                     <a href="<?= _isset($data, 'slug') ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
                                 </div>
                             </article>
@@ -270,7 +272,7 @@ require 'inc/nav.php';
                             <?php foreach ($services_list as $service) : ?>
                                 <article class="box">
                                     <?= _imgSrc($service, 'image', 'image'); ?>
-                                    <p class="overlay"><?= _isset($service, 'title') ?></p>
+                                    <div class="overlay"><p class="filter-shadow"><?= _isset($service, 'title') ?></p></div>
                                 </article>
                             <?php endforeach; ?>
                         </div>

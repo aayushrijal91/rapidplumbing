@@ -318,12 +318,12 @@ $('.membershipSlider').slick({
 $('.tapstoiltesservices-slider').slick({
     dots: false,
     arrows: false,
-    infinite: false,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    centerMode: true,
     speed: 500,
     autoplay: false,
-    variableWidth: true,
+    // variableWidth: true,
     touchThreshold: 1000,
     responsive: [
         {
