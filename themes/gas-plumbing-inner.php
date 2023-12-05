@@ -19,7 +19,7 @@ $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = gas_plumbing_faqs::get_data($faqs);
+$faqs = gas_plumbing_inner_service_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -101,19 +101,23 @@ require 'inc/serviceBanner.php';
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
-                
+
                 <div class="slider">
                     <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
-                        <?php foreach ($faqs as $faq) : ?>
-                            <article class="box">
-                                <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
-                                <article class="description fs-18 pt-3 lh-1_5">
-                                    <?= _isset($faq, 'content') ?>
+                        <?php foreach ($faqs as $faq) :
+                            if ($page_content['slug'] == $faq['category']) :
+                        ?>
+                                <article class="box">
+                                    <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
+                                    <article class="description fs-18 pt-3 lh-1_5">
+                                        <?= _isset($faq, 'content') ?>
+                                    </article>
                                 </article>
-                            </article>
-                        <?php endforeach; ?>
+                        <?php
+                            endif;
+                        endforeach; ?>
                     </div>
-    
+
                     <div class="slider-progressbar mt-4">
                         <div class="content">
                             <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">

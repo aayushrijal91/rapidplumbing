@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Renovation Plumbers FAQs',
-  'menuOrder' => '0000000080',
+  'menuOrder' => '0000000086',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

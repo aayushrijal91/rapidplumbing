@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'General Plumbing Services',
-  'menuOrder' => '0000000069',
+  'menuOrder' => '0000000073',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

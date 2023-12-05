@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Roofing & Guttering Content',
-  'menuOrder' => '0000000082',
+  'menuOrder' => '0000000088',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

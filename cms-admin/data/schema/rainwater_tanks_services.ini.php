@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'Rainwater Tanks Services',
-  'menuOrder' => '0000000065',
+  'menuOrder' => '0000000068',
   'menuType' => 'multi',
   'num' => array(
     'order' => 1,

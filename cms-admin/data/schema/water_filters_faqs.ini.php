@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Water Filters FAQs',
-  'menuOrder' => '0000000094',
+  'menuOrder' => '0000000101',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

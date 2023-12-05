@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Schools FAQs',
-  'menuOrder' => '0000000101',
+  'menuOrder' => '0000000108',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(
