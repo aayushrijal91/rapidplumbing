@@ -132,14 +132,16 @@ require 'inc/serviceBanner.php';
                             </article>
                         <?php endforeach; ?>
                     </div>
-    
-                    <div class="slider-progressbar mt-4">
-                        <div class="content">
-                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only"></span>
+
+                    <?php if (count($faqs) > 3) : ?>
+                        <div class="slider-progressbar mt-4">
+                            <div class="content">
+                                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="sr-only"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>

@@ -9,9 +9,6 @@ if (count($page_content)) {
 $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
-$services = array('orderBy' => 'dragSortOrder ASC');
-$services = backflow_prevention_services::get_data($services);
-
 $faqs = array('orderBy' => 'dragSortOrder ASC');
 $faqs = backflow_prevention_faqs::get_data($faqs);
 
@@ -108,13 +105,15 @@ require 'inc/serviceBanner.php';
                         <?php endforeach; ?>
                     </div>
 
-                    <div class="slider-progressbar mt-4">
-                        <div class="content">
-                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only"></span>
+                    <?php if (count($faqs) > 3) : ?>
+                        <div class="slider-progressbar mt-4">
+                            <div class="content">
+                                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="sr-only"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>

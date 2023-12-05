@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Strata Plumbing FAQs',
-  'menuOrder' => '0000000078',
+  'menuOrder' => '0000000079',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

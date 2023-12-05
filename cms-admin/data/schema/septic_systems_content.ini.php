@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Septic Systems Content',
-  'menuOrder' => '0000000093',
+  'menuOrder' => '0000000094',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

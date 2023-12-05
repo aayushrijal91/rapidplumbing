@@ -103,8 +103,12 @@ require 'inc/serviceBanner.php';
 
                 <div class="slider">
                     <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
-                        <?php foreach ($faqs as $faq) :
+                        <?php
+                        $count = 0;
+
+                        foreach ($faqs as $faq) :
                             if ($page_content['slug'] == $faq['category']) :
+                                $count++;
                         ?>
                                 <article class="box dark">
                                     <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
@@ -117,13 +121,15 @@ require 'inc/serviceBanner.php';
                         endforeach; ?>
                     </div>
 
-                    <div class="slider-progressbar mt-4">
-                        <div class="content">
-                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only"></span>
+                    <?php if ($count > 3) : ?>
+                        <div class="slider-progressbar mt-4">
+                            <div class="content">
+                                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="sr-only"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
