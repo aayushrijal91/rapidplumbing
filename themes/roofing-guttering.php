@@ -59,7 +59,9 @@ require 'inc/serviceBanner.php';
                             <a href="<?= _isset($service, 'slug') ?>">
                                 <article class="aboutCard d-flex flex-column">
                                     <p class="fs-24 text-center pb-4 flex-grow-1 text-white"><?= _isset($service, 'title') ?></p>
-                                    <?= _imgSrc($service, 'image', 'w-100'); ?>
+                                    <div class="mainImg">
+                                        <?= _imgSrc($service, 'image', 'w-100 h-100 object-fit-cover'); ?>
+                                    </div>
                                 </article>
                             </a>
                         </div>
