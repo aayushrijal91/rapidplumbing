@@ -81,7 +81,7 @@ require 'inc/serviceBanner.php';
                         <div class="tapstoiltesservices-slider position-relative z-1">
                             <?php foreach ($services as $service) : ?>
                                 <article class="box">
-                                    <?= _imgSrc($service, 'image', 'h-100 w-100 object-cover'); ?>
+                                    <?= _imgSrc($service, 'image', 'h-100 w-100 object-fit-cover'); ?>
                                     <div class="overlay">
                                         <p><?= _isset($service, 'title') ?></p>
                                     </div>
