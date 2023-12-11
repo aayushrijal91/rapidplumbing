@@ -34,7 +34,7 @@ function progressBarSlider(slider, $progressBar) {
 }
 
 $('.homebanner').slick({
-    arrows: false,
+    arrows: true,
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,

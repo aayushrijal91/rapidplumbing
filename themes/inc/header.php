@@ -15,9 +15,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name='robots' content='index, follow, max-video-preview:-1, max-snippet:-1, max-image-preview:large' />
 
         <!-- Site Title -->
 		<title><?php if(isset($meta_title) && !empty($meta_title)) { echo $meta_title;}?></title>
+        <link rel="canonical" href="https://<?= $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] ?>" />
 		<meta name="title" content="<?php if(isset($meta_title) && !empty($meta_title)) { echo $meta_title;}?>">
 		<meta name="description" content="<?php if(isset($meta_description) && !empty($meta_description)) { echo $meta_description;}?>">
 		<meta name="keyword" content="<?php if(isset($meta_keyword) && !empty($meta_keyword)) { echo $meta_keyword;}?>">

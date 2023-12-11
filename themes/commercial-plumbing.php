@@ -48,7 +48,7 @@ require 'inc/serviceBanner.php';
                 <div class="row align-items-center gy-5">
                     <div class="col-lg-6">
                         <article>
-                            <h3 class="fs-55 fw-500 lh-1 text-capitalize fw-700"><?= _isset($page_content, 'introduction_title') ?></h3>
+                            <p class="fs-55 fw-500 lh-1 text-capitalize fw-700"><?= _isset($page_content, 'introduction_title') ?></p>
 
                             <article class="fs-16 description lh-1_67 py-4">
                                 <?= _isset($page_content, 'introduction_description') ?>
@@ -66,10 +66,14 @@ require 'inc/serviceBanner.php';
                     </div>
                 </div>
             </section>
-        </div>
 
-        <div class="container pt-7">
-            <div class="row gy-4">
+            <div class="detail pt-7 row justify-content-center description">
+                <div class="col-12 col-xl-10">
+                    <?= $page_content['detail_description'] ?>
+                </div>
+            </div>
+
+            <div class="row gy-4 pt-7">
                 <?php foreach ($cta_list as $cta) { ?>
                     <div class="col-12">
                         <article class="aboutCard">

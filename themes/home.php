@@ -21,9 +21,6 @@ if (count($page_content)) {
 $services_list = array('orderBy' => 'dragSortOrder ASC');
 $services_list = services_list::get_data($services_list);
 
-$trusted_plumber_gallery = array('orderBy' => 'dragSortOrder ASC');
-$trusted_plumber_gallery = trusted_plumber_gallery::get_data($trusted_plumber_gallery);
-
 $how_to_help_list = array('orderBy' => 'dragSortOrder ASC');
 $how_to_help_list = how_to_help_list::get_data($how_to_help_list);
 
@@ -80,15 +77,15 @@ require 'inc/nav.php';
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="trusted-main-slider">
-                    <?php foreach ($trusted_plumber_gallery as $val) : ?>
+                    <?php foreach ($page_content['trusted_plumber_images'] as $val) : ?>
                         <div>
-                            <img src="<?= V_CDN_URL . $val['image'][0]['urlPath'] ?>" alt="<?= $val['image'][0]['info2'] ?>" class="w-100 h-100 object-fit-cover" />
+                            <img src="<?= V_CDN_URL . $val['urlPath'] ?>" alt="<?= $val['info2'] ?>" class="w-100 h-100 object-fit-cover" />
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-lg-6">
-                <article class="px-3 py-6 p-md-7 pe-lg-10 d-flex flex-column gap-1_5">
+                <article class="px-3 py-6 p-md-7 p-lg-6 pe-xl-10 d-flex flex-column gap-1_5">
                     <h3 class="fs-70 fw-500 lh-1 highlight-primary"><?= _isset($page_content, 'trusted_plumber_title') ?></h3>
 
                     <article class="fs-20 py-4 col-xl-9 description">
@@ -96,9 +93,9 @@ require 'inc/nav.php';
                     </article>
 
                     <div class="trusted-thumbnail-slider pt-md-4">
-                        <?php foreach ($trusted_plumber_gallery as $val) : ?>
+                        <?php foreach ($page_content['trusted_plumber_images'] as $val) : ?>
                             <div>
-                                <img src="<?= V_CDN_URL . $val['thumbnail'][0]['urlPath'] ?>" alt="<?= $val['thumbnail'][0]['info2'] ?>" />
+                                <img src="<?= V_CDN_URL . $val['urlPath'] ?>" alt="<?= $val['info2'] ?>" />
                             </div>
                         <?php endforeach; ?>
                     </div>

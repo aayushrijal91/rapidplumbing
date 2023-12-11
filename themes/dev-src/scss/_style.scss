@@ -122,6 +122,17 @@ section.serviceBanner {
 
 // Home Page
 main.homepage {
+    .homebanner {
+        .slick-prev {
+            left: 10%;
+            z-index: 1;
+        }
+
+        .slick-next {
+            right: 10%;
+        }
+    }
+
     .rapid-van {
         img.van {
             @include media-breakpoint-down(xl) {
@@ -139,6 +150,26 @@ main.homepage {
 
         .trusted-bg {
             mix-blend-mode: soft-light;
+        }
+
+        .trusted-main-slider {
+            .slick-slide {
+                height: 800px;
+
+                @include media-breakpoint-down(lg) {
+                    height: 450px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    height: 350px;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
         }
 
         .trusted-thumbnail-slider {
@@ -175,9 +206,12 @@ main.homepage {
 
             .slick-slide {
                 margin: 0 5px;
+                height: 150px;
 
                 img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }

@@ -8,7 +8,7 @@ class router {
 		'ajax' => array('ajax'),		
 		'sitemap' => array('sitemap'),
 		'about-us' => array('about-us'),
-		'services' => array('services'),
+		'penrith-plumber' => array('penrith-plumber'),
 		'faqs' => array('faqs'),
 		'careers' => array('careers'),
 		'home-safety-inspection' => array('home-safety-inspection'),

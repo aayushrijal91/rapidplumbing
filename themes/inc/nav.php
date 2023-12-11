@@ -29,7 +29,7 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
             <div class="col-auto">
                 <a href="<?php echo V_SITE_URL; ?>"><?= _imgSrc($header_settings, 'site_logo', 'header__logo'); ?></a>
             </div>
-            
+
             <div class="col d-none d-lg-block">
                 <?php if (!empty($header_menu_section)) { ?>
                     <nav class="navbar navbar-expand-lg collapsed ">
@@ -48,6 +48,9 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
 
             <div class="col-auto d-none d-md-block">
                 <div class="row align-items-center gx-xl-4">
+                    <div class="col-auto">
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/brighte.png" alt="brighte" />
+                    </div>
                     <div class="col-auto d-none d-xl-block">
                         <a href="tel:<?php echo preg_replace('/[^\d]/i', '', _isset($contact_info, 'phone_number')); ?>" class="btn btn-primary text-white fs-27 text-italic fw-700 gap-2">
                             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/buzzing-phone.gif" width=38 height=38 alt="Phone" />
