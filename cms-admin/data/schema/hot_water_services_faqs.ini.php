@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Hot Water Services FAQs',
-  'menuOrder' => '0000000060',
+  'menuOrder' => '0000000076',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

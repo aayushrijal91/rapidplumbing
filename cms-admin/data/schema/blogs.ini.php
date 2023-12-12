@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Blogs',
-  'menuOrder' => '0000000026',
+  'menuOrder' => '0000000024',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

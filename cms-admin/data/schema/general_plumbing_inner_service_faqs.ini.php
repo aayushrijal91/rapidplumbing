@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'General Plumbing Inner Service FAQs',
-  'menuOrder' => '0000000076',
+  'menuOrder' => '0000000072',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

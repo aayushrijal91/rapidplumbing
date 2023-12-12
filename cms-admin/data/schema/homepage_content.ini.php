@@ -356,10 +356,10 @@ return array (
     'maxUploadSizeKB' => '5120',
     'checkMaxUploads' => '1',
     'maxUploads' => '200',
-    'resizeOversizedImages' => '1',
+    'resizeOversizedImages' => '0',
     'maxImageHeight' => '800',
     'maxImageWidth' => '600',
-    'createThumbnails' => '1',
+    'createThumbnails' => '0',
     'maxThumbnailHeight' => '150',
     'maxThumbnailWidth' => '150',
     'cropThumbnails' => '0',
@@ -385,7 +385,7 @@ return array (
     'infoField5' => '',
   ),
   '__separator003__' => array(
-    'order' => 21,
+    'order' => 20,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -401,7 +401,7 @@ return array (
     'isCollapsed' => '',
   ),
   'welcome_title' => array(
-    'order' => 22,
+    'order' => 21,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -420,7 +420,7 @@ return array (
     'charset' => '',
   ),
   'welcome_subtitle' => array(
-    'order' => 23,
+    'order' => 22,
     'label' => 'Subtitle',
     'type' => 'textbox',
     'indexed' => '',
@@ -435,7 +435,7 @@ return array (
     'autoFormat' => '1',
   ),
   'welcome_button_text' => array(
-    'order' => 24,
+    'order' => 23,
     'label' => 'Button Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -454,7 +454,7 @@ return array (
     'charset' => '',
   ),
   'welcome_button_link' => array(
-    'order' => 25,
+    'order' => 24,
     'label' => 'Button Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -473,7 +473,7 @@ return array (
     'charset' => '',
   ),
   '__separator005__' => array(
-    'order' => 26,
+    'order' => 25,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -489,7 +489,7 @@ return array (
     'isCollapsed' => '',
   ),
   'how_to_help_title' => array(
-    'order' => 27,
+    'order' => 26,
     'label' => 'How To Help Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -508,7 +508,7 @@ return array (
     'charset' => '',
   ),
   'how_to_help_list' => array(
-    'order' => 28,
+    'order' => 27,
     'label' => 'How To Help List',
     'type' => 'relatedRecords',
     'indexed' => '',
@@ -535,7 +535,7 @@ return array (
     'relatedMoreLink' => '',
   ),
   '__separator006__' => array(
-    'order' => 29,
+    'order' => 28,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -551,7 +551,7 @@ return array (
     'isCollapsed' => '',
   ),
   '3_step_process_title' => array(
-    'order' => 30,
+    'order' => 29,
     'label' => '3 Step Process Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -570,7 +570,7 @@ return array (
     'charset' => '',
   ),
   'step_1_image' => array(
-    'order' => 31,
+    'order' => 30,
     'label' => 'Step 1 Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -610,7 +610,7 @@ return array (
     'infoField5' => '',
   ),
   'step_1_title' => array(
-    'order' => 32,
+    'order' => 31,
     'label' => 'Step 1 Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -629,7 +629,7 @@ return array (
     'charset' => '',
   ),
   'step_1_description' => array(
-    'order' => 33,
+    'order' => 32,
     'label' => 'Step 1 Description',
     'type' => 'textbox',
     'indexed' => '',
@@ -644,7 +644,7 @@ return array (
     'autoFormat' => '1',
   ),
   'step_2_image' => array(
-    'order' => 34,
+    'order' => 33,
     'label' => 'Step 2 Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -684,7 +684,7 @@ return array (
     'infoField5' => '',
   ),
   'step_2_title' => array(
-    'order' => 35,
+    'order' => 34,
     'label' => 'Step 2 Title',
     'type' => 'textfield',
     'indexed' => '0',
@@ -706,7 +706,7 @@ return array (
     'charset' => '',
   ),
   'step_2_description' => array(
-    'order' => 36,
+    'order' => 35,
     'label' => 'Step 2 Description',
     'type' => 'textbox',
     'indexed' => '',
@@ -721,7 +721,7 @@ return array (
     'autoFormat' => '1',
   ),
   'step_3_image' => array(
-    'order' => 37,
+    'order' => 36,
     'label' => 'Step 3 Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -761,7 +761,7 @@ return array (
     'infoField5' => '',
   ),
   'step_3_title' => array(
-    'order' => 38,
+    'order' => 37,
     'label' => 'Step 3 Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -780,7 +780,7 @@ return array (
     'charset' => '',
   ),
   'step_3_description' => array(
-    'order' => 39,
+    'order' => 38,
     'label' => 'Step 3 Description',
     'type' => 'textbox',
     'indexed' => '',
@@ -795,7 +795,7 @@ return array (
     'autoFormat' => '1',
   ),
   '__separator008__' => array(
-    'order' => 40,
+    'order' => 39,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -811,7 +811,7 @@ return array (
     'isCollapsed' => '',
   ),
   'expect_title' => array(
-    'order' => 41,
+    'order' => 40,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '0',
@@ -830,7 +830,7 @@ return array (
     'charset' => '',
   ),
   'expect_description' => array(
-    'order' => 42,
+    'order' => 41,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '0',
@@ -872,7 +872,7 @@ return array (
     'customUploadUrl' => '',
   ),
   '__separator007__' => array(
-    'order' => 43,
+    'order' => 42,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -888,7 +888,7 @@ return array (
     'isCollapsed' => '',
   ),
   'custom_project_title' => array(
-    'order' => 44,
+    'order' => 43,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '0',
@@ -907,7 +907,7 @@ return array (
     'charset' => '',
   ),
   'custom_project_description' => array(
-    'order' => 45,
+    'order' => 44,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -949,7 +949,7 @@ return array (
     'customUploadUrl' => '',
   ),
   'custom_project_button_link' => array(
-    'order' => 46,
+    'order' => 45,
     'label' => 'Button Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -968,7 +968,7 @@ return array (
     'charset' => '',
   ),
   'custom_project_image' => array(
-    'order' => 47,
+    'order' => 46,
     'label' => 'Image',
     'type' => 'upload',
     'fieldPrefix' => '',
@@ -1008,7 +1008,7 @@ return array (
     'infoField5' => '',
   ),
   '__separator009__' => array(
-    'order' => 48,
+    'order' => 47,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -1024,7 +1024,7 @@ return array (
     'isCollapsed' => '',
   ),
   'testimonials_title' => array(
-    'order' => 49,
+    'order' => 48,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '0',
@@ -1043,7 +1043,7 @@ return array (
     'charset' => '',
   ),
   'testimonials_button_1_text' => array(
-    'order' => 50,
+    'order' => 49,
     'label' => 'Button 1 Text',
     'type' => 'textfield',
     'indexed' => '0',
@@ -1062,7 +1062,7 @@ return array (
     'charset' => '',
   ),
   'testimonials_button_1_link' => array(
-    'order' => 51,
+    'order' => 50,
     'label' => 'Button 1 Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -1081,7 +1081,7 @@ return array (
     'charset' => '',
   ),
   'testimonials_button_2_text' => array(
-    'order' => 52,
+    'order' => 51,
     'label' => 'Button 2 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -1100,7 +1100,7 @@ return array (
     'charset' => '',
   ),
   'testimonials_button_2_link' => array(
-    'order' => 53,
+    'order' => 52,
     'label' => 'Button 2 Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -1119,7 +1119,7 @@ return array (
     'charset' => '',
   ),
   'testimonials' => array(
-    'order' => 54,
+    'order' => 53,
     'label' => 'Testimonials',
     'type' => 'relatedRecords',
     'indexed' => '',
@@ -1146,7 +1146,7 @@ return array (
     'relatedMoreLink' => '',
   ),
   '__separator010__' => array(
-    'order' => 55,
+    'order' => 54,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -1162,7 +1162,7 @@ return array (
     'isCollapsed' => '',
   ),
   'hire_us_title' => array(
-    'order' => 56,
+    'order' => 55,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -1181,7 +1181,7 @@ return array (
     'charset' => '',
   ),
   'hire_us_description' => array(
-    'order' => 57,
+    'order' => 56,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -1223,7 +1223,7 @@ return array (
     'customUploadUrl' => '',
   ),
   'hiring_reasons' => array(
-    'order' => 58,
+    'order' => 57,
     'label' => 'Hiring Reasons',
     'type' => 'relatedRecords',
     'indexed' => '',
@@ -1250,7 +1250,7 @@ return array (
     'relatedMoreLink' => '',
   ),
   '__separator011__' => array(
-    'order' => 59,
+    'order' => 58,
     'label' => '',
     'type' => 'separator',
     'separatorType' => 'header bar',
@@ -1266,7 +1266,7 @@ return array (
     'isCollapsed' => '',
   ),
   'price_matching_title' => array(
-    'order' => 60,
+    'order' => 59,
     'label' => 'Title',
     'type' => 'textfield',
     'indexed' => '',
@@ -1285,7 +1285,7 @@ return array (
     'charset' => '',
   ),
   'price_matching_description' => array(
-    'order' => 61,
+    'order' => 60,
     'label' => 'Description',
     'type' => 'wysiwyg',
     'indexed' => '',
@@ -1327,7 +1327,7 @@ return array (
     'customUploadUrl' => '',
   ),
   'price_matching_button_1_text' => array(
-    'order' => 62,
+    'order' => 61,
     'label' => 'Button 1 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -1346,7 +1346,7 @@ return array (
     'charset' => '',
   ),
   'price_matching_button_1_link' => array(
-    'order' => 63,
+    'order' => 62,
     'label' => 'Button 1 Link',
     'type' => 'textfield',
     'indexed' => '',
@@ -1365,7 +1365,7 @@ return array (
     'charset' => '',
   ),
   'price_matching_button_2_text' => array(
-    'order' => 64,
+    'order' => 63,
     'label' => 'Button 2 Text',
     'type' => 'textfield',
     'indexed' => '',
@@ -1384,7 +1384,7 @@ return array (
     'charset' => '',
   ),
   'price_matching_button_2_link' => array(
-    'order' => 65,
+    'order' => 64,
     'label' => 'Button 2 Link',
     'type' => 'textfield',
     'indexed' => '',

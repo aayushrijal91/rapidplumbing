@@ -1736,3 +1736,186 @@ main.commercialPlumbingServicePage {
         background: transparent !important;
     }
 }
+
+main.suburbsPage {
+    .areatop {
+        .alphbetwrap {
+            .areas_allSearch, .areas_alphabet {
+                display: inline-block;
+                background-color: #262627;
+                color: $white;
+                cursor: pointer;
+                font-size: 1.15rem;
+                text-transform: uppercase;
+                transition: 0.35s all ease;
+                height: 47px;
+                width: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+
+                &:hover {
+                    color: $white;
+                    background-color: $primary;
+                }
+            }
+
+            .areas_allSearch {
+                width: 124px;
+            }
+
+            .active {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+
+    .areawrap {
+        background: #132649;
+        border-radius: 80px 80px 0 0;
+        padding: 137px 0;
+
+        .arealistwrap {
+            ul {
+                margin-bottom: 0;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 0 2rem;
+
+                li {
+                    display: inline-block;
+                    padding: 0.25rem 0;
+
+                    a {
+                        font-size: 1rem;
+                        color: $white;
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+
+                .show-more {
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+
+            .areahide {
+                display: none;
+            }
+
+            .mbottom {
+                margin-bottom: 7.2rem;
+
+                @media screen and (max-width: 576px) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .arealisthide {
+            display: none;
+        }
+
+        .areas_loadMoreWrap {
+            position: relative;
+            text-align: center;
+            padding: 3rem 0 1.6rem;
+
+            a {
+                font-weight: bold;
+                color: $white;
+                font-size: 1.2rem;
+                padding: 1rem;
+                width: 13.2rem;
+                display: inline-block;
+                text-align: center;
+                border-radius: 0;
+                background-color: $primary;
+
+                &:hover {
+                    background-color: $secondary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    div.areas_droplist {
+        position: relative;
+        z-index: 9;
+    }
+
+    div.areas_droplist > div.caption {
+        border: 1px solid #c4c4c4;
+        padding: 11px 24px;
+        border-radius: 0;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0.5rem;
+            top: 35%;
+            border: solid $primary;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            transition: all 0.35s ease;
+        }
+    }
+
+    div.areas_droplist > div.list {
+        position: absolute;
+        background-color: #f2f2f2;
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+        display: none;
+    }
+
+    div.areas_droplist > div.list > div.item {
+        padding: 11px 24px;
+        background-color: #cecece;
+        cursor: pointer;
+    }
+
+    div.areas_droplist > div.list > div.item.selected {
+        font-weight: bold;
+    }
+
+    div.areas_droplist > div.caption:hover,
+    div.areas_droplist > div.list > div.item:hover {
+        background-color: $primary;
+        color: #fff;
+    }
+
+    div.areas_droplist.open > div.caption {
+        border-radius: 3px 3px 0 0;
+        border-bottom: solid 1px #999;
+    }
+
+    div.areas_droplist.open > div.list {
+        display: block;
+        z-index: 99;
+    }
+}
+
+main.suburbInnerPage {
+    section.introduction {
+        background: #132649;
+
+        .hero-image {
+            height: 326px;
+        }
+
+        .content {
+            background: #152F5F;
+        }
+    }
+}

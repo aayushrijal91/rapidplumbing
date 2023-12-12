@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Hot Water Inner Service FAQs',
-  'menuOrder' => '0000000061',
+  'menuOrder' => '0000000077',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

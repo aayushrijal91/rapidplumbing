@@ -32,6 +32,7 @@ class router {
 		'water-filters' => array('water-filters'),
 		'commercial-plumbing' => array('commercial-plumbing'),
 		'schools' => array('schools'),
+		'suburbs' => array('suburbs'),
 	);
 	
 	public static function init() {

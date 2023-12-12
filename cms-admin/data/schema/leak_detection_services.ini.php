@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Leak Detection Services',
-  'menuOrder' => '0000000082',
+  'menuOrder' => '0000000080',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

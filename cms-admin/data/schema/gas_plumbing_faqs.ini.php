@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Gas Plumbing FAQs',
-  'menuOrder' => '0000000052',
+  'menuOrder' => '0000000066',
   'menuPrefixIcon' => '',
   'menuType' => 'multi',
   'num' => array(

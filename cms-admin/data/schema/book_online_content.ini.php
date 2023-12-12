@@ -23,7 +23,7 @@ return array (
   'listPageSearchFields' => '_all_',
   'menuHidden' => '0',
   'menuName' => 'Book Online Content',
-  'menuOrder' => '0000000040',
+  'menuOrder' => '0000000027',
   'menuPrefixIcon' => '',
   'menuType' => 'single',
   'num' => array(

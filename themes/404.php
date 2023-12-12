@@ -136,6 +136,19 @@ if (isset($Explode[0]) && !empty($Explode[0])) {
     }
 }
 
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $suburbArray = array('where' => "`slug` = '" . $Explode[0] . "'");
+    $suburbs = suburb_list::get_data($suburbArray);
+
+    if (count($suburbs) > 0) {
+        $_GET['slug'] = $Explode[0];
+        $filepagename =  'suburb';
+        include('suburb.php');
+        $no_page_exist = false;
+        exit();
+    }
+}
+
 if ($no_page_exist) :
 ?>
 

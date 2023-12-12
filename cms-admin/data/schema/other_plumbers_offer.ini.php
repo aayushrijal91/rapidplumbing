@@ -14,7 +14,7 @@ return array (
   'listPageOrder' => 'dragSortOrder DESC',
   'listPageSearchFields' => '_all_',
   'menuName' => 'Other Plumbers Offer',
-  'menuOrder' => '0000000035',
+  'menuOrder' => '0000000039',
   'menuType' => 'multi',
   'num' => array(
     'order' => 1,
