@@ -1911,7 +1911,12 @@ main.suburbInnerPage {
 
     section.about {
         ul {
-            @include media-breakpoint-up(md) {
+            @include media-breakpoint-only(md) {
+                column-count: 2;
+                column-gap: 32px;
+            }
+
+            @include media-breakpoint-up(xl) {
                 column-count: 2;
                 column-gap: 32px;
             }
