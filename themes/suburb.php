@@ -66,17 +66,17 @@ require 'inc/banner.php';
                         </svg>
                     <?php endif; ?>
                 </div>
-                <div class="bg-dark-blue py-6 px-5">
+                <div class="bg-dark-blue py-4 py-md-6 px-2 px-md-5">
                     <p class="text-primary fs-55 fw-700">Reliable Emergency <?= $SUBURB ?> Plumber</p>
 
-                    <div class="description fs-24 lh-1_67 pt-5">
+                    <div class="description fs-24 lh-1_67 pt-4 pt-md-5">
                         <p>At Rapid Plumbing Group Pty Ltd, you can count on our team of dedicated <?= $SUBURB ?> plumbing technicians to deliver outstanding plumbing repair and installation services designed to restore the flow of water to your home. Our expert plumber <?= $SUBURB ?> offers fast and effective service, including burst pipe repair emergency solutions, water heater installation and repair, septic tank plumbing, and much more, so make sure to work with a team who always puts your needs and comfort first and call for service today.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="about mt-9">
+        <section class="about mt-6 mt-md-9">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -106,7 +106,7 @@ require 'inc/banner.php';
     <div class="container py-7">
         <p class="fs-55 fw-700 lh-1 text-capitalize">Your local Plumber <?= $SUBURB ?> Solutions</p>
 
-        <div class="description fs-24 pt-5 lh-1_5 column-count-2">
+        <div class="description fs-24 pt-4 pt-md-5 lh-1_5 column-count-2">
             <p>Whether you need whole-house repiping services to solve ongoing leaks and problems with your plumbing system; slab leak services designed to locate the source of your slab leak and prevent it from causing structural damage to your home’s foundation, or clog removal services to restore your drains and toilets to proper working order, you can count on our team.</p>
             <p>We provide fast and efficient plumbing repair and installation solutions and can replace and upgrade a variety of plumbing equipment and fixtures.</p>
             <p>We offer bathroom remodeling services to help you give your bathroom a facelift and install new, efficient fixtures safety and according to local code standards.No matter when plumbing issues rear their ugly heads, whether it’s in the middle of the night or the middle of your workweek, you can count on the experts at Rapid Plumbing Group Pty Ltd to deliver fast and reliable plumbing solutions.</p>
@@ -127,8 +127,8 @@ require 'inc/banner.php';
                         </svg>
                     <?php endif; ?>
                 </div>
-                <div class="bg-white py-6 px-5">
-                    <div class="row justify-content-between">
+                <div class="bg-white py-4 py-md-6 px-2 px-md-5">
+                    <div class="row justify-content-between gy-4">
                         <div class="col-xl-9">
                             <p class="text-quaternary fs-55 fw-600">Blocked Drain <?= $SUBURB ?> Service</p>
                         </div>
@@ -140,13 +140,13 @@ require 'inc/banner.php';
                             </a>
                         </div>
 
-                        <div class="description fs-24 lh-1_67 pt-5 text-quaternary column-count-2">
+                        <div class="description fs-24 lh-1_67 pt-3 pt-md-5 text-quaternary column-count-2">
                             <p>At Rapid Plumbing Group Pty Ltd, you can count on our team of dedicated <?= $SUBURB ?> plumbing technicians to deliver outstanding plumbing repair and installation services designed to restore the flow of water to your home. Our expert plumber <?= $SUBURB ?> offers fast and effective service, including burst pipe repair emergency solutions, water heater installation and repair, septic tank plumbing, and much more, so make sure to work with a team who always puts your needs and comfort first and call for service today.</p>
                         </div>
                     </div>
             </section>
 
-            <section class="content mt-6 p-5 bg-darkest-blue">
+            <section class="content mt-4 mt-md-6 py-5 px-2 p-md-5 bg-darkest-blue">
                 <div class="row gy-5">
                     <div class="col-lg-6 order-1">
                         <div class="h-100 d-flex align-items-center">
@@ -174,9 +174,9 @@ require 'inc/banner.php';
                 </div>
             </section>
 
-            <section class="content mt-6 p-5 bg-darkest-blue">
+            <section class="content mt-4 mt-md-6 py-5 px-2 p-md-5 bg-darkest-blue">
                 <div class="row gy-5">
-                    <div class="col-lg-6 order-2">
+                    <div class="col-lg-6 order-1 order-md-2">
                         <div class="h-100 d-flex align-items-center">
                             <div>
                                 <p class="fs-55 fw-700 text-capitalize lh-1">Commercial and Strata Plumbing in <?= $SUBURB ?></p>
@@ -187,7 +187,7 @@ require 'inc/banner.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-1">
+                    <div class="col-lg-6 order-2 order-md-1">
                         <div class="h-100 overflow-hidden content-image">
                             <?= _imgSrc($page_content, 'content_2_image', 'h-100 w-100 object-fit-cover'); ?>
                         </div>
@@ -195,7 +195,7 @@ require 'inc/banner.php';
                 </div>
             </section>
 
-            <section class="content mt-6 p-5 bg-darkest-blue">
+            <section class="content mt-4 mt-md-6 py-5 px-2 p-md-5 bg-darkest-blue">
                 <div class="row gy-5">
                     <div class="col-lg-6 order-1">
                         <div class="h-100 d-flex align-items-center">
