@@ -1922,4 +1922,10 @@ main.suburbInnerPage {
             }
         }
     }
+
+    section.content {
+        .content-image {
+            min-height: 650px;
+        }
+    }
 }

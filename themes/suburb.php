@@ -70,7 +70,7 @@ require 'inc/banner.php';
                     <p class="text-primary fs-55 fw-700">Reliable Emergency <?= $SUBURB ?> Plumber</p>
 
                     <div class="description fs-24 lh-1_67 pt-5">
-                        <p>At Rapid Plumbing Group Pty Ltd, you can count on our team of dedicated Kingswood plumbing technicians to deliver outstanding plumbing repair and installation services designed to restore the flow of water to your home. Our expert plumber Kingswood offers fast and effective service, including burst pipe repair emergency solutions, water heater installation and repair, septic tank plumbing, and much more, so make sure to work with a team who always puts your needs and comfort first and call for service today.</p>
+                        <p>At Rapid Plumbing Group Pty Ltd, you can count on our team of dedicated <?= $SUBURB ?> plumbing technicians to deliver outstanding plumbing repair and installation services designed to restore the flow of water to your home. Our expert plumber <?= $SUBURB ?> offers fast and effective service, including burst pipe repair emergency solutions, water heater installation and repair, septic tank plumbing, and much more, so make sure to work with a team who always puts your needs and comfort first and call for service today.</p>
                     </div>
                 </div>
             </div>
@@ -80,27 +80,22 @@ require 'inc/banner.php';
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p class="text-primary fs-55 fw-700">Full List of Plumbing Services Provided</p>
+                        <p class="text-primary fs-55 fw-700 pb-4"><?= _isset($page_content, 'service_list_title') ?></p>
 
-                        <ul class="pt-4">
-                            <li>24 Hour Emergency Services</li>
-                            <li>Backflow Testing and Certification</li>
-                            <li>Hot Water System Repair and Installation</li>
-                            <li>Broken Pipe Repair</li>
-                            <li>Bathroom Remodeling and Renovation</li>
-                            <li>Blocked Drain Repair</li>
-                            <li>General Plumbing Repairs & Installation</li>
-                            <li>Gas Fitting Installation & Repairs</li>
-                            <li>Sewer & Stormwater Services</li>
-                            <li>Septic Tank Pumping and Repair</li>
-                            <li>Rain Water Tanks & Pumps</li>
-                            <li>Water Jetting Services</li>
-                            <li>Commercial Plumbing</li>
-                        </ul>
+                        <div class="description">
+                            <?= _isset($page_content, 'service_list') ?>
+                        </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="h-100 rounded-20 overflow-hidden">
-                            <?= _imgSrc($page_content, 'introduction_hero_image', 'h-100 w-100 object-fit-cover'); ?>
+                        <div class="h-100 rounded-20 overflow-hidden bg-grey-2 d-flex justify-content-center align-items-center">
+                            <?php
+                            if (count($page_content['service_list_image']) > 0) : ?>
+                                <?= _imgSrc($page_content, 'service_list_image', 'h-100 w-100 object-fit-cover'); ?>
+                            <?php else : ?>
+                                <svg width="125" height="125" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M103.569 0.426697H20.9232C15.4435 0.426697 10.1881 2.60353 6.31334 6.47831C2.43855 10.3531 0.261719 15.6084 0.261719 21.0882L0.261719 103.734C0.261719 109.214 2.43855 114.469 6.31334 118.344C10.1881 122.219 15.4435 124.396 20.9232 124.396H103.569C109.049 124.396 114.304 122.219 118.179 118.344C122.054 114.469 124.231 109.214 124.231 103.734V21.0882C124.231 15.6084 122.054 10.3531 118.179 6.47831C114.304 2.60353 109.049 0.426697 103.569 0.426697ZM41.5847 21.0882C43.628 21.0882 45.6253 21.6941 47.3242 22.8293C49.0231 23.9644 50.3472 25.5779 51.1291 27.4656C51.911 29.3533 52.1156 31.4304 51.717 33.4344C51.3184 35.4384 50.3345 37.2791 48.8897 38.7239C47.4449 40.1687 45.6041 41.1526 43.6002 41.5512C41.5962 41.9498 39.519 41.7453 37.6313 40.9633C35.7436 40.1814 34.1302 38.8573 32.995 37.1584C31.8599 35.4595 31.254 33.4622 31.254 31.419C31.254 28.6791 32.3424 26.0514 34.2798 24.114C36.2172 22.1766 38.8449 21.0882 41.5847 21.0882ZM99.7572 93.4035H28.0515C27.5209 93.4033 27.0032 93.2396 26.5689 92.9348C26.1346 92.63 25.8047 92.1988 25.6241 91.6999C25.4435 91.201 25.421 90.6586 25.5595 90.1464C25.6981 89.6342 25.991 89.1771 26.3985 88.8373L80.1805 44.0225C80.4941 43.7621 80.8649 43.5797 81.2626 43.4901C81.6603 43.4005 82.0735 43.4064 82.4685 43.5071C82.8635 43.6079 83.229 43.8007 83.5352 44.0699C83.8414 44.339 84.0795 44.6768 84.2301 45.0556L102.154 89.86C102.311 90.2519 102.37 90.6763 102.325 91.096C102.28 91.5158 102.132 91.9181 101.896 92.2678C101.659 92.6175 101.341 92.9038 100.968 93.1018C100.595 93.2998 100.179 93.4034 99.7572 93.4035Z" fill="white" />
+                                </svg>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -115,7 +110,7 @@ require 'inc/banner.php';
             <p>Whether you need whole-house repiping services to solve ongoing leaks and problems with your plumbing system; slab leak services designed to locate the source of your slab leak and prevent it from causing structural damage to your home’s foundation, or clog removal services to restore your drains and toilets to proper working order, you can count on our team.</p>
             <p>We provide fast and efficient plumbing repair and installation solutions and can replace and upgrade a variety of plumbing equipment and fixtures.</p>
             <p>We offer bathroom remodeling services to help you give your bathroom a facelift and install new, efficient fixtures safety and according to local code standards.No matter when plumbing issues rear their ugly heads, whether it’s in the middle of the night or the middle of your workweek, you can count on the experts at Rapid Plumbing Group Pty Ltd to deliver fast and reliable plumbing solutions.</p>
-            <p>Our Plumber Kingswood is equipped with hands-on knowledge, certification, and skills to deliver a wide variety of professional plumbing installation and repair solutions, so why wait? Give us a call and restore your pipes to the perfect working order as soon as possible.</p>
+            <p>Our Plumber <?= $SUBURB ?> is equipped with hands-on knowledge, certification, and skills to deliver a wide variety of professional plumbing installation and repair solutions, so why wait? Give us a call and restore your pipes to the perfect working order as soon as possible.</p>
         </div>
     </div>
 
@@ -124,8 +119,8 @@ require 'inc/banner.php';
             <section class="introduction">
                 <div class="hero-image bg-grey-2 d-flex justify-content-center align-items-center">
                     <?php
-                    if (count($page_content['introduction_hero_image']) > 0) : ?>
-                        <?= _imgSrc($page_content, 'introduction_hero_image', 'h-100 w-100 object-fit-cover'); ?>
+                    if (count($page_content['block_drains_services_image']) > 0) : ?>
+                        <?= _imgSrc($page_content, 'block_drains_services_image', 'h-100 w-100 object-fit-cover'); ?>
                     <?php else : ?>
                         <svg width="125" height="125" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M103.569 0.426697H20.9232C15.4435 0.426697 10.1881 2.60353 6.31334 6.47831C2.43855 10.3531 0.261719 15.6084 0.261719 21.0882L0.261719 103.734C0.261719 109.214 2.43855 114.469 6.31334 118.344C10.1881 122.219 15.4435 124.396 20.9232 124.396H103.569C109.049 124.396 114.304 122.219 118.179 118.344C122.054 114.469 124.231 109.214 124.231 103.734V21.0882C124.231 15.6084 122.054 10.3531 118.179 6.47831C114.304 2.60353 109.049 0.426697 103.569 0.426697ZM41.5847 21.0882C43.628 21.0882 45.6253 21.6941 47.3242 22.8293C49.0231 23.9644 50.3472 25.5779 51.1291 27.4656C51.911 29.3533 52.1156 31.4304 51.717 33.4344C51.3184 35.4384 50.3345 37.2791 48.8897 38.7239C47.4449 40.1687 45.6041 41.1526 43.6002 41.5512C41.5962 41.9498 39.519 41.7453 37.6313 40.9633C35.7436 40.1814 34.1302 38.8573 32.995 37.1584C31.8599 35.4595 31.254 33.4622 31.254 31.419C31.254 28.6791 32.3424 26.0514 34.2798 24.114C36.2172 22.1766 38.8449 21.0882 41.5847 21.0882ZM99.7572 93.4035H28.0515C27.5209 93.4033 27.0032 93.2396 26.5689 92.9348C26.1346 92.63 25.8047 92.1988 25.6241 91.6999C25.4435 91.201 25.421 90.6586 25.5595 90.1464C25.6981 89.6342 25.991 89.1771 26.3985 88.8373L80.1805 44.0225C80.4941 43.7621 80.8649 43.5797 81.2626 43.4901C81.6603 43.4005 82.0735 43.4064 82.4685 43.5071C82.8635 43.6079 83.229 43.8007 83.5352 44.0699C83.8414 44.339 84.0795 44.6768 84.2301 45.0556L102.154 89.86C102.311 90.2519 102.37 90.6763 102.325 91.096C102.28 91.5158 102.132 91.9181 101.896 92.2678C101.659 92.6175 101.341 92.9038 100.968 93.1018C100.595 93.2998 100.179 93.4034 99.7572 93.4035Z" fill="white" />
@@ -146,7 +141,7 @@ require 'inc/banner.php';
                         </div>
 
                         <div class="description fs-24 lh-1_67 pt-5 text-quaternary column-count-2">
-                            <p>At Rapid Plumbing Group Pty Ltd, you can count on our team of dedicated Kingswood plumbing technicians to deliver outstanding plumbing repair and installation services designed to restore the flow of water to your home. Our expert plumber Kingswood offers fast and effective service, including burst pipe repair emergency solutions, water heater installation and repair, septic tank plumbing, and much more, so make sure to work with a team who always puts your needs and comfort first and call for service today.</p>
+                            <p>At Rapid Plumbing Group Pty Ltd, you can count on our team of dedicated <?= $SUBURB ?> plumbing technicians to deliver outstanding plumbing repair and installation services designed to restore the flow of water to your home. Our expert plumber <?= $SUBURB ?> offers fast and effective service, including burst pipe repair emergency solutions, water heater installation and repair, septic tank plumbing, and much more, so make sure to work with a team who always puts your needs and comfort first and call for service today.</p>
                         </div>
                     </div>
             </section>
@@ -156,7 +151,7 @@ require 'inc/banner.php';
                     <div class="col-lg-6 order-1">
                         <div class="h-100 d-flex align-items-center">
                             <div>
-                                <p class="fs-55 fw-700 text-capitalize lh-1">Hot Water Heater Repair Kingswood</p>
+                                <p class="fs-55 fw-700 text-capitalize lh-1">Hot Water Heater Repair <?= $SUBURB ?></p>
 
                                 <div class="description fs-18 pt-4 lh-1_5">
                                     <p>Has your water heater been failing to deliver consistently hot water as it once did? If you have noticed that your water heater has been failing to maintain the same level of warm water that it used to, or if your hot water seems to run out faster than it did before, contact us for hot water heater repair services. Take a look at this list of common warning signs and then give us a call:</p>
@@ -172,8 +167,8 @@ require 'inc/banner.php';
                         </div>
                     </div>
                     <div class="col-lg-6 order-2">
-                        <div class="h-100 overflow-hidden">
-                            <?= _imgSrc($page_content, 'introduction_hero_image', 'h-100 w-100 object-fit-cover'); ?>
+                        <div class="h-100 overflow-hidden content-image">
+                            <?= _imgSrc($page_content, 'content_1_image', 'h-100 w-100 object-fit-cover'); ?>
                         </div>
                     </div>
                 </div>
@@ -184,7 +179,7 @@ require 'inc/banner.php';
                     <div class="col-lg-6 order-2">
                         <div class="h-100 d-flex align-items-center">
                             <div>
-                                <p class="fs-55 fw-700 text-capitalize lh-1">Commercial and Strata Plumbing in Kingswood</p>
+                                <p class="fs-55 fw-700 text-capitalize lh-1">Commercial and Strata Plumbing in <?= $SUBURB ?></p>
 
                                 <div class="description fs-18 pt-4 lh-1_5">
                                     <p>It is very important for a building to have a mandated plumber in order to ensure that there is a trustworthy person available in an emergency. During a plumbing emergency, damage can quickly occur if not repaired immediately. With the use of our expert strata services, you can have the peace of mind that comes from reliable and long-lasting repair, installation, and maintenance services.</p>
@@ -193,8 +188,8 @@ require 'inc/banner.php';
                         </div>
                     </div>
                     <div class="col-lg-6 order-1">
-                        <div class="h-100 overflow-hidden">
-                            <?= _imgSrc($page_content, 'introduction_hero_image', 'h-100 w-100 object-fit-cover'); ?>
+                        <div class="h-100 overflow-hidden content-image">
+                            <?= _imgSrc($page_content, 'content_2_image', 'h-100 w-100 object-fit-cover'); ?>
                         </div>
                     </div>
                 </div>
@@ -205,7 +200,7 @@ require 'inc/banner.php';
                     <div class="col-lg-6 order-1">
                         <div class="h-100 d-flex align-items-center">
                             <div>
-                                <p class="fs-55 fw-700 text-capitalize lh-1">Reasons to Choose our Plumber in Kingswood</p>
+                                <p class="fs-55 fw-700 text-capitalize lh-1">Reasons to Choose our Plumber in <?= $SUBURB ?></p>
 
                                 <div class="description fs-18 pt-4 lh-1_5">
                                     <p>There’s more to finding the right team of plumbing experts to solve your issues than just calling around; it’s important to pay attention to all that your plumbing service provider has to offer. When you choose our team, you can also enjoy:</p>
@@ -222,8 +217,8 @@ require 'inc/banner.php';
                         </div>
                     </div>
                     <div class="col-lg-6 order-2">
-                        <div class="h-100 overflow-hidden">
-                            <?= _imgSrc($page_content, 'introduction_hero_image', 'h-100 w-100 object-fit-cover'); ?>
+                        <div class="h-100 overflow-hidden content-image">
+                            <?= _imgSrc($page_content, 'content_3_image', 'h-100 w-100 object-fit-cover'); ?>
                         </div>
                     </div>
                 </div>
@@ -233,7 +228,7 @@ require 'inc/banner.php';
                 <p class="fs-55 text-primary fw-700">Over 10 Years of Plumbing Experience</p>
 
                 <div class="description fs-24 lh-1_5 pt-5">
-                    <p>Rapid Plumbing Group Pty Ltd was founded in 2006, which means that we have over a decade’s worth of hands-on experience solving plumbing issues in your community. Our Kingswood plumber is equipped with the training, certification, and experience working in the field to quickly diagnose the cause of your plumbing issue, and can deliver fast and effective services designed to resolve the problem as quickly as possible.</p>
+                    <p>Rapid Plumbing Group Pty Ltd was founded in 2006, which means that we have over a decade’s worth of hands-on experience solving plumbing issues in your community. Our <?= $SUBURB ?> plumber is equipped with the training, certification, and experience working in the field to quickly diagnose the cause of your plumbing issue, and can deliver fast and effective services designed to resolve the problem as quickly as possible.</p>
                     <p>Working with our team of dedicated plumbing experts means that you can feel confident in the level of customer service that we bring to each job that we do. We know that repeat business is based on exceptional service, which is why we’ll always be “There in a Flush” whenever you need us.</p>
                 </div>
             </section>
