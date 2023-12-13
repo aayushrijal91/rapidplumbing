@@ -1,3 +1,18 @@
+.slide-nav {
+    position: fixed;
+    height: 100%;
+    background-color: $dark;
+    width: 100%;
+    top: 0;
+    z-index: 100000;
+    transform: translateX(-100%);
+    transition: 0.3s all;
+
+    &.active {
+        transform: translateX(0);
+    }
+}
+
 .slider-progressbar {
     .progress {
         display: block;
@@ -70,7 +85,7 @@ section.banner {
         }
 
         @include media-breakpoint-down(sm) {
-            font-size: 64px;
+            font-size: 48px;
         }
     }
 

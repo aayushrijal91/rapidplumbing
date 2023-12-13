@@ -12,6 +12,12 @@ function lazyloader() {
 
 AOS.init();
 
+$(".showSlideNav").on('click', function(e){
+    e.preventDefault();
+
+    $('.slide-nav').toggleClass('active');
+})
+
 function progressBarSlider1(slider) {
     let $progressBar = $('.slider-progressbar .progress');
 
