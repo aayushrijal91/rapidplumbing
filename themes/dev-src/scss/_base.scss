@@ -72,8 +72,8 @@ img {
             @include media-breakpoint-down(lg) {
                 font-size: 1rem !important;
             }
-        
-        
+
+
             @include media-breakpoint-down(sm) {
                 font-size: 0.875rem !important;
             }
@@ -349,7 +349,7 @@ section.globalCta {
     }
 }
 
-.filter-shadow{
+.filter-shadow {
     filter: drop-shadow(2px 4px 6px black);
 }
 
@@ -357,9 +357,16 @@ section.globalCta {
     outline: none;
 }
 
+.column-count-2 {
+    @include media-breakpoint-up(lg) {
+        column-count: 2;
+        column-gap: 48px;
+    }
+}
+
 footer {
     .mobileServiceBtn {
-        background: rgba(97,99,108,0.2);
+        background: rgba(97, 99, 108, 0.2);
         width: 100%;
         display: flex;
         justify-content: space-around;

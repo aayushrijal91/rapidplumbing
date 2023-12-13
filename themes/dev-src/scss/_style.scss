@@ -876,7 +876,7 @@ main.blogInnerPage {
         height: 100%;
         background: $grey-3;
     }
-    
+
     .blogCard {
         height: 100%;
         display: flex;
@@ -911,12 +911,6 @@ main.blogInnerPage {
 }
 
 main.blogInnerPage {
-    .column-count-2 {
-        @include media-breakpoint-up(lg) {
-            column-count: 2;
-        }
-    }
-
     section.section_1,
     section.section_4 {
         .heroImage {
@@ -1540,7 +1534,7 @@ main.renovationPlumbersServicePage {
                 display: flex;
                 justify-content: center;
                 height: 456px;
-                
+
                 img {
                     width: 330px;
                     border-radius: 0 0 35px 35px;
@@ -1740,7 +1734,9 @@ main.commercialPlumbingServicePage {
 main.suburbsPage {
     .areatop {
         .alphbetwrap {
-            .areas_allSearch, .areas_alphabet {
+
+            .areas_allSearch,
+            .areas_alphabet {
                 display: inline-block;
                 background-color: #262627;
                 color: $white;
@@ -1850,7 +1846,7 @@ main.suburbsPage {
         z-index: 9;
     }
 
-    div.areas_droplist > div.caption {
+    div.areas_droplist>div.caption {
         border: 1px solid #c4c4c4;
         padding: 11px 24px;
         border-radius: 0;
@@ -1871,7 +1867,7 @@ main.suburbsPage {
         }
     }
 
-    div.areas_droplist > div.list {
+    div.areas_droplist>div.list {
         position: absolute;
         background-color: #f2f2f2;
         width: 100%;
@@ -1879,28 +1875,28 @@ main.suburbsPage {
         display: none;
     }
 
-    div.areas_droplist > div.list > div.item {
+    div.areas_droplist>div.list>div.item {
         padding: 11px 24px;
         background-color: #cecece;
         cursor: pointer;
     }
 
-    div.areas_droplist > div.list > div.item.selected {
+    div.areas_droplist>div.list>div.item.selected {
         font-weight: bold;
     }
 
-    div.areas_droplist > div.caption:hover,
-    div.areas_droplist > div.list > div.item:hover {
+    div.areas_droplist>div.caption:hover,
+    div.areas_droplist>div.list>div.item:hover {
         background-color: $primary;
         color: #fff;
     }
 
-    div.areas_droplist.open > div.caption {
+    div.areas_droplist.open>div.caption {
         border-radius: 3px 3px 0 0;
         border-bottom: solid 1px #999;
     }
 
-    div.areas_droplist.open > div.list {
+    div.areas_droplist.open>div.list {
         display: block;
         z-index: 99;
     }
@@ -1908,14 +1904,22 @@ main.suburbsPage {
 
 main.suburbInnerPage {
     section.introduction {
-        background: #132649;
-
         .hero-image {
             height: 326px;
         }
+    }
 
-        .content {
-            background: #152F5F;
+    section.about {
+        ul {
+            column-count: 2;
+            column-gap: 32px;
+            
+            li {
+                list-style: disc;
+                font-size: 24px;
+                padding: 8px 0;
+                font-weight: 300;
+            }
         }
     }
 }

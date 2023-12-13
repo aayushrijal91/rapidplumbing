@@ -8,6 +8,7 @@ $dark: #131314;
 $dark-grey: #1C1C1D;
 $dark-blue: #152F5F;
 $darker-blue: #1E3B73;
+$darkest-blue: #0D1E3F;
 $light-grey: #f4f4f4;
 $brighte-green: #00D280;
 $grey: #61636C;
@@ -35,6 +36,7 @@ $theme-colors: map-merge(("primary": $primary,
       "dark-grey": $dark-grey,
       "dark-blue": $dark-blue,
       "darker-blue": $darker-blue,
+      "darkest-blue": $darkest-blue,
       "brighte-green": $brighte-green,
       "grey": $grey,
       "light": $light,
