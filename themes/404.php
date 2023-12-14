@@ -149,6 +149,15 @@ if (isset($Explode[0]) && !empty($Explode[0])) {
     }
 }
 
+$RedirectUrlArr = array('orderBy' => 'num ASC', 'where' => "`title` = '" . $_SERVER['REQUEST_URI'] . "' ");
+$RedirectUrl = redirects_url::get_data($RedirectUrlArr);
+if (count($RedirectUrl)) {
+    $RedirectUrl = $RedirectUrl[0];
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location:" . $RedirectUrl['action_data'] . "");
+    exit();
+}
+
 if ($no_page_exist) :
 ?>
 
