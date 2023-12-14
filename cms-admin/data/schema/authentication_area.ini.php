@@ -71,9 +71,9 @@ return array (
     'fieldHeight' => '',
     'autoFormat' => '1',
   ),
-  'footer' => array(
+  'body_schema' => array(
     'order' => 7,
-    'label' => 'Footer',
+    'label' => 'Schema',
     'type' => 'textbox',
     'indexed' => '',
     'defaultContent' => '',
@@ -89,8 +89,8 @@ return array (
   'body_start_content' => array(
     'order' => 8,
     'label' => 'Body Start Content',
-    'type' => 'textfield',
-    'indexed' => '',
+    'type' => 'textbox',
+    'indexed' => '0',
     'defaultValue' => '',
     'fieldPrefix' => '',
     'description' => '',
@@ -104,6 +104,24 @@ return array (
     'maxLength' => '',
     'charsetRule' => '',
     'charset' => '',
+    'defaultContent' => '',
+    'fieldHeight' => '',
+    'autoFormat' => '1',
+  ),
+  'footer' => array(
+    'order' => 9,
+    'label' => 'Footer',
+    'type' => 'textbox',
+    'indexed' => '',
+    'defaultContent' => '',
+    'fieldPrefix' => '',
+    'description' => '',
+    'isRequired' => '0',
+    'isUnique' => '0',
+    'minLength' => '',
+    'maxLength' => '',
+    'fieldHeight' => '',
+    'autoFormat' => '1',
   ),
 );
 ?>
