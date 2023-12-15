@@ -9,35 +9,13 @@ if (count($email_settings)) {
 if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
         $recaptcha_response = $_POST['recaptcha_response'];
-
-        $data = array(
-            'secret' => "6Ldso5ghAAAAAOeC9nGV2Zq1nmFYwN2Z-Sp4Eyre",
-            'response' => $recaptcha_response
-        );
-
-        $verify = curl_init();
-        // curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-        curl_setopt($verify, CURLOPT_POST, true);
-        // curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
-        $recaptcha = curl_exec($verify);
-        $recaptcha = json_decode($recaptcha, true);
+        $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+        $recaptcha_secret = V_RECAPTCHA_SERVER_SECRET;
+        $recaptcha_response = $recaptcha_response;
+        $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+        $recaptcha = json_decode($recaptcha);
 
         if ($recaptcha["success"] === true) {
-            // $ArrData = array(
-            //     'title'                    =>    strip_tags($_POST['name']),
-            //     'phone'                    =>    strip_tags($_POST['phone']),
-            //     'email'                    =>    strip_tags($_POST['email']),
-            //     'preffered_date'           =>    strip_tags($_POST['date']),
-            //     'address'                  =>    strip_tags($_POST['address']),
-            //     'service'                  =>    strip_tags($_POST['service']),
-            //     'special_selection'        =>    $special,
-            // );
-            // contact_us_form_data::add_record($ArrData);
-
-            // $email =     strip_tags($_POST['email']);
-
             $tableStyle = 'border: 1px solid #ddd;text-align: left; border-colspan: colspan; width: 100%;';
             $tableCellStyle = 'border: 1px solid #ddd;text-align: left; padding: 15px;';
             $tableCellStyler = 'border: 1px solid #ddd;text-align: right; padding: 15px;';

@@ -69,7 +69,7 @@ if (isset($meta_keyword) && !empty($meta_keyword)) {
 
     <!-- Favicon -->
     <link rel="icon" href="<?php echo V_CDN_URL . V_THEME_DIR; ?>_assets/images/favicon.png">
-
+    <script src='https://www.google.com/recaptcha/api.js?render=<?= V_RECAPTCHA_CLIENT_SECRET ?>'></script>
     <link rel="stylesheet" type="text/css" href="<?php echo V_CDN_URL . V_THEME_DIR; ?>_assets/css/main.css?ver=<?php echo time(); ?>">
     <?php if (isset($authentication_area['head']) && !empty($authentication_area['head'])) {
         echo str_replace(array('<br>', '</br>'), array("", ""), $authentication_area['head']);

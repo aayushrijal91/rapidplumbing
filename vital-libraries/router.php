@@ -26,7 +26,7 @@ class router
 		'penrith-plumber/general-plumbing' => 'penrith-plumber/general-plumbing',
 		'penrith-plumber/property-strata-managers' => 'penrith-plumber/property-strata-managers',
 		'penrith-plumber/leak-detection' => 'penrith-plumber/leak-detection',
-		'penrith-plumber/renovation-plumber' => 'penrith-plumber/penrith-plumber/renovation-plumber',
+		'penrith-plumber/renovation-plumber' => 'penrith-plumber/renovation-plumber',
 		'penrith-plumber/roofing-guttering' => 'penrith-plumber/roofing-guttering',
 		'penrith-plumber/septic-systems' => 'penrith-plumber/septic-systems',
 		'penrith-plumber/backflow-prevention' => 'penrith-plumber/backflow-prevention',

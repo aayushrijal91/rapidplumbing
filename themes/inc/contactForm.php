@@ -27,7 +27,7 @@ if (count($global_cta)) {
             </div>
             <div class="col-xl-6">
                 <form id="contact_us_form" class="needs-validation" method="POST" novalidate>
-                    <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
+                    <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
                     <input type="hidden" name="request" value="contact_us_form">
 
                     <div class="row gy-5">

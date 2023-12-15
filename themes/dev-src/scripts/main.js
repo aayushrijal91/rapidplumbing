@@ -481,36 +481,36 @@ $('.areas_droplist > .list > .item').on('click', function () {
 
 $(".nav-item.menu-item-has-children").find("> .nav-link").addClass('dropdown-toggle');
 
-$(document).on("submit", "#enquiry_form", function (e) {
-    e.preventDefault();
-    let form = $(this);
-    if (!validateForm(form)) {
-        e.preventDefault();
-        form.addClass('was-validated');
-    } else {
-        e.preventDefault();
-        $('.submit_btn').attr('disabled', 'disabled').val("Loading...");
+// $(document).on("submit", "#enquiry_form", function (e) {
+//     e.preventDefault();
+//     let form = $(this);
+//     if (!validateForm(form)) {
+//         e.preventDefault();
+//         form.addClass('was-validated');
+//     } else {
+//         e.preventDefault();
+//         $('.submit_btn').attr('disabled', 'disabled').val("Loading...");
 
-        $.ajax({
-            url: SITE_URL + '/ajax/',
-            data: $("#enquiry_form").serialize(),
-            method: 'POST',
-            success: function (response) {
-                response = response.trim();
-                if (response == "success") {
-                    $("#enquiry_form")[0].reset();
-                    $(".submit_btn").removeAttr('disabled').val("SUBMIT");
-                    window.location.href = SITE_URL + '/thank-you/';
-                } else if (response == "fail") {
-                    alert("Failed, Something went wrong.")
-                }
-            }
-        });
-    }
-})
+//         $.ajax({
+//             url: SITE_URL + '/ajax/',
+//             data: $("#enquiry_form").serialize(),
+//             method: 'POST',
+//             success: function (response) {
+//                 response = response.trim();
+//                 if (response == "success") {
+//                     $("#enquiry_form")[0].reset();
+//                     $(".submit_btn").removeAttr('disabled').val("SUBMIT");
+//                     window.location.href = SITE_URL + '/thank-you/';
+//                 } else if (response == "fail") {
+//                     alert("Failed, Something went wrong.")
+//                 }
+//             }
+//         });
+//     }
+// })
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 /*********************** Forms ******************* */
 $(document).on("submit", "#contact_us_form", function (e) {
@@ -521,7 +521,7 @@ $(document).on("submit", "#contact_us_form", function (e) {
     $(".contact_us_submit_btn").attr('disabled', 'disabled').val("Loading...");
 
     grecaptcha.ready(function () {
-        grecaptcha.execute('6Ldso5ghAAAAAChSuoeDg027KKnRXuxF5rT3Lb0U', {
+        grecaptcha.execute('6LceIBwkAAAAAN0pB1ps__ZPUBNOme_2sFYJBNNn', {
                 action: 'MyForm'
             })
             .then(function (token) {
