@@ -6,7 +6,7 @@ if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug']))
 
 if ($serviceSlug != '') {
     $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
-    $service = general_plumbing_services::get_data($serviceArray);
+    $service = leak_detection_services::get_data($serviceArray);
     if (count($service) > 0) {
         $page_content = $service[0];
     } else {
@@ -19,7 +19,7 @@ $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = general_plumbing_inner_service_faqs::get_data($faqs);
+$faqs = leak_detection_inner_service_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -42,53 +42,42 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
-<main class="generalPlumbingServicePage">
+<main class="leakDetectionServicePage">
     <section class="help">
-        <section class="about pb-5">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-md-6 col-xl-4 order-1">
-                        <article class="callRapidCard primaryborder h-100 position-relative">
-                            <?= _imgSrc($page_content, 'about_image_1', 'heroImage h-100 w-100 object-fit-cover'); ?>
-                            <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
-                                <p class="fw-800 lh-1"><?= _isset($page_content, 'about_image_1_title') ?></p>
-                            </div>
+        <div class="container pb-7">
+            <section class="introduction">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6">
+                        <article>
+                            <h3 class="fs-55 fw-500 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
+
+                            <p class="text-primary text-capitalize fs-20 fw-700 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
+
+                            <article class="fs-18 description lh-1_67 py-4">
+                                <?= _isset($page_content, 'introduction_description') ?>
+                            </article>
+
+                            <?php if (!empty($page_content['introduction_button_link']) && !empty($page_content['introduction_button_text'])) : ?>
+                                <button class="bg-transparent rounded-pill">
+                                    <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 d-inline-flex"><?= _isset($page_content, 'introduction_button_text') ?></a>
+                                </button>
+                            <?php endif; ?>
                         </article>
                     </div>
-
-                    <div class="col-xl-4 order-2 order-md-3 order-xl-2">
-                        <h3 class="fs-36 highlight-primary lh-1 pt-md-4 text-capitalize"><?= _isset($page_content, 'about_title') ?></h3>
-
-                        <article class="description fs-18 pt-4">
-                            <?= _isset($page_content, 'about_description') ?>
-                        </article>
-
-                        <?php if (!empty($page_content['about_button_link'])) : ?>
-                            <button class="bg-transparent rounded-pill mt-4">
-                                <a href="<?= _issetUrl($page_content, 'about_button_link'); ?>" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 d-inline-flex">Enquire</a>
-                            </button>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="col-md-6 col-xl-4 order-3 order-md-2 order-xl-3">
-                        <article class="callRapidCard h-100 position-relative">
-                            <?= _imgSrc($page_content, 'about_image_2', 'heroImage h-100 w-100 object-fit-cover'); ?>
-                            <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
-                                <p class="fw-800 lh-1"><?= _isset($page_content, 'about_image_2_title') ?></p>
-                            </div>
-                        </article>
+                    <div class="col-lg-6">
+                        <?= _imgSrc($page_content, 'introduction_image', 'h-100 w-100'); ?>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <div class="container pb-6">
-            <div class="row gy-4 pt-6">
+        <div class="container pt-7">
+            <div class="row gy-4">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
                         <article class="aboutCard">
@@ -149,7 +138,7 @@ require 'inc/serviceBanner.php';
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>

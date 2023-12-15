@@ -1,25 +1,16 @@
 <?php
+$page_content_arr = array();
+$page_content = water_filters_content::get_data($page_content_arr);
 
-if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
-    $serviceSlug = $_GET['slug'];
-}
-
-if ($serviceSlug != '') {
-    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
-    $service = hot_water_services_list::get_data($serviceArray);
-    if (count($service) > 0) {
-        $page_content = $service[0];
-    } else {
-        include('404.php');
-        die();
-    }
+if (count($page_content)) {
+    $page_content = $page_content[0];
 }
 
 $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = hot_water_inner_service_faqs::get_data($faqs);
+$faqs = water_filters_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -42,31 +33,25 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
-<main class="hotWaterServicesPage">
+<main class="waterFiltersServicePage">
     <section class="introduction">
-        <div class="container">
-            <div class="row align-items-end align-items-xl-center">
-                <div class="col-lg-6">
-                    <article class="py-5">
-                        <h3 class="fs-60 highlight-primary text-capitalize fw-700 lh-1"><?= _isset($page_content, 'introduction_title') ?></h3>
-                        <article class="description fs-18 lh-1_5 py-4">
+        <div class="container-fluid px-0">
+            <div class="row">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <?= _imgSrc($page_content, 'introduction_image', 'w-100 h-100') ?>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <article class="px-3 px-xl-5 py-5 pb-lg-4 py-xxl-7 col-xxl-9">
+                        <h3 class="fs-64 text-capitalize highlight-primary lh-1 fw-400"><?= _isset($page_content, 'introduction_title') ?></h3>
+                        <article class="description lh-1_5 pt-4">
                             <?= _isset($page_content, 'introduction_description') ?>
                         </article>
-
-                        <?php if (!empty($page_content['introduction_button_link'])) : ?>
-                            <button class="bg-transparent rounded-pill mt-md-4">
-                                <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
-                            </button>
-                        <?php endif; ?>
                     </article>
-                </div>
-                <div class="col-lg-6">
-                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/hot_water_partners.png" alt="" />
                 </div>
             </div>
         </div>
@@ -74,7 +59,7 @@ require 'inc/serviceBanner.php';
 
     <section class="help">
         <div class="container">
-            <div class="row gy-4 pt-6">
+            <div class="row gy-4">
                 <?php foreach ($cta_list as $cta) { ?>
                     <div class="col-12">
                         <article class="aboutCard">
@@ -103,25 +88,17 @@ require 'inc/serviceBanner.php';
 
                 <div class="slider">
                     <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
-                        <?php
-                        $count = 0;
-
-                        foreach ($faqs as $faq) :
-                            if ($page_content['slug'] == $faq['category']) :
-                                $count++;
-                        ?>
-                                <article class="box">
-                                    <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
-                                    <article class="description fs-18 pt-3 lh-1_5">
-                                        <?= _isset($faq, 'content') ?>
-                                    </article>
+                        <?php foreach ($faqs as $faq) : ?>
+                            <article class="box">
+                                <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
+                                <article class="description fs-18 pt-3 lh-1_5">
+                                    <?= _isset($faq, 'content') ?>
                                 </article>
-                        <?php
-                            endif;
-                        endforeach; ?>
+                            </article>
+                        <?php endforeach; ?>
                     </div>
 
-                    <?php if ($count > 3) : ?>
+                    <?php if (count($faqs) > 3) : ?>
                         <div class="slider-progressbar mt-4">
                             <div class="content">
                                 <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
@@ -135,7 +112,7 @@ require 'inc/serviceBanner.php';
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>

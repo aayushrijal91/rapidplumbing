@@ -90,11 +90,9 @@ foreach ($arrState as $state) {
 
         $Insert .= " `slug` = '" . $conn->escape_string(slugify2($state)) . "' ";
 
-        //print_r($Insert);die;
 
         $conn->query($Insert);
 
-        ///error_log( $con->error );
 
         $num++;
     }

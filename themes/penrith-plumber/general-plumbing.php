@@ -36,9 +36,9 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
 <main class="generalPlumbingServicePage">
@@ -124,7 +124,7 @@ require 'inc/serviceBanner.php';
                                         <p><?= _isset($service, 'title') ?></p>
                                     </div>
                                     <?php if (!empty($service['slug'])) : ?>
-                                        <a href="<?= _isset($service, 'slug'); ?>" class="button text-white px-5 py-3 fw-600">Enquire</a>
+                                        <a href="<?= _issetUrl($service, 'slug'); ?>" class="button text-white px-5 py-3 fw-600">Enquire</a>
                                     <?php endif; ?>
                                 </article>
                             <?php endforeach; ?>
@@ -162,7 +162,7 @@ require 'inc/serviceBanner.php';
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>

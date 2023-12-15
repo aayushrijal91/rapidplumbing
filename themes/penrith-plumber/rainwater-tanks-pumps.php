@@ -1,6 +1,6 @@
 <?php
 $page_content_arr = array();
-$page_content = leak_detection_content::get_data($page_content_arr);
+$page_content = rainwater_tanks_pumps_content::get_data($page_content_arr);
 
 if (count($page_content)) {
     $page_content = $page_content[0];
@@ -10,10 +10,10 @@ $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $services = array('orderBy' => 'dragSortOrder ASC');
-$services = leak_detection_services::get_data($services);
+$services = rainwater_tanks_services::get_data($services);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = leak_detection_faqs::get_data($faqs);
+$faqs = rainwater_tanks_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -36,60 +36,64 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
-<main class="leakDetectionServicePage">
+<main class="rainwaterServicePage">
     <section class="help">
-        <div class="container pb-7">
-            <section class="introduction">
-                <div class="row align-items-center gy-5">
+        <div class="introduction pb-9">
+            <div class="container">
+                <div class="row gy-5 ">
                     <div class="col-lg-6">
                         <article>
-                            <h3 class="fs-55 fw-500 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
-
-                            <p class="text-primary text-capitalize fs-20 fw-700 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
-
-                            <article class="fs-18 description lh-1_67 py-4">
+                            <h2 class="fw-800 fs-64 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h2>
+                            <p class="fw-700 text-primary text-capitalize fs-20 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
+                            <article class="fs-18 description pt-4 fw-300">
                                 <?= _isset($page_content, 'introduction_description') ?>
                             </article>
 
                             <?php if (!empty($page_content['introduction_button_link']) && !empty($page_content['introduction_button_text'])) : ?>
-                                <button class="bg-transparent rounded-pill">
-                                    <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 d-inline-flex"><?= _isset($page_content, 'introduction_button_text') ?></a>
+                                <button class="bg-transparent rounded-pill mt-4">
+                                    <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'introduction_button_text') ?></a>
                                 </button>
                             <?php endif; ?>
+
+                            <div class="pt-5">
+                                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/recycle-brands.png" alt="Recycle Brands" />
+                            </div>
                         </article>
                     </div>
+
                     <div class="col-lg-6">
                         <?= _imgSrc($page_content, 'introduction_image', 'h-100 w-100'); ?>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
 
-        <section class="services pt-6 pb-8">
-            <div class="container">
-                <h3 class="highlight-primary fs-70 fw-700"><span><?= _isset($page_content, 'banner_title') ?></span> Services Sydney</h3>
+        <div class="container">
+            <h3 class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</h3>
 
-                <div class="row mt-5 gy-3 innerServiceListingSlider">
-                    <?php foreach ($services as $service) : ?>
-                        <div class="col-md-6 col-lg-3">
-                            <a href="<?= _isset($service, 'slug') ?>">
-                                <article class="box">
-                                    <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
-                                    <p class="overlay text-white"><?= _isset($service, 'title') ?></p>
-                                </article>
-                            </a>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+            <div class="row gy-4 gy-lg-5 mt-5 mt-xl-7 innerServiceListingSlider">
+                <?php foreach ($services as $service) : ?>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <article class="helpCard">
+                            <?= _imgSrc($service, 'image', 'h-100 w-100 object-fit-cover'); ?>
+                            <div class="overlay">
+                                <p class="fs-24 fw-700 lh-1 text-start text-white filter-shadow"><?= _isset($service, 'title') ?></p>
+                                <?php if (!empty($service['slug'])) : ?>
+                                    <a href="<?= _issetUrl($service, 'slug'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 ">ENQUIRE</a>
+                                <?php endif; ?>
+                            </div>
+                        </article>
+                    </div>
+                <?php endforeach; ?>
             </div>
-        </section>
+        </div>
 
-        <div class="container pt-7">
+        <div class="container pt-6 pt-lg-9">
             <div class="row gy-4">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
@@ -143,7 +147,7 @@ require 'inc/serviceBanner.php';
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>

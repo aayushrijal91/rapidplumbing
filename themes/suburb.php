@@ -2,17 +2,19 @@
 
 $SUBURB = '';
 
+
 if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
     $suburbSlug = $_GET['slug'];
 }
 
 if ($suburbSlug != '') {
-    $suburbArray = array('where' => "`slug` = '" . $suburbSlug . "'");
-    $suburb = suburb_list::get_data($serviceArray);
+    $suburbQuery = array('where' => "`slug` = '" . $suburbSlug . "'");
+    $suburb = suburb_list::get_data($suburbQuery);
+
     if (count($suburb) > 0) {
         $SUBURB = $suburb[0]['title'];
     } else {
-        include('404.php');
+        include(V_ROOT_THEME . '404.php');
         die();
     }
 }

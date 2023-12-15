@@ -1,6 +1,6 @@
 <?php
 $page_content_arr = array();
-$page_content = gas_plumbing_content::get_data($page_content_arr);
+$page_content = leak_detection_content::get_data($page_content_arr);
 
 if (count($page_content)) {
     $page_content = $page_content[0];
@@ -10,10 +10,10 @@ $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $services = array('orderBy' => 'dragSortOrder ASC');
-$services = gas_plumbing_services::get_data($services);
+$services = leak_detection_services::get_data($services);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = gas_plumbing_faqs::get_data($faqs);
+$faqs = leak_detection_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -36,27 +36,29 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
-<main class="gasPlumbingServicePage">
+<main class="leakDetectionServicePage">
     <section class="help">
-        <div class="container">
+        <div class="container pb-7">
             <section class="introduction">
                 <div class="row align-items-center gy-5">
                     <div class="col-lg-6">
                         <article>
-                            <h3 class="fs-64 fw-800 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
+                            <h3 class="fs-55 fw-500 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
+
+                            <p class="text-primary text-capitalize fs-20 fw-700 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
 
                             <article class="fs-18 description lh-1_67 py-4">
                                 <?= _isset($page_content, 'introduction_description') ?>
                             </article>
 
                             <?php if (!empty($page_content['introduction_button_link']) && !empty($page_content['introduction_button_text'])) : ?>
-                                <button class="bg-transparent rounded-pill mt-md-4">
-                                    <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'introduction_button_text') ?></a>
+                                <button class="bg-transparent rounded-pill">
+                                    <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white rounded-pill px-3 px-lg-5 fs-18 fw-700 d-inline-flex"><?= _isset($page_content, 'introduction_button_text') ?></a>
                                 </button>
                             <?php endif; ?>
                         </article>
@@ -68,8 +70,27 @@ require 'inc/serviceBanner.php';
             </section>
         </div>
 
-        <div class="container">
-            <div class="row gy-4 pt-6">
+        <section class="services pt-6 pb-8">
+            <div class="container">
+                <h3 class="highlight-primary fs-70 fw-700"><span><?= _isset($page_content, 'banner_title') ?></span> Services Sydney</h3>
+
+                <div class="row mt-5 gy-3 innerServiceListingSlider">
+                    <?php foreach ($services as $service) : ?>
+                        <div class="col-md-6 col-lg-3">
+                            <a href="<?= _issetUrl($service, 'slug') ?>">
+                                <article class="box">
+                                    <?= _imgSrc($service, 'image', 'h-100 w-100'); ?>
+                                    <p class="overlay text-white"><?= _isset($service, 'title') ?></p>
+                                </article>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <div class="container pt-7">
+            <div class="row gy-4">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
                         <article class="aboutCard">
@@ -92,26 +113,6 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <div class="container pt-7 pt-md-9">
-            <h3 class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</h3>
-
-            <div class="row gy-4 gy-lg-5 mt-5 innerServiceListingSlider">
-                <?php foreach ($services as $service) : ?>
-                    <div class="col-md-6 col-lg-4">
-                        <article class="helpCard">
-                            <?= _imgSrc($service, 'image', 'h-100 w-100 object-fit-cover'); ?>
-                            <div class="overlay align-items-start">
-                                <p class="fs-24 fw-700 lh-1 text-start filter-shadow"><?= _isset($service, 'title') ?></p>
-                                <?php if (!empty($service['slug'])) : ?>
-                                    <a href="<?= _isset($service, 'slug'); ?>" class="btn btn-primary text-white rounded-pill py-0_75 px-3 px-lg-5 fs-18 fw-700 text-uppercase">Enquire</a>
-                                <?php endif; ?>
-                            </div>
-                        </article>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-
         <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
@@ -127,20 +128,22 @@ require 'inc/serviceBanner.php';
                             </article>
                         <?php endforeach; ?>
                     </div>
-    
-                    <div class="slider-progressbar mt-4">
-                        <div class="content">
-                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only"></span>
+
+                    <?php if (count($faqs) > 3) : ?>
+                        <div class="slider-progressbar mt-4">
+                            <div class="content">
+                                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="sr-only"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>

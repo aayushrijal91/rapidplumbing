@@ -1,58 +1,60 @@
 <?php
 
-class router {
-	
+class router
+{
+
 	/* array key mean url first segment and value array means first key is file name and other all key is a $_GET array key */
 	public static $allPath = array(
-		'' => array('home'),	
-		'ajax' => array('ajax'),		
-		'sitemap' => array('sitemap'),
-		'about-us' => array('about-us'),
-		'penrith-plumber' => array('penrith-plumber'),
-		'faqs' => array('faqs'),
-		'careers' => array('careers'),
-		'home-safety-inspection' => array('home-safety-inspection'),
-		'blogs' => array('blogs'),
-		'contact-us' => array('contact-us'),
-		'book-online' => array('book-online'),
-		'memberships' => array('memberships'),
-		'blocked-drains' => array('blocked-drains'),
-		'gas-plumbing' => array('gas-plumbing'),
-		'emergency-plumbing' => array('emergency-plumbing'),
-		'hot-water-services' => array('hot-water-services'),
-		'taps-toilets' => array('taps-toilets'),
-		'rainwater-tanks-pumps' => array('rainwater-tanks-pumps'),
-		'general-plumbing' => array('general-plumbing'),
-		'property-strata-managers' => array('property-strata-managers'),
-		'leak-detection' => array('leak-detection'),
-		'renovation-plumber' => array('renovation-plumber'),
-		'roofing-guttering' => array('roofing-guttering'),
-		'septic-systems' => array('septic-systems'),
-		'backflow-prevention' => array('backflow-prevention'),
-		'water-filters' => array('water-filters'),
-		'commercial-plumbing' => array('commercial-plumbing'),
-		'schools' => array('schools'),
-		'suburbs' => array('suburbs'),
+		'' => 'home',
+		'ajax' => 'ajax',
+		'sitemap' => 'sitemap',
+		'about-us' => 'about-us',
+		'penrith-plumber' => 'penrith-plumber',
+		'faqs' => 'faqs',
+		'careers' => 'careers',
+		'home-safety-inspection' => 'home-safety-inspection',
+		'blogs' => 'blogs',
+		'contact-us' => 'contact-us',
+		'book-online' => 'book-online',
+		'memberships' => 'memberships',
+		'penrith-plumber/blocked-drains' => 'penrith-plumber/blocked-drains',
+		'penrith-plumber/gas-plumbing' => 'penrith-plumber/gas-plumbing',
+		'penrith-plumber/emergency-plumbing' => 'penrith-plumber/emergency-plumbing',
+		'penrith-plumber/hot-water-services' => 'penrith-plumber/hot-water-services',
+		'penrith-plumber/taps-toilets' => 'penrith-plumber/taps-toilets',
+		'penrith-plumber/rainwater-tanks-pumps' => 'penrith-plumber/rainwater-tanks-pumps',
+		'penrith-plumber/general-plumbing' => 'penrith-plumber/general-plumbing',
+		'penrith-plumber/property-strata-managers' => 'penrith-plumber/property-strata-managers',
+		'penrith-plumber/leak-detection' => 'penrith-plumber/leak-detection',
+		'penrith-plumber/renovation-plumber' => 'penrith-plumber/penrith-plumber/renovation-plumber',
+		'penrith-plumber/roofing-guttering' => 'penrith-plumber/roofing-guttering',
+		'penrith-plumber/septic-systems' => 'penrith-plumber/septic-systems',
+		'penrith-plumber/backflow-prevention' => 'penrith-plumber/backflow-prevention',
+		'penrith-plumber/water-filters' => 'penrith-plumber/water-filters',
+		'penrith-plumber/commercial-plumbing' => 'penrith-plumber/commercial-plumbing',
+		'penrith-plumber/schools' => 'penrith-plumber/schools',
+		'suburbs' => 'suburbs',
 	);
-	
-	public static function init() {
+
+	public static function init()
+	{
 		global $filepagename;
-		 // Parse URL and Path data
+		// Parse URL and Path data
 		$url = parse_url((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 		$url = (object) $url;
 		$url->path = ltrim($url->path, '/');
-		
-		$url->path = implode( '/', config::get_paths());
-		
-		
+
+		$url->path = implode('/', config::get_paths());
+
+
 		// Handle feed.rss, sitemap.xml, robots.txt and known file exceptions.
-		$known_files = array ('feed.rss', 'sitemap','site-map','sitemap.xml', 'robots.txt', 'ajax.js');
-		if (in_array($url->path, $known_files)){
+		$known_files = array('feed.rss', 'sitemap', 'site-map', 'sitemap.xml', 'robots.txt', 'ajax.js');
+		if (in_array($url->path, $known_files)) {
 			require 'themes/' . $url->path . '.php';
 			exit();
 		}
-		
-		
+
+
 		// Set Headers
 		header('X-XSS-Protection: 1; mode=block'); // Set Security Headers
 		header('X-Frame-Options: SAMEORIGIN'); // Sets X-Frame-Options
@@ -60,49 +62,34 @@ class router {
 		header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload'); // HSTS Enabled
 		header('Content-language: en-au'); // Sets Language
 		header('Cache-Control: must-revalidate');
-		header('Pragma: public'); 
+		header('Pragma: public');
 		date_default_timezone_set('Australia/Melbourne'); // Sets Timezone
-		
+
 		$cache = new cache();
 		$cache->check($url->path);
-		
+
 		ob_start();
-		if(isset($url->path)){
+		if (isset($url->path)) {
 			/* get include file name */
 			$fileName = self::_includeFile($url->path);
 			$filepagename = $fileName;
-			require 'themes/'.$fileName.'.php';
+			require 'themes/' . $fileName . '.php';
 		}
 
-		
 		$render = ob_get_contents();
 		ob_end_clean();
 		/*echo $render;*/
 		$minify = new minify();
 		echo $render = $minify->html($render);
 		/*$cache->create($render);*/
-
 	}
 
-	
-	
-	public static function _includeFile($path = ''){
-		/* default file 404 other wise find in all path array */
-		$tmpPath = explode('/',$path);
-		$fileName = '404';
-		$tmpUrl = array();
-		foreach($tmpPath as $key => $val){
-			if(in_array($val,array_keys(self::$allPath)) && $key == 0){
-				$tmpUrl = self::$allPath[$val];
-				$fileName = $tmpUrl[$key];
-			}else if(!isset($tmpUrl[$key]) && !empty($val)){
-				$fileName = '404';
-			}else if(!empty($val) && count($tmpUrl) && isset($tmpUrl[$key]) && !empty($tmpUrl[$key])){
-				$_GET[$tmpUrl[$key]] = $val;
-			}else{
-				continue;
-			}
+	public static function _includeFile($path = '')
+	{
+		if (array_key_exists($path, self::$allPath)) {
+			return self::$allPath[$path];
+		} else {
+			return "404";
 		}
-		return $fileName;
 	}
 }

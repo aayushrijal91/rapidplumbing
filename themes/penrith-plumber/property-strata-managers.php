@@ -1,6 +1,6 @@
 <?php
 $page_content_arr = array();
-$page_content = schools_content::get_data($page_content_arr);
+$page_content = property_strata_managers_content::get_data($page_content_arr);
 
 if (count($page_content)) {
     $page_content = $page_content[0];
@@ -10,7 +10,7 @@ $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = schools_faqs::get_data($faqs);
+$faqs = strata_plumbing_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -33,21 +33,19 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
-<main class="schoolsServicePage">
-    <section class="introduction overflow-hidden">
+<main class="propertyManagersServicePage">
+    <section class="introduction position-relative overflow-hidden">
         <div class="container">
-            <div class="row gy-5 justify-content-center">
+            <div class="row">
                 <div class="col-xl-6">
                     <article>
                         <h3 class="fs-64 fw-700 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
-
                         <p class="fw-700 text-primary text-capitalize fs-20 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
-
                         <article class="fs-18 description pt-4 fw-300 lh-1_67">
                             <?= _isset($page_content, 'introduction_description') ?>
                         </article>
@@ -59,17 +57,16 @@ require 'inc/serviceBanner.php';
                         <?php endif; ?>
                     </article>
                 </div>
-                <div class="col-auto col-xl-6">
-                    <?= _imgSrc($page_content, 'introduction_image', 'rounded-xl') ?>
-                </div>
             </div>
         </div>
+
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/strata-managers.png" class="strataImage" alt="Strata Managed Building" />
     </section>
 
     <section class="help">
         <div class="container pb-9">
             <div class="row gy-4 pt-6">
-                <?php foreach ($cta_list as $cta) { ?>
+                <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
                         <article class="aboutCard dark">
                             <div class="row h-100">
@@ -87,13 +84,13 @@ require 'inc/serviceBanner.php';
                             </div>
                         </article>
                     </div>
-                <?php } ?>
+                <?php endforeach; ?>
             </div>
         </div>
 
         <section class="serviceFaq">
             <div class="container">
-                <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
+                <h3 class="fs-60 fw-700 highlight-secondary text-center">Strata Plumbing Sydney FAQs</h3>
 
                 <div class="slider">
                     <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
@@ -121,7 +118,7 @@ require 'inc/serviceBanner.php';
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>

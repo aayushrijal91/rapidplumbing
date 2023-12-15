@@ -8,4 +8,10 @@ define('TABLE_PREFIX', 'vital_');
 
 /* define('V_CDN_URL', 'https://ik.imagekit.io/qjttjqku09a/sydneyreliningcompany/'); */
 
+$isLocalhost = ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1');
+
+$root_theme = $isLocalhost ? $_SERVER['DOCUMENT_ROOT'] . '/rapid/themes/' : $_SERVER['DOCUMENT_ROOT'] . '/themes/';
+
+define('V_ROOT_THEME', $root_theme);
+
 ?>

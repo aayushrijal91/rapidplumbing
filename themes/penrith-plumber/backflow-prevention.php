@@ -1,6 +1,6 @@
 <?php
 $page_content_arr = array();
-$page_content = taps_toilets_content::get_data($page_content_arr);
+$page_content = backflow_prevention_content::get_data($page_content_arr);
 
 if (count($page_content)) {
     $page_content = $page_content[0];
@@ -10,10 +10,7 @@ $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = taps_toilets_faqs::get_data($faqs);
-
-$services = array('orderBy' => 'dragSortOrder ASC');
-$services = taps_toilets_services_list::get_data($services);
+$faqs = backflow_prevention_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -36,71 +33,43 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
-<main class="tapsAndToiletsServicePage">
-    <section class="introduction position-relative overflow-hidden">
+<main class="backflowPreventionServicePage">
+    <section class="introduction">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <article>
-                        <h3 class="fs-64 fw-500 lh-1 text-capitalize"><?= _isset($page_content, 'introduction_title') ?></h3>
-                        <p class="fw-700 text-primary text-capitalize fs-20 pt-4"><?= _isset($page_content, 'introduction_subtitle') ?></p>
-                        <article class="fs-18 description pt-4 fw-300">
+            <div class="row align-items-end align-items-xl-center gy-5">
+                <div class="col-lg-6">
+                    <article class="py-5">
+                        <h3 class="fs-60 text-capitalize fw-400 lh-1"><?= _isset($page_content, 'introduction_title') ?></h3>
+
+                        <article class="description fs-18 lh-1_5 py-4">
                             <?= _isset($page_content, 'introduction_description') ?>
                         </article>
 
-                        <?php if (!empty($page_content['introduction_button_link'])) : ?>
+                        <?php if (!empty($page_content['introduction_button_link']) && !empty($page_content['introduction_button_text'])) : ?>
                             <button class="bg-transparent rounded-pill mt-4">
-                                <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
+                                <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-primary text-white d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700"><?= _isset($page_content, 'introduction_button_text') ?></a>
                             </button>
                         <?php endif; ?>
                     </article>
                 </div>
-            </div>
-        </div>
-
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/tapstoilets-introduction.png" class="plumberImage" alt="Plumber Left" />
-    </section>
-
-    <section class="help">
-        <div class="services pb-6">
-            <div class="container">
-                <h3 class="fs-64 fw-400"><?= _isset($page_content, 'services_title') ?></h3>
-                <article class="fs-18 description py-4 py-md-5">
-                    <?= _isset($page_content, 'services_description') ?>
-                </article>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row justify-content-end">
-                    <div class="col-xl-11 ps-xxl-7">
-                        <div class="tapstoiltesservices-slider position-relative z-1">
-                            <?php foreach ($services as $service) : ?>
-                                <article class="box">
-                                    <?= _imgSrc($service, 'image', 'h-100 w-100 object-fit-cover'); ?>
-                                    <div class="overlay">
-                                        <p><?= _isset($service, 'title') ?></p>
-                                    </div>
-                                    <?php if (!empty($service['slug'])) : ?>
-                                        <a href="<?= _isset($service, 'slug'); ?>" class="button text-white px-5 py-3 fw-600">Enquire</a>
-                                    <?php endif; ?>
-                                </article>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <?= _imgSrc($page_content, 'introduction_image', 'h-100 w-100'); ?>
                 </div>
             </div>
         </div>
+    </section>
 
+    <section class="help">
         <div class="container">
             <div class="row gy-4 pt-6">
-                <?php foreach ($cta_list as $cta) { ?>
+                <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
-                        <article class="aboutCard dark">
+                        <article class="aboutCard">
                             <div class="row h-100">
                                 <div class="col-lg-6">
                                     <?= _imgSrc($cta, 'image', 'h-100 w-100'); ?>
@@ -108,15 +77,15 @@ require 'inc/serviceBanner.php';
                                 <div class="col-lg-6 d-flex align-items-center">
                                     <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
-                                        <article class="fs-18 pt-3 lh-1_5 description">
+                                        <p class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
-                                        </article>
+                                        </p>
                                     </article>
                                 </div>
                             </div>
                         </article>
                     </div>
-                <?php } ?>
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -126,14 +95,14 @@ require 'inc/serviceBanner.php';
 
                 <div class="slider">
                     <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
-                        <?php foreach ($faqs as $faq) { ?>
-                            <article class="box dark">
+                        <?php foreach ($faqs as $faq) : ?>
+                            <article class="box">
                                 <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
                                 <article class="description fs-18 pt-3 lh-1_5">
                                     <?= _isset($faq, 'content') ?>
                                 </article>
                             </article>
-                        <?php } ?>
+                        <?php endforeach; ?>
                     </div>
 
                     <?php if (count($faqs) > 3) : ?>
@@ -150,7 +119,7 @@ require 'inc/serviceBanner.php';
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>

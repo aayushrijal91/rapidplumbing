@@ -1,16 +1,25 @@
 <?php
-$page_content_arr = array();
-$page_content = renovation_plumber_content::get_data($page_content_arr);
 
-if (count($page_content)) {
-    $page_content = $page_content[0];
+if (isset($_GET['slug']) && !empty($_GET['slug']) && !is_numeric($_GET['slug'])) {
+    $serviceSlug = $_GET['slug'];
+}
+
+if ($serviceSlug != '') {
+    $serviceArray = array('where' => "`slug` = '" . $serviceSlug . "'");
+    $service = general_plumbing_services::get_data($serviceArray);
+    if (count($service) > 0) {
+        $page_content = $service[0];
+    } else {
+        include('404.php');
+        die();
+    }
 }
 
 $cta_list = array('orderBy' => 'dragSortOrder ASC');
 $cta_list = cta_list::get_data($cta_list);
 
 $faqs = array('orderBy' => 'dragSortOrder ASC');
-$faqs = renovation_plumbers_faqs::get_data($faqs);
+$faqs = general_plumbing_inner_service_faqs::get_data($faqs);
 
 /*  Meta data */
 $meta_title         = $page_content['meta_title'];
@@ -33,16 +42,16 @@ $banner_details = array(
 
 /*  Banner Array End */
 
-require 'inc/header.php';
-require 'inc/nav.php';
-require 'inc/serviceBanner.php';
+require V_ROOT_THEME . 'inc/header.php';
+require V_ROOT_THEME . 'inc/nav.php';
+require V_ROOT_THEME . 'inc/serviceBanner.php';
 ?>
 
-<main class="renovationPlumbersServicePage">
+<main class="generalPlumbingServicePage">
     <section class="help">
         <section class="about pb-5">
             <div class="container">
-                <div class="row gy-5">
+                <div class="row gy-4">
                     <div class="col-md-6 col-xl-4 order-1">
                         <article class="callRapidCard primaryborder h-100 position-relative">
                             <?= _imgSrc($page_content, 'about_image_1', 'heroImage h-100 w-100 object-fit-cover'); ?>
@@ -78,7 +87,7 @@ require 'inc/serviceBanner.php';
             </div>
         </section>
 
-        <div class="container pb-9">
+        <div class="container pb-6">
             <div class="row gy-4 pt-6">
                 <?php foreach ($cta_list as $cta) : ?>
                     <div class="col-12">
@@ -90,7 +99,7 @@ require 'inc/serviceBanner.php';
                                 <div class="col-lg-6 d-flex align-items-center">
                                     <article class="pt-5 pb-3 px-3 p-md-5 px-lg-3 p-xl-5">
                                         <h3 class="fs-60 fw-600 lh-1"><?= _isset($cta, 'title') ?></h3>
-                                        <p class="fs-18 pt-3 lh-1_5">
+                                        <p class="fs-18 pt-3 lh-1_5 description">
                                             <?= _isset($cta, 'content') ?>
                                         </p>
                                     </article>
@@ -102,23 +111,31 @@ require 'inc/serviceBanner.php';
             </div>
         </div>
 
-        <section class="serviceFaq">
+        <section class="serviceFaq pt-8">
             <div class="container">
                 <h3 class="fs-60 fw-700 highlight-secondary text-center"><?= _isset($page_content, 'banner_title') ?> Sydney FAQs</h3>
 
                 <div class="slider">
                     <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
-                        <?php foreach ($faqs as $faq) : ?>
-                            <article class="box">
-                                <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
-                                <article class="description fs-18 pt-3 lh-1_5">
-                                    <?= _isset($faq, 'content') ?>
+                        <?php
+                        $count = 0;
+
+                        foreach ($faqs as $faq) :
+                            if ($page_content['slug'] == $faq['category']) :
+                                $count++;
+                        ?>
+                                <article class="box">
+                                    <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
+                                    <article class="description fs-18 pt-3 lh-1_5">
+                                        <?= _isset($faq, 'content') ?>
+                                    </article>
                                 </article>
-                            </article>
-                        <?php endforeach; ?>
+                        <?php
+                            endif;
+                        endforeach; ?>
                     </div>
 
-                    <?php if (count($faqs) > 3) : ?>
+                    <?php if ($count > 3) : ?>
                         <div class="slider-progressbar mt-4">
                             <div class="content">
                                 <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
@@ -132,7 +149,7 @@ require 'inc/serviceBanner.php';
         </section>
     </section>
 
-    <?php require 'inc/gallery.php'; ?>
+    <?php require V_ROOT_THEME . 'inc/gallery.php'; ?>
 </main>
 
-<?php require 'inc/footer.php'; ?>
+<?php require V_ROOT_THEME . 'inc/footer.php'; ?>
