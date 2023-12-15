@@ -8,7 +8,7 @@ function _send_mail($tomail, $Subject, $MessagesBody, $mCc, $mBcc)
 
 	$headers = "MIME-Version: 1.0" . "\r\n";
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-	$headers .= 'From:E1 Pest Solutions <info@elitepestsolutions.com.au>' . "\r\n";
+	$headers .= 'From: Rapid Plumbing Group <info@rapidplumbinggroup.com.au>' . "\r\n";
 	$headers .= 'Cc: ' . $mCc . '' . "\r\n";
 	$headers .= 'Bcc: ' . $mBcc . ' ' . "\r\n";
 

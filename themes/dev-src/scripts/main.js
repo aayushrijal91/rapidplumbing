@@ -513,33 +513,34 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 /*********************** Forms ******************* */
-// $(document).on("submit", "#enquiry_form", function (e) {
-//     e.preventDefault();
-//     // var thank = $(this).attr('data-thank');
-//     // console.log(thank);
-//     // e.preventDefault();
-//     $(".enquiry_form_btn").attr('disabled', 'disabled').val("Loading...");
-//     grecaptcha.ready(function () {
-//         grecaptcha.execute('6Ldso5ghAAAAAChSuoeDg027KKnRXuxF5rT3Lb0U', {
-//                 action: 'MyForm'
-//             })
-//             .then(function (token) {
-//                 $('.g-recaptcha-response').val(token);
-//                 $.ajax({
-//                     url: SITE_URL + '/ajax/',
-//                     data: $("#enquiry_form").serialize(),
-//                     method: 'POST',
-//                     success: function (response) {
-//                         response = response.trim();
-//                         if (response == "success") {
-//                             $("#enquiry_form")[0].reset();
-//                             $(".enquiry_form_btn").removeAttr('disabled').val("SUBMIT");
-//                             window.location.href = SITE_URL + '/contact-thank-you/';
-//                         } else if (response == "fail") {
-//                             alert("Failed, Something went wrong.")
-//                         }
-//                     }
-//                 });
-//             });
-//     });
-// });
+$(document).on("submit", "#contact_us_form", function (e) {
+    e.preventDefault();
+    // var thank = $(this).attr('data-thank');
+    // console.log(thank);
+    // e.preventDefault();
+    $(".contact_us_submit_btn").attr('disabled', 'disabled').val("Loading...");
+
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6Ldso5ghAAAAAChSuoeDg027KKnRXuxF5rT3Lb0U', {
+                action: 'MyForm'
+            })
+            .then(function (token) {
+                $('.g-recaptcha-response').val(token);
+                $.ajax({
+                    url: SITE_URL + '/ajax/',
+                    data: $("#contact_us_form").serialize(),
+                    method: 'POST',
+                    success: function (response) {
+                        response = response.trim();
+                        if (response == "success") {
+                            $("#contact_us_form")[0].reset();
+                            $(".contact_us_submit_btn").removeAttr('disabled').val("SUBMIT");
+                            window.location.href = SITE_URL + '/contact-thank-you/';
+                        } else if (response == "fail") {
+                            alert("Failed, Something went wrong.")
+                        }
+                    }
+                });
+            });
+    });
+});

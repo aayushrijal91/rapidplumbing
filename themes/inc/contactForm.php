@@ -26,9 +26,10 @@ if (count($global_cta)) {
                 </a>
             </div>
             <div class="col-xl-6">
-                <form id="enquiry_form" class="needs-validation" method="POST" novalidate>
+                <form id="contact_us_form" class="needs-validation" method="POST" novalidate>
                     <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
-                    <input type="hidden" name="request" value="enquiry_form_request">
+                    <input type="hidden" name="request" value="contact_us_form">
+
                     <div class="row gy-5">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -127,7 +128,7 @@ if (count($global_cta)) {
                             </div>
                         </div>
                         <div class="col-auto">
-                            <button type="submit" class="submit_btn btn btn-primary rounded-pill fs-18 fw-700 text-white px-5 px-lg-6">Enquire</button>
+                            <button type="submit" class="contact_us_submit_btn btn btn-primary rounded-pill fs-18 fw-700 text-white px-5 px-lg-6">Enquire</button>
                         </div>
                     </div>
                 </form>

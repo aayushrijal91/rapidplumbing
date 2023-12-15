@@ -2,16 +2,14 @@
 
 $email_settingsArr = array();
 $email_settings  = email_settings::get_data($email_settingsArr);
-if(count($email_settings)){
-	$email_settings = $email_settings[0];
+if (count($email_settings)) {
+    $email_settings = $email_settings[0];
 }
 
-if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form_request') {
+if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
         $recaptcha_response = $_POST['recaptcha_response'];
 
-        var_dump('landed');
-        die();
         $data = array(
             'secret' => "6Ldso5ghAAAAAOeC9nGV2Zq1nmFYwN2Z-Sp4Eyre",
             'response' => $recaptcha_response
@@ -25,33 +23,20 @@ if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form_request') {
         curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
         $recaptcha = curl_exec($verify);
         $recaptcha = json_decode($recaptcha, true);
-        
-        $special = '';
-        $special1 = '';
-        $special2 = '';
-
-        if (isset($_POST["special1"])) {
-            $special1 = strip_tags($_POST['special1']);
-            $special .= $special1;
-        }
-        if (isset($_POST["special2"])) {
-            $special2 = strip_tags($_POST['special2']);
-            $special .= '<br>' . $special2;
-        }
 
         if ($recaptcha["success"] === true) {
-            $ArrData = array(
-                'title'                    =>    strip_tags($_POST['name']),
-                'phone'                    =>    strip_tags($_POST['phone']),
-                'email'                    =>    strip_tags($_POST['email']),
-                'preffered_date'           =>    strip_tags($_POST['date']),
-                'address'                  =>    strip_tags($_POST['address']),
-                'service'                  =>    strip_tags($_POST['service']),
-                'special_selection'        =>    $special,
-            );
+            // $ArrData = array(
+            //     'title'                    =>    strip_tags($_POST['name']),
+            //     'phone'                    =>    strip_tags($_POST['phone']),
+            //     'email'                    =>    strip_tags($_POST['email']),
+            //     'preffered_date'           =>    strip_tags($_POST['date']),
+            //     'address'                  =>    strip_tags($_POST['address']),
+            //     'service'                  =>    strip_tags($_POST['service']),
+            //     'special_selection'        =>    $special,
+            // );
             // contact_us_form_data::add_record($ArrData);
 
-            $email =     strip_tags($_POST['email']);
+            // $email =     strip_tags($_POST['email']);
 
             $tableStyle = 'border: 1px solid #ddd;text-align: left; border-colspan: colspan; width: 100%;';
             $tableCellStyle = 'border: 1px solid #ddd;text-align: left; padding: 15px;';
@@ -61,37 +46,32 @@ if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form_request') {
             $html = "<table style='" . $tableStyle . "'>
                         <tr>
                             <td style='" . $tableCellStyle . "'>Name</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['name']) . "</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['firstName']) . ' ' . strip_tags($_POST['lastName']) . "</td>                                    
                         </tr>
+
                         <tr>
                             <td style='" . $tableCellStyle . "'>Phone Number</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['phone']) . "</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['phoneNumber']) . "</td>                                    
                         </tr>
+
                         <tr>
                             <td style='" . $tableCellStyle . "'>Email</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['email']) . "</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['emailAddress']) . "</td>                                    
                         </tr>
                        
                         <tr>
-                            <td style='" . $tableCellStyle . "'>Date</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['date']) . "</td>                                    
-                        </tr>
-                        <tr>
-                            <td style='" . $tableCellStyle . "'>Address</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['address'], '<br>') . "</td>                                    
-                        </tr>
-                        <tr>
                             <td style='" . $tableCellStyle . "'>Service</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['service'], '<br>') . "</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['service']) . "</td>                                    
                         </tr>
+
                         <tr>
-                        <td style='" . $tableCellStyle . "'>Special Selection</td>                                    
-                        <td style='" . $tableCellStyle . "'>" . $special . "</td>                                    
-                    </tr>
+                            <td style='" . $tableCellStyle . "'>Message</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['message'], '<br>') . "</td>                                    
+                        </tr>
                     </table>
                     
                     <p>Thanks..</p>
-                    <p> E1 Pest Solutions Team</p>";
+                    <p> Rapid Plumbing Group</p>";
 
             $subject = 'New Contact Form Enquiry';
             $message = $html;
@@ -121,15 +101,14 @@ if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form_request') {
                     $statusMsg = 'Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.';
                 }
 
-               
+
 
                 if ($uploadStatus == 1) {
                     $semi_rand = md5(time());
                     $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-                    $headers = "From:E1 Pest Solutions <info@aiims-staging.com.au>" . "\r\n";
+                    $headers = "From:Rapid Plumbing Group <info@rapidplumbinggroup.com.au>" . "\r\n";
                     $headers .= 'Cc: ' . $email_settings['cc_email'] . '' . "\r\n";
                     $headers .= 'Bcc: ' . $email_settings['bcc_email'] . ' ' . "\r\n";
-                    $headers .= "Bcc:aayush@aiims.com.au" . "\r\n";
                     $headers .= 'Reply-To: ' . $email . "\r\n";
                     //$headers .= "Bcc: tracking+sps_main_booking@api.aiims.com.au\r\n";
                     $headers .= "MIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
@@ -164,5 +143,3 @@ if (isset($_POST['request']) && $_POST['request'] == 'enquiry_form_request') {
         }
     }
 }
-
-?>
