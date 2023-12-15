@@ -15,7 +15,8 @@ if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
         $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
         $recaptcha = json_decode($recaptcha);
 
-        if ($recaptcha["success"] === true) {
+        if ($recaptcha->success === true) {
+            $email =     strip_tags($_POST['emailAddress']);
             $tableStyle = 'border: 1px solid #ddd;text-align: left; border-colspan: colspan; width: 100%;';
             $tableCellStyle = 'border: 1px solid #ddd;text-align: left; padding: 15px;';
             $tableCellStyler = 'border: 1px solid #ddd;text-align: right; padding: 15px;';
@@ -113,7 +114,8 @@ if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
                     echo $statusMsg;
                 }
             } else {
-                _send_mail($to_email, $subject, $message, $email_settings['cc_email'], $email_settings['bcc_email'], $email);
+                $result = _send_mail($to_email, $subject, $message, $email_settings['cc_email'], $email_settings['bcc_email']);
+
                 echo "success";
             }
         } else {
