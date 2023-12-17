@@ -481,7 +481,7 @@ $('.areas_droplist > .list > .item').on('click', function () {
 
 $(".nav-item.menu-item-has-children").find("> .nav-link").addClass('dropdown-toggle');
 
-$('#fileUpload').on('change', function() {
+$('#fileUpload').on('change', function () {
     let file = $(this).val();
     if (file != "") {
         let theSplit = file.split('\\');
@@ -496,10 +496,11 @@ $('#fileUpload').on('change', function() {
 /*********************** Forms ******************* */
 $(document).on("submit", "#contact_us_form", function (e) {
     e.preventDefault();
-    $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
-    let recaptchaVal = $(".g-recaptcha-response").val();
 
     if (validateForm($(this))) {
+        $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
+        let recaptchaVal = $(".g-recaptcha-response").val();
+
         grecaptcha.ready(function () {
             grecaptcha.execute(recaptchaVal, {
                 action: 'MyForm'
@@ -528,10 +529,11 @@ $(document).on("submit", "#contact_us_form", function (e) {
 
 $(document).on("submit", "#careers_form", function (e) {
     e.preventDefault();
-    $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
-    let recaptchaVal = $(".g-recaptcha-response").val();
 
     if (validateForm($(this))) {
+        $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
+        let recaptchaVal = $(".g-recaptcha-response").val();
+
         grecaptcha.ready(function () {
             grecaptcha.execute(recaptchaVal, {
                 action: 'MyForm'
@@ -540,8 +542,10 @@ $(document).on("submit", "#careers_form", function (e) {
                     $('.g-recaptcha-response').val(token);
                     $.ajax({
                         url: SITE_URL + '/ajax/',
-                        data: $("#careers_form").serialize(),
+                        data: new FormData($("#careers_form")[0]),
                         method: 'POST',
+                        processData: false,
+                        contentType: false,
                         success: function (response) {
                             response = response.trim();
                             if (response == "success") {
