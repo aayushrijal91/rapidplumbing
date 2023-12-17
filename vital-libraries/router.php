@@ -34,6 +34,7 @@ class router
 		'penrith-plumber/schools' => 'penrith-plumber/schools',
 		'suburbs' => 'suburbs',
 		'thank-you' => 'thank-you',
+		'thank-you-book' => 'thank-you-book',
 		'thank-you-careers' => 'thank-you-careers',
 	);
 
