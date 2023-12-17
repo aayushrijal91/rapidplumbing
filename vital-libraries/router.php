@@ -33,6 +33,7 @@ class router
 		'penrith-plumber/commercial-plumbing' => 'penrith-plumber/commercial-plumbing',
 		'penrith-plumber/schools' => 'penrith-plumber/schools',
 		'suburbs' => 'suburbs',
+		'thank-you' => 'thank-you',
 		'thank-you-careers' => 'thank-you-careers',
 	);
 

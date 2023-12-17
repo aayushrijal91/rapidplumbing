@@ -41,7 +41,6 @@ RewriteEngine On
 	#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     RewriteBase /
-    RewriteRule ^thank-you thank-you.php [NC,L,QSA]
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
