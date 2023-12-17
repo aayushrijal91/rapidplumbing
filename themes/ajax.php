@@ -7,7 +7,7 @@ if (count($email_settings)) {
     $email_settings = $email_settings[0];
 }
 
-if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
+if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form' || $_POST['request'] == 'book_online_form') {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
         $recaptcha_response = $_POST['recaptcha_response'];
         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -57,11 +57,11 @@ if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
             $message = $html;
             $to_email = $email_settings['to_email'];
 
-            if (!empty($_FILES["file"]["name"])) {
+            if (!empty($_FILES["uploadedFile"]["name"])) {
                 $uploadStatus = 1;
 
                 $targetDir = "uploads/";
-                $fileName = basename($_FILES["file"]["name"]);
+                $fileName = basename($_FILES["uploadedFile"]["name"]);
                 $targetFilePath = $targetDir . $fileName;
                 $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
@@ -70,7 +70,7 @@ if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
                 if (in_array($fileType, $allowTypes)) {
                     $uploadStatus = 1;
 
-                    if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
+                    if (move_uploaded_file($_FILES["uploadedFile"]["tmp_name"], $targetFilePath)) {
                         $uploadedFile = $targetFilePath;
                     } else {
                         $uploadStatus = 0;
@@ -88,7 +88,6 @@ if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
                     $headers .= 'Cc: ' . $email_settings['cc_email'] . '' . "\r\n";
                     $headers .= 'Bcc: ' . $email_settings['bcc_email'] . ' ' . "\r\n";
                     $headers .= 'Reply-To: ' . $email . "\r\n";
-                    //$headers .= "Bcc: tracking+sps_main_booking@api.aiims.com.au\r\n";
                     $headers .= "MIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
                     $messagea = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
@@ -173,11 +172,11 @@ if (isset($_POST['request']) && $_POST['request'] == 'careers_form') {
             $message = $html;
             $to_email = $email_settings['to_email'];
 
-            if (!empty($_FILES["file"]["name"])) {
+            if (!empty($_FILES["uploadedFile"]["name"])) {
                 $uploadStatus = 1;
 
                 $targetDir = "uploads/";
-                $fileName = basename($_FILES["file"]["name"]);
+                $fileName = basename($_FILES["uploadedFile"]["name"]);
                 $targetFilePath = $targetDir . $fileName;
                 $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
@@ -186,7 +185,7 @@ if (isset($_POST['request']) && $_POST['request'] == 'careers_form') {
                 if (in_array($fileType, $allowTypes)) {
                     $uploadStatus = 1;
 
-                    if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
+                    if (move_uploaded_file($_FILES["uploadedFile"]["tmp_name"], $targetFilePath)) {
                         $uploadedFile = $targetFilePath;
                     } else {
                         $uploadStatus = 0;

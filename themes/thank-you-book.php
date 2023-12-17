@@ -18,11 +18,13 @@ require 'inc/header.php';
 require 'inc/nav.php';
 require 'inc/banner.php';
 ?>
-<!-- Event snippet for Contact Form (NEW MAIN SITE) conversion page -->
+
+<!-- Event snippet for Booking Form (NEW MAIN SITE) conversion page -->
 
 <script>
     gtag('event', 'conversion', {
-        'send_to': 'AW-469873309/XmB9CKeJtf8YEJ3lhuAB'
+        'send_to': 'AW-469873309/Mp5YCKqJtf8YEJ3lhuAB'
     });
 </script>
+
 <?php require 'inc/footer.php'; ?>
