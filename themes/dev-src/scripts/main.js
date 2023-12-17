@@ -481,33 +481,14 @@ $('.areas_droplist > .list > .item').on('click', function () {
 
 $(".nav-item.menu-item-has-children").find("> .nav-link").addClass('dropdown-toggle');
 
-// $(document).on("submit", "#enquiry_form", function (e) {
-//     e.preventDefault();
-//     let form = $(this);
-//     if (!validateForm(form)) {
-//         e.preventDefault();
-//         form.addClass('was-validated');
-//     } else {
-//         e.preventDefault();
-//         $('.submit_btn').attr('disabled', 'disabled').val("Loading...");
-
-//         $.ajax({
-//             url: SITE_URL + '/ajax/',
-//             data: $("#enquiry_form").serialize(),
-//             method: 'POST',
-//             success: function (response) {
-//                 response = response.trim();
-//                 if (response == "success") {
-//                     $("#enquiry_form")[0].reset();
-//                     $(".submit_btn").removeAttr('disabled').val("SUBMIT");
-//                     window.location.href = SITE_URL + '/thank-you/';
-//                 } else if (response == "fail") {
-//                     alert("Failed, Something went wrong.")
-//                 }
-//             }
-//         });
-//     }
-// })
+$('#fileUpload').on('change', function() {
+    let file = $(this).val();
+    if (file != "") {
+        let theSplit = file.split('\\');
+        let fileName = theSplit[theSplit.length - 1];
+        $(`#file-label`).html(fileName.substring(0, 50));
+    }
+})
 
 // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 // const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));

@@ -46,7 +46,7 @@ return array (
     'label' => 'Last Updated By',
     'isSystemField' => '1',
   ),
-  'title' => array(
+  'to_email' => array(
     'order' => 6,
     'label' => 'Receiver Email',
     'type' => 'textfield',

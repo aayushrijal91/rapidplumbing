@@ -95,7 +95,7 @@ require 'inc/banner.php';
 
                             <div class="col-12">
                                 <div class="form-group d-flex align-items-center gap-4 gap-xl-5">
-                                    <label class="form-label m-0" for="phoneNumber">Employed Desired</label>
+                                    <label class="form-label m-0" for="employedDesired">Employed Desired</label>
                                     <div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="employedDesired" id="employment1" value="Full Time" checked>
@@ -115,15 +115,15 @@ require 'inc/banner.php';
 
                             <div class="col-12">
                                 <div class="form-group upload">
-                                    <label for="file-upload" class="my-0 w-100 text-white text-center gap-3 d-flex justify-content-center fw-300" id="file-label">
+                                    <label for="fileUpload" class="my-0 w-100 text-white text-center gap-3 d-flex justify-content-center fw-300">
                                         <svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M27.6172 23.853H2.61719C1.95415 23.853 1.31826 24.0989 0.849421 24.5364C0.38058 24.974 0.117188 25.5675 0.117188 26.1864C0.117188 26.8052 0.38058 27.3987 0.849421 27.8363C1.31826 28.2739 1.95415 28.5197 2.61719 28.5197H27.6172C28.2802 28.5197 28.9161 28.2739 29.385 27.8363C29.8538 27.3987 30.1172 26.8052 30.1172 26.1864C30.1172 25.5675 29.8538 24.974 29.385 24.5364C28.9161 24.0989 28.2802 23.853 27.6172 23.853Z" fill="white" />
                                             <path d="M13.8659 19.1864H16.3659C16.6974 19.1864 17.0154 19.0635 17.2498 18.8447C17.4842 18.6259 17.6159 18.3292 17.6159 18.0197V12.1864H23.8659C24.1059 12.1862 24.3407 12.1215 24.5423 12.0001C24.744 11.8786 24.9039 11.7056 25.003 11.5016C25.1021 11.2977 25.1363 11.0714 25.1013 10.8498C25.0664 10.6282 24.9638 10.4207 24.8059 10.2521L16.0559 0.918745C15.9353 0.798953 15.7897 0.703487 15.628 0.63823C15.4663 0.572973 15.2921 0.539307 15.1159 0.539307C14.9398 0.539307 14.7655 0.572973 14.6038 0.63823C14.4422 0.703487 14.2965 0.798953 14.1759 0.918745L5.42592 10.2521C5.26802 10.4207 5.16547 10.6282 5.13052 10.8498C5.09557 11.0714 5.12969 11.2977 5.22881 11.5016C5.32793 11.7056 5.48786 11.8786 5.68949 12.0001C5.89113 12.1215 6.12595 12.1862 6.36592 12.1864H12.6159V18.0197C12.6159 18.3292 12.7476 18.6259 12.982 18.8447C13.2165 19.0635 13.5344 19.1864 13.8659 19.1864Z" fill="white" />
                                         </svg>
 
-                                        <span>Attach supporting files</span>
+                                        <span id="file-label">Attach supporting files</span>
                                     </label>
-                                    <input id="file-upload" class="form-control rounded-0" type="file" name="uploadedFile" onchange="fileUploaded('file-upload','uploaded-file-name')">
+                                    <input id="fileUpload" class="form-control rounded-0" type="file" name="uploadedFile">
                                 </div>
                             </div>
                             <div class="col-12">

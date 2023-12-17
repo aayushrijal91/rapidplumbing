@@ -167,12 +167,14 @@ if (count($RedirectUrl)) {
 }
 
 if ($no_page_exist) :
-?>
-
-    <?php
+    $meta_title         = '404 | Rapid Plumbing Group';
+    $meta_description     = "Looking for a plumber you can trust? Call Rapid Plumbing Group Pty Ltd at 1800 172 743 and get reliable and professional plumbing solutions for your home in no time!";
+    $meta_keyword         = "Rapid Plumbing";
+    $meta_image         = '';
+    $meta_url             = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     require 'inc/header.php';
     require 'inc/nav.php';
-    ?>
+?>
 
     <section class="py-10">
         <div class="container">
