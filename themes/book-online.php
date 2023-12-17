@@ -37,9 +37,10 @@ require 'inc/banner.php';
         <h2 class="text-center fs-64 text-capitalize fw-500">Book With Us Today</h2>
         <p class="text-center lh-1_5 fs-18 fw-300 pt-4">Finding a reliable plumber in Penrith, NSW shouldn't be a hassle. Rapid Plumbing Group Pty Ltd makes it easy</p>
 
-        <form id="booking_form" class="needs-validation pt-8" method="POST" novalidate>
-            <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
-            <input type="hidden" name="request" value="booking_form_request">
+        <form id="contact_us_form" class="needs-validation pt-8" method="POST" novalidate>
+            <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
+            <input type="hidden" name="request" value="contact_us_form">
+
             <div class="row gy-5">
                 <div class="col-6">
                     <div class="form-group">
@@ -71,7 +72,7 @@ require 'inc/banner.php';
                 </div>
                 <div class="col-12">
                     <div class="form-group">
-                        <label class="form-label" for="phoneNumber">What can we help you with?</label>
+                        <label class="form-label">What can we help you with?</label>
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check">

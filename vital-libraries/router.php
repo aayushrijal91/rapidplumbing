@@ -2,7 +2,6 @@
 
 class router
 {
-
 	/* array key mean url first segment and value array means first key is file name and other all key is a $_GET array key */
 	public static $allPath = array(
 		'' => 'home',
@@ -34,6 +33,7 @@ class router
 		'penrith-plumber/commercial-plumbing' => 'penrith-plumber/commercial-plumbing',
 		'penrith-plumber/schools' => 'penrith-plumber/schools',
 		'suburbs' => 'suburbs',
+		'thank-you-careers' => 'thank-you-careers',
 	);
 
 	public static function init()
@@ -43,9 +43,7 @@ class router
 		$url = parse_url((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 		$url = (object) $url;
 		$url->path = ltrim($url->path, '/');
-
 		$url->path = implode('/', config::get_paths());
-
 
 		// Handle feed.rss, sitemap.xml, robots.txt and known file exceptions.
 		$known_files = array('feed.rss', 'sitemap', 'site-map', 'sitemap.xml', 'robots.txt', 'ajax.js');
@@ -53,7 +51,6 @@ class router
 			require 'themes/' . $url->path . '.php';
 			exit();
 		}
-
 
 		// Set Headers
 		header('X-XSS-Protection: 1; mode=block'); // Set Security Headers

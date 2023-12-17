@@ -12,7 +12,7 @@ function lazyloader() {
 
 AOS.init();
 
-$(".showSlideNav").on('click', function(e){
+$(".showSlideNav").on('click', function (e) {
     e.preventDefault();
 
     $('.slide-nav').toggleClass('active');
@@ -515,32 +515,64 @@ $(".nav-item.menu-item-has-children").find("> .nav-link").addClass('dropdown-tog
 /*********************** Forms ******************* */
 $(document).on("submit", "#contact_us_form", function (e) {
     e.preventDefault();
-    // var thank = $(this).attr('data-thank');
-    // console.log(thank);
-    // e.preventDefault();
-    $(".contact_us_submit_btn").attr('disabled', 'disabled').val("Loading...");
+    $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
+    let recaptchaVal = $(".g-recaptcha-response").val();
 
-    grecaptcha.ready(function () {
-        grecaptcha.execute('6LceIBwkAAAAAN0pB1ps__ZPUBNOme_2sFYJBNNn', {
+    if (validateForm($(this))) {
+        grecaptcha.ready(function () {
+            grecaptcha.execute(recaptchaVal, {
                 action: 'MyForm'
             })
-            .then(function (token) {
-                $('.g-recaptcha-response').val(token);
-                $.ajax({
-                    url: SITE_URL + '/ajax/',
-                    data: $("#contact_us_form").serialize(),
-                    method: 'POST',
-                    success: function (response) {
-                        response = response.trim();
-                        if (response == "success") {
-                            $("#contact_us_form")[0].reset();
-                            $(".contact_us_submit_btn").removeAttr('disabled').val("SUBMIT");
-                            window.location.href = SITE_URL + '/contact-thank-you/';
-                        } else if (response == "fail") {
-                            alert("Failed, Something went wrong.")
+                .then(function (token) {
+                    $('.g-recaptcha-response').val(token);
+                    $.ajax({
+                        url: SITE_URL + '/ajax/',
+                        data: $("#contact_us_form").serialize(),
+                        method: 'POST',
+                        success: function (response) {
+                            response = response.trim();
+                            if (response == "success") {
+                                $("#contact_us_form")[0].reset();
+                                $(".submit_btn").removeAttr('disabled').val("SUBMIT");
+                                window.location.href = SITE_URL + '/thank-you/';
+                            } else if (response == "fail") {
+                                alert("Failed, Something went wrong.")
+                            }
                         }
-                    }
+                    });
                 });
-            });
-    });
+        });
+    }
+});
+
+$(document).on("submit", "#careers_form", function (e) {
+    e.preventDefault();
+    $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
+    let recaptchaVal = $(".g-recaptcha-response").val();
+
+    if (validateForm($(this))) {
+        grecaptcha.ready(function () {
+            grecaptcha.execute(recaptchaVal, {
+                action: 'MyForm'
+            })
+                .then(function (token) {
+                    $('.g-recaptcha-response').val(token);
+                    $.ajax({
+                        url: SITE_URL + '/ajax/',
+                        data: $("#careers_form").serialize(),
+                        method: 'POST',
+                        success: function (response) {
+                            response = response.trim();
+                            if (response == "success") {
+                                $("#careers_form")[0].reset();
+                                $(".submit_btn").removeAttr('disabled').val("Apply");
+                                window.location.href = SITE_URL + '/thank-you-careers/';
+                            } else if (response == "fail") {
+                                alert("Failed, Something went wrong.")
+                            }
+                        }
+                    });
+                });
+        });
+    }
 });

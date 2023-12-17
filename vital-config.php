@@ -41,8 +41,8 @@
 				}
 			}
 			return $returnarrPaths;
-			
 		}
+
 		public static function site_url( $path="" ) {
 			$site_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].$path;
 			if($_SERVER['REMOTE_ADDR']=='127.0.0.1' || $_SERVER['REMOTE_ADDR']=='::1') {
@@ -61,6 +61,7 @@
 			if($_SERVER['REMOTE_ADDR']=='::1') {
 				$site_url = "http://localhost/rapid";
 			}
+			
 			return $site_url;
 		}
 	}

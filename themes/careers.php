@@ -54,11 +54,11 @@ require 'inc/banner.php';
                         <?= _isset($page_content, 'job_benefits') ?>
                     </article>
                 </div>
-                
+
                 <div class="col-lg-6">
-                    <form id="enquiry_form" class="needs-validation" method="POST" novalidate>
-                        <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value="6Lc_0cQiAAAAAPy9Shlbf3Sru6VxUYAvqeIWN_hD">
-                        <input type="hidden" name="request" value="enquiry_form_request">
+                    <form id="careers_form" class="needs-validation" method="POST" novalidate enctype="multipart/form-data">
+                        <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
+                        <input type="hidden" name="request" value="careers_form">
 
                         <div class="row gy-4 gy-md-5">
                             <div class="col-12">
