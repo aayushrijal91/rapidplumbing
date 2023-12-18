@@ -56,8 +56,8 @@ require 'inc/banner.php';
                 </div>
 
                 <div class="col-lg-6">
-                    <form action="./ajax" id="careers_form" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
-                        <input id="careers_recaptcha" type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
+                    <form action="./ajax" id="careers_form" class="needs-validation" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
                         <input type="hidden" name="request" value="careers_form">
 
                         <div class="row gy-4 gy-md-5">
@@ -114,6 +114,11 @@ require 'inc/banner.php';
                             </div>
 
                             <div class="col-12">
+                                <p class="">Please send resumes through to
+                                    <a href="mailto:info@rapidsolutions.net.au" class="">info@rapidsolutions.net.au</a>
+                                </p>
+                            </div>
+                            <!-- <div class="col-12">
                                 <div class="form-group upload">
                                     <label for="fileUpload" class="my-0 w-100 text-white text-center gap-3 d-flex justify-content-center fw-300">
                                         <svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +130,8 @@ require 'inc/banner.php';
                                     </label>
                                     <input id="fileUpload" class="form-control rounded-0" type="file" name="uploadedFile">
                                 </div>
-                            </div>
+                            </div> -->
+
                             <div class="col-12">
                                 <button type="submit" class="submit_btn btn btn-white rounded-pill fs-18 fw-700 text-primary w-100 px-5 px-lg-6">Apply</button>
                             </div>
