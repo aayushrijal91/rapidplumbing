@@ -560,37 +560,60 @@ $(document).on("submit", "#book_online_form", function (e) {
     }
 });
 
-$(document).on("submit", "#careers_form", function (e) {
+$('#careers_form').on("submit", function (e) {
     e.preventDefault();
+    let form = this;
+    let recaptchaVal = $(".g-recaptcha-response").val();
 
     if (validateForm($(this))) {
         $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
-        let recaptchaVal = $(".g-recaptcha-response").val();
 
         grecaptcha.ready(function () {
             grecaptcha.execute(recaptchaVal, {
-                action: 'MyForm'
-            })
-                .then(function (token) {
-                    $('.g-recaptcha-response').val(token);
-                    $.ajax({
-                        url: SITE_URL + '/ajax/',
-                        data: new FormData($("#careers_form")[0]),
-                        method: 'POST',
-                        processData: false,
-                        contentType: false,
-                        success: function (response) {
-                            response = response.trim();
-                            if (response == "success") {
-                                $("#careers_form")[0].reset();
-                                $(".submit_btn").removeAttr('disabled').val("Apply");
-                                window.location.href = SITE_URL + '/thank-you-careers/';
-                            } else if (response == "fail") {
-                                alert("Failed, Something went wrong.")
-                            }
-                        }
-                    });
-                });
+                action: 'contact'
+            }).then(function (token) {
+                $('#careers_recaptcha').val(token);
+
+                form.submit();
+            });
         });
+
+        return true;
+    } else {
+        return false;
     }
 });
+// $(document).on("submit", "#careers_form", function (e) {
+//     e.preventDefault();
+
+//     if (validateForm($(this))) {
+//         $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
+//         let recaptchaVal = $(".g-recaptcha-response").val();
+
+//         grecaptcha.ready(function () {
+//             grecaptcha.execute(recaptchaVal, {
+//                 action: 'MyForm'
+//             })
+//                 .then(function (token) {
+//                     $('.g-recaptcha-response').val(token);
+//                     $.ajax({
+//                         url: SITE_URL + '/ajax/',
+//                         data: new FormData($("#careers_form")[0]),
+//                         method: 'POST',
+//                         processData: false,
+//                         contentType: false,
+//                         success: function (response) {
+//                             response = response.trim();
+//                             if (response == "success") {
+//                                 $("#careers_form")[0].reset();
+//                                 $(".submit_btn").removeAttr('disabled').val("Apply");
+//                                 window.location.href = SITE_URL + '/thank-you-careers/';
+//                             } else if (response == "fail") {
+//                                 alert("Failed, Something went wrong.")
+//                             }
+//                         }
+//                     });
+//                 });
+//         });
+//     }
+// });

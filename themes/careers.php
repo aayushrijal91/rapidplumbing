@@ -56,8 +56,8 @@ require 'inc/banner.php';
                 </div>
 
                 <div class="col-lg-6">
-                    <form id="careers_form" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
-                        <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
+                    <form action="./ajax" id="careers_form" class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+                        <input id="careers_recaptcha" type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
                         <input type="hidden" name="request" value="careers_form">
 
                         <div class="row gy-4 gy-md-5">
