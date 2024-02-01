@@ -81,7 +81,7 @@ $('.testimonials-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     variableWidth: true,
     touchThreshold: 1000,
 });

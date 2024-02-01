@@ -173,9 +173,9 @@ require 'inc/nav.php';
                 </div>
 
                 <?php if (!empty($page_content['welcome_button_text']) && !empty($page_content['welcome_button_link'])) : ?>
-                <div class="text-center pt-5 d-md-none">
-                    <a href="<?= _isset($page_content, 'welcome_button_link') ?>" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700"><?= _isset($page_content, 'welcome_button_text') ?></a>
-                </div>
+                    <div class="text-center pt-5 d-md-none">
+                        <a href="<?= _isset($page_content, 'welcome_button_link') ?>" class="btn btn-primary d-inline-flex text-white rounded-pill py-1 px-4 fs-18 fw-700"><?= _isset($page_content, 'welcome_button_text') ?></a>
+                    </div>
                 <?php endif; ?>
             </div>
 
@@ -269,7 +269,9 @@ require 'inc/nav.php';
                             <?php foreach ($services_list as $service) : ?>
                                 <article class="box">
                                     <?= _imgSrc($service, 'image', 'image'); ?>
-                                    <div class="overlay"><p class="filter-shadow"><?= _isset($service, 'title') ?></p></div>
+                                    <div class="overlay">
+                                        <p class="filter-shadow"><?= _isset($service, 'title') ?></p>
+                                    </div>
                                 </article>
                             <?php endforeach; ?>
                         </div>
@@ -341,7 +343,10 @@ require 'inc/nav.php';
                                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/testimonial-quote.png" class="quote" alt="Rapid Plumbing Van" />
                                     <article class="text-center">
                                         <div class="d-inline-block position-relative">
-                                            <?= _imgSrc($testimonial, 'image') ?>
+
+                                            <div class="image">
+                                                <?= (empty(_imgSrc($testimonial, 'image'))) ? substr(_isset($testimonial, 'title'), 0, 1) : _imgSrc($testimonial, 'image'); ?>
+                                            </div>
 
                                             <div class="position-absolute end-0 bottom-0 mb-n0_5 me-n0_5">
                                                 <?php if ($testimonial['platform'] == 'Google') : ?>
