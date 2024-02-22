@@ -227,7 +227,7 @@ require 'inc/banner.php';
             </section>
 
             <section class="text-center py-8">
-                <p class="fs-55 text-primary fw-700">Over 10 Years of Plumbing Experience</p>
+                <p class="fs-55 text-primary fw-700">Over 20 Years of Plumbing Experience</p>
 
                 <div class="description fs-24 lh-1_5 pt-5">
                     <p>Rapid Plumbing Group Pty Ltd was founded in 2006, which means that we have over a decade’s worth of hands-on experience solving plumbing issues in your community. Our <?= $SUBURB ?> plumber is equipped with the training, certification, and experience working in the field to quickly diagnose the cause of your plumbing issue, and can deliver fast and effective services designed to resolve the problem as quickly as possible.</p>

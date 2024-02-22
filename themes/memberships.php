@@ -81,7 +81,7 @@ require 'inc/banner.php';
     <section class="comparison bg-dark-grey py-6 py-lg-7">
         <div class="container">
             <div class="text-center"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/membership-comparison.png" alt="Membership Comparison\" /></div>
-            <p class="text-center text-grey fs-20 pt-3">There's a reason why nearly half of our clients return to us to solve their plumbing problems</p>
+            <p class="text-center text-grey fs-20 pt-3">There's a reason why nearly 96% of our clients return to us to solve their plumbing problems</p>
 
             <div class="row g-4 pt-5">
                 <div class="col-xl-6">
@@ -154,7 +154,9 @@ require 'inc/banner.php';
     </section>
 
     <section class="why-us position-relative">
-        <div class="container-fluid">
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/vip-member-hand.png" class="d-none d-xl-block position-absolute bottom-0 end-0" alt="VIP membership program" />
+
+        <div class="container-fluid position-relative">
             <div class="row justify-content-center">
                 <div class="col-xl-11">
                     <div class="row">
@@ -177,8 +179,6 @@ require 'inc/banner.php';
                 </div>
             </div>
         </div>
-
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/vip-member-hand.png" class="d-none d-xl-block position-absolute bottom-0 end-0" alt="VIP membership program" />
     </section>
 </main>
 <?php require 'inc/footer.php'; ?>

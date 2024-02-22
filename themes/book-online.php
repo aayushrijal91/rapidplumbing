@@ -35,7 +35,7 @@ require 'inc/banner.php';
 <main class="bookOnlinePage">
     <div class="container">
         <h2 class="text-center fs-64 text-capitalize fw-500">Book With Us Today</h2>
-        <p class="text-center lh-1_5 fs-18 fw-300 pt-4">Finding a reliable plumber in Penrith, NSW shouldn't be a hassle. Rapid Plumbing Group Pty Ltd makes it easy</p>
+        <p class="text-center lh-1_5 fs-18 fw-300 pt-4">Finding a reliable local plumber shouldn't be a hassle. Rapid Plumbing Group Pty Ltd makes it easy</p>
 
         <form id="book_online_form" class="needs-validation pt-8" method="POST" novalidate>
             <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>

@@ -116,6 +116,12 @@ if (count($global_cta)) {
                                                 General Plumbing
                                             </label>
                                         </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="service" id="service9" value="Others">
+                                            <label class="form-check-label" for="service9">
+                                                Others
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -39,7 +39,9 @@ require 'inc/banner.php';
 ?>
 
 <main class="contactUsPage position-relative">
-    <?php require 'inc/contactForm.php'; ?>
+    <div id="contactForm">
+        <?php require 'inc/contactForm.php'; ?>
+    </div>
 
     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/background/contact-us-dots.svg" class="position-absolute bottom-0 z-n1" alt="Rapid Plumbing Van" />
 </main>
