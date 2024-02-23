@@ -111,8 +111,11 @@ require V_ROOT_THEME . 'inc/serviceBanner.php';
                     <div class="innerServiceFaqSlider pt-6 pt-lg-7 z-1">
                         <?php foreach ($faqs as $faq) : ?>
                             <article class="box">
-                                <p class="fs-26 fw-600"><?= _isset($faq, 'title') ?></p>
-                                <article class="description fs-18 pt-3 lh-1_5">
+                                <div class="bg-primary title text-center">
+                                    <p class="fs-24 fw-600"><?= _isset($faq, 'title') ?></p>
+                                </div>
+
+                                <article class="description fs-18 lh-1_5">
                                     <?= _isset($faq, 'content') ?>
                                 </article>
                             </article>

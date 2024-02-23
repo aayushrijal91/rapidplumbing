@@ -336,7 +336,7 @@ require 'inc/nav.php';
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="col-xl-6">
+                    <div class="col-xl-8">
                         <div class="testimonials-slider d-inline-flex">
                             <?php foreach ($testimonials as $testimonial) : ?>
                                 <div class="testimonial">
