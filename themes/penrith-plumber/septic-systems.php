@@ -24,6 +24,7 @@ $banner_details = array(
     'banner_title_heading_tag' => _isset($page_content, 'banner_title_heading_tag'),
     'banner_title' => _isset($page_content, 'banner_title'),
     'banner_subtitle' => _isset($page_content, 'banner_subtitle'),
+    'banner_video_image' => _isset($page_content, 'banner_video_image'),
     'banner_button_1_text' => _isset($page_content, 'banner_button_1_text'),
     'banner_button_1_link' => _isset($page_content, 'banner_button_1_link'),
     'banner_button_2_text' => _isset($page_content, 'banner_button_2_text'),
