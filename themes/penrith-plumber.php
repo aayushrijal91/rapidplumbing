@@ -72,7 +72,7 @@ require 'inc/banner.php';
         <div class="container">
             <div class="row justify-content-xl-end">
                 <div class="col-xl-9">
-                    <article class="col-xl-6">
+                    <article class="col-xl-6 ms-xl-10 ms-xxl-0">
                         <p class="fs-165 text-white fw-700 text-xl-end lh-xl-0_7">Why</p>
                         <p class="fs-109 text-primary fw-700 lh-1">hire us?</p>
                     </article>

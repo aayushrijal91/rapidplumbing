@@ -125,7 +125,7 @@ require 'inc/nav.php';
                         <div class="row gx-3" id="awards-slider">
                             <div class="col-6 col-md">
                                 <article class="awardCard mt-md-7">
-                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
+                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-award-2018.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2018</p>
                                     <p class="fs-12 py-1">Local Business Awards</p>
@@ -134,7 +134,7 @@ require 'inc/nav.php';
                             </div>
                             <div class="col-6 col-md">
                                 <article class="awardCard mt-md-5">
-                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
+                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-award-2019.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2019</p>
                                     <p class="fs-12 py-1">Local Business Awards</p>
@@ -143,7 +143,7 @@ require 'inc/nav.php';
                             </div>
                             <div class="col-6 col-md">
                                 <article class="awardCard mt-md-9">
-                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
+                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-award-2020.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2020</p>
                                     <p class="fs-12 py-1">Local Business Awards</p>
@@ -152,7 +152,7 @@ require 'inc/nav.php';
                             </div>
                             <div class="col-6 col-md">
                                 <article class="awardCard">
-                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
+                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-award-2021.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2021</p>
                                     <p class="fs-12 py-1">Local Business Awards</p>
@@ -161,7 +161,7 @@ require 'inc/nav.php';
                             </div>
                             <div class="col-6 col-md">
                                 <article class="awardCard mt-md-7">
-                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-awards.png" alt="Rapid Plumbing Van" />
+                                    <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/local-business-award-2022.png" alt="Rapid Plumbing Van" />
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2022</p>
                                     <p class="fs-12 py-1">Local Business Awards</p>
