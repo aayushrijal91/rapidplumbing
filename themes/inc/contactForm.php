@@ -45,6 +45,7 @@ if (count($global_cta)) {
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
+                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="emailAddress">Email</label>
@@ -52,6 +53,7 @@ if (count($global_cta)) {
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="phoneNumber">Number</label>
@@ -59,6 +61,23 @@ if (count($global_cta)) {
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="suburb">Suburb</label>
+                                <input type="text" name="suburb" id="suburb" class="form-control required" placeholder="E.g. Parramatta" />
+                                <span class="text-danger fs-12 error">Error</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="postcode">Postcode</label>
+                                <input type="text" name="postcode" id="postcode" class="form-control required" placeholder="E.g. 2000" />
+                                <span class="text-danger fs-12 error">Error</span>
+                            </div>
+                        </div>
+                        
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-label" for="phoneNumber">What can we help you with?</label>

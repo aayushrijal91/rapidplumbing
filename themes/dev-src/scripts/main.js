@@ -193,14 +193,29 @@ $('#about-review').slick({
 });
 
 $('.customersSlider').slick({
-    slidesToShow: 10,
+    slidesToShow: 6,
     slidesToScroll: 1,
-    variableWidth: true,
     arrows: false,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 0,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    responsive: [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }
+    ]
 });
 
 $('.slider').each(function (index, element) {

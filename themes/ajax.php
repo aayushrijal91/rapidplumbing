@@ -99,6 +99,16 @@ if (isset($_POST['request']) && $_POST['request'] == 'book_online_form') {
                         </tr>
                        
                         <tr>
+                            <td style='" . $tableCellStyle . "'>Suburb</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['suburb']) . "</td>                                    
+                        </tr>
+
+                        <tr>
+                            <td style='" . $tableCellStyle . "'>Postcode</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['postcode']) . "</td>                                    
+                        </tr>
+
+                        <tr>
                             <td style='" . $tableCellStyle . "'>Service</td>                                    
                             <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['service']) . "</td>                                    
                         </tr>
