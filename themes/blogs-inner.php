@@ -30,6 +30,7 @@ $meta_url             = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST
 $banner_details['banner_title_heading_tag'] = _isset($page_content, 'banner_title_heading_tag');
 $banner_details['banner_title'] = _isset($page_content, 'banner_title');
 $banner_details['banner_subtitle'] = _isset($page_content, 'banner_subtitle');
+$banner_details['banner_video_image'] = $page_content['banner_video_image'];
 $banner_details['banner_button_1_text'] = _isset($page_content, 'banner_button_1');
 $banner_details['banner_button_1_link'] = _isset($page_content, 'banner_button_1_link');
 $banner_details['banner_button_2_text'] = _isset($page_content, 'banner_button_2');

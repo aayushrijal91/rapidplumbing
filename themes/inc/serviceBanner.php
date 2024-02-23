@@ -1,13 +1,13 @@
-<section class="serviceBanner py-5 d-flex align-items-center position-relative">
+<section class="serviceBanner d-flex align-items-center position-relative">
     <?php if (!empty($banner_details['banner_video_image'])) : ?>
-        <?= _imgSrc($banner_details, 'banner_video_image', 'position-absolute bottom-0 end-0 d-none d-xl-block h-full'); ?>
+        <?= _imgSrc($banner_details, 'banner_video_image', 'position-absolute bottom-0 end-0 d-none d-xl-block h-100 w-auto'); ?>
     <?php else : ?>
-        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/background/banner.png" alt="" class="position-absolute h-full bottom-0 end-0 d-none d-xl-block" />
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/background/banner.png" alt="" class="position-absolute h-100 bottom-0 end-0 d-none d-xl-block" />
     <?php endif; ?>
 
     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/there_in_a_flush.png" alt="there in a flush" class="there-in-a-flush" />
 
-    <div class="container position-relative">
+    <div class="container position-relative py-5">
         <div class="row pt-8 pt-xxl-0">
             <div class="col-lg-8">
                 <?php $htmltag = html_tag($banner_details, 'banner_title_heading_tag', ''); ?>

@@ -1,5 +1,11 @@
-<section class="banner py-5 d-flex align-items-center position-relative">
-    <div class="container">
+<section class="banner d-flex align-items-center position-relative">
+    <?php if (!empty($banner_details['banner_image'])) : ?>
+        <?= _imgSrc($banner_details, 'banner_image', 'position-absolute bottom-0 end-0 d-none d-xl-block h-100'); ?>
+    <?php else : ?>
+        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/background/banner.png" alt="" class="position-absolute h-100 bottom-0 end-0 d-none d-xl-block" />
+    <?php endif; ?>
+
+    <div class="container position-relative py-5">
         <div class="row">
             <div class="col-lg-8 col-xl-6">
                 <?php $htmltag = html_tag($banner_details, 'banner_title_heading_tag', ''); ?>
@@ -28,5 +34,4 @@
             </div>
         </div>
     </div>
-    <?= _imgSrc($banner_details, 'banner_image', 'position-absolute bottom-0 end-0 d-none d-xl-block'); ?>
 </section>
