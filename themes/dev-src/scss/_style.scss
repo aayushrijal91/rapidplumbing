@@ -40,6 +40,12 @@
 }
 
 header.header {
+    background: $dark;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100000;
+    
     .serviceBtn {
         background: $primary;
         height: 63px;

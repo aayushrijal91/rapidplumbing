@@ -24,10 +24,18 @@ body {
     background: $dark;
     color: $white;
     font-weight: 400;
-    margin: 0 auto;
+    margin: 198px auto 0;
     font-size: 1rem;
     overflow-x: hidden;
     line-height: 1.25;
+
+    @include media-breakpoint-down(xl) {
+        margin-top: 135px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        margin-top: 119px;
+    }
 }
 
 img {

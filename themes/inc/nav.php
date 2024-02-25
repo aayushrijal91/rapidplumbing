@@ -48,16 +48,22 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
 
             <div class="col-auto d-none d-md-block">
                 <div class="row align-items-center gx-xl-4">
-                    <!-- <div class="col-auto">
-                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/brighte.png" alt="brighte" />
-                    </div> -->
+                    <div class="col-auto d-none d-xxl-block">
+                        <!-- <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/brighte.png" alt="brighte" /> -->
+                        <p class="fs-20 fw-700 text-center">Plumb Now,<br /> Pay Later</p>
+                    </div>
+                    <div class="col-auto d-none d-xl-block">
+                        <a href="<?= _issetUrl(['url' => '/book-online'], 'url') ?>" class="btn btn-primary text-white fs-16 fw-700 gap-2">
+                            Book Online
+                        </a>
+                    </div>
                     <div class="col-auto d-none d-xl-block">
                         <a href="tel:<?php echo preg_replace('/[^\d]/i', '', _isset($contact_info, 'phone_number')); ?>" class="btn btn-primary text-danger fs-32 text-italic fw-700 gap-2">
                             <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/buzzing-phone.gif" width=38 height=38 alt="Phone" />
                             <?= _isset($contact_info, 'phone_number'); ?>
                         </a>
                     </div>
-                    <?php if (!empty(_isset($contact_info, 'facebook_link'))) : ?>
+                    <!-- <?php if (!empty(_isset($contact_info, 'facebook_link'))) : ?>
                         <div class="col-auto">
                             <a href="<?= _isset($contact_info, 'facebook_link') ?>">
                                 <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +82,7 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
                                 </svg>
                             </a>
                         </div>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
                 </div>
             </div>
 
