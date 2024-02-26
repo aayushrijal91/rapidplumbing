@@ -12,8 +12,8 @@ if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1') 
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = blocked_drains_services::get_data($serviceArray);
 
@@ -21,14 +21,14 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'blocked-drains-inner';
-        include('penrith-plumber/blocked-drains-inner.php');
+        include('blocked-drains-inner.php');
         $no_page_exist = false;
         exit();
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = gas_plumbing_services::get_data($serviceArray);
 
@@ -36,14 +36,14 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'gas-plumbing-inner';
-        include('penrith-plumber/gas-plumbing-inner.php');
+        include('gas-plumbing-inner.php');
         $no_page_exist = false;
         exit();
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = hot_water_services_list::get_data($serviceArray);
 
@@ -51,14 +51,14 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'hot-water-services-inner';
-        include('penrith-plumber/hot-water-services-inner.php');
+        include('hot-water-services-inner.php');
         $no_page_exist = false;
         exit();
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = taps_toilets_services_list::get_data($serviceArray);
 
@@ -66,14 +66,14 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'taps-toilets-inner';
-        include('penrith-plumber/taps-toilets-inner.php');
+        include('taps-toilets-inner.php');
         $no_page_exist = false;
         exit();
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = general_plumbing_services::get_data($serviceArray);
 
@@ -81,14 +81,14 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'general-plumbing-inner';
-        include('penrith-plumber/general-plumbing-inner.php');
+        include('general-plumbing-inner.php');
         $no_page_exist = false;
         exit();
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = leak_detection_services::get_data($serviceArray);
 
@@ -96,14 +96,14 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'leak-detection-inner';
-        include('penrith-plumber/leak-detection-inner.php');
+        include('leak-detection-inner.php');
         $no_page_exist = false;
         exit();
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = rainwater_tanks_services::get_data($serviceArray);
 
@@ -111,14 +111,14 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'rainwater-tanks-inner';
-        include('penrith-plumber/rainwater-tanks-inner.php');
+        include('rainwater-tanks-inner.php');
         $no_page_exist = false;
         exit();
     }
 }
 
-if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($Explode[1])) {
-    $slug = '/' . $Explode[0] . '/' . $Explode[1];
+if (isset($Explode[0]) && !empty($Explode[0])) {
+    $slug = '/' . $Explode[0];
     $serviceArray = array('where' => "`slug` = '" . $slug . "'");
     $service = roofing_guttering_services::get_data($serviceArray);
 
@@ -126,7 +126,7 @@ if (isset($Explode[0]) && !empty($Explode[0]) && isset($Explode[1]) && !empty($E
         $service = $service[0];
         $_GET['slug'] = $slug;
         $filepagename =  'roofing-guttering-inner';
-        include('penrith-plumber/roofing-guttering-inner.php');
+        include('roofing-guttering-inner.php');
         $no_page_exist = false;
         exit();
     }
