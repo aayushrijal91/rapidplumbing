@@ -46,7 +46,19 @@ $('.homebanner').slick({
     slidesToScroll: 1,
     autoplay: true,
     swipe: false,
-    speed: 3000
+    speed: 3000,
+    asNavFor: $('.rapid-van-slider')
+});
+
+$('.rapid-van-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    swipe: false,
+    speed: 3000,
+    asNavFor: $('.homebanner')
 });
 
 $('.expect-slider').slick({

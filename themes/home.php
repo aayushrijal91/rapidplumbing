@@ -60,14 +60,19 @@ require 'inc/nav.php';
                 <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/homebanner-sm-4.jpg" alt="home banner slide" />
             </div>
         </div>
-        <div class="rapid-van position-absolute bottom-0 mx-auto">
-            <!--<?php if (!empty($page_content['banner_button_text']) && !empty($page_content['banner_button_link'])) : ?>-->
-            <!--    <div class="d-flex justify-content-center mb-4">-->
-            <!--        <a href="<?= _isset($page_content, 'banner_button_link') ?>" class="text-uppercase btn btn-secondary rounded-pill d-inline-flex fs-18 fw-700 text-white px-5 px-lg-6"><?= _isset($page_content, 'banner_button_text') ?></a>-->
-            <!--    </div>-->
-            <!--<?php endif; ?>-->
+        <!--<?php if (!empty($page_content['banner_button_text']) && !empty($page_content['banner_button_link'])) : ?>-->
+        <!--    <div class="d-flex justify-content-center mb-4">-->
+        <!--        <a href="<?= _isset($page_content, 'banner_button_link') ?>" class="text-uppercase btn btn-secondary rounded-pill d-inline-flex fs-18 fw-700 text-white px-5 px-lg-6"><?= _isset($page_content, 'banner_button_text') ?></a>-->
+        <!--    </div>-->
+        <!--<?php endif; ?>-->
 
-            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-van.png" alt="Rapid Plumbing Van" class="van" />
+        <div class="rapid-van position-absolute bottom-0 mx-auto w-100">
+            <div class="rapid-van-slider">
+                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/van-1.png" alt="Rapid Plumbing Van" class="van" /></div>
+                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/van-2.png" alt="Rapid Plumbing Van" class="van" /></div>
+                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/van-3.png" alt="Rapid Plumbing Van" class="van" /></div>
+                <div><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/van-4.png" alt="Rapid Plumbing Van" class="van" /></div>
+            </div>
         </div>
     </section>
 

@@ -155,6 +155,13 @@ main.homepage {
     }
 
     .rapid-van {
+        .rapid-van-slider {
+            .slick-slide {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
         img.van {
             @include media-breakpoint-down(xl) {
                 height: 120px;
