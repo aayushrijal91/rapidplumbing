@@ -8,7 +8,7 @@ class router
 		'ajax' => 'ajax',
 		'sitemap' => 'sitemap',
 		'about-us' => 'about-us',
-		'penrith-plumber' => 'penrith-plumber',
+		'our-services' => 'our-services',
 		'faqs' => 'faqs',
 		'careers' => 'careers',
 		'home-safety-inspection' => 'home-safety-inspection',

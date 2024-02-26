@@ -22,7 +22,7 @@ return array (
   'listPageOrder' => '',
   'listPageSearchFields' => '',
   'menuHidden' => '0',
-  'menuName' => 'Penrith Plumber',
+  'menuName' => 'Our Services',
   'menuOrder' => '0000000045',
   'menuType' => 'menugroup',
 );
