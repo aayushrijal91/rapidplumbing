@@ -96,7 +96,7 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
             <div class="row g-2 d-none d-lg-flex">
                 <?php foreach ($services_menu_list as $index => $service) : ?>
                     <div class="col">
-                        <a class="serviceBtn <?= (count($services_menu_list) == $index + 1) ? 'bg-danger' : '' ?>" href="<?= _issetUrl($service, 'link') ?>">
+                        <a class="serviceBtn" href="<?= _issetUrl($service, 'link') ?>">
                             <?= _imgSrc($service, 'icon') ?>
 
                             <p><?= _isset($service, 'title') ?></p>
