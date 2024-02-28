@@ -135,10 +135,12 @@ require V_ROOT_THEME . 'inc/serviceBanner.php';
                 <div class="row pt-5 gy-4 innerServiceListingSlider">
                     <?php foreach ($services as $service) : ?>
                         <div class="col-md-4 col-lg-3">
-                            <article class="box">
-                                <?= _imgSrc($service, 'image', 'w-100 h-100') ?>
-                                <p class="overlay"><?= _isset($service, 'title') ?></p>
-                            </article>
+                            <a href="<?= !empty($service['slug']) ? _isset($service, 'slug') : 'javascript:void(0)' ?>">
+                                <article class="box">
+                                    <?= _imgSrc($service, 'image', 'w-100 h-100') ?>
+                                    <p class="overlay text-white"><?= _isset($service, 'title') ?></p>
+                                </article>
+                            </a>
                         </div>
                     <?php endforeach; ?>
                 </div>

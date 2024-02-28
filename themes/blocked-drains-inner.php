@@ -54,7 +54,7 @@ require V_ROOT_THEME . 'inc/serviceBanner.php';
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-md-6 col-xl-4 order-1">
-                        <article class="callRapidCard primaryborder h-100 position-relative">
+                        <article class="callRapidCard h-100 position-relative">
                             <?= _imgSrc($page_content, 'about_image_1', 'heroImage h-100 w-100 object-fit-cover'); ?>
                             <div class="overlay d-flex align-items-end h-100 w-100 top-0 position-absolute">
                                 <p class="fw-800 lh-1"><?= _isset($page_content, 'about_image_1_title') ?></p>

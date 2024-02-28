@@ -1365,12 +1365,19 @@ main.emergencyPlumbingServicesPage {
 
             .box {
                 position: relative;
-                padding: 39px 22px;
                 margin: 16px 0;
                 margin-right: 1rem;
                 z-index: 1;
                 background: #222224;
                 transition: 0.35s all ease;
+
+                .title {
+                    padding: 24px 16px;
+                }
+
+                .description {
+                    padding: 39px 22px;
+                }
 
                 &:hover {
                     transform: scale(1.05);
