@@ -115,9 +115,11 @@ require 'inc/nav.php';
     <section class="blue-gradient overflow-hidden">
         <section class="welcome position-relative">
             <div class="container position-relative z-1">
-                <h3 class="fs-64 fw-500 text-md-center lh-1 highlight-primary"><?= _isset($page_content, 'welcome_title') ?></h3>
+                <p class="fs-64 fw-500 text-md-center lh-1 highlight-primary"><span>Award Winning</span> Plumbing Company </p>
 
-                <p class="fs-20 text-md-center pt-4 pt-md-5"><?= _isset($page_content, 'welcome_subtitle') ?></p>
+                <p class="fs-48 fw-500 text-md-center lh-1 highlight-primary py-4 py-md-5"><?= _isset($page_content, 'welcome_title') ?></p>
+
+                <p class="fs-20 text-md-center"><?= _isset($page_content, 'welcome_subtitle') ?></p>
 
                 <?php if (!empty($page_content['welcome_button_text']) && !empty($page_content['welcome_button_link'])) : ?>
                     <div class="text-center py-6 d-none d-md-block">
@@ -241,7 +243,7 @@ require 'inc/nav.php';
                                     <p class="number">03</p>
                                     <?= _imgSrc($page_content, 'step_3_image') ?>
                                     <div>
-                                        <p class="fs-20 fw-600 lh-1"><?= _isset($page_content, 'step_2_title') ?></p>
+                                        <p class="fs-20 fw-600 lh-1"><?= _isset($page_content, 'step_3_title') ?></p>
                                         <article class="fs-18 text-primary-light pt-3 description"><?= _isset($page_content, 'step_3_description') ?></article>
                                     </div>
                                 </article>

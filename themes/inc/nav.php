@@ -93,14 +93,53 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
             </div>
         </div>
         <?php if (!empty($services_menu_list)) : ?>
-            <div class="row g-2 d-none d-lg-flex">
+            <div class="row g-2 d-none d-xl-flex">
                 <?php foreach ($services_menu_list as $index => $service) : ?>
-                    <div class="col">
-                        <a class="serviceBtn" href="<?= _issetUrl($service, 'link') ?>">
+                    <div class="col position-relative serviceBtnWrapper">
+                        <a class="serviceBtn" href="<?= _issetUrl($service, 'link') ?>" data-hover="<?= _issetUrl($service, 'link') ?>">
                             <?= _imgSrc($service, 'icon') ?>
 
                             <p><?= _isset($service, 'title') ?></p>
                         </a>
+
+                        <?php if (!empty(_isset($service, 'subservice_list'))) :
+                            $subServiceList = _isset($service, 'subservice_list');
+
+                            $dom = new DOMDocument;
+
+                            $dom->loadHTML($subServiceList);
+
+                            $liElements = $dom->getElementsByTagName('li');
+
+                            $stringArray = [];
+
+                            foreach ($liElements as $li) {
+                                $stringArray[] = $li->textContent;
+                            }
+
+                            if (count($stringArray) > 0) :
+                        ?>
+                                <div class="dropdown pt-4">
+                                    <div class="dropdown-inner shadow overflow-hidden">
+                                        <div class="row g-0">
+                                            <div class="col-8 p-4 bg-primary-darker rounded-20">
+                                                <p class="fs-32 fw-700 text-italic"><?= _isset($service, 'title') ?></p>
+
+                                                <ul class="pt-4 subservice_list">
+                                                    <?php foreach ($stringArray as $ser) : ?>
+                                                        <li><a href="<?= slugify($ser) ?>" class="text-white"><?= $ser ?></a></li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            </div>
+
+                                            <div class="col-4 p-4">
+                                                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/test-frame.png" alt="Phone" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <?php endif;
+                        endif; ?>
                     </div>
                 <?php endforeach; ?>
             </div>

@@ -45,19 +45,61 @@ header.header {
     width: 100%;
     top: 0;
     z-index: 100000;
-    
-    .serviceBtn {
-        // background: $primary;
-        height: 63px;
-        color: $white;
-        text-transform: capitalize;
-        font-weight: 700;
-        font-style: italic;
-        padding: 8px 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
+
+    .serviceBtnWrapper {
+        .serviceBtn {
+            height: 63px;
+            color: $white;
+            text-transform: capitalize;
+            font-weight: 700;
+            font-style: italic;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+
+            &:hover+.dropdown {
+                display: block;
+            }
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 952px;
+
+            @include media-breakpoint-down(xxl) {
+                width: 800px;
+            }
+
+            .dropdown-inner {
+                overflow: hidden;
+                border-radius: 20px;
+                background: $primary;
+                color: $white;
+
+                ul.subservice_list {
+                    padding-inline-start: 0;
+                    column-count: 2;
+
+                    li {
+                        padding: 8px 0;
+                    }
+                }
+            }
+
+            &:hover {
+                display: block;
+            }
+        }
+
+        &:nth-child(n + 5) .dropdown {
+            right: 0;
+            left: auto;
+        }
     }
 }
 
@@ -966,6 +1008,7 @@ main.blogInnerPage {
 }
 
 main.blogInnerPage {
+
     section.section_1,
     section.section_4 {
         .heroImage {
@@ -1445,11 +1488,11 @@ main.schoolsServicePage {
                 z-index: 1;
                 background: #112649;
                 transition: 0.35s all ease;
-                
+
                 .title {
                     padding: 24px 16px;
                 }
-                
+
                 .description {
                     padding: 39px 22px;
                 }
@@ -1982,7 +2025,7 @@ main.suburbInnerPage {
                 column-count: 2;
                 column-gap: 32px;
             }
-            
+
             li {
                 list-style: disc;
                 font-size: 24px;
