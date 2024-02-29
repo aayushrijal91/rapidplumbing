@@ -69,9 +69,39 @@ require V_ROOT_THEME . 'inc/serviceBanner.php';
 
     <section class="help">
         <div class="container">
-            <h3 class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</h3>
+            <p class="fs-70 highlight-primary text-center">How can we <span>help</span> you?</p>
 
-            <div class="row gy-4 gy-lg-5 mt-5 mt-xl-7 innerServiceListingSlider">
+            <div class="row justify-content-center align-items-center gy-4 mt-5 mt-xl-6">
+                <?php for ($i = 1; $i < 9; $i++) : ?>
+                    <div class="col-auto">
+                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/<?= $i ?>.png" alt="Brands" />
+                    </div>
+                <?php endfor; ?>
+            </div>
+
+            <div class="row justify-content-between align-items-center bg-primary rounded-20 p-5 my-5 my-xl-7">
+                <div class="col-3 text-center">
+                    <p class="fs-32 fw-700 text-italic">Buy Now</p>
+                    <p class="pt-3">Don’t put your repairs and upgrades off any longer.</p>
+                </div>
+                <div class="col-3 text-center">
+                    <p class="fs-32 fw-700 text-italic">Pay Later</p>
+                    <p class="pt-3">We’ll start work today, and you can pay us later.</p>
+                </div>
+                <div class="col-3 text-center">
+                    <p class="fs-32 fw-700 text-italic">No Interest</p>
+                    <p class="pt-3">Pay the work off in instalments, without any interest!</p>
+                </div>
+                <div class="col-auto">
+                    <?php if (!empty($page_content['introduction_button_link'])) : ?>
+                        <button class="bg-transparent rounded-pill">
+                            <a href="<?= _issetUrl($page_content, 'introduction_button_link'); ?>" class="btn btn-white text-primary d-inline-flex rounded-pill px-3 px-lg-5 fs-18 fw-700">Enquire</a>
+                        </button>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <div class="row gy-4 gy-lg-5 innerServiceListingSlider">
                 <?php foreach ($services as $service) : ?>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <article class="helpCard">
