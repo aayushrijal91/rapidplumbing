@@ -79,16 +79,16 @@ require V_ROOT_THEME . 'inc/serviceBanner.php';
                 <?php endfor; ?>
             </div>
 
-            <div class="row justify-content-between align-items-center bg-primary rounded-20 p-5 my-5 my-xl-7">
-                <div class="col-3 text-center">
+            <div class="row justify-content-center justify-content-md-between align-items-center bg-primary rounded-20 p-5 my-5 my-xl-7">
+                <div class="col-md-6 col-lg-3 text-center">
                     <p class="fs-32 fw-700 text-italic">Buy Now</p>
                     <p class="pt-3">Don’t put your repairs and upgrades off any longer.</p>
                 </div>
-                <div class="col-3 text-center">
+                <div class="col-md-6 col-lg-3 text-center">
                     <p class="fs-32 fw-700 text-italic">Pay Later</p>
                     <p class="pt-3">We’ll start work today, and you can pay us later.</p>
                 </div>
-                <div class="col-3 text-center">
+                <div class="col-md-6 col-lg-3 text-center">
                     <p class="fs-32 fw-700 text-italic">No Interest</p>
                     <p class="pt-3">Pay the work off in instalments, without any interest!</p>
                 </div>
