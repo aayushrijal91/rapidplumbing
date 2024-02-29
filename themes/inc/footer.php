@@ -24,7 +24,7 @@ $services_menu_list = services_menu_list::get_data($services_menu_list_Arr);
 
 <footer class="bg-dark-grey text-white py-3 py-lg-6">
     <div class="container">
-        <div class="text-center pb-5"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/payment-methods.png" class="col-md-6 col-xl-4" alt="Truck" /></div>
+        <div class="text-center pb-5"><img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/logo/payment-methods.png" class="col-md-6 col-xl-4" alt="Payment methods" /></div>
         <div class="row justify-content-center gy-5">
             <div class="col-auto col-md-12 col-xl-3">
                 <a href="<?php echo V_SITE_URL; ?>"><?= _imgSrc($header_settings, 'site_logo', 'header__logo'); ?></a>

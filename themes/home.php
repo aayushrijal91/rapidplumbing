@@ -330,7 +330,7 @@ require 'inc/nav.php';
                 <div class="row align-items-center justify-content-between gy-5">
                     <div class="col-xl-4">
                         <p class="fs-64 lh-1 fw-500 highlight-primary"><?= _isset($page_content, 'testimonials_title') ?></p>
-                        <div class="row pt-6 d-none d-xl-flex">
+                        <div class="row pt-5 d-none d-xl-flex">
                             <?php if (!empty($page_content['testimonials_button_1_text']) && !empty($page_content['testimonials_button_1_link'])) : ?>
                                 <div class="col-6">
                                     <a href="<?= _isset($page_content, 'testimonials_button_1_link') ?>" class="btn btn-primary text-white rounded-pill fs-18 fw-700"><?= _isset($page_content, 'testimonials_button_1_text') ?></a>
@@ -341,6 +341,65 @@ require 'inc/nav.php';
                                     <a href="<?= _isset($page_content, 'testimonials_button_2_link') ?>" class="btn border-white border-2 text-white rounded-pill fs-18 fw-700"><?= _isset($page_content, 'testimonials_button_2_text') ?></a>
                                 </div>
                             <?php endif; ?>
+
+                            <div class="row mt-5 gy-4 pb-3 bg-primary rounded-20 align-items-center">
+                                <div class="col-12">
+                                    <p class="text-primary-dark fs-24 fw-800 text-center">Sydney's Highest Rated Plumber</p>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div class="row align-items-center bg-white rounded-10 p-3">
+                                        <div class="col-auto">
+                                            <div class="review-icon">
+                                                <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/big-google.png" alt="Google" />
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/five-stars.png" width="100" alt="5 Stars" />
+                                            <p class="text-primary-darker text-italic fs-16 pt-2">800 Reviews</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div class="review-icon">
+                                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/hipages.png" alt="HiPages" />
+                                    </div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div class="review-icon">
+                                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/big-fb.png" alt="facebook" />
+                                    </div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div class="review-icon">
+                                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/product-review.png" alt="Product Review" />
+                                    </div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div class="review-icon">
+                                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/birdeye.png" alt="Birdeye" />
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-auto">
+                                    <div class="review-icon">
+                                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/yellow-pages.png" alt="Yellow Pages" />
+                                    </div>
+                                </div>
+
+
+                                <div class="col-auto">
+                                    <div class="review-icon">
+                                        <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/icons/word-of-mouth.png" alt="Word Of Mouth" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-8">
