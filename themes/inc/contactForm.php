@@ -153,7 +153,7 @@ if (count($global_cta)) {
                             </div>
                         </div>
                         <div class="col-auto">
-                            <button type="submit" class="submit_btn btn btn-primary rounded-pill fs-18 fw-700 text-white px-5 px-lg-6">Enquire</button>
+                            <button type="submit" class="submit_btn btn btn-primary rounded-pill fs-18 fw-700 text-white px-5 px-lg-6">Book Now</button>
                         </div>
                     </div>
                 </form>

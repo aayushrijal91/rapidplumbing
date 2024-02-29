@@ -136,7 +136,7 @@ require 'inc/nav.php';
                                     <hr class="w-25 mx-auto border-2">
                                     <p class="fs-18 fw-600 lh-1">2018</p>
                                     <p class="fs-12 py-1">Local Business Awards</p>
-                                    <p class="fs-14 fw-600">Finalists</p>
+                                    <p class="fs-14 fw-600">Winner</p>
                                 </article>
                             </div>
                             <div class="col-6 col-md">

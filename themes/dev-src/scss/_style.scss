@@ -2023,6 +2023,8 @@ main.suburbInnerPage {
 
     section.about {
         ul {
+            padding-inline-start: 0;
+
             @include media-breakpoint-only(md) {
                 column-count: 2;
                 column-gap: 32px;
@@ -2034,11 +2036,21 @@ main.suburbInnerPage {
             }
 
             li {
-                list-style: disc;
                 font-size: 24px;
-                padding: 8px 0;
+                padding: 8px 0 0 30px ;
                 font-weight: 300;
+                list-style-type: none;
+                position: relative;
+
+                &::before {
+                    content: '✔';
+                    position: absolute;
+                    left: 0;
+                    top: 11px;
+                    font-size: 24px;
+                }
             }
+            
         }
     }
 
