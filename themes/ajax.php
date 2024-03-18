@@ -39,6 +39,16 @@ if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
                             <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['emailAddress']) . "</td>                                    
                         </tr>
                        
+                       <tr>
+                            <td style='" . $tableCellStyle . "'>Suburb</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['suburb']) . "</td>                                    
+                        </tr>
+
+                        <tr>
+                            <td style='" . $tableCellStyle . "'>Postcode</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['postcode']) . "</td>                                    
+                        </tr>
+                        
                         <tr>
                             <td style='" . $tableCellStyle . "'>Service</td>                                    
                             <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['service']) . "</td>                                    
@@ -59,7 +69,7 @@ if (isset($_POST['request']) && $_POST['request'] == 'contact_us_form') {
 
             $result = _send_mail($to_email, $subject, $message, $email_settings['cc_email'], $email_settings['bcc_email']);
 
-            echo "success";
+            echo $result ? "success" : "error";
         } else {
             echo 'captchaerror';
         }
@@ -99,16 +109,6 @@ if (isset($_POST['request']) && $_POST['request'] == 'book_online_form') {
                         </tr>
                        
                         <tr>
-                            <td style='" . $tableCellStyle . "'>Suburb</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['suburb']) . "</td>                                    
-                        </tr>
-
-                        <tr>
-                            <td style='" . $tableCellStyle . "'>Postcode</td>                                    
-                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['postcode']) . "</td>                                    
-                        </tr>
-
-                        <tr>
                             <td style='" . $tableCellStyle . "'>Service</td>                                    
                             <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['service']) . "</td>                                    
                         </tr>
@@ -128,7 +128,7 @@ if (isset($_POST['request']) && $_POST['request'] == 'book_online_form') {
 
             $result = _send_mail($to_email, $subject, $message, $email_settings['cc_email'], $email_settings['bcc_email']);
 
-            echo "success";
+            echo $result ? "success" : "error";
         } else {
             echo 'captchaerror';
         }
@@ -243,7 +243,7 @@ if (isset($_POST['request']) && $_POST['request'] == 'careers_form') {
             // } else {
                 $result = _send_mail($to_email, $subject, $message, $email_settings['cc_email'], $email_settings['bcc_email']);
 
-                echo "success";
+                echo $result ? "success" : "error";
             // }
         } else {
             echo 'captchaerror';

@@ -12,7 +12,7 @@ function _send_mail($tomail, $Subject, $MessagesBody, $mCc, $mBcc)
 	$headers .= 'Cc: ' . $mCc . '' . "\r\n";
 	$headers .= 'Bcc: ' . $mBcc . ' ' . "\r\n";
 
-	mail($to_email, $subject, $message, $headers);
+	return mail($to_email, $subject, $message, $headers);
 }
 
 function _isArray($tmpData = array())
