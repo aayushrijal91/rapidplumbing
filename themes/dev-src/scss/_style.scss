@@ -335,7 +335,7 @@ main.homepage {
             position: relative;
             z-index: 1;
             transition: 0.35s all ease;
-            height: 500px;
+            height: 360px;
 
             @include media-breakpoint-down(sm) {
                 height: 218px;
@@ -352,7 +352,6 @@ main.homepage {
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(7, 23, 53, 0.95);
                 padding: 32px 27px 40px;
                 display: flex;
                 justify-content: space-between;
@@ -663,7 +662,7 @@ main.aboutUsPage {
         .serviceCard {
             img.heroImage {
                 width: 100%;
-                height: 544px;
+                height: 370px;
                 object-fit: cover;
                 object-position: top;
             }
@@ -749,7 +748,7 @@ main.servicesPage {
 
         .serviceHelpCard {
             width: 100%;
-            height: 365px;
+            height: 280px;
             position: relative;
             z-index: 1;
             transition: 0.35s all ease;
@@ -766,7 +765,6 @@ main.servicesPage {
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(7, 23, 53, 0.95);
                 padding: 15px 24px;
                 transition: 0.35s all ease;
                 display: flex;
@@ -1267,17 +1265,18 @@ main.blockedDrainServicesPage {
 
     section.innerServices {
         .expect-slider {
+            margin-bottom: 16px;
+
             .box {
                 position: relative;
+                height: 270px;
                 width: 274px;
-                margin: 16px 0;
                 margin-right: 1.125rem;
                 z-index: 1;
                 transition: 0.35s all ease;
 
                 .overlay {
                     position: absolute;
-                    background: linear-gradient(rgba(18, 32, 57, 0.9) 0% 65%, #152F5F 100%);
                     height: 100%;
                     width: 100%;
                     top: 0;
@@ -1781,11 +1780,11 @@ main.commercialPlumbingServicePage {
                 width: 100%;
                 z-index: 1;
                 transition: 0.35s all ease;
-                height: 565px;
+                height: 340px;
 
                 .overlay {
                     position: absolute;
-                    background: linear-gradient(rgba(18, 32, 57, 0.9) 0% 65%, #152F5F 100%);
+                    background: linear-gradient(rgba(18, 32, 57, 0) 0% 65%, #152F5F 100%);
                     height: 100%;
                     width: 100%;
                     top: 0;

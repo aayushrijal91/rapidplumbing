@@ -80,7 +80,6 @@ if (count($global_cta)) {
                         
                         <div class="col-12">
                             <div class="form-group">
-                                <label class="form-label" for="phoneNumber">What can we help you with?</label>
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="form-check">
@@ -148,7 +147,7 @@ if (count($global_cta)) {
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-label" for="message">Message</label>
-                                <input type="text" name="message" id="message" class="form-control" placeholder="Write your message" />
+                                <input type="text" name="message" id="message" class="form-control required" placeholder="Write your message" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>

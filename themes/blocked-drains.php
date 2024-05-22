@@ -79,14 +79,13 @@ require V_ROOT_THEME . 'inc/serviceBanner.php';
                 <div class="col-lg-11">
                     <div class="expect-slider">
                         <?php foreach ($blocked_drains_services as $service) { ?>
-                            <a href="<?= $service['slug'] ?>">
-                                <a href="<?= _issetUrl($service, 'slug') ?>">
-                                    <article class="box">
-                                        <?= _imgSrc($service, 'image', ''); ?>
-                                        <p class="overlay text-white"><?= $service['title'] ?></p>
-                                    </article>
-                                </a>
-                            <?php } ?>
+                            <a href="<?= _issetUrl($service, 'slug') ?>">
+                                <article class="box">
+                                    <?= _imgSrc($service, 'image', ''); ?>
+                                    <p class="overlay text-white"><?= $service['title'] ?></p>
+                                </article>
+                            </a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
