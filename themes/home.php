@@ -115,9 +115,9 @@ require 'inc/nav.php';
     <section class="blue-gradient overflow-hidden">
         <section class="welcome position-relative">
             <div class="container position-relative z-1">
-                <p class="fs-64 fw-500 text-md-center lh-1 highlight-primary"><span>Award Winning</span> Plumbing Company </p>
-
-                <p class="fs-48 fw-500 text-md-center lh-1 highlight-primary py-4 py-md-5"><?= _isset($page_content, 'welcome_title') ?></p>
+                <p class="fs-48 fw-500 text-md-center lh-1 highlight-primary" data-aos="fade-up"><?= _isset($page_content, 'welcome_title') ?></p>
+                
+                <p class="fs-64 fw-500 text-md-center lh-1 highlight-primary py-4 py-md-5" data-aos="fade-up"><span>Award Winning</span> Plumbing Company </p>
 
                 <p class="fs-20 text-md-center"><?= _isset($page_content, 'welcome_subtitle') ?></p>
 
@@ -127,7 +127,7 @@ require 'inc/nav.php';
                     </div>
                 <?php endif; ?>
 
-                <div class="row justify-content-center pt-5 pt-md-0">
+                <div class="row justify-content-center pt-5 pt-md-0" data-aos="fade-up">
                     <div class="col-xl-9">
                         <div class="row gx-3" id="awards-slider">
                             <div class="col-6 col-md">

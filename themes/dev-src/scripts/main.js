@@ -210,8 +210,7 @@ $('.customersSlider').slick({
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 0,
+    variableWidth: true,
     cssEase: 'linear',
     responsive: [
         {

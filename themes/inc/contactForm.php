@@ -12,7 +12,7 @@ if (count($global_cta)) {
 <section class="contactForm">
     <div class="container">
         <div class="row align-items-center gy-5">
-            <div class="col-xl-6 d-flex flex-column align-items-center">
+            <div class="col-xl-5 d-flex flex-column align-items-center">
                 <div class="title">
                     <article>
                         <p class="text-1">Enquire</p>
@@ -25,8 +25,8 @@ if (count($global_cta)) {
                     <?= _isset($contact_info, 'phone_number'); ?>
                 </a>
             </div>
-            <div class="col-xl-6">
-                <form id="contact_us_form" class="needs-validation" method="POST" novalidate>
+            <div class="col-xl-7">
+                <form id="contact_us_form" class="needs-validation border p-5 border-white rounded-10" method="POST" novalidate>
                     <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
                     <input type="hidden" name="request" value="contact_us_form">
 
@@ -34,14 +34,14 @@ if (count($global_cta)) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="firstName">First Name</label>
-                                <input type="text" name="firstName" id="firstName" class="form-control required" placeholder="E.g. John" />
+                                <input type="text" name="firstName" id="firstName" class="form-control required" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="lastName">Last Name</label>
-                                <input type="text" name="lastName" id="lastName" class="form-control required" placeholder="E.g. Smith" />
+                                <input type="text" name="lastName" id="lastName" class="form-control required" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ if (count($global_cta)) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="emailAddress">Email</label>
-                                <input type="email" name="emailAddress" id="emailAddress" class="form-control required" placeholder="E.g. johnsmith@gmail.com" />
+                                <input type="email" name="emailAddress" id="emailAddress" class="form-control required" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ if (count($global_cta)) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="phoneNumber">Number</label>
-                                <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control required" placeholder="E.g. 0400 000 000" />
+                                <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control required" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
@@ -65,7 +65,7 @@ if (count($global_cta)) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="suburb">Suburb</label>
-                                <input type="text" name="suburb" id="suburb" class="form-control required" placeholder="E.g. Parramatta" />
+                                <input type="text" name="suburb" id="suburb" class="form-control required" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ if (count($global_cta)) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="postcode">Postcode</label>
-                                <input type="text" name="postcode" id="postcode" class="form-control required" placeholder="E.g. 2000" />
+                                <input type="text" name="postcode" id="postcode" class="form-control required" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ if (count($global_cta)) {
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-label" for="message">Message</label>
-                                <input type="text" name="message" id="message" class="form-control required" placeholder="Write your message" />
+                                <input type="text" name="message" id="message" class="form-control required" />
                                 <span class="text-danger fs-12 error">Error</span>
                             </div>
                         </div>

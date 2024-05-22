@@ -217,17 +217,15 @@ section.contactForm {
             }
 
             .form-control {
-                background: transparent;
+                background: $white;
                 border-radius: 0;
                 border: none;
-                border-bottom: 1px solid $tertiary;
                 font-size: 18px;
                 color: $white;
-                padding: 0;
-                padding-bottom: 10px;
                 line-height: 1;
                 outline: none;
                 box-shadow: none;
+                padding: 10px 20px;
                 font-weight: 600;
                 transition: 0.1s all;
 
@@ -241,6 +239,10 @@ section.contactForm {
                 }
             }
 
+            input.form-control {
+                height: 64px;
+            }
+            
             .form-check {
                 label.form-check-label {
                     color: $tertiary;
