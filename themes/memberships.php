@@ -180,5 +180,51 @@ require 'inc/banner.php';
             </div>
         </div>
     </section>
+
+    <section class="form py-6 py-md-8 ">
+        <div class="container">
+            <form id="become_a_member_form" class="needs-validation border p-5 border-white rounded-10" method="POST" novalidate>
+                <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
+                <input type="hidden" name="request" value="become_a_member_form">
+
+                <div class="row gy-5 justify-content-center">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="firstName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" class="form-control required" />
+                            <span class="text-danger fs-12 error">Error</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" class="form-control required" />
+                            <span class="text-danger fs-12 error">Error</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="emailAddress">Email</label>
+                            <input type="email" name="emailAddress" id="emailAddress" class="form-control required" />
+                            <span class="text-danger fs-12 error">Error</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="phoneNumber">Number</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control required" />
+                            <span class="text-danger fs-12 error">Error</span>
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <button type="submit" class="submit_btn btn btn-primary rounded-pill fs-18 fw-700 text-white px-5">Become a Member</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 </main>
 <?php require 'inc/footer.php'; ?>
