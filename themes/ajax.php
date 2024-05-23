@@ -125,6 +125,55 @@ if (isset($_POST['request']) && $_POST['request'] == 'become_a_member_form') {
     }
 }
 
+if (isset($_POST['request']) && $_POST['request'] == 'second_opinion_form') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
+        $recaptcha_response = $_POST['recaptcha_response'];
+        $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+        $recaptcha_secret = V_RECAPTCHA_SERVER_SECRET;
+        $recaptcha_response = $recaptcha_response;
+        $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+        $recaptcha = json_decode($recaptcha);
+
+        if ($recaptcha->success === true) {
+            $email =     strip_tags($_POST['emailAddress']);
+            $tableStyle = 'border: 1px solid #ddd;text-align: left; border-colspan: colspan; width: 100%;';
+            $tableCellStyle = 'border: 1px solid #ddd;text-align: left; padding: 15px;';
+            $tableCellStyler = 'border: 1px solid #ddd;text-align: right; padding: 15px;';
+            $tableCellStyleHead = 'border: 1px solid #ddd;text-align: center; padding: 15px;';
+
+            $html = "<table style='" . $tableStyle . "'>
+                        <tr>
+                            <td style='" . $tableCellStyle . "'>Name</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['firstName']) . ' ' . strip_tags($_POST['lastName']) . "</td>                                    
+                        </tr>
+
+                        <tr>
+                            <td style='" . $tableCellStyle . "'>Phone Number</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['phoneNumber']) . "</td>                                    
+                        </tr>
+
+                        <tr>
+                            <td style='" . $tableCellStyle . "'>Email</td>                                    
+                            <td style='" . $tableCellStyle . "'>" . strip_tags($_POST['emailAddress']) . "</td>                                    
+                        </tr>
+                    </table>
+                    
+                    <p>Thanks..</p>
+                    <p>Rapid Plumbing Group</p>";
+
+            $subject = 'Rapid Plumbing Group Second Opinion Form';
+            $message = $html;
+            $to_email = $email_settings['to_email'];
+
+            $result = _send_mail($to_email, $subject, $message, $email_settings['cc_email'], $email_settings['bcc_email']);
+
+            echo $result ? "success" : "error";
+        } else {
+            echo 'captchaerror';
+        }
+    }
+}
+
 if (isset($_POST['request']) && $_POST['request'] == 'book_online_form') {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
         $recaptcha_response = $_POST['recaptcha_response'];

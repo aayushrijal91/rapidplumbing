@@ -116,7 +116,7 @@ require 'inc/nav.php';
         <section class="welcome position-relative">
             <div class="container position-relative z-1">
                 <p class="fs-48 fw-500 text-md-center lh-1 highlight-primary" data-aos="fade-up"><?= _isset($page_content, 'welcome_title') ?></p>
-                
+
                 <p class="fs-64 fw-500 text-md-center lh-1 highlight-primary py-4 py-md-5" data-aos="fade-up"><span>Award Winning</span> Plumbing Company </p>
 
                 <p class="fs-20 text-md-center"><?= _isset($page_content, 'welcome_subtitle') ?></p>
@@ -413,8 +413,8 @@ require 'inc/nav.php';
                                             <div class="image">
                                                 <?php if (empty(_imgSrc($testimonial, 'image'))) : ?>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-</svg>
+                                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                                                    </svg>
                                                 <?php else : echo _imgSrc($testimonial, 'image'); ?>
                                                 <?php endif; ?>
                                             </div>
@@ -500,13 +500,58 @@ require 'inc/nav.php';
 
     <section class="pricematching position-relative z-1 overflow-hidden">
         <div class="container-fluid px-0">
-            <div class="row align-items-center gy-5">
+            <div class="row align-items-end gy-5">
                 <div class="col-xl-6 order-2 order-xl-1">
                     <img src="<?= V_CDN_URL . V_THEME_DIR ?>_assets/images/lib/rapid-price-matching.png" alt="Rapid Plumbing Van" />
                 </div>
+
                 <div class="col-xl-6 order-1 order-xl-2">
-                    <article class="px-3 px-xl-0 pe-xl-15">
+                    <article class="px-3 px-xl-0 pe-xl-15 pt-7 pt-lg-8 pb-5">
                         <h3 class="fs-64 lh-1 fw-500 highlight-primary"><?= _isset($page_content, 'price_matching_title') ?></h3>
+
+                        <p class="fs-18 description text-danger fw-700 pt-4 pt-md-5">Is your Plumber giving you the best deal? Let us be your FREE second opinion</p>
+
+                        <form id="second_opinion_form" class="needs-validation border py-4 px-3 mt-5 border-white rounded-10" method="POST" novalidate>
+                            <input type="hidden" name="recaptcha_response" class="g-recaptcha-response" value=<?= V_RECAPTCHA_CLIENT_SECRET ?>>
+                            <input type="hidden" name="request" value="second_opinion_form">
+
+                            <div class="row gy-5 justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="firstName">First Name</label>
+                                        <input type="text" name="firstName" id="firstName" class="form-control required" />
+                                        <span class="text-danger fs-12 error">Error</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="lastName">Last Name</label>
+                                        <input type="text" name="lastName" id="lastName" class="form-control required" />
+                                        <span class="text-danger fs-12 error">Error</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="emailAddress">Email</label>
+                                        <input type="email" name="emailAddress" id="emailAddress" class="form-control required" />
+                                        <span class="text-danger fs-12 error">Error</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="phoneNumber">Number</label>
+                                        <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control required" />
+                                        <span class="text-danger fs-12 error">Error</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <button type="submit" class="submit_btn btn btn-primary rounded-pill fs-18 fw-700 text-white px-5">Submit</button>
+                                </div>
+                            </div>
+                        </form>
 
                         <article class="fs-18 description py-4 py-md-5">
                             <?= _isset($page_content, 'price_matching_description') ?>

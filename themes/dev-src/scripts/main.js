@@ -587,6 +587,39 @@ $(document).on("submit", "#become_a_member_form", function (e) {
     }
 });
 
+$(document).on("submit", "#second_opinion_form", function (e) {
+    e.preventDefault();
+
+    if (validateForm($(this))) {
+        $(".submit_btn").attr('disabled', 'disabled').val("Loading...");
+        let recaptchaVal = $(".g-recaptcha-response").val();
+
+        grecaptcha.ready(function () {
+            grecaptcha.execute(recaptchaVal, {
+                action: 'MyForm'
+            })
+                .then(function (token) {
+                    $('.g-recaptcha-response').val(token);
+                    $.ajax({
+                        url: SITE_URL + '/ajax/',
+                        data: $("#second_opinion_form").serialize(),
+                        method: 'POST',
+                        success: function (response) {
+                            response = response.trim();
+                            if (response == "success") {
+                                $("#second_opinion_form")[0].reset();
+                                $(".submit_btn").removeAttr('disabled').val("SUBMIT");
+                                window.location.href = SITE_URL + '/thank-you/';
+                            } else if (response == "fail") {
+                                alert("Failed, Something went wrong.")
+                            }
+                        }
+                    });
+                });
+        });
+    }
+});
+
 $(document).on("submit", "#book_online_form", function (e) {
     e.preventDefault();
 
@@ -619,6 +652,7 @@ $(document).on("submit", "#book_online_form", function (e) {
         });
     }
 });
+
 
 $(document).on("submit", "#careers_form", function (e) {
     e.preventDefault();

@@ -618,10 +618,68 @@ main.homepage {
 
     section.pricematching {
         background: linear-gradient(102deg, #13264A 0%, #0B1934 100%);
-        padding-top: 97px;
 
-        @include media-breakpoint-down(sm) {
-            padding-top: 80px;
+        form {
+            .form-group {
+                .error {
+                    display: none;
+                }
+
+                label {
+                    font-weight: 600;
+                    letter-spacing: -0.16px;
+                }
+
+                .form-control {
+                    background: $white;
+                    border-radius: 0;
+                    border: none;
+                    font-size: 18px;
+                    color: $white;
+                    line-height: 1;
+                    outline: none;
+                    box-shadow: none;
+                    padding: 10px 20px;
+                    font-weight: 600;
+                    transition: 0.1s all;
+
+                    &::placeholder {
+                        color: $tertiary;
+                        font-weight: 400;
+                    }
+
+                    &:focus {
+                        border-color: $primary;
+                    }
+                }
+
+                input.form-control {
+                    height: 64px;
+                }
+
+                .form-check {
+                    label.form-check-label {
+                        color: $tertiary;
+                        font-weight: 400;
+                    }
+
+                    input.form-check-input {
+                        outline: none;
+                        box-shadow: none;
+                        background: transparent;
+                        transition: 0.1s all;
+
+                        &:checked {
+                            border-width: 4px;
+                        }
+
+                        &.is-valid,
+                        &:valid {
+                            border-color: $primary;
+                        }
+                    }
+                }
+            }
         }
     }
 }
